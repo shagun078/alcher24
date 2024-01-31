@@ -105,3 +105,55 @@ a {
     color-scheme: dark;
   }
 }
+
+
+
+
+/* from prev */
+/* 
+@font-face {
+  font-family: 'Uncut sans';
+  src: url(./fonts/Uncut-Sans-Bold.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Futara PT';
+  src: url(./fonts/FuturaPTLight.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Uncut sans medium';
+  src: url(./fonts/Uncut-Sans-Medium.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Uncut sans regular';
+  src: url(./fonts/Uncut-Sans-Regular.otf) format('truetype');
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+:root{
+  --color1: #181818;
+  --color2: #E8EDD9;
+  --color3: #39A27A;
+  --font-size1: 1.31vw;
+  --font--size16: 4.07vw
+  /* var(--font--size16) only to be used in mobile view */
+/* } */
+
+/* @media only screen and (max-width: 1024px){
+  html,body{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+  }
+}  */

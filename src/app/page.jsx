@@ -1,5 +1,7 @@
 import React from "react";
 import Link from "next/link";
+import './globals.css';
+
 
 export default function MainPage() {
   return (
@@ -7,6 +9,12 @@ export default function MainPage() {
       <Link href="/homepage"> Home Page</Link>
       <br />
       <Link href="/events">Events Page</Link>
+      <br />
+      <Link href="/kartavya">Kartavya Page</Link>
+      <br></br>
+      <Link href="/sponsor">Sponsor Page</Link>
+      <br />
+      <Link href="/teams">Teams Page</Link>
     </>
   );
 }

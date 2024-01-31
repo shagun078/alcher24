@@ -1,0 +1,232 @@
+:root{
+    --page_head: calc(4vw + 20px);
+    --page_head_mobile: calc(3vw + 15px);
+    --page_subhead: calc(2vw + 10px);
+    --text_head: 3vw;
+    --text_name: calc(0.5vw + 10px);
+    --text_detail: calc(0.5vw + 6px);
+    --color_prb: #B7EC60;
+    --color_crm: #AADCDB;
+    --color_creatives: #F25BFF;
+    --color_events: #6859C7;
+    --color_web_app: #FF7E35;
+    --color_mun: #02A5D4;
+    --color_finance: #7266F8;
+    --color_convener: #B357B6;
+}
+
+main{
+    background-color: #141414;
+    color: #E8EDD9;
+    text-align: center;
+    overflow: hidden;
+    background-image: url('../resources/TexturePattern.jpg');
+    background-blend-mode:color-burn;
+}
+
+.teams_heading{
+    width: 80vw;
+    margin: 25vh auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left_window{
+    width: 10vw;
+    aspect-ratio: 141/347;
+}
+
+.right_window{
+    width: 10vw;
+    aspect-ratio: 141/347;
+}
+
+.teams_head1 h2{
+    font-size: var(--page_head);
+    font-weight: 800;
+    color: #02a5d4;
+}
+
+.teams_head1 h5{
+    font-size: var(--page_subhead);
+    font-weight: 300;
+}
+
+.all_teams{
+    width: 80vw;
+    margin: 0 auto 40vh;
+}
+
+.head_prb{
+    font-size: var(--text_head);
+    color: var(--color_prb);
+    padding-top: 20vh;
+}
+
+.bg_prb{
+    background-image: url('../resources/prb_bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.head_crm{
+    font-size: var(--text_head);
+    color: var(--color_crm);
+    padding-top: 20vh;
+}
+
+.bg_crm{
+    background-image: url('../resources/crm_bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.head_creatives{
+    font-size: var(--text_head);
+    color: var(--color_creatives);
+    padding-top: 20vh;
+}
+
+.bg_creatives{
+    background-image: url('../resources/creatives_bg.png');
+    /* background-size:; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-position-x: left; */
+    /* background-position-y: calc(center - 20px); */
+}
+
+.head_events{
+    font-size: var(--text_head);
+    color: var(--color_events);
+    padding-top: 20vh;
+}
+
+.bg_events{
+    background-image: url('../resources/events_bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.head_web_app{
+    font-size: var(--text_head);
+    color: var(--color_web_app);
+    padding-top: 20vh;
+}
+
+.bg_web_app{
+    background-image: url('../resources/web_app_bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.head_mun{
+    font-size: var(--text_head);
+    color: var(--color_mun);
+    padding-top: 20vh;
+}
+
+.bg_mun{
+    background-image: url('../resources/mun_bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.head_finance{
+    font-size: var(--text_head);
+    color: var(--color_finance);
+    padding-top: 20vh;
+}
+
+.bg_finance{
+    background-image: url('../resources/finance_bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.head_convener{
+    font-size: var(--text_head);
+    color: var(--color_convener);
+    padding-top: 20vh;
+}
+
+.bg_convener{
+    background-image: url('../resources/convener_bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.names_prb, .names_crm, .names_creatives, .names_events, .names_web_app, .names_mun, .names_finance, .names_convener{
+    width: 58vw;
+    margin: calc(2vw + 40px) auto 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.names_prb{
+    color: var(--color_prb);
+}
+
+.names_crm{
+    color: var(--color_crm);
+}
+
+.names_creatives{
+    color: var(--color_creatives);
+}
+
+.names_events{
+    color: var(--color_events);
+}
+
+.names_web_app{
+    color: var(--color_web_app);
+}
+
+.names_mun{
+    color: var(--color_mun);
+}
+
+.names_prb{
+    color: var(--color_prb);
+}
+
+.names_finance{
+    color: var(--color_finance);
+}
+
+.names_convener{
+    color: var(--color_convener);
+}
+
+.names_prb h6, .names_crm h6, .names_creatives h6, .names_events h6, .names_web_app h6, .names_mun h6, .names_finance h6, .names_convener h6{
+    font-size: var(--text_name);
+
+}
+
+.names_prb p, .names_crm p, .names_creatives p, .names_events p, .names_web_app p, .names_mun p, .names_finance p, .names_convener p{
+    font-size: var(--text_detail);
+}
+
+@media screen and (max-width: 1025px){
+    .teams_heading{
+        width: 90vw;
+        margin: 10vh auto 0;
+    }
+    .teams_head1 h2{
+        font-size: var(--page_head_mobile);
+    }
+    .names_prb, .names_crm, .names_creatives, .names_events, .names_web_app, .names_mun, .names_finance, .names_convener{
+        margin: 20px auto 0;
+    }
+}
