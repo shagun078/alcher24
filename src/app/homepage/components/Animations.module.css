@@ -1,0 +1,49 @@
+
+.animes
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 8vw;
+    color:#F22C5B;
+    font-weight: 700;
+    font-size: 5vw;
+}
+
+.animes>div>div
+{
+    margin-bottom: 5vw;
+    height: 5vw;
+    display: inline-block;
+}
+.animes div:first-child {
+    animation: text-animation 8s infinite;
+  }
+@keyframes text-animation {
+    24%{margin-top:-2vw;}
+    48% {margin-top: -11.62vw;}
+    72% {margin-top: -21.24vw;}
+    96% {margin-top: -31.86vw;}
+    97% {margin-top: -21.24vw;}
+    98% {margin-top: -11.62vw;}
+    99% {margin-top: -2vw;}
+    100%{margin-top:0;}
+  }
+  @media (orientation: portrait) {
+    .animes
+    {
+      display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 10vw;
+    color: white;
+    font-weight: 700;
+    font-size: 7vw;
+    font-family: Vangaurdcf;
+    width:50vw;
+    }
+  }
+
+ 

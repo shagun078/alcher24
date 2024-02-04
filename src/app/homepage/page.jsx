@@ -8,7 +8,7 @@ import MySlider from "./components/slider";
 import TWEEN from "@tweenjs/tween.js";
 import { FaAngleDoubleDown } from "react-icons/fa";
 import "./homepage.css";
-
+import Animations from "./components/Animations";
 const marks = [
   {
     key: "A",
@@ -392,7 +392,7 @@ export default function App() {
   return (
     <React.Fragment>
       <div className='threeDWrapper'>
-        <Canvas
+        {/*<Canvas
           camera={{
             fov: 40,
             position: [-2, 1.5, -2],
@@ -433,8 +433,9 @@ export default function App() {
           <div className='left'>
             <img className="image" src="left.svg"></img>
           </div>
-          <div className="center">
-            <img className="image" src="centerFlower.svg"></img>
+          <div className="centerDiv">
+            <img className="center-image" src="centerFlower.svg"></img>
+            <Animations className='animation-container'/>
           </div>
           <div className='right'>
             <img className="image" src="right.svg"></img>

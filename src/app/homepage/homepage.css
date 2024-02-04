@@ -6,6 +6,16 @@ body,
   background: #000000;
 }
 
+@font-face {
+  font-family: headingAlcher;
+  src: url('../../../public/CruyffSans-Bold.ecd5078c.woff2');
+}
+
+@font-face {
+  font-family: normalText;
+  src: url('../../../public/Uncut-Sans-Medium.woff2');
+}
+
 #info {
   position: absolute;
   top: 10px;
@@ -156,8 +166,15 @@ iframe{
   width:20%;
 }
 
-.center{
+.centerDiv{
   width:60%;
+  position: relative;
+}
+
+.Animations_animes__8kF5l{
+  width:100%;
+  position: absolute;
+  top:48%;
 }
 
 
@@ -165,6 +182,13 @@ iframe{
 .image{
   width:100%;
 }
+
+.center-image{
+  display: block;
+  width:80%;
+  margin:0px auto;
+}
+
 
 .merchSection{
   margin-top:10rem;
@@ -219,15 +243,19 @@ iframe{
   color:#FFFFFF;
   font-size: 1.6rem;
   margin-bottom: 1rem;
-  font-family: 'basicHeading';
+  font-family: normalText;
   font-weight: 900;
 }
+
+
 #alcherPass{
   color:#F22C5B;
   font-size: 3rem;
   margin-bottom: 1.4rem;
-  font-family: 'demoFont';
+  font-family: headingAlcher;
 }
+
+
 #registerBtn{
   width:fit-content;
   height: fit-content;
@@ -239,6 +267,7 @@ iframe{
   border-radius: 1rem;
   background-color: #F22C5B;
   cursor: pointer;
+  font-family: headingAlcher;
 }
 .cardHoverSection{
   display: flex;
@@ -390,11 +419,13 @@ iframe{
 #text h1{
   color : #AADCDB;
   font-size: 3.2rem;
+  font-family: headingAlcher;
 }
 
 #text p{
   margin-top:2vh;
   font-size: 1.2rem;
+  font-family: normalText;
   color: white;
 }
 
@@ -487,6 +518,7 @@ iframe{
 
   #alcherPass{
     font-size: 2.5rem;
+    
   }
 
   .imageWrapper{
