@@ -10,6 +10,8 @@ export default function MainPage() {
       <br />
       <Link href="/events">Events Page</Link>
       <br />
+      <Link href="/events_2d">Events2D Page</Link>
+      <br />
       <Link href="/kartavya">Kartavya Page</Link>
       <br></br>
       <Link href="/sponsor">Sponsor Page</Link>
