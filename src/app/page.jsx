@@ -15,6 +15,8 @@ export default function MainPage() {
       <Link href="/sponsor">Sponsor Page</Link>
       <br />
       <Link href="/teams">Teams Page</Link>
+      <br/>
+      <Link href="/events_2d">Event 2D</Link>
     </>
   );
 }

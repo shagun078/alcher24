@@ -392,7 +392,7 @@ export default function App() {
   return (
     <React.Fragment>
       <div className='threeDWrapper'>
-        {/*<Canvas
+        <Canvas
           camera={{
             fov: 40,
             position: [-2, 1.5, -2],
