@@ -1,12 +1,12 @@
 "use client";
-
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { OrbitControls, Html } from "@react-three/drei";
 import RoomScene from "../components/RoomScene";
 import { motion } from "framer-motion";
+import MySlider from "./components/slider";
 import TWEEN from "@tweenjs/tween.js";
-
+import { FaAngleDoubleDown } from "react-icons/fa";
 import "./homepage.css";
 
 const marks = [
@@ -371,28 +371,114 @@ function Tween() {
 }
 
 export default function App() {
+  const contentRef = useRef(null);
   const ref = useRef();
-
+  const [isHovered, setIsHovered] = useState(false);
+  const scrollToContent = () => {
+    console.log("clicked!");
+    contentRef.current && contentRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+  const hoverEffect = () => {
+    setIsHovered(!isHovered);
+    console.log(isHovered);
+  }
+  const buttons = (
+    <React.Fragment>
+      <FaAngleDoubleDown className="content-btn" onClick={scrollToContent} />
+    </React.Fragment>
+  )
+  
+ 
   return (
-    <Canvas
-      camera={{
-        fov: 40,
-        position: [-2, 1.5, -1],
-        zoom: 0.35,
-      }}
-      shadows
-    >
-      <OrbitControls
-        ref={ref}
-        target={[-3.5, 1.4, -1.8]}
-        enableZoom={false}
-        enableDamping={true}
-      />
-      <ambientLight intensity={1.5} />
-      <Annotations controls={ref} />
-      <RoomScene></RoomScene>
-      {/* <axesHelper args={[20, 20, 20]} /> */}
-      <Tween />
-    </Canvas>
+    <React.Fragment>
+      <div className='threeDWrapper'>
+        <Canvas
+          camera={{
+            fov: 40,
+            position: [-2, 1.5, -2],
+            zoom: 0.35,
+          }}
+          shadows
+        >
+          <OrbitControls
+            ref={ref}
+            target={[-3.5, 1.4, -1.8]}
+            enableZoom={false}
+            enableDamping={true}
+            minPolarAngle={Math.PI/3}
+            maxPolarAngle={Math.PI/2}
+            dampingFactor={0.02}
+          />
+          <ambientLight intensity={1.5} />
+          <Annotations controls={ref} />
+          <RoomScene></RoomScene>
+          <axesHelper args={[20, 20, 20]} /> 
+          <Tween />
+        </Canvas>
+        <div id="ui">{buttons}</div>
+      </div>
+      <div className='mainContainer ' ref={contentRef}>
+        {/*Video-container section starts*/}
+        <div className='videoWrapper'>
+          <div className='videoBox'>
+            <iframe src="https://www.youtube.com/embed/CWhFx8v1mg8?autoplay=1&controls=0"
+              frameborder="0" allowfullscreen
+            ></iframe>
+          </div>
+          {/*Video-container section ends*/}
+        </div>
+
+        {/*Sponsor section starts*/}
+        <div className='decorationContainer'>
+          <div className='left'>
+            <img className="image" src="left.svg"></img>
+          </div>
+          <div className="center">
+            <img className="image" src="centerFlower.svg"></img>
+          </div>
+          <div className='right'>
+            <img className="image" src="right.svg"></img>
+          </div>
+        </div>
+        <div className='sponsor'>
+          <MySlider />
+        </div>
+        {/*Sponsorsection ends*/}
+        <div className='getAppSection'>
+          <img src='upperHand.svg' id='upperHand'></img>
+          <img src='lowerHand.svg' id='lowerHand'></img>
+          <div className='textSection'>
+            <div id='text'>
+              <h1>GET THE <br/> ALCHERINGA APP</h1>
+              <p>Download our app and get access to app exclusive features like<br/> Alcheringa passes , merches , schedule,Campus maps , <br/>  real-time updates and much more</p>
+              <div id='appDownloadBtn'><img src='googlePlay.svg' className="googlePlayImage"></img></div>
+            </div>
+          </div>
+          <div className="imageWrapper">
+            <div className='img-cont darkModeImage'>
+              <div className='img-section img-dark'></div>
+            </div>
+            <div className=" img-cont lightModeImage">
+             <div className=" img-section img-light"></div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div className='passesSection'>
+          <p id='getYour'>Get your Own</p>
+          <h1 id='alcherPass'>Alcheringa'24 Passes</h1>
+          <button id='registerBtn'>REGISTER</button>
+        </div>
+        
+
+        <div className={`cardHoverSection ${isHovered ? 'hovered' : ''}`} onMouseEnter={hoverEffect} onMouseLeave={hoverEffect}>
+          <img src='BoardOrange.svg' id='cardHoverLeft'></img>
+          <img src='BoardBlue.svg' id='cardHoverRight'></img>
+        </div>
+      </div>
+    </React.Fragment>
+
   );
 }
