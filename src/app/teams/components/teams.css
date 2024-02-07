@@ -22,6 +22,7 @@ main{
     overflow: hidden;
     background-image: url('../resources/TexturePattern.jpg');
     background-blend-mode:color-burn;
+    /* user-select: none; */
 }
 
 .teams_heading{
@@ -34,19 +35,33 @@ main{
 }
 
 .left_window{
+    background-size: contain;
+    background-repeat: no-repeat;
     width: 10vw;
     aspect-ratio: 141/347;
+    -webkit-animation: left_window_change 12s ease-in-out infinite;
+    -moz-animation: left_window_change 12s ease-in-out infinite;
+    animation: left_window_change 12s ease-in-out infinite;
+    /* animation-fill-mode: forwards; */
 }
 
 .right_window{
+    background-size: contain;
+    background-repeat: no-repeat;
     width: 10vw;
     aspect-ratio: 141/347;
+    -webkit-animation: right_window_change 12s ease-in-out infinite;
+    -moz-animation: right_window_change 12s ease-in-out infinite;
+    animation: right_window_change 12s ease-in-out infinite;
 }
 
 .teams_head1 h2{
     font-size: var(--page_head);
     font-weight: 800;
-    color: #02a5d4;
+    /* color: #02a5d4; */
+    -webkit-animation: head1_change 12s ease-in-out infinite;
+    -moz-animation: head1_change 12s ease-in-out infinite;
+    animation: head1_change 12s ease-in-out infinite;
 }
 
 .teams_head1 h5{
@@ -63,6 +78,7 @@ main{
     font-size: var(--text_head);
     color: var(--color_prb);
     padding-top: 20vh;
+    /* font-weight: 500; */
 }
 
 .bg_prb{
@@ -171,6 +187,7 @@ main{
     margin: calc(2vw + 40px) auto 0;
     display: flex;
     justify-content: space-evenly;
+    gap: 0px 10px;
 }
 
 .names_prb{
@@ -211,11 +228,19 @@ main{
 
 .names_prb h6, .names_crm h6, .names_creatives h6, .names_events h6, .names_web_app h6, .names_mun h6, .names_finance h6, .names_convener h6{
     font-size: var(--text_name);
-
+    padding-bottom: 3px;
 }
 
 .names_prb p, .names_crm p, .names_creatives p, .names_events p, .names_web_app p, .names_mun p, .names_finance p, .names_convener p{
     font-size: var(--text_detail);
+}
+
+.finance_img{
+    margin-bottom: -0.3vw;
+}
+
+.convener_img{
+    margin-bottom: 1.4vw;
 }
 
 @media screen and (max-width: 1025px){
@@ -229,4 +254,289 @@ main{
     .names_prb, .names_crm, .names_creatives, .names_events, .names_web_app, .names_mun, .names_finance, .names_convener{
         margin: 20px auto 0;
     }
+    .finance_img{
+        margin-bottom: -0.5vw;
+    }
+    .convener_img{
+        margin-bottom: 1vw;
+    }
 }
+
+@media screen and (max-width: 431px){
+    .finance_img{
+        margin-bottom: -1.3vw;
+    }
+    .convener_img{
+        margin-bottom: 0.5vw;
+    }
+}
+
+@-webkit-keyframes left_window_change {
+    0% {
+        background-image: url('../resources/left_window1.png');
+    }
+    12.5% {
+        background-image: url('../resources/left_window2.png');
+    }
+    25% {
+        background-image: url('../resources/left_window3.png');
+    }
+    37.5% {
+        background-image: url('../resources/left_window4.png');
+    }
+    50% {
+        background-image: url('../resources/left_window5.png');
+    }
+    62.5% {
+        background-image: url('../resources/left_window6.png');
+    }
+    75% {
+        background-image: url('../resources/left_window7.png');
+    }
+    87.5% {
+        background-image: url('../resources/left_window8.png');
+    }
+    100% {
+        background-image: url('../resources/left_window1.png');
+    }
+  }
+  
+  @-moz-keyframes left_window_change {
+    0% {
+        background-image: url('../resources/left_window1.png');
+    }
+    12.5% {
+        background-image: url('../resources/left_window2.png');
+    }
+    25% {
+        background-image: url('../resources/left_window3.png');
+    }
+    37.5% {
+        background-image: url('../resources/left_window4.png');
+    }
+    50% {
+        background-image: url('../resources/left_window5.png');
+    }
+    62.5% {
+        background-image: url('../resources/left_window6.png');
+    }
+    75% {
+        background-image: url('../resources/left_window7.png');
+    }
+    87.5% {
+        background-image: url('../resources/left_window8.png');
+    }
+    100% {
+        background-image: url('../resources/left_window1.png');
+    }
+  }
+  
+  @keyframes left_window_change {
+    0% {
+        background-image: url('../resources/left_window1.png');
+    }
+    12.5% {
+        background-image: url('../resources/left_window2.png');
+    }
+    25% {
+        background-image: url('../resources/left_window3.png');
+    }
+    37.5% {
+        background-image: url('../resources/left_window4.png');
+    }
+    50% {
+        background-image: url('../resources/left_window5.png');
+    }
+    62.5% {
+        background-image: url('../resources/left_window6.png');
+    }
+    75% {
+        background-image: url('../resources/left_window7.png');
+    }
+    87.5% {
+        background-image: url('../resources/left_window8.png');
+    }
+    100% {
+        background-image: url('../resources/left_window1.png');
+    }
+  } 
+
+  @-webkit-keyframes head1_change {
+    0% {
+        color: var(--color_mun)
+    }
+    12.5% {
+        color: var(--color_finance)
+    }
+    25% {
+        color: var(--color_crm)
+    }
+    37.5% {
+        color: var(--color_events)
+    }
+    50% {
+        color: var(--color_web_app)
+    }
+    62.5% {
+        color: var(--color_prb)
+    }
+    75% {
+        color: var(--color_mun)
+    }
+    87.5% {
+        color: var(--color_creatives)
+    }
+    100% {
+        color: var(--color_mun)
+    }
+  }
+  
+  @-moz-keyframes head1_change {
+    0% {
+        color: var(--color_mun)
+    }
+    12.5% {
+        color: var(--color_finance)
+    }
+    25% {
+        color: var(--color_crm)
+    }
+    37.5% {
+        color: var(--color_events)
+    }
+    50% {
+        color: var(--color_web_app)
+    }
+    62.5% {
+        color: var(--color_prb)
+    }
+    75% {
+        color: var(--color_mun)
+    }
+    87.5% {
+        color: var(--color_creatives)
+    }
+    100% {
+        color: var(--color_mun)
+    }
+  }
+  
+  @keyframes head1_change {
+    0% {
+        color: var(--color_mun)
+    }
+    12.5% {
+        color: var(--color_finance)
+    }
+    25% {
+        color: var(--color_crm)
+    }
+    37.5% {
+        color: var(--color_events)
+    }
+    50% {
+        color: var(--color_web_app)
+    }
+    62.5% {
+        color: var(--color_prb)
+    }
+    75% {
+        color: var(--color_mun)
+    }
+    87.5% {
+        color: var(--color_creatives)
+    }
+    100% {
+        color: var(--color_mun)
+    }
+  }
+
+  @-webkit-keyframes right_window_change {
+    0% {
+        background-image: url('../resources/right_window1.png');
+    }
+    12.5% {
+        background-image: url('../resources/right_window2.png');
+    }
+    25% {
+        background-image: url('../resources/right_window3.png');
+    }
+    37.5% {
+        background-image: url('../resources/right_window4.png');
+    }
+    50% {
+        background-image: url('../resources/right_window5.png');
+    }
+    62.5% {
+        background-image: url('../resources/right_window6.png');
+    }
+    75% {
+        background-image: url('../resources/right_window7.png');
+    }
+    87.5% {
+        background-image: url('../resources/right_window8.png');
+    }
+    100% {
+        background-image: url('../resources/right_window1.png');
+    }
+  }
+  
+  @-moz-keyframes right_window_change {
+    0% {
+        background-image: url('../resources/right_window1.png');
+    }
+    12.5% {
+        background-image: url('../resources/right_window2.png');
+    }
+    25% {
+        background-image: url('../resources/right_window3.png');
+    }
+    37.5% {
+        background-image: url('../resources/right_window4.png');
+    }
+    50% {
+        background-image: url('../resources/right_window5.png');
+    }
+    62.5% {
+        background-image: url('../resources/right_window6.png');
+    }
+    75% {
+        background-image: url('../resources/right_window7.png');
+    }
+    87.5% {
+        background-image: url('../resources/right_window8.png');
+    }
+    100% {
+        background-image: url('../resources/right_window1.png');
+    }
+  }
+  
+  @keyframes right_window_change {
+    0% {
+        background-image: url('../resources/right_window1.png');
+    }
+    12.5% {
+        background-image: url('../resources/right_window2.png');
+    }
+    25% {
+        background-image: url('../resources/right_window3.png');
+    }
+    37.5% {
+        background-image: url('../resources/right_window4.png');
+    }
+    50% {
+        background-image: url('../resources/right_window5.png');
+    }
+    62.5% {
+        background-image: url('../resources/right_window6.png');
+    }
+    75% {
+        background-image: url('../resources/right_window7.png');
+    }
+    87.5% {
+        background-image: url('../resources/right_window8.png');
+    }
+    100% {
+        background-image: url('../resources/right_window1.png');
+    }
+  }

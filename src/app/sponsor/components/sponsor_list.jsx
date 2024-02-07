@@ -60,16 +60,16 @@ function getCards(){
 }
 
 export default function SponsorList() {
-  let sponsor_card = getCards();
-return (
-  <>
-      {sponsor_card.map((sponsor)=>(
-      <div key={sponsor.id} className="col">
-          <img className="sponsorimg" src={sponsor.img}/>
-          <div className="name"><h2>{sponsor.name}</h2></div>
-          <div className="partner"><p>{sponsor.partner}</p></div>
-      </div>
-      ))}
-  </>
-)
+    let sponsor_card = getCards();
+  return (
+    <>
+        {sponsor_card.map((sponsor)=>(
+        <div key={sponsor.id} className="col">
+            <img className="sponsorimg" src={sponsor.img}/>
+            <div id="name"> <h2>{sponsor.name}</h2></div>
+            <div id="partner"> <p>{sponsor.partner}</p></div>
+        </div>
+        ))}
+    </>
+  )
 }

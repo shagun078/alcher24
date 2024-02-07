@@ -18,28 +18,28 @@ export default function Teams() {
     <main>
         <section className='teams_heading'>
             <div className="left_window">
-                <Image
+                {/* <Image
                     src={left_window}
                     alt='left_window'
                     style={{
                         width: '100%',
                         height: '100%',
                     }}
-                />
+                /> */}
             </div>
             <div className="teams_head1">
                 <h2>MEET THE TEAMS</h2>
                 <h5>"Act as if what you do makes a difference. It does"</h5>
             </div>
             <div className="right_window">
-                <Image
+                {/* <Image
                     src={right_window}
                     alt='right_window'
                     style={{
                         width: '100%',
                         height: '100%'
                     }}
-                />
+                /> */}
             </div>
         </section>
 
@@ -62,17 +62,17 @@ export default function Teams() {
                     <div>
                         <h6>Firstname Lastname</h6>
                         <p>+91 1234567890</p>
-                        <p>firstlast@gmail.com</p>
+                        <p>anurag@alcheringa.in</p>
                     </div>
                     <div>
                         <h6>Firstname Lastname</h6>
                         <p>+91 1234567890</p>
-                        <p>firstlast@gmail.com</p>
+                        <p>ankit.k@alcheringa.in</p>
                     </div>
                     <div>
                         <h6>Firstname Lastname</h6>
                         <p>+91 1234567890</p>
-                        <p>firstlast@gmail.com</p>
+                        <p>lakshya@alcheringa.in</p>
                     </div>
                 </div>
             </div>
@@ -94,22 +94,22 @@ export default function Teams() {
                     <div>
                         <h6>Firstname Lastname</h6>
                         <p>+91 1234567890</p>
-                        <p>firstlast@gmail.com</p>
+                        <p>rachit@alcheringa.in</p>
                     </div>
                     <div>
                         <h6>Firstname Lastname</h6>
                         <p>+91 1234567890</p>
-                        <p>firstlast@gmail.com</p>
+                        <p>harshit@alcheringa.in</p>
                     </div>
                     <div>
                         <h6>Firstname Lastname</h6>
                         <p>+91 1234567890</p>
-                        <p>firstlast@gmail.com</p>
+                        <p>chakradhar@alcheringa.in</p>
                     </div>
                     <div>
                         <h6>Firstname Lastname</h6>
                         <p>+91 1234567890</p>
-                        <p>firstlast@gmail.com</p>
+                        <p>kanika@alcheringa.in</p>
                     </div>
                 </div>
             </div>
@@ -133,17 +133,17 @@ export default function Teams() {
                     <div>
                         <h6>Firstname Lastname</h6>
                         <p>+91 1234567890</p>
-                        <p>firstlast@gmail.com</p>
+                        <p>creatives@alcheringa.in</p>
                     </div>
                     <div>
                         <h6>Firstname Lastname</h6>
                         <p>+91 1234567890</p>
-                        <p>firstlast@gmail.com</p>
+                        <p>creatives@alcheringa.in</p>
                     </div>
                     <div>
                         <h6>Firstname Lastname</h6>
                         <p>+91 1234567890</p>
-                        <p>firstlast@gmail.com</p>
+                        <p>creatives@alcheringa.in</p>
                     </div>
                 </div>
             </div>
@@ -165,17 +165,17 @@ export default function Teams() {
                     <div>
                         <h6>Firstname Lastname</h6>
                         <p>+91 1234567890</p>
-                        <p>firstlast@gmail.com</p>
+                        <p>abhinav@alcheringa.in</p>
                     </div>
                     <div>
                         <h6>Firstname Lastname</h6>
                         <p>+91 1234567890</p>
-                        <p>firstlast@gmail.com</p>
+                        <p>priyanshu.s@alcheringa.in</p>
                     </div>
                     <div>
                         <h6>Firstname Lastname</h6>
                         <p>+91 1234567890</p>
-                        <p>firstlast@gmail.com</p>
+                        <p>rahul@alcheringa.in</p>
                     </div>
                 </div>
             </div>
@@ -197,12 +197,12 @@ export default function Teams() {
                     <div>
                         <h6>Firstname Lastname</h6>
                         <p>+91 1234567890</p>
-                        <p>firstlast@gmail.com</p>
+                        <p>webops@alcheringa.in</p>
                     </div>
                     <div>
                         <h6>Firstname Lastname</h6>
                         <p>+91 1234567890</p>
-                        <p>firstlast@gmail.com</p>
+                        <p>webops@alcheringa.in</p>
                     </div>
                 </div>
             </div>
@@ -224,12 +224,12 @@ export default function Teams() {
                     <div>
                         <h6>Firstname Lastname</h6>
                         <p>+91 1234567890</p>
-                        <p>firstlast@gmail.com</p>
+                        <p>iitgmun@alcheringa.in</p>
                     </div>
                     <div>
                         <h6>Firstname Lastname</h6>
                         <p>+91 1234567890</p>
-                        <p>firstlast@gmail.com</p>
+                        <p>iitgmun@alcheringa.in</p>
                     </div>
                 </div>
             </div>
@@ -241,9 +241,11 @@ export default function Teams() {
                     <Image
                         src={model_finance}
                         alt='Finance and Account'
+                        className='finance_img'
                         style={{
-                            width: '20vw',
-                            height: 'auto'
+                            width: '25vw',
+                            height: 'auto',
+                            // marginBottom: '-0.5vw'
                         }}
                     />
                 </div>
@@ -251,7 +253,7 @@ export default function Teams() {
                     <div>
                         <h6>Firstname Lastname</h6>
                         <p>+91 1234567890</p>
-                        <p>firstlast@gmail.com</p>
+                        <p>sabir@alcheringa.in</p>
                     </div>
                 </div>
             </div>
@@ -263,10 +265,11 @@ export default function Teams() {
                     <Image
                         src={model_convener}
                         alt='Convener'
+                        className='convener_img'
                         style={{
-                            width: '20vw',
+                            width: '25vw',
                             height: 'auto',
-                            marginBottom: '15px'
+                            // marginBottom: '0.5vw'
                         }}
                     />
                 </div>
@@ -274,7 +277,7 @@ export default function Teams() {
                     <div>
                         <h6>Firstname Lastname</h6>
                         <p>+91 1234567890</p>
-                        <p>firstlast@gmail.com</p>
+                        <p>madhav@alcheringa.in</p>
                     </div>
                 </div>
             </div>

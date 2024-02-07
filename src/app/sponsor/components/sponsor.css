@@ -1,25 +1,86 @@
-
-.App {
+main{
+  background-image: url('../resources/TexturePattern.jpg');
+  background-blend-mode:color-burn;
   text-align: center;
   color: white;
-  padding-top: 6vw;
   font-size: 1.2vw;
-  background-color: black;
+  background-color: #141414;
+}
+
+.top_sun{
+  width: 19vw;
+  height: 20vw;
+  background-image: url('../resources/sun.png');
+  position: absolute;
+  top: 0;
+  background-size: cover;
+  z-index: 10;
+}
+
+.no_sponsor{
+  /* display: none; */
+}
+
+.after_sponsor{
+  display: none;
+}
+
+.coming_soon{
+  z-index: 1;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.coming_soon::before{
+  content: "";
+  background-image: url("../resources/bg1.jpg");
+  opacity: 0.7;
+  background-size:cover;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.coming_soon h2{
+  font-size: 6vw;
+  position: relative;
+  font-weight: 700;
+}
+
+.coming_soon h5{
+  font-size: 2.5vw;
+  font-weight: 500;
+  position: relative;
+}
+
+.App {
+  z-index: 1;
+  position: relative;
   background-image: url("../resources/bg1.jpg");
   background-size:cover;
   background-repeat: repeat;
-  /* height: 50%; */
-  
-  }
+  padding-top: 15vw;
+}
+
+.App h1{
+  font-size: 5vh;
+}
 
 .title{
   font-size: 1vw;
   padding-top: 1.5vw;
   color: white;
 }
-
+.title h1{
+  font-size: 4vh;
+}
 .titlesponsorimg{
-  display: flex;
+  /* display: flex; */
   padding-left: 40vw;
   padding-top: 3.8vw;
   align-items: center;
@@ -32,6 +93,7 @@
   position: relative;
   z-index: 10;
   border-radius: 1.3vw;
+  margin-bottom: 4.3vh;
 }
 
 .cardt{
@@ -68,6 +130,9 @@
   padding-top: 2vw;
   color: white;
 }
+.cotitle h1{
+  font-size: 3.6vh;
+}
 .cotitlesponsorimg{
  
   display: flex;
@@ -84,7 +149,7 @@
   position: relative;
   z-index: 10;
   border-radius: 1.3vw;
-
+  margin-bottom: 4vh;
 }
 
 .cardct{
@@ -121,7 +186,9 @@
   padding-top: 1.7vw;
   color: white;
 }
-
+.powered h1{
+  font-size: 3vh;
+}
 .poweredimg{
   height: 16vw ;
   width: 16vw;
@@ -169,6 +236,7 @@
   display: flex;
   height: 25vh;
   justify-content: center;
+  object-fit: cover;
 }
 
 .sponsor_name{
@@ -192,13 +260,14 @@
 }
 
 .heading2{
-  font-size: 3vw;
+  font-size: 2.3vw;
   font-weight: 600;
   padding-bottom: 5vw;
 }
 
 .sponsors{
   display: grid;
+  /* flex-wrap: nowrap; */
   grid-template-columns: repeat(4, 1fr);
   width: 80vw;
   row-gap: 10vh;
@@ -212,13 +281,14 @@
 
 }
 
-.name h2{
-  font-size: 1.2vw;
+#name {
+  font-size: 1vw;
+  padding-bottom: 1vh;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.partner p{
-  font-size: 1vw;
+#partner {
+  font-size: 1.2vw;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
@@ -250,35 +320,45 @@
   .partner{
     font-size: 3vw;
   }
+  .title{
+    height: 40%;
+  }
+  h1{
+    font-size: 2vh;
+  }
   }
   
-   @media (max-width: 430px){/*,(min-height: 932px) { */
-    #sponsorimg{
-      width: 18vw;
-      height: 23vh;
-      padding-bottom: 2vw;
-    }
-    .name{
-      font-size: 3vw;
+   @media (max-width: 430px){
+   
+    #name{
+      font-size: 1vh;
       padding-top: 3vw;
+    }
     
+    .sponsors{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-row-gap: 6vh;
     }
-   
-    .sponsor_card{
-      height: 40vw;
-      padding-bottom: 2vw;
+    .App h1{
+      font-size: 2vh;
     }
-    .partner{
-      font-size: 1vw;
-      padding-top: 2vh;
+    
+    #design{
+      margin-top: 1.2vh;
+      height: 11.5vw;
     }
-    h1{
-     font-size:  3.7vw;
+    #designct{
+      margin-bottom: 3vh;
+      padding-right: 2.5vw;
     }
-    .titlesponsorimg{
-      height: 30vw;
-      width: 25vw;
-      right: 25vw;
+    #partner{
+      font-size: 1.3vh;
+      padding-top: 1vh;
     }
-   
+    .heading2{
+      font-size: 1.6vh;
+      padding: 10px 0;
+    }
+
   } 

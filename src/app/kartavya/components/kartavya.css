@@ -22,6 +22,7 @@ main{
     overflow: hidden;
     background-image: url('../resources/TexturePattern.jpg');
     background-blend-mode:color-burn;
+    user-select: none;
 }
 
 .texture_wheel{
@@ -68,8 +69,8 @@ main{
     margin: 20vh auto 8vh;
     border-radius: 30px;
     background-color: #39a27a;
-    ;
     transform: rotate(2deg);
+    opacity: 0.8;
 }
 
 .large_card{
@@ -197,11 +198,16 @@ main{
     animation: fadeIn 2s;
 
 }
+
+.large_card_mobile{
+    display: none;
+}
   
   .col{
     cursor: pointer;
     width: 100%;
     aspect-ratio: 772/970;
+    opacity: 0.8;
   }
   
   .container{
@@ -238,6 +244,7 @@ main{
     /* background-image: url("../resources/small_card.png"); */
     background-color: #5965C7;
     background-size:contain;
+    /* opacity: 0.8; */
   }
 
   .front:after{
@@ -331,6 +338,17 @@ button{
     width: 90%;
     display: flex;
     justify-content: space-between;
+}
+
+.star2{
+    position: relative;
+    top: calc(3vh);
+}
+
+@media screen and (max-width: 1281px){
+    .back .inner p{
+        font-size: calc(2vh);
+    }
 }
 
 @media screen and (max-width: 1025px){
@@ -457,6 +475,7 @@ button{
         width: 90vw;
         margin: 10vh auto 4vh;
         aspect-ratio: 772/970;
+        display: none;
     }
 
     .stars2{
@@ -471,6 +490,12 @@ button{
     .large_card h4{
         padding-top: calc(772/970*120vw);
         font-size: var(--text3);    
+    }
+
+    .large_card_mobile{
+        display: block;
+        width: 90vw;
+        margin: 0 auto 3vh;
     }
 
     .cards{
@@ -530,6 +555,12 @@ button{
 
     .back .inner p{
         font-size: var(--text6);
+    }
+}
+
+@media screen and (max-width: 750px){
+    .star2{
+        top: 1vh;
     }
 }
 
