@@ -8,6 +8,7 @@ import TWEEN from "@tweenjs/tween.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Museum } from "../components/Museum_FinalExport1";
+import Loadingpage from "../components/loading/loading";
 import "./FadeInComponent.css";
 
 const marks = [

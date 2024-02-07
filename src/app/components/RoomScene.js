@@ -7,7 +7,7 @@ import {
   useVideoTexture,
   useTexture,
   Text,
-  Text3D,
+ 
 } from "@react-three/drei";
 // import video from "public/assets/video.mp4";
 // import alcher from "public/assets/alcher.png";
@@ -42,32 +42,26 @@ export default function RoomScene(props) {
   const textureMaterial = new THREE.MeshStandardMaterial({
     map: texture,
   });
-  const { nodes, materials } = useGLTF("RoomScene_Export_New.gltf");
-  const calculateTimeRemaining = () => {
+  const { nodes } = useGLTF("RoomScene_Export_New.gltf");
+
+  const calculateDaysRemaining = () => {
     const currentDate = new Date();
-    const targetDate = new Date("2024-01-23"); // Replace with your target date
+    const targetDate = new Date('2024-03-7'); // Replace with your target date
     const timeDifference = targetDate.getTime() - currentDate.getTime();
 
-    // Calculate hours, minutes, and seconds remaining
-    const hoursRemaining = Math.floor(timeDifference / (1000 * 60 * 60));
-    const minutesRemaining = Math.floor(
-      (timeDifference % (1000 * 60 * 60)) / (1000 * 60)
-    );
-    const secondsRemaining = Math.floor((timeDifference % (1000 * 60)) / 1000);
+    // Calculate days remaining
+    const daysRemaining = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
 
-    return {
-      hours: hoursRemaining,
-      minutes: minutesRemaining,
-      seconds: secondsRemaining,
-    };
+    return daysRemaining;
   };
 
   const clockModelRef = useRef();
-  const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining());
+  const [timeRemaining, setTimeRemaining] = useState(calculateDaysRemaining());
+
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setTimeRemaining(calculateTimeRemaining());
+      setTimeRemaining(calculateDaysRemaining());
     }, 1000); // Update every second
 
     return () => clearInterval(interval);
@@ -331,13 +325,17 @@ export default function RoomScene(props) {
         position={[-4.755, 1.008, -3.208]}
         rotation={[0, -0.903, -1.295]}
       />
-      <mesh
-        name="ClockScreen"
-        geometry={nodes.ClockScreen.geometry}
-        material={textureMaterial}
-        position={[-5.402, 0.916, -1.313]}
-        rotation={[0, -0.279, 0]}
-      />
+      <group>
+        <mesh
+          name="ClockScreen"
+          ref={clockModelRef}
+          geometry={nodes.ClockScreen.geometry}
+          material={textureMaterial}
+          position={[-5.402, 0.916, -1.313]}
+          rotation={[0, -0.279, 0]}
+        />
+      </group>
+
     </group>
   );
 }

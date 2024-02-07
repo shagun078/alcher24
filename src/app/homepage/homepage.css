@@ -169,6 +169,7 @@ iframe{
 .centerDiv{
   width:60%;
   position: relative;
+  height:fit-content
 }
 
 .Animations_animes__8kF5l{
@@ -185,7 +186,7 @@ iframe{
 
 .center-image{
   display: block;
-  width:80%;
+  width:90%;
   margin:0px auto;
 }
 

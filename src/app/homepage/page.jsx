@@ -1,7 +1,7 @@
 "use client";
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, Suspense } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { OrbitControls, Html } from "@react-three/drei";
+import { OrbitControls, Html, Text } from "@react-three/drei";
 import RoomScene from "../components/RoomScene";
 import { motion } from "framer-motion";
 import MySlider from "./components/slider";
@@ -9,6 +9,7 @@ import TWEEN from "@tweenjs/tween.js";
 import { FaAngleDoubleDown } from "react-icons/fa";
 import "./homepage.css";
 import Animations from "./components/Animations";
+import Loadingpage from "../components/loading/loading";
 const marks = [
   {
     key: "A",
@@ -364,6 +365,8 @@ function Annotations({ controls }) {
   );
 }
 
+
+
 function Tween() {
   useFrame(() => {
     TWEEN.update();
@@ -387,42 +390,46 @@ export default function App() {
       <FaAngleDoubleDown className="content-btn" onClick={scrollToContent} />
     </React.Fragment>
   )
-  
- 
+
+
   return (
     <React.Fragment>
       <div className='threeDWrapper'>
-        <Canvas
-          camera={{
-            fov: 40,
-            position: [-2, 1.5, -2],
-            zoom: 0.35,
-          }}
-          shadows
-        >
-          <OrbitControls
-            ref={ref}
-            target={[-3.5, 1.4, -1.8]}
-            enableZoom={false}
-            enableDamping={true}
-            minPolarAngle={Math.PI/3}
-            maxPolarAngle={Math.PI/2}
-            dampingFactor={0.02}
-          />
-          <ambientLight intensity={1.5} />
-          <Annotations controls={ref} />
-          <RoomScene></RoomScene>
-          <axesHelper args={[20, 20, 20]} /> 
-          <Tween />
-        </Canvas>
-        <div id="ui">{buttons}</div>
+        <Suspense fallback={<Loadingpage />}>
+          <Canvas
+            camera={{
+              fov: 40,
+              position: [-2, 1.5, -2],
+              zoom: 0.35,
+            }}
+            shadows
+          >
+            <OrbitControls
+              ref={ref}
+              target={[-3.5, 1.4, -1.8]}
+              enableZoom={false}
+              enableDamping={true}
+              minPolarAngle={Math.PI / 3}
+              maxPolarAngle={Math.PI / 2}
+              dampingFactor={0.02}
+            />
+            <ambientLight intensity={1.5} />
+            <Annotations controls={ref} />
+            <RoomScene></RoomScene>
+
+            <Tween />
+          </Canvas>
+          <div id="ui">{buttons}</div>
+        </Suspense>
+
+       
       </div>
       <div className='mainContainer ' ref={contentRef}>
         {/*Video-container section starts*/}
         <div className='videoWrapper'>
           <div className='videoBox'>
             <iframe src="https://www.youtube.com/embed/CWhFx8v1mg8?autoplay=1&controls=0"
-              frameborder="0" allowfullscreen
+              frameBorder="0" allowFullScreen
             ></iframe>
           </div>
           {/*Video-container section ends*/}
@@ -435,7 +442,7 @@ export default function App() {
           </div>
           <div className="centerDiv">
             <img className="center-image" src="centerFlower.svg"></img>
-            <Animations className='animation-container'/>
+            <Animations className='animation-container' />
           </div>
           <div className='right'>
             <img className="image" src="right.svg"></img>
@@ -450,8 +457,8 @@ export default function App() {
           <img src='lowerHand.svg' id='lowerHand'></img>
           <div className='textSection'>
             <div id='text'>
-              <h1>GET THE <br/> ALCHERINGA APP</h1>
-              <p>Download our app and get access to app exclusive features like<br/> Alcheringa passes , merches , schedule,Campus maps , <br/>  real-time updates and much more</p>
+              <h1>GET THE <br /> ALCHERINGA APP</h1>
+              <p>Download our app and get access to app exclusive features like<br /> Alcheringa passes , merches , schedule,Campus maps , <br />  real-time updates and much more</p>
               <div id='appDownloadBtn'><img src='googlePlay.svg' className="googlePlayImage"></img></div>
             </div>
           </div>
@@ -460,7 +467,7 @@ export default function App() {
               <div className='img-section img-dark'></div>
             </div>
             <div className=" img-cont lightModeImage">
-             <div className=" img-section img-light"></div>
+              <div className=" img-section img-light"></div>
             </div>
           </div>
         </div>
@@ -472,7 +479,7 @@ export default function App() {
           <h1 id='alcherPass'>Alcheringa'24 Passes</h1>
           <button id='registerBtn'>REGISTER</button>
         </div>
-        
+
 
         <div className={`cardHoverSection ${isHovered ? 'hovered' : ''}`} onMouseEnter={hoverEffect} onMouseLeave={hoverEffect}>
           <img src='BoardOrange.svg' id='cardHoverLeft'></img>
