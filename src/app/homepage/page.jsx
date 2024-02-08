@@ -289,7 +289,7 @@ function Annotations({ controls }) {
             y: targetY,
             z: targetZ,
           },
-          3000
+          2500
         )
         .easing(TWEEN.Easing.Cubic.Out)
         .start();
@@ -302,7 +302,7 @@ function Annotations({ controls }) {
             y: camPosY,
             z: camPosZ,
           },
-          3000
+          2500
         )
         .easing(TWEEN.Easing.Cubic.Out)
         .start();
@@ -351,7 +351,7 @@ function Annotations({ controls }) {
                           y: targetY,
                           z: targetZ,
                         },
-                        2000
+                        2500
                       )
                       .easing(TWEEN.Easing.Cubic.Out)
                       .start();
@@ -364,14 +364,14 @@ function Annotations({ controls }) {
                           y: camPosY,
                           z: camPosZ,
                         },
-                        2000
+                        2500
                       )
                       .easing(TWEEN.Easing.Cubic.Out)
                       .start();
                     setSelected(backtrack ? -1 : a.key);
                     setTimeout(() => {
                       controls.current.enabled = backtrack;
-                    }, 2100);
+                    }, 2600);
                     // console.log(controls.current);
                   }}
                 >
