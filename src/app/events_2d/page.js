@@ -14,6 +14,8 @@ import "./events_2d.css";
 //components
 import { Cardleft, Cardright } from "./components/card";
 import { useState } from "react";
+import Navbar from "../components/navbar/page";
+import Footer from "../components/footer/page";
 
 const Home = () => {
   const [open, setOpen] = useState(false);
@@ -21,6 +23,7 @@ const Home = () => {
 
   return (
     <>
+    <Navbar/>
       <main>
         <section className="hero-section">
           <div className="hand_upper">
@@ -152,6 +155,7 @@ const Home = () => {
         animate={{ opacity: open ? 1 : 0 }}
         transition={{ duration: 0.5 }}
       ></motion.div>
+    <Footer/>
     </>
   );
 };

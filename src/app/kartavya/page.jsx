@@ -6,6 +6,8 @@ import CardList from './components/cardList'
 import ListItem from './components/list'
 
 import styles from './components/kartavya.css'
+import Footer from '../components/footer/page'
+import Navbar from '../components/navbar/page'
 
 
 function getCards(){
@@ -32,6 +34,8 @@ export default function Home() {
   };
 
   return (
+    <>
+    <Navbar/>
     <main>
       <section className='texture_wheel'>
 
@@ -145,5 +149,7 @@ export default function Home() {
 
 
     </main>
+    <Footer/>
+    </>
   )
 }

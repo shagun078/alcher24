@@ -3,6 +3,8 @@ import design from './resources/design.png'
 import SponsorList from "./components/sponsor_list"
 import gucci from './resources/gucci.png'
 import Image from "next/image";
+import Navbar from "../components/navbar/page";
+import Footer from "../components/footer/page";
 
 
 
@@ -13,6 +15,7 @@ function App () {
   ];
   return (
     <>
+    <Navbar/>
     <main>
       
       <div className="top_sun">
@@ -97,6 +100,7 @@ function App () {
       </section>
       
     </main>
+    <Footer/>
     </>
   );
   

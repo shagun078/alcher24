@@ -12,9 +12,13 @@ import model_finance from './resources/team_images/model_finance.png'
 import model_convener from './resources/team_images/model_convener.png'
 
 import './components/teams.css'
+import Footer from '../components/footer/page'
+import Navbar from '../components/navbar/page'
 
 export default function Teams() {
   return (
+    <>
+    <Navbar/>
     <main>
         <section className='teams_heading'>
             <div className="left_window">
@@ -283,5 +287,7 @@ export default function Teams() {
             </div>
         </section>
     </main>
+    <Footer/>
+    </>
   )
 }
