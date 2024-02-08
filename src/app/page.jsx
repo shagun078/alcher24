@@ -18,7 +18,9 @@ export default function MainPage() {
       <br />
       <Link href="/teams">Teams Page</Link>
       <br/>
-      <Link href="/home">Home2D</Link>
+      <Link href="/events_2d">Event 2D</Link>
+      <br/>
+      <Link href='/loading'>Loading_page</Link> 
     </>
   );
 }

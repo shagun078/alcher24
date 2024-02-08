@@ -1,0 +1,26 @@
+body {
+    background: black;
+  }
+  
+  .logo_img{
+    width:fit-content;
+    height:20vh;
+    margin-right: 2vw;
+  }
+
+  .logo_img img{
+    display: block;
+    width: 100%;
+    height:100%;
+  }
+  .Loading_page {
+    overflow: hidden;
+    width:100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+  
