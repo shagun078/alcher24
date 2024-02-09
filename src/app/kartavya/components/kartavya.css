@@ -43,7 +43,7 @@ main{
 }
 
 .hand_lower{
-    width: 30vw;
+    width: 32vw;
     float: right;
     margin-top: -12vh;
     -webkit-animation: cspin 8s ease-in-out infinite;
@@ -53,7 +53,7 @@ main{
 }
 
 .head{
-    padding-top: 9vh;
+    padding-top: 12vh;
     font-size: var(--text1);
     font-weight: 900;
 }
@@ -61,6 +61,7 @@ main{
 .detail1{
     font-size: var(--text2);
     font-weight: 300;
+    padding-top: 2vh;
 }
 
 .large_card_shadow{
@@ -196,7 +197,7 @@ main{
     content: "Udaan, launched as 'Bachpan' in 2011, aims to deliver hope to underprivileged children and create an impact in their lives through the conduction of various educational workshops and recreational activities.";
     z-index: 10;
     animation: fadeIn 2s;
-
+    font-weight: 500;
 }
 
 .large_card_mobile{

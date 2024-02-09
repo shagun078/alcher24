@@ -3,9 +3,9 @@ import hand_upper from './resources/hand_upper.png'
 import hand_lower from './resources/hand_lower.png'
 import stars from './resources/stars.png'
 import CardList from './components/cardList'
-import ListItem from './components/list'
 
-import styles from './components/kartavya.css'
+// import styles from './components/kartavya.css'
+import './components/kartavya.css';
 
 
 function getCards(){
@@ -14,7 +14,7 @@ function getCards(){
       "id": "lg",
       "heading": "UDAAN",
       "body": "Udaan, launched as 'Bachpan' in 2011, aims to deliver hope to underprivileged children and create an impact in their lives through the conduction of various educational workshops and recreational activities.",
-      "img": "/try_large.jpg"
+      "img": "./try_large.jpg"
     }
   ]
 
@@ -41,6 +41,7 @@ export default function Home() {
             alt="upper hand"
             style={{
               width: '100%',
+              aspectRatio: '870/941',
               height: 'auto'
             }}
             quality={100}
@@ -78,6 +79,7 @@ export default function Home() {
                 style={{
                   width: '5vw',
                   height: 'auto',
+                  float: 'left'
                 }}
                 quality={100}
                 placeholder='blur'
@@ -123,27 +125,24 @@ export default function Home() {
             alt="lower hand"
             style={{
               width: '100%',
-              height: 'auto'
+              aspectRatio: '1142/1044',
+              height: 'auto',
             }}
             quality={100}
             placeholder='blur'
           />
       </div>
-
-
-
-      <section className='achievements'>
-        <div className="head2">
-          <h3>Alcher Community</h3>
-          <h2>Our Achievements</h2>
-        </div>
-        <div><hr></hr></div>
-        <ListItem></ListItem>        
-
-
-      </section>
-
-
     </main>
   )
 }
+
+{/* <section className='achievements'>
+<div className="head2">
+  <h3>Alcher Community</h3>
+  <h2>Our Achievements</h2>
+</div>
+<div><hr></hr></div>
+<ListItem></ListItem>        
+
+
+</section> */}

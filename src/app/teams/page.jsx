@@ -1,7 +1,5 @@
 import Image from 'next/image'
 import React from 'react'
-import left_window from './resources/left_window1.png'
-import right_window from './resources/right_window1.png'
 import model_prb from './resources/team_images/model_prb.png'
 import model_crm from './resources/team_images/model_crm.png'
 import model_creatives from './resources/team_images/model_creatives.png'
