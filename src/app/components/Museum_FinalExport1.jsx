@@ -1,8 +1,23 @@
 "use client"
 
 import React, { useRef } from 'react'
-import { useGLTF , useTexture } from '@react-three/drei';
+import { useGLTF , useTexture , useVideoTexture} from '@react-three/drei';
 import * as THREE from 'three';
+
+function VideoScene() {
+  return (
+    <mesh scale={[0.5,0.3,0.5]} position={[-1.735, 0.081, -2.886]}>
+    <planeGeometry />
+        <VideoMaterial url='testing.mp4' />
+    </mesh>
+  )
+}
+
+function VideoMaterial({ url }) {
+  const texture = useVideoTexture(url)
+  return <meshBasicMaterial map={texture} toneMapped={false} />
+}
+
 
 export function Museum(props) {
   const texture=useTexture('models/BakedTexture.png');
@@ -14,6 +29,7 @@ export function Museum(props) {
   const { nodes, materials } = useGLTF('models/Museum_FinalExport1.gltf')
   return (
     <group {...props} dispose={null}>
+    
       <mesh geometry={nodes.Corridoor.geometry} material={textureMaterial} position={[0, 2.061, 69.472]} />
       <mesh geometry={nodes.Celings.geometry} material={textureMaterial} position={[0, 2.081, 34.518]} />
       <mesh geometry={nodes.Entrance.geometry} material={textureMaterial} position={[0, 2.061, 0]} />
@@ -120,7 +136,7 @@ export function Museum(props) {
         <mesh geometry={nodes.dab3f60e50f26f0116e837d544be3524024.geometry} material={textureMaterial} />
         <mesh geometry={nodes.dab3f60e50f26f0116e837d544be3524024_1.geometry} material={textureMaterial} />
       </group>
-      <mesh geometry={nodes.Plane036.geometry} material={materials.Canvas} position={[-1.735, 0.081, -2.886]} rotation={[-1.442, -0.042, -0.313]} />
+      <mesh geometry={nodes.Plane036.geometry} material={materials.Canvas} position={[-1.735, 0.081, -2.886]} rotation={[-1.442, -0.042, -0.313]}  />
       <mesh geometry={nodes.Plane037.geometry} material={materials.Canvas} position={[1.921, 0.081, -3.037]} rotation={[-1.453, 0.066, 0.506]} />
       <mesh geometry={nodes.Plane038.geometry} material={materials.Canvas} position={[-1.735, 0.081, 15.553]} rotation={[-1.442, -0.042, -0.313]} />
       <mesh geometry={nodes.Plane039.geometry} material={materials.Canvas} position={[1.921, 0.081, 15.403]} rotation={[-1.453, 0.066, 0.506]} />

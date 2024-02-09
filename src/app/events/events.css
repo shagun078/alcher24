@@ -25,18 +25,43 @@ body {
 
 #ui {
   position: absolute;
-  top: 60px;
-  left: 10px;
-  width: 98%;
-  height:90vh;
+  width: 100%;
+  height:75vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn_box{
+  width:100%;
+  height:25%;
+  display: flex;
+  align-items:self-end;
+  justify-content: space-between;
+  transition: all 2s ease-in-out;
+}
+
+.event_box{
+  width:100%;
+  height:75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  transition: all 2s ease-in-out;
+}
+.event_box span{
+  font-size: 3rem;
+  color:#5C6ADF;
+  margin-bottom: 1rem ;
 }
 
 
 .backward-container{
   cursor: pointer;
-  position: absolute;
+  /* position: absolute;
   bottom:10vh;
-  left:5vw;
+  left:5vw; */
   display: flex;
   align-items: center;
  width:fit-content;
@@ -44,6 +69,7 @@ body {
  padding:0px 10px; 
  border-radius: 1.2rem;
  background-color: #FA5045;
+ margin-left: 2vw;
 }
 
 .backward-svg{
@@ -61,14 +87,15 @@ body {
   cursor: pointer;  
   display: flex;
   align-items: center;
-  position: absolute;
+  /* position: absolute;
   right:5vw;
-  bottom:10vh;
+  bottom:10vh; */
   width:fit-content;
   height:40px;
   padding:0 10px; 
   border-radius: 1.2rem;
   background-color: #FA5045;
+  margin-right: 2vw;
  }
  
  .forward-svg{
@@ -84,9 +111,9 @@ body {
 
  .back-to-home{
   cursor: pointer;
-  position: absolute;
+  /* position: absolute;
   bottom:5vh;
-  left:45vw;
+  left:45vw; */
   outline:none;
   border: none;
   width:fit-content;
@@ -97,5 +124,17 @@ body {
   color:white;
   font-size: 1.1rem;
  }
-
+ 
+ .show-event-btn{
+  cursor: pointer;
+  outline:none;
+  border: none;
+  width:fit-content;
+  height:40px;
+  padding:0px 14px; 
+  border-radius: 1.2rem;
+  background-color: #FA5045;
+  color:white;
+  font-size: 1.1rem;
+ }
  

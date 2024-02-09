@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+:root {
+    --font-size-24-1440: 1.67vw;
+    --color-b: #646DBB;
+    --color-w: #E8EDD9;
+    --color-db: #444A7F;
+}
+
+.body {
+    min-height: 89.11vw;
+    width: 100vw;
+    background-image: url('../resources/bg_c-min.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.body::before{
+    content: "";
+    position: absolute;
+    min-height: 89.11vw;
+    width: 100vw;
+    width: 100vw;
+    background: url('../resources/Texture\ Pattern\ \(to\ be\ used\ as\ Color\ Burn\).jpg'), url('../resources/top\ black\ overlay\ for\ infinite\ tiles-min.jpg');
+    background-repeat: repeat-y,repeat-y;
+    background-size: cover,cover;
+    background-position: center,center;
+    mix-blend-mode: color-burn;
+}
+
+.search_box {
+    height: 15.21vw;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_1 {
+    height: 3.40vw;
+    width: 86.11vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search {
+    height: 2.08vw;
+    width: 41.66vw;
+    background: none;
+    border: none;
+    border-bottom: 0.069vw solid var(--color-w);
+    position: relative;
+    color: var(--color-w);
+    font-size: var(--font-size-24-1440);
+    outline: none;
+}
+
+.search::placeholder {
+    color: var(--color-w);
+    font-size: var(--font-size-24-1440);
+    opacity: 0.7;
+}
+
+.fa-magnifying-glass {
+    color: var(--color-w);
+    font-size: 1.33vw;
+    position: relative !important;
+    right: 1.4vw;
+}
+
+.fa-magnifying-glass:hover {
+    cursor: pointer;
+}
+
+.fa-active {
+    transition: all 0.1s;
+    animation-duration: 0.1s;
+    animation-name: move-down;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+.modules {
+    height: 3.40vw;
+    width: 26.87vw;
+    background: var(--color-b);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 400;
+    font-size: var(--font-size-20-1440);
+    color: var(--color-w);
+    box-sizing: border-box;
+    font-family: 'Uncut sans regular';
+    border-radius: 0.55vw;
+}
+
+.modules:hover{
+    cursor: pointer;
+}
+
+.modules p {
+    padding: 1.11vw 1.11vw;
+}
+
+.fa-sort-down {
+    height: 2vw;
+    width: 4vw;
+    position: relative;
+    top: 0.95vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+.small_box {
+    position: relative;
+    bottom: 0.3vw;
+    height: 4vw;
+    width: 4vw;
+}
+
+.list_container{
+    position: absolute;
+    top: 0vw;
+    right: 5.80vw;
+    height: 42.28vw;
+
+}
+
+.list {
+    background: var(--color-db);
+    height: 33.88vw;
+    width: 26.87vw;
+    position: absolute;
+    top: 5.5vw;
+    box-sizing: border-box;
+    display: none;
+    align-items: center;
+    border-radius: 0.55vw;
+}
+
+.list_active {
+    display: grid;
+    animation-name: list-anime;
+    animation-duration: 0.4s;
+    z-index: 10;
+}
+
+@keyframes list-anime {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 33.88vw;
+    }
+}
+
+.list ul {
+    list-style: none;
+    height: 32.22vw;
+    width: 23.88vw;
+    margin-left: 1.25vw;
+    box-sizing: border-box;
+}
+
+@keyframes hamburger1 {
+    0% {
+        color: transparent;
+    }
+
+    50% {
+        color: transparent;
+    }
+
+    100% {
+        color: white;
+    }
+}
+
+.list ul li {
+    font-family: 'Uncut sans regular';
+    font-weight: 400;
+    font-size: var(--font-size-20-1440);
+    padding: 0.47vw 0vw;
+    color: white;
+    animation-name: hamburger1;
+    animation-duration: 0.401s;
+    transition-timing-function: ease-in;
+}
+
+.list ul li:hover{
+    cursor: pointer;
+}
+
+.title {
+    height: 4.78vw;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.title h2 {
+    font-size: 3.93vw;
+    color: var(--color2);
+}
+
+.item_box {
+    min-height: 69.12vw;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item_box::before {
+    content: '';
+    min-height: 69.12vw;
+    width: 100vw;
+    background-image: url('../resources/Stairs.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 46.2vw 13.8vw;
+    z-index: 1;
+    mix-blend-mode: normal;
+    position: absolute;
+    animation-name: stairs;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes stairs {
+    0% {
+        background-position: 46.2vw 13.8vw;
+    }
+
+    100% {
+        background-position: 60.48vw 0.7vw;
+    }
+}
+
+.item_container {
+    min-height: 63.96vw;
+    width: 86.12vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.icon{
+    height: 30.48vw;
+    width: 26.875vw;
+    margin: 1vw 0.1vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.iconsIMG{
+    height: 25.41vw;
+    width: 26.87vw;
+}
+
+.icon_text{
+    margin: 1vw 0vw;
+    color: white;
+    font-size: 1.94vw;
+    font-weight: 700;
+}
+

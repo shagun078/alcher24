@@ -1,0 +1,163 @@
+:root{
+    --font-size-16-mobile: 4.44vw;
+    --font-size-12-mobile: 3.33vw;
+    --font-size-10-mobile: 2.65vw;
+}
+
+
+@media (orientation: portrait){
+    .navbar_footer{
+       height: 10vh;
+       z-index: 2;
+    }
+    
+    .navbar_footer ul{
+        display: none;
+    }
+
+    .circle_box{
+        width: 80vw;
+    }
+
+    .circle_box img{
+        height: 7.22vw;
+        width: 7.22vw;
+    }
+
+    .windows_box{
+      height: 43vw;
+      width: 90vw;
+    }
+
+    .windows_img{
+        height: 111.225vw;
+      width: 150vw;
+    }
+
+    .crop_container{
+        width: 100vw;
+        bottom: 0vw;
+    }
+
+    .crop_box{
+        height: 50vw;
+        width: 40vw;
+        overflow: hidden;
+        -webkit-box-reflect: right 10vw;
+    }
+
+    .complex_grid{
+        height: 20.43vw;
+        width: 77.68vw;
+        top: 30vh;
+    }
+
+    .alcheringa{
+        height: 11.89vw;
+        width: 77.68vw;
+    }
+
+    .extra_box{
+        height: 40vh;
+    }
+
+    .credits_1{
+        height: 30vh;
+        width: 87.8vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .cred{
+        width: 43.9vw;
+    }
+
+    .cred h1{
+        font-size: var(--font-size-16-mobile) !important;
+        font-weight: 600;
+    }
+
+    .info{
+        font-size: var(--font-size-12-mobile) !important;
+        font-weight: 400;
+    }
+
+    .grid_1{
+        order: 1;
+    }
+
+    .grid_2{
+        order: 3;
+    }
+
+    #seperate{
+        order: 2;
+        height: 30vh;
+        width: 43.9vw;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        display: flex;
+        align-items: end;
+    }
+
+    #normal_text{
+        display: none;
+    }
+
+    #follow_text,#on_text{
+        font-family: 'Uncut sans regular';
+        display: inline-block;
+        font-size: var(--font-size-16-mobile) !important;
+        height: 3vh;
+    }
+
+    .icons{
+        height: 27vh;
+        flex-direction: column;
+        align-items: end;
+        margin-top: 0;
+        padding-top: 1.5vw;
+    }
+
+    .icons img{
+        height: var(--font-size-16-mobile) !important;
+        width: var(--font-size-16-mobile) !important;
+    }
+
+    #seperate img{
+        height: 3vw;
+        width: 3vw;
+        margin: 1vw 0vw;
+    }
+
+    .credits_2{
+        height: 5.8vh;
+        width: 86.66vw;
+    }
+
+    .extra_width{
+        width: 86.66vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: var(--font-size-10-mobile) !important;
+    }
+
+    .extra_width a{
+        padding: 0vw 0.6vw 0vw 0.6vw;
+        font-size: var(--font-size-10-mobile) !important;
+        
+    }
+
+    .credits_2 div{
+        display: none;
+    }
+
+    .windows_img{
+        object-fit: cover;
+    }
+
+}

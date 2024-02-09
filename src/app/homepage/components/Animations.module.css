@@ -1,0 +1,66 @@
+@font-face {
+  font-family: text_animation_font;
+  src: url(../../../../public/CruyffSans-Bold.ecd5078c.woff2);
+}
+.animes
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 8vw;
+    color:#F22C5B;
+    font-weight: 700;
+    font-size: 5vw;
+}
+
+.animes>div>div
+{
+    margin-bottom: 5vw;
+    height: 6vw;
+    display: inline-block;
+    font-family: text_animation_font;
+}
+.animes div:first-child {
+    animation: text-animation 9s infinite;
+  }
+
+
+@keyframes text-animation {
+    24%{margin-top:-1.4vw;}
+    48% {margin-top: -11.62vw;}
+    72% {margin-top: -21.24vw;}
+    96% {margin-top: -31.86vw;}
+    97% {margin-top: -21.24vw;}
+    98% {margin-top: -11.62vw;}
+    99% {margin-top: -2vw;}
+    100%{margin-top:0;}
+  }
+  @media (orientation: portrait) {
+    .animes
+    {
+      display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 10vw;
+    color:#F22C5B;
+    font-weight: 700;
+    font-size: 7vw;
+    font-family: Vangaurdcf;
+    width:100%;
+    }
+  }
+
+  @media screen and (max-width:819px){
+    .animes{
+      font-size: 6vw;
+    }
+  }
+  @media screen and (max-width:540px){
+    .animes{
+      height:8vw;
+    }
+  }
+
+ 

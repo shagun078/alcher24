@@ -8,6 +8,7 @@ import TWEEN from "@tweenjs/tween.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Museum } from "../components/Museum_FinalExport1";
+import Loadingpage from "../components/loading/loading";
 import "./FadeInComponent.css";
 
 const marks = [
@@ -18,7 +19,7 @@ const marks = [
     camPos: {
       x: 0,
       y: 2,
-      z: -25,
+      z: -13,
     },
     lookAt: {
       x: 0,
@@ -33,21 +34,6 @@ const marks = [
     camPos: {
       x: 0,
       y: 2,
-      z: -13,
-    },
-    lookAt: {
-      x: 0,
-      y: 2,
-      z: 0,
-    },
-  },
-  {
-    title2: "room-2",
-    title1: "room-3",
-    description: "Alcher-related display image!",
-    camPos: {
-      x: 0,
-      y: 2,
       z: 5,
     },
     lookAt: {
@@ -57,8 +43,8 @@ const marks = [
     },
   },
   {
-    title2: "room-3",
-    title1: "Home",
+    title2: "room-2",
+    title1: "room-3",
     description: "Alcher-related display image!",
     camPos: {
       x: 0,
@@ -69,6 +55,21 @@ const marks = [
       x: 0,
       y: 2,
       z: 30,
+    },
+  },
+  {
+    title2: "room-3",
+    title1: "Home",
+    description: "Alcher-related display image!",
+    camPos: {
+      x: 0,
+      y: 2,
+      z: 42,
+    },
+    lookAt: {
+      x: 0,
+      y: 2,
+      z: 50,
     },
   },
 ];
@@ -120,6 +121,9 @@ function App() {
   const [isAnimating, setIsAnimating] = useState(false);
   const [title1, setTitle1] = useState(list.head.data.title1);
   const [title2, setTitle2] = useState(list.head.data.title2);
+  const [isClick , setClick]=useState(false);
+  const [eventStyle,setEventStyle]=useState({opacity:1});
+  const [boxStyle,setBoxStyle]=useState({opacity:0});
   const controls = useRef();
   const camera = useRef();
   let [now, setNow] = useState(list.head);
@@ -200,45 +204,102 @@ function App() {
     }
   }, [now]);
 
+
+
+  const showEvent=()=>{
+    setClick(true);
+    setBoxStyle({
+      opacity:1
+    })
+    setEventStyle({
+      opacity:0
+    })
+    const targetX=0;
+      const targetY=2;
+      const targetZ=0;
+
+      const camZ=-13;
+      new TWEEN.Tween(controls.current.target)
+        .to(
+          {
+            x: targetX,
+            y: targetY,
+            z: targetZ
+          },
+          3000
+        )
+        .easing(TWEEN.Easing.Cubic.Out)
+        .start();
+
+      new TWEEN.Tween(camera.current.position)
+        .to(
+          {
+            z: camZ,
+          },
+          3000
+        )
+        .easing(TWEEN.Easing.Cubic.Out)
+        .start();
+  }
+
+
   const buttons = (
     <React.Fragment>
-      <span className="forward-container">
-        <button
-          className="btn btn-forward"
-          onClick={() => {
-            forward();
-          }}
-        >
-          <span className={`fade-in ${isAnimating ? "animating" : ""}`}>
-            {title1}
-          </span>
-        </button>
-
-        <FontAwesomeIcon icon={faArrowRight} className="forward-svg" />
+    <div className="event_box" style={isClick?eventStyle:eventStyle}>
+    <span>EVENTS</span>
+    <button
+    className="show-event-btn"
+    onClick={showEvent}
+  >
+    View our Events
+  </button>
+    </div>
+    <div className="btn_box" style={isClick?boxStyle:boxStyle}>
+    <span className="backward-container">
+    <FontAwesomeIcon icon={faArrowLeft} className="backward-svg" />
+    <button
+      className="btn btn-backward"
+      onClick={() => {
+        backward();
+      }}
+    >
+      <span className={`fade-in ${isAnimating ? "animating" : ""}`}>
+        {title2}
       </span>
+    </button>
+  </span>
 
-      <span className="backward-container">
-        <FontAwesomeIcon icon={faArrowLeft} className="backward-svg" />
-        <button
-          className="btn btn-backward"
-          onClick={() => {
-            backward();
-          }}
-        >
-          <span className={`fade-in ${isAnimating ? "animating" : ""}`}>
-            {title2}
-          </span>
-        </button>
+
+  <button
+    className="back-to-home"
+    onClick={() => {
+      backToHome();
+    }}
+  >
+    Back to home
+  </button>
+
+
+  <span className="forward-container">
+    <button
+      className="btn btn-forward"
+      onClick={() => {
+        forward();
+      }}
+    >
+      <span className={`fade-in ${isAnimating ? "animating" : ""}`}>
+        {title1}
       </span>
+    </button>
 
-      <button
-        className="back-to-home"
-        onClick={() => {
-          backToHome();
-        }}
-      >
-        Back to home
-      </button>
+    <FontAwesomeIcon icon={faArrowRight} className="forward-svg" />
+  </span>
+    </div>
+      
+
+
+
+
     </React.Fragment>
   );
   return (
@@ -250,9 +311,9 @@ function App() {
           enableZoom={true}
           enableDamping={true}
           enableRotate={true}
-          target={[0, 0, 0]}
+          target={[0, 2, 0]}
         />
-        <ambientLight intensity={3}/>
+        <ambientLight intensity={3} />
         <Museum />
         {/* <axesHelper args={[10]} /> */}
         <Tween />

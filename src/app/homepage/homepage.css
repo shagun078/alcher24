@@ -4,6 +4,28 @@ body,
   height: 100%;
   margin: 0;
   background: #000000;
+  -ms-content-zooming: none  disable browser zoom;
+  background-image: url('/TexturePattern.jpg');
+  background-blend-mode: color-burn;
+  background-color: #141414;
+  
+}
+
+@font-face {
+  font-family: sponsor_heading_text;
+  src: url(../../../public/Fontspring-DEMO-freigeist-conblack.woff2);
+}
+
+
+
+@font-face {
+  font-family: headingAlcher;
+  src: url('../../../public/CruyffSans-Bold.ecd5078c.woff2');
+}
+
+@font-face {
+  font-family: normalText;
+  src: url('../../../public/Uncut-Sans-Medium.woff2');
 }
 
 #info {
@@ -62,37 +84,578 @@ body,
 
 .return {
   cursor: pointer;
-  padding: 1.2rem;
-  color: azure;
-  background: rgb(219, 54, 69);
-  background: linear-gradient(
-    122deg,
-    rgba(219, 54, 69, 1) 18%,
-    rgba(164, 14, 14, 1) 40%,
-    rgba(0, 0, 0, 1) 82%
-  );
-  border-radius: 1rem;
-  translate: 130px 45vh;
+  padding: 1rem;
+  font-size: large;
+  color: white;
+  backdrop-filter: blur(2px);
+  background-color: hsla(0, 0%, 9%, 0.3);
+  border-radius: 50%;
+  translate: -70px -120px;
   border: none;
   outline: none;
 }
 
 .blur {
-  /* backdrop-filter: blur(1px); */
-  padding: 0.2rem 1rem;
+  padding: 0 20%;
   border-radius: 0.5rem;
   width: fit-content;
   font-family: Helvetica, sans-serif;
-  /* background: rgba(0, 0, 0, 0.66); */
   backdrop-filter: blur(2px);
   background-color: hsla(0, 0%, 9%, 0.3);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 48px;
 }
 .blur p {
-  min-width: 50vw;
+  font-size: 20px;
   display: flex;
   align-items: center;
+}
+.title{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+@font-face {
+  font-family: 'basicHeading';
+  src: url('/UncutSans.ttf') format('truetype');
+  font-family: 'demoFont';
+  src:url('/demo.otf') format ('truetype');
+}
+
+
+
+.threeD_2dwrapper{
+  width:100%;
+  height:100%;
+  -ms-content-zooming: none  disable browser zoom;
+  background-image: url('/TexturePattern.jpg');
+  background-blend-mode: color-burn;
+  background-color: #141414;
+}
+
+.mainContainer{
+ 
+  width:100%;
+  height:100%;
+  
+}
+.videoWrapper{
+  position: relative;
+  top:10vh;
+  width:80%;
+  margin:0px auto;
+  height:80vh;
+  border-radius: 1.2rem;
+  background-color: #39a27a;
+  transform: rotate(2deg);
+}
+.videoBox{
+  width:99%;
+  margin:0px auto;
+  aspect-ratio: 2519/1034;
+  height:99%;
+  background-color: #7266F8;
+  border-radius: 1.2rem;
+  transform: rotate(-2deg);
+  overflow: hidden;
+}
+iframe{
+  width:100%;
+  height:100%;
+}
+
+.decorationContainer{
+  margin-top:20rem;
+  width:100%;
+  height:80vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.left .right{
+  width:20%;
+}
+
+.centerDiv{
+  width:60%;
+  position: relative;
+  height:fit-content
+}
+
+.Animations_animes__8kF5l{
+  width:100%;
+  position: absolute;
+  top:48%;
+}
+
+
+
+.image{
+  width:100%;
+}
+
+.center_image{
+  display: block;
+  width:90%;
+  height:95vh;
+  margin:0px auto;
+}
+
+
+.merchSection{
+  margin-top:10rem;
+  width:100%;
+  height:70vh;
+}
+.mainImage{
+  position: relative;
+  width:80%;
+  margin:0px auto;
+  display:flex;
+  justify-content: center;
+}
+.sponsor_homepage{
+  margin: 15rem 0px;
+  width:100%;
+  height:fit-content;
+}
+
+.img_text_wrapper{
+  width:100%;
+  height:100%;
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  align-items: center;
+  margin-top: 0rem;
+}
+.text_sponsor_content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.text_sponsor_content h1{
+  position: relative;
+  bottom:10vh;
+  color:#AADCDB;
+  font-weight: 850;
+  font-size: 4.5vw;
+  font-family: sponsor_heading_text;
+}
+
+.text_sponsor_content span{
+  color:#F12353;
+  font-size:4.2vw;
+  font-weight: 700;
+  font-family: headingAlcher;
+}
+
+.text_sponsor_content h2{
+  color:#FFFFFF;
+  font-size:4.2vw;
+  font-weight: 700;
+  font-family: headingAlcher;
+}
+
+.text_sponsor_content p{
+  color:#FFFFFF;
+  margin-top: 1.4rem;
+  font-size: 1.8vw;
+  font-family: normalText;
+}
+.splide{
+  width:90%;
+  margin:0px auto;
+  z-index:10;
+}
+.splide__slide img{
+  height:20vh;
+}
+
+
+#leftGate{
+  display: block;
+  position: absolute;
+  left:0;
+  height:45vh;
+  top:-10vh;
+}
+#rightGate{
+  display: block;
+  position: absolute;
+  height:45vh;
+  right:0;
+  top:-10vh;  
+}
+.passesSection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top:10rem;
+}
+#getYour{
+  color:#FFFFFF;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  font-family: normalText;
+  font-weight: 900;
+}
+
+
+#alcherPass{
+  color:#F22C5B;
+  font-size: 3rem;
+  margin-bottom: 1.4rem;
+  font-family: headingAlcher;
+}
+
+
+#registerBtn{
+  width:fit-content;
+  height: fit-content;
+  padding:0.4rem 1rem;
+  color:white;
+  font-size: 1.2rem;
+  outline:none;
+  border: none;
+  border-radius: 1rem;
+  background-color: #F22C5B;
+  cursor: pointer;
+  font-family: headingAlcher;
+}
+.cardHoverSection{
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  width:100%;
+  height:fit-content;
+  position: relative;
+}
+.cardHoverSection img{
+  width:30vw;
+  transform: rotate(-98deg);
+}
+#cardHoverLeft{
+  transform: rotate(0deg) scale(1.2);
+  position: absolute;
+  left:20vw;
+  transition: all 0.4s ease-in-out;
+}
+#cardHoverRight{
+  position: absolute;
+  transform: rotate(0deg) scale(1.2);
+  top:1vh;
+  left: 46vw; 
+  transition: all 0.4s ease-in-out;
+}
+
+.cardHoverSection.hovered #cardHoverLeft {
+  transform: rotate(-10deg);
+}
+
+.cardHoverSection.hovered #cardHoverRight {
+  transform: rotate(10deg);
+}
+
+/* #cardHoverLeft:hover{
+  transform: rotate(60deg);
+}
+#cardHoverRight:hover{
+  transform: rotate(-60deg);
+} */
+
+.threeDWrapper{
+  width:100%;
+  height:100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+
+#ui {
+  position: absolute;
+  bottom:5vh;
+  width:fit-content;
+  height: fit-content;
+  left:50%;
+}
+
+.content-btn{
+  font-size:2.5rem;
+  position: relative;
+  color:white;
+  opacity:1;
+  cursor:pointer;
+  animation: moveUpDown 2s ease-in-out infinite;
+}
+
+.getAppSection{
+  width:100%;
+  height:100%;
+  position: relative;
+  margin-top:6rem;
+  display: flex;
+}
+#upperHand{
+  position: absolute;
+  right:0;
+  width:25vw;
+}
+#lowerHand{
+  position: absolute;
+  left:0;
+  bottom:-5vh;
+  width:25vw;
+}
+.textSection{
+  margin-top: 10vh;
+  width:50%;
+  height:90%;
+}
+.imageWrapper{
+  width:50%;
+  height:100%;
+  display:flex;
+  justify-content:flex-start;
+  align-items: center;
+  position: relative;
+}
+.alcher_app{
+  width:100%;
+  height: 100%;
+  position: relative;
+}
+.alcher_app>img{
+  position: absolute;
+  top:18vh;
+  width:100%;
+  height:100%;
+  transform: scale(0.85);
+}
+
+
+
+
+
+
+
+#text{
+  height:100%;
+  margin-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+#text h1{
+  color : #AADCDB;
+  font-size: 3.8vw;
+  font-family: headingAlcher;
+}
+
+#text p{
+  margin-top:2vh;
+  font-size: 1.2vw;
+  font-family: normalText;
+  color: white;
+}
+
+.googlePlayImage{
+  width:15vw;
+  height:15vw;
+  cursor: pointer;
+}
+
+@keyframes moveUpDown {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-20px);
+  }
+}
+
+
+@media screen and (max-width:912px){
+  .decorationContainer{
+    margin-top: 0rem;
+  }
+  .splide__slide{
+    margin:0px 5rem;
+  }
+  .sponsor_homepage{
+    margin-top: 5rem;
+  }
+  #cardHoverLeft {
+    transform:  rotate(10deg);
+    left:25vw;
+  }
+  #cardHoverRight{
+    transform: rotate(-10deg);
+    left:44vw;
+  }
+  .cardHoverSection{
+    margin-top: 2rem;
+  }
+  .videoWrapper{
+    height:50vh;
+  }
+  .getAppSection{
+    height:60%;
+  }
+  
+  .imageWrapper{
+    height:45vh;
+  }
+  #leftGate{
+    height:35vh;
+  }
+  #rightGate{
+   height: 35vh;
+  }
+  
+}
+/*
+@media screen and (max-width:830px){
+  #cardHoverLeft{
+    left:24vw;
+  }
+  .videoWrapper{
+    height:54vh
+  }
+  .getAppSection{
+    height:60%;
+  }
+  #text h1{
+    font-size: 3.2vw;
+  }
+  #text p{
+    font-size: 1.2vw;
+  }
+  .imageWrapper{
+    height:45vh;
+  }
+  .alcher_app>img{
+    transform: scale(1);
+  }
+
+}
+*/
+@media screen and (max-width:550px) {
+  .decorationContainer{
+    margin-top: 0rem;
+  }
+
+  #alcherPass{
+    font-size: 2.5rem;
+    
+  }
+
+  .imageWrapper{
+    height:50vh;
+  }
+
+
+  #text{
+    margin-left: 2rem;
+  }
+
+  .textSection{
+    margin-top: 5vh;
+  }
+  .cardHoverSection{
+    transform: scale(1.4)
+  }
+  .left , .right{
+    width:28%;
+  }
+}
+
+
+@media screen and (max-width:420px){
+  .decorationContainer{
+    margin-top: 0rem;
+  }
+  #leftGate ,#rightGate{
+    height:28vh;
+  }
+  .sponsor_homepage{
+    margin-top: 0;
+  }
+  .sponsorImage{
+   width:100px;
+   height:100px;
+  }
+  #alcherPass{
+    font-size: 1.8rem;
+  }
+  .cardHoverSection{
+    margin-top: 2rem;
+  }
+
+  #cardHoverLeft , #cardHoverRight{
+    transform: scale(1.4);
+  }
+  .videoWrapper{
+    height:34vh;
+    width:90%;
+  }
+  #registerBtn{
+    font-size: 1rem;
+  }
+
+  .getAppSection{
+    height:40%;
+  }
+  .alcher_app>img{
+   top:10vh;
+  }
+
+  #text p{
+    font-size:1.2vw;
+  }
+
+  
+
+  .imageWrapper{
+    height: 39vh;
+  }
+
+}
+
+@media screen and (max-width:300px){
+  #getYour{
+    font-size: 0.9rem;
+  }
+  #alcherPass{
+    font-size: 1.2rem;
+  }
+  .decorationContainer{
+    margin-top: 0rem;
+  }
+  .getAppSection{
+    height:35%;
+  }
+}
+
+@media (max-width:1000px) and (orientation:landscape){
+  .getAppSection{
+    height:100%;
+  }
+  #text h1{
+    font-size: 2vw;
+  }
+  .imageWrapper{
+    transform: scale(1.2);
+    margin-top: 4rem;
+    width:34%;
+    height:93%;
+  }
 }

@@ -4,8 +4,9 @@ import hand_lower from './resources/hand_lower.png'
 import stars from './resources/stars.png'
 import CardList from './components/cardList'
 
-// import styles from './components/kartavya.css'
-import './components/kartavya.css';
+import styles from './components/kartavya.css'
+import Footer from '../components/footer/page'
+import Navbar from '../components/navbar/page'
 
 
 function getCards(){
@@ -32,6 +33,8 @@ export default function Home() {
   };
 
   return (
+    <>
+    <Navbar/>
     <main>
       <section className='texture_wheel'>
 
@@ -133,6 +136,8 @@ export default function Home() {
           />
       </div>
     </main>
+    <Footer/>
+    </>
   )
 }
 
