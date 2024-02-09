@@ -10,6 +10,8 @@ import { FaAngleDoubleDown } from "react-icons/fa";
 import "./homepage.css";
 import Animations from "./components/Animations";
 import Loadingpage from "../components/loading/loading";
+import Navbar from "../components/navbar/page";
+import Footer from "../components/footer/page";
 const marks = [
   {
     key: "A",
@@ -509,10 +511,10 @@ export default function App() {
 
   return (
   <React.Fragment>
+  <Suspense fallback={<Loadingpage />}>
+  <Navbar/>
     <main className="threeD_2dwrapper">
       <div className='threeDWrapper'>
-      
-        <Suspense fallback={<Loadingpage />}>
           <Canvas
             camera={{
               fov: 70,
@@ -537,9 +539,6 @@ export default function App() {
             <Tween />
           </Canvas>
           <div id="ui">{buttons}</div>
-        </Suspense>
-
-       
       </div>
       <div className='mainContainer ' ref={contentRef}>
         {/*Video-container section starts*/}
@@ -610,6 +609,8 @@ export default function App() {
         </div>
       </div>
     </main>
+    <Footer/>
+    </Suspense>
   </React.Fragment>
 
   );

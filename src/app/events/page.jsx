@@ -8,8 +8,11 @@ import TWEEN from "@tweenjs/tween.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Museum } from "../components/Museum_FinalExport1";
+//import { Museum1 } from "../components/Museum";
 import Loadingpage from "../components/loading/loading";
 import "./FadeInComponent.css";
+import Navbar from "../components/navbar/page";
+import Footer from "../components/footer/page";
 
 const marks = [
   {
@@ -118,6 +121,9 @@ function Tween() {
 }
 
 function App() {
+  
+  const contentRef=useRef(null);
+
   const [isAnimating, setIsAnimating] = useState(false);
   const [title1, setTitle1] = useState(list.head.data.title1);
   const [title2, setTitle2] = useState(list.head.data.title2);
@@ -207,6 +213,7 @@ function App() {
 
 
   const showEvent=()=>{
+    contentRef.current && contentRef.current.scrollIntoView({ behavior: 'smooth' });
     setClick(true);
     setBoxStyle({
       opacity:1
@@ -244,8 +251,9 @@ function App() {
 
 
   const buttons = (
+   
     <React.Fragment>
-    <div className="event_box" style={isClick?eventStyle:eventStyle}>
+    <div  className="event_box" style={isClick?eventStyle:eventStyle}>
     <span>EVENTS</span>
     <button
     className="show-event-btn"
@@ -303,23 +311,31 @@ function App() {
     </React.Fragment>
   );
   return (
-    <div className="wrapper">
+    <>
+    <Suspense fallback={<Loadingpage/>}>
+    <Navbar/>
+    <div className="wrapper" ref={contentRef}>
+    
       <Canvas>
         <PerspectiveCamera ref={camera} makeDefault position={[0, 2, -25]} />
         <OrbitControls
           ref={controls}
-          enableZoom={true}
+          enableZoom={false}
           enableDamping={true}
           enableRotate={true}
           target={[0, 2, 0]}
         />
         <ambientLight intensity={3} />
-        <Museum />
+        <Museum/>
         {/* <axesHelper args={[10]} /> */}
         <Tween />
       </Canvas>
       <div id="ui">{buttons}</div>
+      
     </div>
+    <Footer/>
+    </Suspense>
+    </>
   );
 }
 
