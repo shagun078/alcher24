@@ -17,32 +17,33 @@ export default function Teams() {
   return (
     <>
     <Navbar/>
+    <section>
+        <div className='fake_div1'></div>
+        <div className='fake_div2'></div>
+        <div className='fake_div3'></div>
+        <div className='fake_div4'></div>
+        <div className='fake_div5'></div>
+        <div className='fake_div6'></div>
+        <div className='fake_div7'></div>
+        <div className='fake_div8'></div>
+        <div className='fake_div9'></div>
+        <div className='fake_div10'></div>
+        <div className='fake_div11'></div>
+        <div className='fake_div12'></div>
+        <div className='fake_div13'></div>
+        <div className='fake_div14'></div>
+        <div className='fake_div15'></div>
+        <div className='fake_div16'></div>
+    </section>
+    
     <main>
         <section className='teams_heading'>
-            <div className="left_window">
-                {/* <Image
-                    src={left_window}
-                    alt='left_window'
-                    style={{
-                        width: '100%',
-                        height: '100%',
-                    }}
-                /> */}
-            </div>
+            <div className="left_window"></div>
             <div className="teams_head1">
                 <h2>MEET THE TEAMS</h2>
                 <h5>"Act as if what you do makes a difference. It does"</h5>
             </div>
-            <div className="right_window">
-                {/* <Image
-                    src={right_window}
-                    alt='right_window'
-                    style={{
-                        width: '100%',
-                        height: '100%'
-                    }}
-                /> */}
-            </div>
+            <div className="right_window"></div>
         </section>
 
         <section className='all_teams'>
@@ -247,7 +248,6 @@ export default function Teams() {
                         style={{
                             width: '25vw',
                             height: 'auto',
-                            // marginBottom: '-0.5vw'
                         }}
                     />
                 </div>
@@ -271,7 +271,6 @@ export default function Teams() {
                         style={{
                             width: '25vw',
                             height: 'auto',
-                            // marginBottom: '0.5vw'
                         }}
                     />
                 </div>

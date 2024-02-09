@@ -542,3 +542,52 @@ main{
         background-image: url('../resources/right_window1.png');
     }
   }
+
+.fake_div1{
+    background-image: url('../resources/left_window1.png');
+}
+.fake_div2{
+    background-image: url('../resources/left_window2.png');
+}
+.fake_div3{
+    background-image: url('../resources/left_window3.png');
+}
+.fake_div4{
+    background-image: url('../resources/left_window4.png');
+}
+.fake_div5{
+    background-image: url('../resources/left_window5.png');
+}
+.fake_div6{
+    background-image: url('../resources/left_window6.png');
+}
+.fake_div7{
+    background-image: url('../resources/left_window7.png');
+}
+.fake_div8{
+    background-image: url('../resources/left_window8.png');
+}
+.fake_div9{
+    background-image: url('../resources/right_window1.png');
+}
+.fake_div10{
+    background-image: url('../resources/right_window2.png');
+}
+.fake_div11{
+    background-image: url('../resources/right_window3.png');
+}
+.fake_div12{
+    background-image: url('../resources/right_window4.png');
+}
+.fake_div13{
+    background-image: url('../resources/right_window5.png');
+}
+.fake_div14{
+    background-image: url('../resources/right_window6.png');
+}
+.fake_div15{
+    background-image: url('../resources/right_window7.png');
+}
+.fake_div16{
+    background-image: url('../resources/right_window8.png');
+}
