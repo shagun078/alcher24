@@ -196,6 +196,8 @@ main{
 
 .names_crm{
     color: var(--color_crm);
+    width: 80vw !important;
+    margin-left: 2vw;
 }
 
 .names_creatives{

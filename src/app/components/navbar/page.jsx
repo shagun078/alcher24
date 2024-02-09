@@ -36,7 +36,7 @@ for(let i=0;i<props.length;i++){
     return (
         <div className="header">
             <div className="logo">
-                <Link href="/homepage"><Image class="logo" src={alcher_logo} alt="Alcheringa24" /></Link>
+                <Link href="/homepage"><Image className="logo" src={alcher_logo} alt="Alcheringa24" /></Link>
             </div>
             <nav id="navbar_menu">
                 <ul>

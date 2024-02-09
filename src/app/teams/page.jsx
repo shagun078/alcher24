@@ -87,7 +87,7 @@ export default function Teams() {
                         src={model_crm}
                         alt='Corporate Relation & Marketing'
                         style={{
-                            width: '60vw',
+                            width: '75vw',
                             height: 'auto'
                         }}
                     />
