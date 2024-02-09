@@ -125,11 +125,15 @@ body,
   src:url('/demo.otf') format ('truetype');
 }
 
-html,
-body {
-  width: 100%;
-  height:100vh;
-  overflow-x: hidden;
+
+
+.threeD_2dwrapper{
+  width:100%;
+  height:100%;
+  -ms-content-zooming: none  disable browser zoom;
+  background-image: url('/TexturePattern.jpg');
+  background-blend-mode: color-burn;
+  background-color: #141414;
 }
 
 .mainContainer{
@@ -448,15 +452,17 @@ iframe{
   flex-direction: column;
   justify-content: center;
 }
+
+
 #text h1{
   color : #AADCDB;
-  font-size: 3.2rem;
+  font-size: 3.8vw;
   font-family: headingAlcher;
 }
 
 #text p{
   margin-top:2vh;
-  font-size: 1.2rem;
+  font-size: 1.2vw;
   font-family: normalText;
   color: white;
 }
@@ -475,19 +481,6 @@ iframe{
       transform: translateY(-20px);
   }
 }
-
-
-
-
-@media screen and (max-width:1100px){
-  #text h1{
-    font-size: 2.8vw;
-  }
-  #text p{
-    font-size: 1.2vw;
-  }
-}
-
 
 
 @media screen and (max-width:912px){
@@ -517,9 +510,7 @@ iframe{
   .getAppSection{
     height:60%;
   }
-  #text h1{
-    font-size: 2.6rem;
-  }
+  
   .imageWrapper{
     height:45vh;
   }
@@ -570,6 +561,8 @@ iframe{
   .imageWrapper{
     height:50vh;
   }
+
+
   #text{
     margin-left: 2rem;
   }
@@ -625,6 +618,9 @@ iframe{
    top:10vh;
   }
 
+  #text p{
+    font-size:1.2vw;
+  }
 
   
 

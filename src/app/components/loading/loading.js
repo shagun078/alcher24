@@ -8,9 +8,9 @@ const Loadingpage = () => {
                     <img src='AlcherLogo.svg'></img>
                 </div>
 
-                <div className='content'>
-                    <h1>Loading...</h1>
-                    <p>Welcome to Alcheringa! We are loading up<br />Please Wait</p>
+                <div className='loading_content'>
+                    <h1>LOADING...</h1>
+                    <p>Welcome to Alcheringa! We are loading up.<br />Please Wait...</p>
                 </div>
             </div>
 

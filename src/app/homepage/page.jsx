@@ -508,8 +508,8 @@ export default function App() {
 
 
   return (
-    <React.Fragment>
-    
+  <React.Fragment>
+    <main className="threeD_2dwrapper">
       <div className='threeDWrapper'>
       
         <Suspense fallback={<Loadingpage />}>
@@ -540,7 +540,7 @@ export default function App() {
         </Suspense>
 
        
-          </div>
+      </div>
       <div className='mainContainer ' ref={contentRef}>
         {/*Video-container section starts*/}
         <div className='videoWrapper'>
@@ -609,7 +609,8 @@ export default function App() {
           <img src='BoardBlue.svg' id='cardHoverRight'></img>
         </div>
       </div>
-    </React.Fragment>
+    </main>
+  </React.Fragment>
 
   );
 }
