@@ -233,8 +233,9 @@ main{
     padding-bottom: 3px;
 }
 
-.names_prb p, .names_crm p, .names_creatives p, .names_events p, .names_web_app p, .names_mun p, .names_finance p, .names_convener p{
+.names_prb a, .names_crm a, .names_creatives a, .names_events a, .names_web_app a, .names_mun a, .names_finance a, .names_convener a{
     font-size: var(--text_detail);
+    font-weight: 600;
 }
 
 .finance_img{

@@ -64,18 +64,21 @@ export default function Teams() {
                 <div className="names_prb">
                     <div>
                         <h6>Firstname Lastname</h6>
-                        <p>+91 1234567890</p>
-                        <p>anurag@alcheringa.in</p>
+                        <a href='tel:+91 1234567890'>+91 1234567890</a>
+                        <br />
+                        <a href='mailto:anurag@alcheringa.in'>anurag@alcheringa.in</a>
                     </div>
                     <div>
                         <h6>Firstname Lastname</h6>
-                        <p>+91 1234567890</p>
-                        <p>ankit.k@alcheringa.in</p>
+                        <a href='tel:+91 1234567890'>+91 1234567890</a>
+                        <br />
+                        <a href='mailto:ankit.k@alcheringa.in'>ankit.k@alcheringa.in</a>
                     </div>
                     <div>
                         <h6>Firstname Lastname</h6>
-                        <p>+91 1234567890</p>
-                        <p>lakshya@alcheringa.in</p>
+                        <a href='tel:+91 1234567890'>+91 1234567890</a>
+                        <br />
+                        <a href='mailto:lakshya@alcheringa.in'>lakshya@alcheringa.in</a>
                     </div>
                 </div>
             </div>
@@ -96,23 +99,27 @@ export default function Teams() {
                 <div className="names_crm">
                     <div>
                         <h6>Firstname Lastname</h6>
-                        <p>+91 1234567890</p>
-                        <p>rachit@alcheringa.in</p>
+                        <a href='tel:+91 1234567890'>+91 1234567890</a>
+                        <br />
+                        <a href='mailto:rachit@alcheringa.in'>rachit@alcheringa.in</a>
                     </div>
                     <div>
                         <h6>Firstname Lastname</h6>
-                        <p>+91 1234567890</p>
-                        <p>harshit@alcheringa.in</p>
+                        <a href='tel:+91 1234567890'>+91 1234567890</a>
+                        <br />
+                        <a href='mailto:harshit@alcheringa.in'>harshit@alcheringa.in</a>
                     </div>
                     <div>
                         <h6>Firstname Lastname</h6>
-                        <p>+91 1234567890</p>
-                        <p>chakradhar@alcheringa.in</p>
+                        <a href='tel:+91 1234567890'>+91 1234567890</a>
+                        <br />
+                        <a href='mailto:chakradhar@alcheringa.in'>chakradhar@alcheringa.in</a>
                     </div>
                     <div>
                         <h6>Firstname Lastname</h6>
-                        <p>+91 1234567890</p>
-                        <p>kanika@alcheringa.in</p>
+                        <a href='tel:+91 1234567890'>+91 1234567890</a>
+                        <br />
+                        <a href='mailto:kanika@alcheringa.in'>kanika@alcheringa.in</a>
                     </div>
                 </div>
             </div>
@@ -135,18 +142,21 @@ export default function Teams() {
                 <div className="names_creatives">
                     <div>
                         <h6>Firstname Lastname</h6>
-                        <p>+91 1234567890</p>
-                        <p>creatives@alcheringa.in</p>
+                        <a href='tel:+91 1234567890'>+91 1234567890</a>
+                        <br />
+                        <a href='mailto:creatives@alcheringa.in'>creatives@alcheringa.in</a>
                     </div>
                     <div>
                         <h6>Firstname Lastname</h6>
-                        <p>+91 1234567890</p>
-                        <p>creatives@alcheringa.in</p>
+                        <a href='tel:+91 1234567890'>+91 1234567890</a>
+                        <br />
+                        <a href='mailto:creatives@alcheringa.in'>creatives@alcheringa.in</a>
                     </div>
                     <div>
                         <h6>Firstname Lastname</h6>
-                        <p>+91 1234567890</p>
-                        <p>creatives@alcheringa.in</p>
+                        <a href='tel:+91 1234567890'>+91 1234567890</a>
+                        <br />
+                        <a href='mailto:creatives@alcheringa.in'>creatives@alcheringa.in</a>
                     </div>
                 </div>
             </div>
@@ -167,18 +177,21 @@ export default function Teams() {
                 <div className="names_events">
                     <div>
                         <h6>Firstname Lastname</h6>
-                        <p>+91 1234567890</p>
-                        <p>abhinav@alcheringa.in</p>
+                        <a href='tel:+91 1234567890'>+91 1234567890</a>
+                        <br />
+                        <a href='mailto:abhinav@alcheringa.in'>abhinav@alcheringa.in</a>
                     </div>
                     <div>
                         <h6>Firstname Lastname</h6>
-                        <p>+91 1234567890</p>
-                        <p>priyanshu.s@alcheringa.in</p>
+                        <a href='tel:+91 1234567890'>+91 1234567890</a>
+                        <br />
+                        <a href='mailto:priyanshu.s@alcheringa.in'>priyanshu.s@alcheringa.in</a>
                     </div>
                     <div>
                         <h6>Firstname Lastname</h6>
-                        <p>+91 1234567890</p>
-                        <p>rahul@alcheringa.in</p>
+                        <a href='tel:+91 1234567890'>+91 1234567890</a>
+                        <br />
+                        <a href='mailto:rahul@alcheringa.in'>rahul@alcheringa.in</a>
                     </div>
                 </div>
             </div>
@@ -199,13 +212,15 @@ export default function Teams() {
                 <div className="names_web_app">
                     <div>
                         <h6>Firstname Lastname</h6>
-                        <p>+91 1234567890</p>
-                        <p>webops@alcheringa.in</p>
+                        <a href='tel:+91 1234567890'>+91 1234567890</a>
+                        <br />
+                        <a href='mailto:webops@alcheringa.in'>webops@alcheringa.in</a>
                     </div>
                     <div>
                         <h6>Firstname Lastname</h6>
-                        <p>+91 1234567890</p>
-                        <p>webops@alcheringa.in</p>
+                        <a href='tel:+91 1234567890'>+91 1234567890</a>
+                        <br />
+                        <a href='mailto:appops@alcheringa.in'>appops@alcheringa.in</a>
                     </div>
                 </div>
             </div>
@@ -226,13 +241,15 @@ export default function Teams() {
                 <div className="names_mun">
                     <div>
                         <h6>Firstname Lastname</h6>
-                        <p>+91 1234567890</p>
-                        <p>iitgmun@alcheringa.in</p>
+                        <a href='tel:+91 1234567890'>+91 1234567890</a>
+                        <br />
+                        <a href='mailto:iitgmun@alcheringa.in'>iitgmun@alcheringa.in</a>
                     </div>
                     <div>
                         <h6>Firstname Lastname</h6>
-                        <p>+91 1234567890</p>
-                        <p>iitgmun@alcheringa.in</p>
+                        <a href='tel:+91 1234567890'>+91 1234567890</a>
+                        <br />
+                        <a href='mailto:iitgmun@alcheringa.in'>iitgmun@alcheringa.in</a>
                     </div>
                 </div>
             </div>
@@ -254,8 +271,9 @@ export default function Teams() {
                 <div className="names_finance">
                     <div>
                         <h6>Firstname Lastname</h6>
-                        <p>+91 1234567890</p>
-                        <p>sabir@alcheringa.in</p>
+                        <a href='tel:+91 1234567890'>+91 1234567890</a>
+                        <br />
+                        <a href='mailto:sabir@alcheringa.in'>sabir@alcheringa.in</a>
                     </div>
                 </div>
             </div>
@@ -277,8 +295,9 @@ export default function Teams() {
                 <div className="names_convener">
                     <div>
                         <h6>Firstname Lastname</h6>
-                        <p>+91 1234567890</p>
-                        <p>madhav@alcheringa.in</p>
+                        <a href='tel:+91 1234567890'>+91 1234567890</a>
+                        <br />
+                        <a href='mailto:madhav@alcheringa.in'>madhav@alcheringa.in</a>
                     </div>
                 </div>
             </div>

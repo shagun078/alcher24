@@ -34,7 +34,7 @@ const Footer = () => {
     const router = useRouter();
     const path = usePathname();
 
-    console.log(props);
+    // console.log(props);
 
     for (let i = 0; i < props.length; i++) {
         if (path === props[i].title) {
