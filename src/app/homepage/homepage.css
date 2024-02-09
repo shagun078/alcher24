@@ -5,7 +5,18 @@ body,
   margin: 0;
   background: #000000;
   -ms-content-zooming: none  disable browser zoom;
+  background-image: url('/TexturePattern.jpg');
+  background-blend-mode: color-burn;
+  background-color: #141414;
+  
 }
+
+@font-face {
+  font-family: sponsor_heading_text;
+  src: url(../../../public/Fontspring-DEMO-freigeist-conblack.woff2);
+}
+
+
 
 @font-face {
   font-family: headingAlcher;
@@ -119,11 +130,8 @@ body {
   width: 100%;
   height:100vh;
   overflow-x: hidden;
-  background-image: url('/TexturePattern.jpg');
-  background-blend-mode: color-burn;
-  background-color: #141414;
-  color: #34362f;
 }
+
 .mainContainer{
  
   width:100%;
@@ -156,7 +164,7 @@ iframe{
 }
 
 .decorationContainer{
-  margin-top:15rem;
+  margin-top:20rem;
   width:100%;
   height:80vh;
   display: flex;
@@ -185,9 +193,10 @@ iframe{
   width:100%;
 }
 
-.center-image{
+.center_image{
   display: block;
   width:90%;
+  height:95vh;
   margin:0px auto;
 }
 
@@ -204,15 +213,56 @@ iframe{
   display:flex;
   justify-content: center;
 }
-.sponsor{
-  margin-bottom: 10rem;
+.sponsor_homepage{
+  margin: 15rem 0px;
+  width:100%;
+  height:fit-content;
 }
 
-.splideWrapper{
+.img_text_wrapper{
+  width:100%;
+  height:100%;
   display:flex;
+  justify-content: space-evenly;
+  align-items: center;
   position: relative;
   align-items: center;
-  margin-top: 15rem;
+  margin-top: 0rem;
+}
+.text_sponsor_content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.text_sponsor_content h1{
+  position: relative;
+  bottom:10vh;
+  color:#AADCDB;
+  font-weight: 850;
+  font-size: 4.5vw;
+  font-family: sponsor_heading_text;
+}
+
+.text_sponsor_content span{
+  color:#F12353;
+  font-size:4.2vw;
+  font-weight: 700;
+  font-family: headingAlcher;
+}
+
+.text_sponsor_content h2{
+  color:#FFFFFF;
+  font-size:4.2vw;
+  font-weight: 700;
+  font-family: headingAlcher;
+}
+
+.text_sponsor_content p{
+  color:#FFFFFF;
+  margin-top: 1.4rem;
+  font-size: 1.8vw;
+  font-family: normalText;
 }
 .splide{
   width:90%;
@@ -222,15 +272,19 @@ iframe{
 .splide__slide img{
   height:20vh;
 }
+
+
 #leftGate{
+  display: block;
   position: absolute;
   left:0;
-  height:40vh;
+  height:45vh;
   top:-10vh;
 }
 #rightGate{
+  display: block;
   position: absolute;
-  height:40vh;
+  height:45vh;
   right:0;
   top:-10vh;  
 }
@@ -316,7 +370,9 @@ iframe{
   width:100%;
   height:100vh;
   position: relative;
+  overflow: hidden;
 }
+
 
 #ui {
   position: absolute;
@@ -330,7 +386,8 @@ iframe{
   font-size:2.5rem;
   position: relative;
   color:white;
-  opacity:0.4;
+  opacity:1;
+  cursor:pointer;
   animation: moveUpDown 2s ease-in-out infinite;
 }
 
@@ -365,47 +422,20 @@ iframe{
   align-items: center;
   position: relative;
 }
-
-.img-cont{
-  width:40%;
-  height:60%;
-  background-color: #7266F8;
-  border:1px solid white;
-  margin:2rem;
-  border-radius: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.alcher_app{
+  width:100%;
+  height: 100%;
+  position: relative;
 }
-
-.darkModeImage{
-  transform: rotate(-8deg);
+.alcher_app>img{
   position: absolute;
-  z-index:2;
-}
-
-.lightModeImage{
-  position: absolute;
-  left:40%;
-  bottom:2%;
-  transform: rotate(10deg);
-}  
-
-.img-section{
-  border-radius: 1.2rem;
+  top:18vh;
   width:100%;
   height:100%;
-  background-color: #F22C5B;
+  transform: scale(0.85);
 }
- .img-dark{
-  transform: rotate(3deg);
-  z-index:2;
- }
 
- 
- .img-light{
-  transform: rotate(-4deg);
- }
+
 
 
 
@@ -461,8 +491,14 @@ iframe{
 
 
 @media screen and (max-width:912px){
+  .decorationContainer{
+    margin-top: 0rem;
+  }
   .splide__slide{
     margin:0px 5rem;
+  }
+  .sponsor_homepage{
+    margin-top: 5rem;
   }
   #cardHoverLeft {
     transform:  rotate(10deg);
@@ -479,17 +515,23 @@ iframe{
     height:50vh;
   }
   .getAppSection{
-    height:70%;
+    height:60%;
   }
   #text h1{
     font-size: 2.6rem;
   }
   .imageWrapper{
     height:45vh;
-    margin:auto 0;
   }
+  #leftGate{
+    height:35vh;
+  }
+  #rightGate{
+   height: 35vh;
+  }
+  
 }
-
+/*
 @media screen and (max-width:830px){
   #cardHoverLeft{
     left:24vw;
@@ -498,7 +540,7 @@ iframe{
     height:54vh
   }
   .getAppSection{
-    height:70%;
+    height:60%;
   }
   #text h1{
     font-size: 3.2vw;
@@ -508,14 +550,16 @@ iframe{
   }
   .imageWrapper{
     height:45vh;
-    margin:auto 0;
+  }
+  .alcher_app>img{
+    transform: scale(1);
   }
 
 }
-
+*/
 @media screen and (max-width:550px) {
   .decorationContainer{
-    margin-top: 6rem;
+    margin-top: 0rem;
   }
 
   #alcherPass{
@@ -544,12 +588,12 @@ iframe{
 
 @media screen and (max-width:420px){
   .decorationContainer{
-    margin-top: 2rem;
+    margin-top: 0rem;
   }
   #leftGate ,#rightGate{
-    height:35vh;
+    height:28vh;
   }
-  .splideWrapper{
+  .sponsor_homepage{
     margin-top: 0;
   }
   .sponsorImage{
@@ -577,26 +621,17 @@ iframe{
   .getAppSection{
     height:40%;
   }
-
-
-  .img-cont{
-    border-radius: 0.6rem;
+  .alcher_app>img{
+   top:10vh;
   }
 
-  .img-section{
-    border-radius: 0.6rem;
-  }
+
+  
 
   .imageWrapper{
     height: 39vh;
   }
-  .darkModeImage , .lightModeImage{
-    margin:0;
-  }
 
-  .lightModeImage{
-    bottom:2vh;
-  }
 }
 
 @media screen and (max-width:300px){
@@ -607,7 +642,7 @@ iframe{
     font-size: 1.2rem;
   }
   .decorationContainer{
-    margin-top: 2rem;
+    margin-top: 0rem;
   }
   .getAppSection{
     height:35%;

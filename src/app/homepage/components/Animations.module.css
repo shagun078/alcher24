@@ -1,4 +1,7 @@
-
+@font-face {
+  font-family: text_animation_font;
+  src: url(../../../../public/CruyffSans-Bold.ecd5078c.woff2);
+}
 .animes
 {
     display: flex;
@@ -16,14 +19,15 @@
     margin-bottom: 5vw;
     height: 6vw;
     display: inline-block;
+    font-family: text_animation_font;
 }
 .animes div:first-child {
-    animation: text-animation 8s infinite;
+    animation: text-animation 9s infinite;
   }
 
 
 @keyframes text-animation {
-    24%{margin-top:-2vw;}
+    24%{margin-top:-1.4vw;}
     48% {margin-top: -11.62vw;}
     72% {margin-top: -21.24vw;}
     96% {margin-top: -31.86vw;}

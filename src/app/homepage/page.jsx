@@ -289,7 +289,7 @@ function Annotations({ controls }) {
             y: targetY,
             z: targetZ,
           },
-          2500
+          3000
         )
         .easing(TWEEN.Easing.Cubic.Out)
         .start();
@@ -302,7 +302,7 @@ function Annotations({ controls }) {
             y: camPosY,
             z: camPosZ,
           },
-          2500
+          3000
         )
         .easing(TWEEN.Easing.Cubic.Out)
         .start();
@@ -351,7 +351,7 @@ function Annotations({ controls }) {
                           y: targetY,
                           z: targetZ,
                         },
-                        2500
+                        2000
                       )
                       .easing(TWEEN.Easing.Cubic.Out)
                       .start();
@@ -364,14 +364,14 @@ function Annotations({ controls }) {
                           y: camPosY,
                           z: camPosZ,
                         },
-                        2500
+                        2000
                       )
                       .easing(TWEEN.Easing.Cubic.Out)
                       .start();
                     setSelected(backtrack ? -1 : a.key);
                     setTimeout(() => {
                       controls.current.enabled = backtrack;
-                    }, 2600);
+                    }, 2100);
                     // console.log(controls.current);
                   }}
                 >
@@ -509,7 +509,9 @@ export default function App() {
 
   return (
     <React.Fragment>
+    
       <div className='threeDWrapper'>
+      
         <Suspense fallback={<Loadingpage />}>
           <Canvas
             camera={{
@@ -538,7 +540,7 @@ export default function App() {
         </Suspense>
 
        
-      </div>
+          </div>
       <div className='mainContainer ' ref={contentRef}>
         {/*Video-container section starts*/}
         <div className='videoWrapper'>
@@ -553,18 +555,28 @@ export default function App() {
         {/*Sponsor section starts*/}
         <div className='decorationContainer'>
           <div className='left'>
-            <img className="image" src="left.svg"></img>
+            <img className="image" src="Subtract.svg"></img>
           </div>
           <div className="centerDiv">
-            <img className="center-image" src="centerFlower.svg"></img>
+            <img className="center_image" src="center_final.svg"></img>
             <Animations className='animation-container' />
           </div>
           <div className='right'>
-            <img className="image" src="right.svg"></img>
+            <img className="image" src="Subtract1.svg"></img>
           </div>
         </div>
-        <div className='sponsor'>
-          <MySlider />
+        <div className='sponsor_homepage'>
+         {/* <MySlider />*/}
+         <div className='img_text_wrapper'>
+         <img src="left_final_gate.svg" id="leftGate"></img>
+         <div className="text_sponsor_content">
+         <h1>SPONSORS</h1>
+         <h2>Coming <span>Soon</span></h2>
+         <p>Stay tuned, sponsors are on the horizon!</p>
+         </div>
+         
+         <img src="right_final_gate.svg" id="rightGate"></img>
+         </div>
         </div>
         {/*Sponsorsection ends*/}
         <div className='getAppSection'>
@@ -573,17 +585,13 @@ export default function App() {
           <div className='textSection'>
             <div id='text'>
               <h1>GET THE <br /> ALCHERINGA APP</h1>
-              <p>Download our app and get access to app exclusive features like<br /> Alcheringa passes , merches , schedule,Campus maps , <br />  real-time updates and much more</p>
+              <p>Download our app and get access to app exclusive<br/> features like Alcheringa passes, Merches,<br/> Schedule, Campus maps, Real-time updates and<br/> much more.</p>
               <div id='appDownloadBtn'><img src='googlePlay.svg' className="googlePlayImage"></img></div>
             </div>
           </div>
           <div className="imageWrapper">
-            <div className='img-cont darkModeImage'>
-              <div className='img-section img-dark'></div>
-            </div>
-            <div className=" img-cont lightModeImage">
-              <div className=" img-section img-light"></div>
-            </div>
+           <div className="alcher_app"><img src='mobileapp.png'></img></div>
+        
           </div>
         </div>
 
