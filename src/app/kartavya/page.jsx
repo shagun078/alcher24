@@ -7,6 +7,8 @@ import CardList from './components/cardList'
 import styles from './components/kartavya.css'
 import Footer from '../components/footer/page'
 import Navbar from '../components/navbar/page'
+import circle1 from '/public/footer_img/Frame 15232-min.png';
+import windows1 from '/public/footer_img/Frame 15230-min.png';
 
 
 function getCards(){
@@ -34,7 +36,7 @@ export default function Home() {
 
   return (
     <>
-    <Navbar/>
+    <Navbar reg_bg= {"register reg_bg3"}/>
     <main>
       <section className='texture_wheel'>
 
@@ -136,7 +138,7 @@ export default function Home() {
           />
       </div>
     </main>
-    <Footer/>
+    <Footer bg={"footer img3"} star={"star1 star"} circle_src={circle1} windows_src={windows1}/>
     </>
   )
 }

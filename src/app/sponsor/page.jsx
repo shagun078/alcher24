@@ -5,6 +5,8 @@ import gucci from './resources/gucci.png'
 import Image from "next/image";
 import Navbar from "../components/navbar/page";
 import Footer from "../components/footer/page";
+import circle1 from '/public/footer_img/Frame 15232-min.png';
+import windows1 from '/public/footer_img/Frame 15230-min.png';
 
 
 
@@ -15,7 +17,7 @@ function App () {
   ];
   return (
     <>
-    <Navbar/>
+    <Navbar  reg_bg={ "register reg_bg7"}/>
     <main>
       
       <div className="top_sun">
@@ -100,7 +102,7 @@ function App () {
       </section>
       
     </main>
-    <Footer/>
+    <Footer  bg={ "footer img7"} star={ "star1 star"} circle_src={ circle1} windows_src={ windows1 }/>
     </>
   );
   

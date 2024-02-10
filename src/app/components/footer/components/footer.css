@@ -1,8 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-    position: relative;
-}
+
 
 :root{
     --color1: #181818;
@@ -12,6 +8,9 @@
 }
 
 .navbar_footer{
+    margin: 0;
+    padding: 0;
+    position: relative;
     height: 10vh;
     width: 100vw;
     background: var(--color1);
@@ -25,7 +24,7 @@
     position: absolute;
     height: 10vh;
     width: 100vw;
-    background: url('../resources/texture_footer.png');
+    background: url('../../../../../public/footer_img/texture_footer.png');
     mix-blend-mode: color-burn;
 }
 
@@ -64,7 +63,7 @@
 .footer{
     position: relative;
     background: var(--color1);
-    background-image: url('../resources/Spiral.png');
+    background-image: url('../../../../../public/footer_img/Spiral.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top 7vw center;
@@ -82,7 +81,7 @@
     position: absolute;
     height: 90vh;
     width: 100vw;
-    background: url('../resources/texture_footer.png');
+    background: url('../../../../../public/footer_img/texture_footer.png');
     mix-blend-mode: color-burn;
 }
 
@@ -126,6 +125,7 @@
 .windows_img{
     display: inline-block;
     width: 87.73vw;
+    height: auto;
 }
 
 .complex_grid{
@@ -148,7 +148,7 @@
 }
 
 .credits_1{
-    width: 78vw;
+    width: 87vw;
     height: 15vh;
     color: white;
     display: flex;
@@ -157,6 +157,10 @@
 
 .cred{
     width: 24vw;
+}
+
+.cred_1{
+    margin-left: auto;
 }
 
 .cred h1,p{
@@ -210,7 +214,7 @@
 
 .credits_2{
     height: 11vh;
-    width: 78vw;
+    width: 87vw;
     color: white;
     display: flex;
     flex-direction: row;
@@ -254,7 +258,7 @@
 .star{
     height: 4.27vw;
     width: 4.24vw;
-    background-image: url('../resources/Star.png');
+    background-image: url('../../../../../public/footer_img/Star.png');
     background-position: center;
     background-size: cover;
     animation-name: all-spark;
@@ -323,4 +327,9 @@
 
 .unactive{
     display: none;
+}
+
+.yt_icon{
+    height: 1.38vw !important;
+    width: 1.73vw !important;
 }

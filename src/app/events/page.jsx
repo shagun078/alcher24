@@ -12,6 +12,10 @@ import Loadingpage from "../components/loading/loading";
 import "./FadeInComponent.css";
 import Navbar from "../components/navbar/page";
 import Footer from "../components/footer/page";
+import circle1 from '/public/footer_img/Frame 15232-min.png';
+import windows1 from '/public/footer_img/Frame 15230-min.png';
+
+
 const marks = [
   {
     title2: "last-room",
@@ -340,9 +344,9 @@ function App() {
   );
   return (
     <>
+    <Navbar reg_bg= {"register reg_bg1"}/>
     <Suspense fallback={<Loadingpage/>}>
     
-    <Navbar/>
     <div className="wrapper" ref={contentRef}>
     
       <Canvas>
@@ -362,7 +366,7 @@ function App() {
     { <div id="ui">{buttons}</div>}
       
     </div>
-    <Footer/>
+    <Footer  bg= {"footer img1"} star= {"star1 star"} circle_src= {circle1}  windows_src= {windows1}/>
     </Suspense>
    
     </>

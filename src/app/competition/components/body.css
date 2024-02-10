@@ -25,13 +25,11 @@
 .body::before{
     content: "";
     position: absolute;
-    min-height: 89.11vw;
-    width: 100vw;
+    min-height: 100%;
     width: 100vw;
     background: url('../resources/Texture\ Pattern\ \(to\ be\ used\ as\ Color\ Burn\).jpg'), url('../resources/top\ black\ overlay\ for\ infinite\ tiles-min.jpg');
-    background-repeat: repeat-y,repeat-y;
-    background-size: cover,cover;
-    background-position: center,center;
+    background-repeat:repeat, repeat;
+    background-position:center,center;
     mix-blend-mode: color-burn;
 }
 
@@ -70,14 +68,16 @@
     opacity: 0.7;
 }
 
-.fa-magnifying-glass {
+.magnifying_glass {
+    height: 1.5vw;
+    width: 1.5vw;
     color: var(--color-w);
     font-size: 1.33vw;
     position: relative !important;
     right: 1.4vw;
 }
 
-.fa-magnifying-glass:hover {
+.magnifying_glass:hover {
     cursor: pointer;
 }
 
@@ -238,6 +238,7 @@
     z-index: 1;
     mix-blend-mode: normal;
     position: absolute;
+    bottom: 0;
     animation-name: stairs;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
@@ -258,11 +259,11 @@
     min-height: 63.96vw;
     width: 86.12vw;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .icon{
+    border: 2px solid red;
     height: 30.48vw;
     width: 26.875vw;
     margin: 1vw 0.1vw;
@@ -272,11 +273,12 @@
     justify-content: center;
     align-items: center;
     z-index: 5;
+    margin: 1vw auto;
 }
 
 .iconsIMG{
-    height: 25.41vw;
-    width: 26.87vw;
+    height: 439px;
+    width: 387px;
 }
 
 .icon_text{
@@ -286,3 +288,18 @@
     font-weight: 700;
 }
 
+@media screen and (max-width: 1200px) {
+    .item_container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .icon{
+        aspect-ratio: 2;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .item_container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

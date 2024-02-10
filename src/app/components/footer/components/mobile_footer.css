@@ -30,17 +30,18 @@
     }
 
     .windows_img{
-        height: 111.225vw;
-      width: 150vw;
+        height: 100%;
+      width: 159vw;
     }
 
     .crop_container{
+        position: relative;
         width: 100vw;
-        bottom: 0vw;
+        top: -4.5vw;
     }
 
     .crop_box{
-        height: 50vw;
+        height: 42vw;
         width: 40vw;
         overflow: hidden;
         -webkit-box-reflect: right 10vw;

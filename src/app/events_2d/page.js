@@ -23,7 +23,7 @@ const Home = () => {
 
   return (
     <>
-    <Navbar/>
+    <Navbar reg_bg= {"register reg_bg5"}/>
       <main>
         <section className="hero-section">
           <div className="hand_upper">
@@ -155,7 +155,8 @@ const Home = () => {
         animate={{ opacity: open ? 1 : 0 }}
         transition={{ duration: 0.5 }}
       ></motion.div>
-    <Footer/>
+    <Footer bg={"footer img5"} star={"star1 star"} circle_src={circle1} windows_src={windows1}/>
+  
     </>
   );
 };

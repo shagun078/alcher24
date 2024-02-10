@@ -10,6 +10,9 @@ import { FaAngleDoubleDown } from "react-icons/fa";
 import "./homepage.css";
 import Animations from "./components/Animations";
 import Loadingpage from "../components/loading/loading";
+import circle1 from '/public/footer_img/Frame 15232-min.png';
+import windows1 from '/public/footer_img/Frame 15230-min.png';
+
 import Navbar from "../components/navbar/page";
 import Footer from "../components/footer/page";
 import Image from "next/image";
@@ -309,6 +312,8 @@ function Annotations({ controls }) {
       {marks.map((a, i) => {
         return (
           <>
+            {/* <Navbar reg_bg={"register reg_bg4"} />
+            <Footer bg={"footer img4"} star={"star1 star"} circle_src={circle1} windows_src={windows1} /> */}
             <Html key={a.key} position={[a.pos.x, a.pos.y, a.pos.z]}>
               {!backtrack && (
                 <motion.svg

@@ -12,11 +12,13 @@ import model_convener from './resources/team_images/model_convener.png'
 import './components/teams.css'
 import Footer from '../components/footer/page'
 import Navbar from '../components/navbar/page'
+import circle1 from '/public/footer_img/Frame 15232-min.png';
+import windows1 from '/public/footer_img/Frame 15230-min.png';
 
 export default function Teams() {
   return (
     <>
-    <Navbar/>
+    <Navbar  reg_bg= {"register reg_bg6"}/>
     <section>
         <div className='fake_div1'></div>
         <div className='fake_div2'></div>
@@ -303,7 +305,7 @@ export default function Teams() {
             </div>
         </section>
     </main>
-    <Footer/>
+    <Footer  bg= {"footer img6"} star= {"star1 star"}  circle_src= {circle1} windows_src= {windows1}/>
     </>
   )
 }
