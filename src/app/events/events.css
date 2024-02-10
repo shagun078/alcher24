@@ -26,24 +26,24 @@ body {
 #ui {
   position: absolute;
   width: 100%;
-  height:75vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.btn_box{
-  width:100%;
-  height:25%;
+.btn_box {
+  width: 100%;
+  height: 25%;
   display: flex;
-  align-items:self-end;
+  align-items: self-end;
   justify-content: space-between;
   transition: all 2s ease-in-out;
 }
 
-.event_box{
-  width:100%;
-  height:75%;
+.event_box {
+  width: 100%;
+  height: 75%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,94 +51,107 @@ body {
   align-items: center;
   transition: all 2s ease-in-out;
 }
-.event_box span{
+.event_box span {
   font-size: 3rem;
-  color:#5C6ADF;
-  margin-bottom: 1rem ;
+  color: #5c6adf;
+  margin-bottom: 1rem;
 }
 
-
-.backward-container{
+.backward-container {
   cursor: pointer;
   /* position: absolute;
   bottom:10vh;
   left:5vw; */
   display: flex;
   align-items: center;
- width:fit-content;
- height:40px;
- padding:0px 10px; 
- border-radius: 1.2rem;
- background-color: #FA5045;
- margin-left: 2vw;
+  width: fit-content;
+  height: 40px;
+  padding: 0px 10px;
+  border-radius: 1.2rem;
+  background-color: #fa5045;
+  margin-left: 2vw;
 }
-button{
-  cursor:pointer;
+button {
+  cursor: pointer;
 }
 
-.backward-svg{
-  color:white;
+.backward-svg {
+  color: white;
 }
-.btn-backward{
-  outline:none;
-  border:none;
+.btn-backward {
+  outline: none;
+  border: none;
   background: transparent;
-  color:white;
+  color: white;
   font-size: 1.2rem;
 }
 
-.forward-container{
-  cursor: pointer;  
+.forward-container {
+  cursor: pointer;
   display: flex;
   align-items: center;
   /* position: absolute;
   right:5vw;
   bottom:10vh; */
-  width:fit-content;
-  height:40px;
-  padding:0 10px; 
+  width: fit-content;
+  height: 40px;
+  padding: 0 10px;
   border-radius: 1.2rem;
-  background-color: #FA5045;
+  background-color: #fa5045;
   margin-right: 2vw;
- }
- 
- .forward-svg{
-   color:white;
- }
- .btn-forward{
-   outline:none;
-   border:none;
-   background: transparent;
-   color:white;
-   font-size: 1.2rem;
- }
+}
 
- .back-to-home{
+.forward-svg {
+  color: white;
+}
+.btn-forward {
+  outline: none;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.back-to-home {
   cursor: pointer;
   /* position: absolute;
   bottom:5vh;
   left:45vw; */
-  outline:none;
+  outline: none;
   border: none;
-  width:fit-content;
-  height:40px;
-  padding:0px 14px; 
+  width: fit-content;
+  height: 40px;
+  padding: 0px 14px;
   border-radius: 1.2rem;
-  background-color: #FA5045;
-  color:white;
+  background-color: #fa5045;
+  color: white;
   font-size: 1.1rem;
- }
- 
- .show-event-btn{
+}
+
+.show-event-btn {
   cursor: pointer;
-  outline:none;
+  outline: none;
   border: none;
-  width:fit-content;
-  height:40px;
-  padding:0px 14px; 
+  width: fit-content;
+  height: 40px;
+  padding: 0px 14px;
   border-radius: 1.2rem;
-  background-color: #FA5045;
-  color:white;
+  background-color: #fa5045;
+  color: white;
   font-size: 1.1rem;
- }
- 
+}
+
+@media screen and (orientation: landscape) {
+  .wrapper-2d {
+    display: none;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .wrapper{
+    display: none;
+  }
+  .wrapper-2d{
+    display:block;
+  }
+}

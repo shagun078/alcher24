@@ -3,7 +3,7 @@ import './loading.css'
 const Loadingpage = () => {
     return (
         <>
-            <div class="Loading_page">
+            <div className="Loading_page">
                 <div className='logo_img'>
                     <img src='AlcherLogo.svg'></img>
                 </div>

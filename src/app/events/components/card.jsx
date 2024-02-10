@@ -14,7 +14,7 @@ export function Cardleft(){
               height: "100%",
             }}
             quality={100}
-            placeholder="blur"
+            // placeholder="blur"
           />
         </div>
         <div className="wrap-left">
@@ -42,7 +42,7 @@ export function Cardright(){
               height: "100%",
             }}
             quality={100}
-            placeholder="blur"
+            // placeholder="blur"
           />
         </div>
         <div className="wrap-right">

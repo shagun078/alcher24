@@ -3,7 +3,7 @@
 import React, { Suspense, useRef, useState, useEffect } from "react";
 import { useGLTF, useVideoTexture, useTexture } from "@react-three/drei";
 import url from "../../../public/video.mp4";
-import "../homepage/homepage.css";
+import "../home/homepage.css";
 import * as THREE from "three";
 
 export default function RoomScene(props) {

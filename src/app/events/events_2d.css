@@ -99,7 +99,6 @@ main {
 }
 .head {
   width: 80%;
-  height: 10vh;
   margin: 10% 10% 0% 10%;
   display: flex;
   flex-direction: column;
@@ -254,11 +253,20 @@ main {
   top: 0;
   width: 100%;
   height: fit-content;
-  min-height: 280%;
+  min-height: 100%;
   background-color: rgba(255, 255, 255, 0.294);
   backdrop-filter: blur(2px);
   pointer-events: none;
 }
 .temp-gap{
   height: 10vh;
+}
+
+@media screen and (orientation: potrait) {
+  .wrapper{
+    display: none;
+  }
+  .wrapper-2d{
+    display:block;
+  }
 }
