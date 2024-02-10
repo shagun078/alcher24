@@ -12,6 +12,11 @@ import Animations from "./components/Animations";
 import Loadingpage from "../components/loading/loading";
 import Navbar from "../components/navbar/page";
 import Footer from "../components/footer/page";
+import Image from "next/image";
+
+import merch from "./resources/home_merch.png"
+
+
 const marks = [
   {
     key: "A",
@@ -578,6 +583,26 @@ export default function App() {
          </div>
         </div>
         {/*Sponsorsection ends*/}
+
+
+        <div className="alcher_merch_section">
+            <h1>ALCHER MERCH</h1>
+            <div className="merch_holder">
+              <Image
+                src={merch}
+                style={{
+                  width: '100vw',
+                  height: 'auto',
+                  alignItems: 'center',
+                }}
+              />
+            </div>
+            <p>Get Your Own</p>
+            <button className="buy_merch_button">BUY NOW</button>
+        </div>
+
+
+
         <div className='getAppSection'>
           <img src='upperHand.svg' id='upperHand'></img>
           <img src='lowerHand.svg' id='lowerHand'></img>
