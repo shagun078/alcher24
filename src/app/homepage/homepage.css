@@ -414,7 +414,6 @@ iframe{
 .textSection{
   margin-top: 10vh;
   width:50%;
-  height:90%;
 }
 .imageWrapper{
   width:50%;
@@ -424,12 +423,12 @@ iframe{
   align-items: center;
   position: relative;
 }
-.alcher_app{
+.home_alcher_app_container{
   width:100%;
   height: 100%;
   position: relative;
 }
-.alcher_app>img{
+.home_alcher_app_container>img{
   position: absolute;
   top:18vh;
   width:100%;
@@ -437,13 +436,7 @@ iframe{
   transform: scale(0.85);
 }
 
-
-
-
-
-
-
-#text{
+#text_home{
   height:100%;
   margin-left: 5rem;
   display: flex;
@@ -452,13 +445,13 @@ iframe{
 }
 
 
-#text h1{
+#text_home h1{
   color : #AADCDB;
   font-size: 3.8vw;
   font-family: headingAlcher;
 }
 
-#text p{
+#text_home p{
   margin-top:2vh;
   font-size: 1.2vw;
   font-family: normalText;
@@ -518,6 +511,10 @@ iframe{
   #rightGate{
    height: 35vh;
   }
+  .home_alcher_app_container>img{
+    top:10vh;
+  }
+  
   
 }
 /*
@@ -561,12 +558,13 @@ iframe{
   }
 
 
-  #text{
+  #text_home{
     margin-left: 2rem;
   }
 
   .textSection{
     margin-top: 5vh;
+    
   }
   .cardHoverSection{
     transform: scale(1.4)
@@ -612,11 +610,11 @@ iframe{
   .getAppSection{
     height:40%;
   }
-  .alcher_app>img{
+  .home_alcher_app_container>img{
    top:10vh;
   }
 
-  #text p{
+  #text_home p{
     font-size:1.2vw;
   }
 
@@ -647,7 +645,7 @@ iframe{
   .getAppSection{
     height:100%;
   }
-  #text h1{
+  #text_home h1{
     font-size: 2vw;
   }
   .imageWrapper{

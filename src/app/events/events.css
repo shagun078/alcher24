@@ -72,6 +72,9 @@ body {
  background-color: #FA5045;
  margin-left: 2vw;
 }
+button{
+  cursor:pointer;
+}
 
 .backward-svg{
   color:white;

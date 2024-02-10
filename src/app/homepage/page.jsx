@@ -582,14 +582,14 @@ export default function App() {
           <img src='upperHand.svg' id='upperHand'></img>
           <img src='lowerHand.svg' id='lowerHand'></img>
           <div className='textSection'>
-            <div id='text'>
+            <div id='text_home'>
               <h1>GET THE <br /> ALCHERINGA APP</h1>
               <p>Download our app and get access to app exclusive<br/> features like Alcheringa passes, Merches,<br/> Schedule, Campus maps, Real-time updates and<br/> much more.</p>
               <div id='appDownloadBtn'><img src='googlePlay.svg' className="googlePlayImage"></img></div>
             </div>
           </div>
           <div className="imageWrapper">
-           <div className="alcher_app"><img src='mobileapp.png'></img></div>
+           <div className="home_alcher_app_container"><img src='mobileapp.png'></img></div>
         
           </div>
         </div>

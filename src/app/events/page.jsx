@@ -1,5 +1,4 @@
 "use client";
-
 import "./events.css";
 import React, { useRef, useState, useEffect, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
@@ -13,7 +12,6 @@ import Loadingpage from "../components/loading/loading";
 import "./FadeInComponent.css";
 import Navbar from "../components/navbar/page";
 import Footer from "../components/footer/page";
-
 const marks = [
   {
     title2: "last-room",
@@ -62,7 +60,7 @@ const marks = [
   },
   {
     title2: "room-3",
-    title1: "Home",
+    title1: "room-4",
     description: "Alcher-related display image!",
     camPos: {
       x: 0,
@@ -73,6 +71,36 @@ const marks = [
       x: 0,
       y: 2,
       z: 50,
+    },
+  },
+  {
+    title2: "room-4",
+    title1: "room-5",
+    description: "Alcher-related display image!",
+    camPos: {
+      x: 0,
+      y: 2,
+      z: 58,
+    },
+    lookAt: {
+      x: 0,
+      y: 2,
+      z: 65,
+    },
+  },
+  {
+    title2: "room-5",
+    title1: "Home",
+    description: "Alcher-related display image!",
+    camPos: {
+      x: 0,
+      y: 2,
+      z: 75,
+    },
+    lookAt: {
+      x: 0,
+      y: 2,
+      z: 83,
     },
   },
 ];
@@ -313,6 +341,7 @@ function App() {
   return (
     <>
     <Suspense fallback={<Loadingpage/>}>
+    
     <Navbar/>
     <div className="wrapper" ref={contentRef}>
     
@@ -320,9 +349,9 @@ function App() {
         <PerspectiveCamera ref={camera} makeDefault position={[0, 2, -25]} />
         <OrbitControls
           ref={controls}
-          enableZoom={false}
+          enableZoom={true}
           enableDamping={true}
-          enableRotate={false}
+          enableRotate={true}
           target={[0, 2, 0]}
         />
         <ambientLight intensity={3} />
@@ -330,11 +359,12 @@ function App() {
         {/* <axesHelper args={[10]} /> */}
         <Tween />
       </Canvas>
-      <div id="ui">{buttons}</div>
+    { <div id="ui">{buttons}</div>}
       
     </div>
     <Footer/>
     </Suspense>
+   
     </>
   );
 }
