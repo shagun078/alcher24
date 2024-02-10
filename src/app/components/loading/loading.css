@@ -1,0 +1,47 @@
+@font-face {
+  font-family: loading;
+  src: url(../../../../public/Fontspring-DEMO-freigeist-conblack.woff2);
+}
+@font-face {
+  font-family: normalText;
+  src: url('../../../../public/Uncut-Sans-Medium.woff2');
+}
+
+
+.Loading_page {
+  width:100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  overflow-y:hidden;
+  background-image: url('/TexturePattern.jpg');
+  background-blend-mode: color-burn;
+  background-color: #141414;
+}
+
+
+  .logo_img{
+    width:fit-content;
+    height:20vh;
+    margin-right: 2vw;
+  }
+
+  .logo_img img{
+    display: block;
+    width: 100%;
+    height:100%;
+  }
+
+  .loading_content h1{
+    font-family: loading;
+    font-size: 4VW;
+  }
+  .loading_content p{
+    font-size: 1.3vw;
+    font-family: normalText;
+  }
+  
+
+  

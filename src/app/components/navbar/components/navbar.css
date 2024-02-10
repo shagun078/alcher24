@@ -1,0 +1,258 @@
+*{  
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+
+@font-face {
+    font-family: 'Uncut sans';
+    src: url("/Uncut-Sans-Bold.otf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Futara PT';
+    src: url("/FuturaPTLight.otf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Uncut sans medium';
+    src: url("/Uncut-Sans-Medium.otf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Uncut sans regular';
+    src: url("/Uncut-Sans-Regular.otf") format('truetype');
+}
+
+:root{
+    --color1: #181818 !important;
+}
+
+.header{
+    background-image: url('/TexturePattern.jpg');
+    background-blend-mode: color-burn;
+    background-color: #141414;
+    width: 100vw;
+    height: 9.31vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo{
+    height: 1.77vw;
+    width: 11.56vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar_menu{
+    height: 2.62vw;
+    width: 50.97vw;
+}
+
+#navbar_menu ul{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+#navbar_menu ul li{
+    font-family: 'Futara PT';
+    font-weight: 400;
+    font-size: 1.31vw;
+    height: 2.62vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+}
+
+#navbar_menu ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 0.66vw 0.66vw 0.66vw 0.66vw;
+}
+
+.register{
+    color: black;
+    height: 2.49vw;
+    width: 8.32vw;
+    background-color: #39A27A;
+    border-radius: 10vw;
+    border: none;
+    opacity: 0.8;
+}
+
+.register a{
+    font-family: 'Uncut sans regular';
+    font-size: var(--font-size1);
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+}
+
+.sit_box{
+    display: none;
+}
+
+.fixing{ 
+    width: 11.56vw;
+    display: flex;
+    justify-content: center;
+}
+
+.cred{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding: 0vw 4vw 0vw 0vw;
+}
+
+#icons{
+    display: none;
+}
+
+.hidden_box{
+    display: none;
+}
+
+@media only screen and (max-width: 1024px){
+    
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    #icons{
+        display: block;
+    }
+
+    #navbar_menu{
+        position: absolute;
+        width: 46.81vw;
+        height: 71.24vw;
+        top: 9.31vw;
+        right: 0;
+        background-color: black;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 30;
+    }
+
+    #navbar_menu.active{
+        display: grid;
+        place-items: center;
+        animation-name: hamburger;
+        animation-duration: 0.4s;
+        transition-timing-function: ease-out;
+    }
+
+    @keyframes hamburger{
+       0%{
+        height: 0vw;
+       }
+
+       100%{
+        height: 71.24vw;
+
+       }
+    }
+    
+    #navbar_menu ul{
+        color: white;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 58.84vw;
+        width: 33vw;
+        margin: auto;
+        z-index: 2;
+    }
+
+    #navbar_menu ul li{
+        font-weight: 400;
+        font-size: 4.07vw;
+        margin: auto;
+        animation-name: hamburger1;
+        animation-duration: 0.401s;
+        transition-timing-function: ease-in;
+        height: 6.5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #navbar_menu ul li a{
+        height: 6.5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @keyframes hamburger1{
+        0%{
+            color: transparent;
+        }
+        50%{
+            color: transparent;  
+        }
+        100%{
+            color: white;
+        }
+    }
+
+    .register{
+        color: black;
+        height: 7.65vw;
+        width: 50.57vw;
+        border-radius: 10vw;
+        border: none;
+    }
+
+    .sit_box{
+        display: inline-block;
+    }
+    
+    #icons{
+        color: white;
+        background-color: var(--color1);
+        outline: none;
+        border: none;
+        font-size: 3.90vw;
+        position: absolute;
+        right: 6vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fixing{
+        height: auto;
+        width: auto;
+    }
+
+    .register{
+        width: 25vw;
+        height: 5.65vw;
+    }
+
+    .register a{
+        font-size: 4.07vw;
+    }
+
+    .logo{
+       height: 5.73vw;
+       width: 40.96vw;
+    }
+    
+}

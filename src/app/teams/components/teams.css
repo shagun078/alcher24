@@ -1,0 +1,594 @@
+:root{
+    --page_head: calc(4vw + 20px);
+    --page_head_mobile: calc(3vw + 15px);
+    --page_subhead: calc(2vw + 10px);
+    --text_head: 3vw;
+    --text_name: calc(0.5vw + 10px);
+    --text_detail: calc(0.5vw + 6px);
+    --color_prb: #B7EC60;
+    --color_crm: #AADCDB;
+    --color_creatives: #F25BFF;
+    --color_events: #6859C7;
+    --color_web_app: #FF7E35;
+    --color_mun: #02A5D4;
+    --color_finance: #7266F8;
+    --color_convener: #B357B6;
+}
+
+main{
+    background-color: #141414;
+    color: #E8EDD9;
+    text-align: center;
+    overflow: hidden;
+    background-image: url('../resources/TexturePattern.jpg');
+    background-blend-mode:color-burn;
+    /* user-select: none; */
+}
+
+.teams_heading{
+    width: 80vw;
+    margin: 25vh auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left_window{
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 10vw;
+    aspect-ratio: 141/347;
+    -webkit-animation: left_window_change 12s ease-in-out infinite;
+    -moz-animation: left_window_change 12s ease-in-out infinite;
+    animation: left_window_change 12s ease-in-out infinite;
+    /* animation-fill-mode: forwards; */
+}
+
+.right_window{
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 10vw;
+    aspect-ratio: 141/347;
+    -webkit-animation: right_window_change 12s ease-in-out infinite;
+    -moz-animation: right_window_change 12s ease-in-out infinite;
+    animation: right_window_change 12s ease-in-out infinite;
+}
+
+.teams_head1 h2{
+    font-size: var(--page_head);
+    font-weight: 800;
+    /* color: #02a5d4; */
+    -webkit-animation: head1_change 12s ease-in-out infinite;
+    -moz-animation: head1_change 12s ease-in-out infinite;
+    animation: head1_change 12s ease-in-out infinite;
+}
+
+.teams_head1 h5{
+    font-size: var(--page_subhead);
+    font-weight: 300;
+}
+
+.all_teams{
+    width: 80vw;
+    margin: 0 auto 40vh;
+}
+
+.head_prb{
+    font-size: var(--text_head);
+    color: var(--color_prb);
+    padding-top: 20vh;
+    /* font-weight: 500; */
+}
+
+.bg_prb{
+    background-image: url('../resources/prb_bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.head_crm{
+    font-size: var(--text_head);
+    color: var(--color_crm);
+    padding-top: 20vh;
+}
+
+.bg_crm{
+    background-image: url('../resources/crm_bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.head_creatives{
+    font-size: var(--text_head);
+    color: var(--color_creatives);
+    padding-top: 20vh;
+}
+
+.bg_creatives{
+    background-image: url('../resources/creatives_bg.png');
+    /* background-size:; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-position-x: left; */
+    /* background-position-y: calc(center - 20px); */
+}
+
+.head_events{
+    font-size: var(--text_head);
+    color: var(--color_events);
+    padding-top: 20vh;
+}
+
+.bg_events{
+    background-image: url('../resources/events_bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.head_web_app{
+    font-size: var(--text_head);
+    color: var(--color_web_app);
+    padding-top: 20vh;
+}
+
+.bg_web_app{
+    background-image: url('../resources/web_app_bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.head_mun{
+    font-size: var(--text_head);
+    color: var(--color_mun);
+    padding-top: 20vh;
+}
+
+.bg_mun{
+    background-image: url('../resources/mun_bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.head_finance{
+    font-size: var(--text_head);
+    color: var(--color_finance);
+    padding-top: 20vh;
+}
+
+.bg_finance{
+    background-image: url('../resources/finance_bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.head_convener{
+    font-size: var(--text_head);
+    color: var(--color_convener);
+    padding-top: 20vh;
+}
+
+.bg_convener{
+    background-image: url('../resources/convener_bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.names_prb, .names_crm, .names_creatives, .names_events, .names_web_app, .names_mun, .names_finance, .names_convener{
+    width: 58vw;
+    margin: calc(2vw + 40px) auto 0;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0px 10px;
+}
+
+.names_prb{
+    color: var(--color_prb);
+}
+
+.names_crm{
+    color: var(--color_crm);
+    width: 80vw !important;
+    margin-left: 2vw;
+}
+
+.names_creatives{
+    color: var(--color_creatives);
+}
+
+.names_events{
+    color: var(--color_events);
+}
+
+.names_web_app{
+    color: var(--color_web_app);
+}
+
+.names_mun{
+    color: var(--color_mun);
+}
+
+.names_prb{
+    color: var(--color_prb);
+}
+
+.names_finance{
+    color: var(--color_finance);
+}
+
+.names_convener{
+    color: var(--color_convener);
+}
+
+.names_prb h6, .names_crm h6, .names_creatives h6, .names_events h6, .names_web_app h6, .names_mun h6, .names_finance h6, .names_convener h6{
+    font-size: var(--text_name);
+    padding-bottom: 3px;
+}
+
+.names_prb a, .names_crm a, .names_creatives a, .names_events a, .names_web_app a, .names_mun a, .names_finance a, .names_convener a{
+    font-size: var(--text_detail);
+    font-weight: 600;
+}
+
+.finance_img{
+    margin-bottom: -0.3vw;
+}
+
+.convener_img{
+    margin-bottom: 1.4vw;
+}
+
+@media screen and (max-width: 1025px){
+    .teams_heading{
+        width: 90vw;
+        margin: 10vh auto 0;
+    }
+    .teams_head1 h2{
+        font-size: var(--page_head_mobile);
+    }
+    .names_prb, .names_crm, .names_creatives, .names_events, .names_web_app, .names_mun, .names_finance, .names_convener{
+        margin: 20px auto 0;
+    }
+    .finance_img{
+        margin-bottom: -0.5vw;
+    }
+    .convener_img{
+        margin-bottom: 1vw;
+    }
+}
+
+@media screen and (max-width: 431px){
+    .finance_img{
+        margin-bottom: -1.3vw;
+    }
+    .convener_img{
+        margin-bottom: 0.5vw;
+    }
+}
+
+@-webkit-keyframes left_window_change {
+    0% {
+        background-image: url('../resources/left_window1.png');
+    }
+    12.5% {
+        background-image: url('../resources/left_window2.png');
+    }
+    25% {
+        background-image: url('../resources/left_window3.png');
+    }
+    37.5% {
+        background-image: url('../resources/left_window4.png');
+    }
+    50% {
+        background-image: url('../resources/left_window5.png');
+    }
+    62.5% {
+        background-image: url('../resources/left_window6.png');
+    }
+    75% {
+        background-image: url('../resources/left_window7.png');
+    }
+    87.5% {
+        background-image: url('../resources/left_window8.png');
+    }
+    100% {
+        background-image: url('../resources/left_window1.png');
+    }
+  }
+  
+  @-moz-keyframes left_window_change {
+    0% {
+        background-image: url('../resources/left_window1.png');
+    }
+    12.5% {
+        background-image: url('../resources/left_window2.png');
+    }
+    25% {
+        background-image: url('../resources/left_window3.png');
+    }
+    37.5% {
+        background-image: url('../resources/left_window4.png');
+    }
+    50% {
+        background-image: url('../resources/left_window5.png');
+    }
+    62.5% {
+        background-image: url('../resources/left_window6.png');
+    }
+    75% {
+        background-image: url('../resources/left_window7.png');
+    }
+    87.5% {
+        background-image: url('../resources/left_window8.png');
+    }
+    100% {
+        background-image: url('../resources/left_window1.png');
+    }
+  }
+  
+  @keyframes left_window_change {
+    0% {
+        background-image: url('../resources/left_window1.png');
+    }
+    12.5% {
+        background-image: url('../resources/left_window2.png');
+    }
+    25% {
+        background-image: url('../resources/left_window3.png');
+    }
+    37.5% {
+        background-image: url('../resources/left_window4.png');
+    }
+    50% {
+        background-image: url('../resources/left_window5.png');
+    }
+    62.5% {
+        background-image: url('../resources/left_window6.png');
+    }
+    75% {
+        background-image: url('../resources/left_window7.png');
+    }
+    87.5% {
+        background-image: url('../resources/left_window8.png');
+    }
+    100% {
+        background-image: url('../resources/left_window1.png');
+    }
+  } 
+
+  @-webkit-keyframes head1_change {
+    0% {
+        color: var(--color_mun)
+    }
+    12.5% {
+        color: var(--color_finance)
+    }
+    25% {
+        color: var(--color_crm)
+    }
+    37.5% {
+        color: var(--color_events)
+    }
+    50% {
+        color: var(--color_web_app)
+    }
+    62.5% {
+        color: var(--color_prb)
+    }
+    75% {
+        color: var(--color_mun)
+    }
+    87.5% {
+        color: var(--color_creatives)
+    }
+    100% {
+        color: var(--color_mun)
+    }
+  }
+  
+  @-moz-keyframes head1_change {
+    0% {
+        color: var(--color_mun)
+    }
+    12.5% {
+        color: var(--color_finance)
+    }
+    25% {
+        color: var(--color_crm)
+    }
+    37.5% {
+        color: var(--color_events)
+    }
+    50% {
+        color: var(--color_web_app)
+    }
+    62.5% {
+        color: var(--color_prb)
+    }
+    75% {
+        color: var(--color_mun)
+    }
+    87.5% {
+        color: var(--color_creatives)
+    }
+    100% {
+        color: var(--color_mun)
+    }
+  }
+  
+  @keyframes head1_change {
+    0% {
+        color: var(--color_mun)
+    }
+    12.5% {
+        color: var(--color_finance)
+    }
+    25% {
+        color: var(--color_crm)
+    }
+    37.5% {
+        color: var(--color_events)
+    }
+    50% {
+        color: var(--color_web_app)
+    }
+    62.5% {
+        color: var(--color_prb)
+    }
+    75% {
+        color: var(--color_mun)
+    }
+    87.5% {
+        color: var(--color_creatives)
+    }
+    100% {
+        color: var(--color_mun)
+    }
+  }
+
+  @-webkit-keyframes right_window_change {
+    0% {
+        background-image: url('../resources/right_window1.png');
+    }
+    12.5% {
+        background-image: url('../resources/right_window2.png');
+    }
+    25% {
+        background-image: url('../resources/right_window3.png');
+    }
+    37.5% {
+        background-image: url('../resources/right_window4.png');
+    }
+    50% {
+        background-image: url('../resources/right_window5.png');
+    }
+    62.5% {
+        background-image: url('../resources/right_window6.png');
+    }
+    75% {
+        background-image: url('../resources/right_window7.png');
+    }
+    87.5% {
+        background-image: url('../resources/right_window8.png');
+    }
+    100% {
+        background-image: url('../resources/right_window1.png');
+    }
+  }
+  
+  @-moz-keyframes right_window_change {
+    0% {
+        background-image: url('../resources/right_window1.png');
+    }
+    12.5% {
+        background-image: url('../resources/right_window2.png');
+    }
+    25% {
+        background-image: url('../resources/right_window3.png');
+    }
+    37.5% {
+        background-image: url('../resources/right_window4.png');
+    }
+    50% {
+        background-image: url('../resources/right_window5.png');
+    }
+    62.5% {
+        background-image: url('../resources/right_window6.png');
+    }
+    75% {
+        background-image: url('../resources/right_window7.png');
+    }
+    87.5% {
+        background-image: url('../resources/right_window8.png');
+    }
+    100% {
+        background-image: url('../resources/right_window1.png');
+    }
+  }
+  
+  @keyframes right_window_change {
+    0% {
+        background-image: url('../resources/right_window1.png');
+    }
+    12.5% {
+        background-image: url('../resources/right_window2.png');
+    }
+    25% {
+        background-image: url('../resources/right_window3.png');
+    }
+    37.5% {
+        background-image: url('../resources/right_window4.png');
+    }
+    50% {
+        background-image: url('../resources/right_window5.png');
+    }
+    62.5% {
+        background-image: url('../resources/right_window6.png');
+    }
+    75% {
+        background-image: url('../resources/right_window7.png');
+    }
+    87.5% {
+        background-image: url('../resources/right_window8.png');
+    }
+    100% {
+        background-image: url('../resources/right_window1.png');
+    }
+  }
+
+.fake_div1{
+    background-image: url('../resources/left_window1.png');
+}
+.fake_div2{
+    background-image: url('../resources/left_window2.png');
+}
+.fake_div3{
+    background-image: url('../resources/left_window3.png');
+}
+.fake_div4{
+    background-image: url('../resources/left_window4.png');
+}
+.fake_div5{
+    background-image: url('../resources/left_window5.png');
+}
+.fake_div6{
+    background-image: url('../resources/left_window6.png');
+}
+.fake_div7{
+    background-image: url('../resources/left_window7.png');
+}
+.fake_div8{
+    background-image: url('../resources/left_window8.png');
+}
+.fake_div9{
+    background-image: url('../resources/right_window1.png');
+}
+.fake_div10{
+    background-image: url('../resources/right_window2.png');
+}
+.fake_div11{
+    background-image: url('../resources/right_window3.png');
+}
+.fake_div12{
+    background-image: url('../resources/right_window4.png');
+}
+.fake_div13{
+    background-image: url('../resources/right_window5.png');
+}
+.fake_div14{
+    background-image: url('../resources/right_window6.png');
+}
+.fake_div15{
+    background-image: url('../resources/right_window7.png');
+}
+.fake_div16{
+    background-image: url('../resources/right_window8.png');
+}
