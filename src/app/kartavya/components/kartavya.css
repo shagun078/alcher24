@@ -559,7 +559,7 @@ padding-left: 0%;
 }
 
 
-@media screen and (max-width: 750px){
+@media screen and (max-width: 600px){
 
     .large_card{
         display: none;
@@ -575,6 +575,12 @@ padding-left: 0%;
         grid-template-columns: repeat(1, 1fr);
         width: 90vw;
         row-gap: 3vh;
+    }
+
+    .front .inner p{
+        padding-top: calc((772/970)*100vw);
+        font-size: var(--text2);
+        margin-left: -16px;
     }
 
     .back .inner p{
