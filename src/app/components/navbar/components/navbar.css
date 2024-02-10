@@ -34,10 +34,11 @@
     background-blend-mode: color-burn;
     background-color: #141414;
     width: 100vw;
-    height: 9.31vw;
+    height: 6vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    z-index: 100;
 }
 
 .logo{
@@ -65,13 +66,12 @@
 
 #navbar_menu ul li{
     font-family: 'Futara PT';
-    font-weight: 400;
+    font-weight: 700;
     font-size: 1.31vw;
     height: 2.62vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0.8;
 }
 
 #navbar_menu ul li a{
@@ -123,11 +123,15 @@
     display: none;
 }
 
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 1025px){
     
     *{
         margin: 0;
         padding: 0;
+    }
+
+    .header{
+        height: 9vw;
     }
 
     #icons{

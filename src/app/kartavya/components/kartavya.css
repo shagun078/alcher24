@@ -343,7 +343,8 @@ padding-left: 0%;
 
 .star2{
     position: relative;
-    top: calc(3vh);
+    top: 3vh;
+    background-color: transparent;
 }
 
 @media screen and (max-width: 1281px){
@@ -353,9 +354,8 @@ padding-left: 0%;
 }
 
 @media screen and (max-width: 1025px){
-
     .hand_upper{
-        margin-top: -10vh;
+        margin-top: -4vh;
     }
 
     .hand_lower{
@@ -441,6 +441,10 @@ padding-left: 0%;
 
     .back .inner p{
         font-size: var(--text4);
+    }
+
+    .star2{
+        top: -1.5vh;
     }
 }
 
