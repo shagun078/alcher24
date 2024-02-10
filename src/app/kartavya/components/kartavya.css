@@ -182,6 +182,7 @@ main{
 .large_card h4::after{
     cursor: pointer;
     content: 'UDAAN';
+    transition: content 2s ease-in-out;
 }
 
 .large_card:not(:hover) h4{
@@ -193,20 +194,18 @@ main{
     content: 'GOAL';
     visibility: visible;
     animation: fadeIn 2s;
+    opacity: 1;
 }
 
-.large_card:hover h5::after{
-    transition: content 10s ease-in-out;
+.large_card h5::after {
+    transition: opacity 1s ease-in-out;
     cursor: pointer;
     content: "Udaan, launched as 'Bachpan' in 2011, aims to deliver hope to underprivileged children and create an impact in their lives through the conduction of various educational workshops and recreational activities.";
-    z-index: 10;
-    animation: fadeIn 2s;
     font-weight: 500;
 }
 
-.large_card:not(:hover) h5::content{
-    /* animation: fadeOut 2s ; */
-    animation: fadeOut 2s ease-in-out;
+.large_card:not(:hover) h5::after {
+    opacity: 0;
 }
 
 .large_card_mobile{
@@ -560,7 +559,7 @@ padding-left: 0%;
 }
 
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 750px){
 
     .large_card{
         display: none;
