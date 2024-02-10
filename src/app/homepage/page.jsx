@@ -20,8 +20,9 @@ import merch from "./resources/home_merch.png"
 const marks = [
   {
     key: "A",
-    title: "EVENTS",
-    description: "Laptop Screen",
+    title: "COMPETITIONS",
+    description:
+      "Alcheringa has many competitions spread across various genres. They take place during the three days with the prize distribution on the last day. People all over the country participate in these competitions to win exciting prizes and goodies and to witness one of India's biggest cultural festival.",
     camPos: {
       x: -4.3,
       y: 1.2,
@@ -39,14 +40,15 @@ const marks = [
     },
     textAt: {
       x: -5.25,
-      y: 2.3,
+      y: 2.6,
       z: -5,
     },
   },
   {
     key: "B",
-    title: "QR",
-    description: "QR code is here",
+    title: "ALCHERINGA APP",
+    description:
+      "Download our app and visit our website get access to amazing features like E-Alcher passes, Schedule, Campus maps, Real-Time updates and much more.",
     camPos: {
       x: -4.2,
       y: 1.2,
@@ -63,23 +65,23 @@ const marks = [
       z: -3.3,
     },
     textAt: {
-      x: -10,
-      y: 0,
-      z: -4.5,
+      x: -11,
+      y: 0.8,
+      z: -3,
     },
   },
   {
     key: "C",
-    title: "Tablet",
-    description: "Theme Video Playing",
+    title: "THEME VIDEO",
+    description: "Our this year's theme, Chromatic Elysium",
     camPos: {
       x: -4,
-      y: 1.5,
+      y: 2,
       z: -2.3,
     },
     lookAt: {
       x: -7,
-      y: 1.5,
+      y: 0.5,
       z: -2.3,
     },
     pos: {
@@ -89,14 +91,15 @@ const marks = [
     },
     textAt: {
       x: -7.5,
-      y: 1.9,
-      z: -1.15,
+      y: 1.3,
+      z: -0.65,
     },
   },
   {
     key: "D",
-    title: "Calendar",
-    description: "xyz days to go!",
+    title: "EVENTS",
+    description:
+      "Alcheringa has more than 80 events spread across various genres like fashion, music, art, sports, etc. They take place during the three days in which many events take place which includes panel discussions with various famous creators, informal activities like hot air balloon, ATV rides, paint ball shoot etc.!",
     camPos: {
       x: -4.5,
       y: 2,
@@ -120,8 +123,9 @@ const marks = [
   },
   {
     key: "E",
-    title: "Kartavya",
-    description: "Kartavya Trophy",
+    title: "KARTAVYA",
+    description:
+      "Alcheringa hosts several campaigns under Initiatives for cultural development and the betterment of society. These campaigns are conducted round the year to serve the mankind.",
     camPos: {
       x: -3.2,
       y: 2,
@@ -139,14 +143,15 @@ const marks = [
     },
     textAt: {
       x: -3.55,
-      y: 3,
+      y: 3.1,
       z: -5,
     },
   },
   {
     key: "F",
-    title: "Merch",
-    description: "ALcher Merch",
+    title: "MERCH",
+    description:
+      "Alcheringa has more than 80 events spread across various genres like fashion, music, art, sports, etc. They take place during the three days in which many events take place which includes panel discussions with various famous creators, informal activities like hot air balloon, ATV rides, paint ball shoot etc.",
     camPos: {
       x: -4,
       y: 2,
@@ -165,13 +170,14 @@ const marks = [
     textAt: {
       x: -8,
       y: 1.9,
-      z: 2,
+      z: 2.4,
     },
   },
   {
     key: "G",
-    title: "Sponsor",
-    description: "Piggy Bank",
+    title: "SPONSORS",
+    description:
+      "Alcheringa has more than 80 events spread across various genres like fashion, music, art, sports, etc. They take place during the three days in which many events take place which includes panel discussions with various famous creators, informal activities like hot air balloon, ATV rides, paint ball shoot etc.",
     camPos: {
       x: -3,
       y: 1,
@@ -195,8 +201,9 @@ const marks = [
   },
   {
     key: "H",
-    title: "Teams",
-    description: "Id Card",
+    title: "THE TEAM",
+    description:
+      "All students, from the fourth year mentors to the first-year freshers, play an active role in actualising the four days of Alcher. Alcheringa is the most significant cultural festival in the northeast and is build by the yearlong efforts of all the students involved in making their vision of Alcher come to life..",
     camPos: {
       x: -3.8,
       y: 1.66,
@@ -213,15 +220,16 @@ const marks = [
       z: -3.7,
     },
     textAt: {
-      x: -3.62,
-      y: 1.66,
+      x: -4.62,
+      y: 1.9,
       z: -3.4,
     },
   },
   {
     key: "I",
     title: "MUN",
-    description: "Microphone",
+    description:
+      "The grandest simulation of the UN in the North-East, IIT Guwahati Model United Nations presents its Edition XVI, bigger and better than ever before. This year we bring to you four committees that are bound to get you thinking about and deliberating on the issues that we face in the real world.",
     camPos: {
       x: -3.8,
       y: 1.2,
@@ -239,33 +247,8 @@ const marks = [
     },
     textAt: {
       x: -3.7,
-      y: 1,
+      y: 1.5,
       z: -3.4,
-    },
-  },
-  {
-    key: "J",
-    title: "Photo",
-    description: "Photoframe",
-    camPos: {
-      x: -2.5,
-      y: 1.35,
-      z: -2,
-    },
-    lookAt: {
-      x: -2.5,
-      y: 1.35,
-      z: -3,
-    },
-    pos: {
-      x: -2.7,
-      y: 1.35,
-      z: -3.4,
-    },
-    textAt: {
-      x: -3,
-      y: 0.7,
-      z: -5,
     },
   },
 ];
@@ -358,7 +341,7 @@ function Annotations({ controls }) {
                           y: targetY,
                           z: targetZ,
                         },
-                        2000
+                        3000
                       )
                       .easing(TWEEN.Easing.Cubic.Out)
                       .start();
@@ -371,14 +354,14 @@ function Annotations({ controls }) {
                           y: camPosY,
                           z: camPosZ,
                         },
-                        2000
+                        3000
                       )
                       .easing(TWEEN.Easing.Cubic.Out)
                       .start();
                     setSelected(backtrack ? -1 : a.key);
                     setTimeout(() => {
                       controls.current.enabled = backtrack;
-                    }, 2100);
+                    }, 3100);
                     // console.log(controls.current);
                   }}
                 >
@@ -416,67 +399,69 @@ function Annotations({ controls }) {
                     transition={{ duration: 2 }}
                   >
                     <motion.div
-                      className="title"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ duration: 2 }}
-                      style={{ color: "white", fontSize: 48 }}
+                      className="return"
+                      onClick={handleReturn}
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="29"
-                        height="32"
-                        viewBox="0 0 29 32"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
                         fill="none"
                       >
                         <path
-                          d="M14.5 0.5L16.5506 13.808L29 16L16.5506 18.192L14.5 31.5L12.4494 18.192L0 16L12.4494 13.808L14.5 0.5Z"
-                          fill="white"
-                        />
-                      </svg>
-                      {a.title}
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="29"
-                        height="32"
-                        viewBox="0 0 29 32"
-                        fill="none"
-                      >
-                        <path
-                          d="M14.5 0.5L16.5506 13.808L29 16L16.5506 18.192L14.5 31.5L12.4494 18.192L0 16L12.4494 13.808L14.5 0.5Z"
+                          d="M21.333 9.70835V12.2917H5.83305L12.9372 19.3959L11.103 21.23L0.873047 11L11.103 0.77002L12.9372 2.60419L5.83305 9.70835H21.333Z"
                           fill="white"
                         />
                       </svg>
                     </motion.div>
-                    <motion.p
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ duration: 2 }}
-                      style={{ color: "white", fontSize: 20 }}
-                    >
-                      {a.description}
-                    </motion.p>
+                    <div className="flex-container">
+                      <motion.div
+                        className="title"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 2 }}
+                        style={{ color: "white", fontSize: "4.7vh" }}
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="29"
+                          height="32"
+                          viewBox="0 0 29 32"
+                          fill="none"
+                        >
+                          <path
+                            d="M14.5 0.5L16.5506 13.808L29 16L16.5506 18.192L14.5 31.5L12.4494 18.192L0 16L12.4494 13.808L14.5 0.5Z"
+                            fill="white"
+                          />
+                        </svg>
+                        {a.title}
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="29"
+                          height="32"
+                          viewBox="0 0 29 32"
+                          fill="none"
+                        >
+                          <path
+                            d="M14.5 0.5L16.5506 13.808L29 16L16.5506 18.192L14.5 31.5L12.4494 18.192L0 16L12.4494 13.808L14.5 0.5Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </motion.div>
+                      <motion.p
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 2 }}
+                        style={{ color: "white", fontSize: "2vh" }}
+                      >
+                        {a.description}
+                      </motion.p>
+                    </div>
                   </motion.div>
-                  <motion.button
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 2 }}
-                    className="return"
-                    onClick={handleReturn}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="22"
-                      height="22"
-                      viewBox="0 0 22 22"
-                      fill="none"
-                    >
-                      <path
-                        d="M21.333 9.70835V12.2917H5.83305L12.9372 19.3959L11.103 21.23L0.873047 11L11.103 0.77002L12.9372 2.60419L5.83305 9.70835H21.333Z"
-                        fill="white"
-                      />
-                    </svg>
-                  </motion.button>
                 </>
               )}
             </Html>
@@ -486,8 +471,6 @@ function Annotations({ controls }) {
     </React.Fragment>
   );
 }
-
-
 
 function Tween() {
   useFrame(() => {
@@ -501,60 +484,62 @@ export default function App() {
   const [isHovered, setIsHovered] = useState(false);
   const scrollToContent = () => {
     console.log("clicked!");
-    contentRef.current && contentRef.current.scrollIntoView({ behavior: 'smooth' });
+    contentRef.current &&
+      contentRef.current.scrollIntoView({ behavior: "smooth" });
   };
   const hoverEffect = () => {
     setIsHovered(!isHovered);
     console.log(isHovered);
-  }
+  };
   const buttons = (
     <React.Fragment>
       <FaAngleDoubleDown className="content-btn" onClick={scrollToContent} />
     </React.Fragment>
-  )
-
+  );
 
   return (
-  <React.Fragment>
-  <Suspense fallback={<Loadingpage />}>
-  <Navbar/>
-    <main className="threeD_2dwrapper">
-      <div className='threeDWrapper'>
-          <Canvas
-            camera={{
-              fov: 70,
-              position: [-2, 1.5, -2],
-              zoom: 1,
-            }}
-            shadows
-          >
-            <OrbitControls
-              ref={ref}
-              target={[-3.5, 1.4, -1.8]}
-              enableZoom={false}
-              enableDamping={true}
-              minPolarAngle={Math.PI / 3}
-              maxPolarAngle={Math.PI / 2}
-              dampingFactor={0.02}
-              enabled={true}
-            />
-            <ambientLight intensity={1.5} />
-            <Annotations controls={ref} />
-            <RoomScene></RoomScene>
-            <Tween />
-          </Canvas>
-          <div id="ui_home">{buttons}</div>
-      </div>
-      <div className='mainContainer ' ref={contentRef}>
-        {/*Video-container section starts*/}
-        <div className='videoWrapper'>
-          <div className='videoBox'>
-            <iframe src="https://www.youtube.com/embed/CWhFx8v1mg8?autoplay=1&controls=0"
-              frameBorder="0" allowFullScreen
-            ></iframe>
+    <React.Fragment>
+      <Suspense fallback={<Loadingpage />}>
+        <Navbar />
+        <main className="threeD_2dwrapper">
+          <div className="threeDWrapper">
+            <Canvas
+              camera={{
+                fov: 70,
+                position: [-2, 1.5, -2],
+                zoom: 1,
+              }}
+              shadows
+            >
+              <OrbitControls
+                ref={ref}
+                target={[-3.5, 1.4, -1.8]}
+                enableZoom={false}
+                enableDamping={true}
+                minPolarAngle={Math.PI / 3}
+                maxPolarAngle={Math.PI / 2}
+                dampingFactor={0.02}
+                enabled={true}
+              />
+              <ambientLight intensity={1.5} />
+              <Annotations controls={ref} />
+              <RoomScene></RoomScene>
+              <Tween />
+            </Canvas>
+            <div id="ui_home">{buttons}</div>
           </div>
-          {/*Video-container section ends*/}
-        </div>
+          <div className="mainContainer " ref={contentRef}>
+            {/*Video-container section starts*/}
+            <div className="videoWrapper">
+              <div className="videoBox">
+                <iframe
+                  src="https://www.youtube.com/embed/CWhFx8v1mg8?autoplay=1&controls=0"
+                  frameBorder="0"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              {/*Video-container section ends*/}
+            </div>
 
         {/*Sponsor section starts*/}
         <div className='decorationContainer'>
@@ -619,24 +604,24 @@ export default function App() {
           </div>
         </div>
 
+            <div className="passesSection">
+              <p id="getYour">Get your Own</p>
+              <h1 id="alcherPass">Alcheringa'24 Passes</h1>
+              <button id="registerBtn">REGISTER</button>
+            </div>
 
-
-        <div className='passesSection'>
-          <p id='getYour'>Get your Own</p>
-          <h1 id='alcherPass'>Alcheringa'24 Passes</h1>
-          <button id='registerBtn'>REGISTER</button>
-        </div>
-
-
-        <div className={`cardHoverSection ${isHovered ? 'hovered' : ''}`} onMouseEnter={hoverEffect} onMouseLeave={hoverEffect}>
-          <img src='BoardOrange.svg' id='cardHoverLeft'></img>
-          <img src='BoardBlue.svg' id='cardHoverRight'></img>
-        </div>
-      </div>
-    </main>
-   <Footer/>
-    </Suspense>
-  </React.Fragment>
-
+            <div
+              className={`cardHoverSection ${isHovered ? "hovered" : ""}`}
+              onMouseEnter={hoverEffect}
+              onMouseLeave={hoverEffect}
+            >
+              <img src="BoardOrange.svg" id="cardHoverLeft"></img>
+              <img src="BoardBlue.svg" id="cardHoverRight"></img>
+            </div>
+          </div>
+        </main>
+        <Footer />
+      </Suspense>
+    </React.Fragment>
   );
 }
