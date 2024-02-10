@@ -13,6 +13,7 @@ const Navbar = () => {
 
     const props = [
         { "title": "/", "bg": "footer ", "star": "star", id: 0, bool: false, "reg_bg": "register reg_bg" },
+        {"title": "/homepage", "bg": "footer img1", "star": "star1 star", id: 1, bool: false, "reg_bg": "register reg_bg1"},
         { "title": "/events", "bg": "footer img1", "star": "star1 star", id: 1, bool: false, "reg_bg": "register reg_bg1"},
         { "title": "/competition", "bg": "footer img2", "star": "star1 star", id: 2, bool: false, "reg_bg": "register reg_bg2"},
         { "title": "/kartavya", "bg": "footer img3", "star": "star1 star", id: 3, bool: false, "reg_bg": "register reg_bg3" },

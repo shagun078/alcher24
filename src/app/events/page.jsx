@@ -322,7 +322,7 @@ function App() {
           ref={controls}
           enableZoom={false}
           enableDamping={true}
-          enableRotate={true}
+          enableRotate={false}
           target={[0, 2, 0]}
         />
         <ambientLight intensity={3} />

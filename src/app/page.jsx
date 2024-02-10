@@ -9,7 +9,7 @@ export default function MainPage() {
   return (
     <>
     <Navbar/>
-      <Link href="/homepage"> Home Page</Link>
+      <Link href="/homepage">Home Page</Link>
       <br />
       <Link href="/events">Events Page</Link>
       <br />

@@ -538,7 +538,7 @@ export default function App() {
             <RoomScene></RoomScene>
             <Tween />
           </Canvas>
-          <div id="ui">{buttons}</div>
+          <div id="ui_home">{buttons}</div>
       </div>
       <div className='mainContainer ' ref={contentRef}>
         {/*Video-container section starts*/}
@@ -609,7 +609,7 @@ export default function App() {
         </div>
       </div>
     </main>
-    <Footer/>
+   <Footer/>
     </Suspense>
   </React.Fragment>
 

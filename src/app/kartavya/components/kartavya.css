@@ -335,7 +335,7 @@ padding-left: 0%;
     font-size: var(--text3);
 }
 
-button{
+.kartavya_button{
     width: 90%;
     display: flex;
     justify-content: space-between;

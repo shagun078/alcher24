@@ -22,6 +22,7 @@ const Footer = () => {
 
     const props = [
         { "title": "/", "bg": "footer ", "star": "star", "id": 0, "reg_bg": "register reg_bg", "circle_src": circle, "windows_src": windows },
+        { "title": "/homepage", "bg": "footer img1", "star": "star1 star", "id": 1, "reg_bg": "register reg_bg1", "circle_src": circle1, "windows_src": windows1 },
         { "title": "/events", "bg": "footer img1", "star": "star1 star", "id": 1, "reg_bg": "register reg_bg1", "circle_src": circle1, "windows_src": windows1 },
         { "title": "/competition", "bg": "footer img2", "star": "star1 star", "id": 2, "reg_bg": "register reg_bg2", "circle_src": circle1, "windows_src": windows1 },
         { "title": "/kartavya", "bg": "footer img3", "star": "star1 star", "id": 3, "reg_bg": "register reg_bg3", "circle_src": circle1, "windows_src": windows1 },
@@ -39,7 +40,7 @@ const Footer = () => {
     for (let i = 0; i < props.length; i++) {
         if (path === props[i].title) {
             return (
-                <div className="container">
+                <div className="nav_footer_container">
                     <div className="navbar_footer">
                         <nav className="navbar_menu_footer">
                             <ul>
