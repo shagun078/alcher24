@@ -184,6 +184,10 @@ main{
     content: 'UDAAN';
 }
 
+.large_card:not(:hover) h4{
+    animation: fadeIn 2s;
+}
+
 .large_card:hover h4::after{
     cursor: pointer;
     content: 'GOAL';
@@ -198,6 +202,11 @@ main{
     z-index: 10;
     animation: fadeIn 2s;
     font-weight: 500;
+}
+
+.large_card:not(:hover) h5::content{
+    /* animation: fadeOut 2s ; */
+    animation: fadeOut 2s ease-in-out;
 }
 
 .large_card_mobile{
@@ -479,34 +488,14 @@ padding-left: 0%;
     .large_card{
         width: 90vw;
         margin: 10vh auto 4vh;
-        aspect-ratio: 772/970;
-        display: none;
-    }
-
-    .stars2{
-        margin-top: calc(772/970*5vw);
     }
 
     .large_card h5{
-        padding-top: calc(772/970*30vw);
-        font-size: 4.5vw;
+        font-size: 3vw;
     }
 
     .large_card h4{
-        padding-top: calc(772/970*120vw);
         font-size: var(--text3);    
-    }
-
-    .large_card_mobile{
-        display: block;
-        width: 90vw;
-        margin: 0 auto 3vh;
-    }
-
-    .cards{
-        grid-template-columns: repeat(1, 1fr);
-        width: 90vw;
-        row-gap: 3vh;
     }
 
     .achievements{
@@ -554,8 +543,9 @@ padding-left: 0%;
     }
 
     .front .inner p{
-        padding-top: calc((772/970)*100vw);
+        padding-top: calc((772/970)*45vw);
         font-size: var(--text2);
+        margin-left: -16px;
     }
 
     .back .inner p{
@@ -566,6 +556,30 @@ padding-left: 0%;
 @media screen and (max-width: 750px){
     .star2{
         top: 1vh;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+
+    .large_card{
+        display: none;
+    }
+
+    .large_card_mobile{
+        display: block;
+        width: 90vw;
+        margin: 0 auto 3vh;
+    }
+
+    .cards{
+        grid-template-columns: repeat(1, 1fr);
+        width: 90vw;
+        row-gap: 3vh;
+    }
+
+    .back .inner p{
+        font-size: var(--text6);
     }
 }
 
@@ -605,4 +619,9 @@ padding-left: 0%;
   @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
+  }
+
+  @keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
   }
