@@ -40,7 +40,7 @@ const marks = [
     camPos: {
       x: 0,
       y: 2,
-      z: -10,
+      z: -9.65,
     },
     lookAt: {
       x: 0,
@@ -88,7 +88,7 @@ const marks = [
     camPos: {
       x: 0,
       y: 2,
-      z: 42,
+      z: 42.5,
     },
     lookAt: {
       x: 0,
@@ -104,7 +104,7 @@ const marks = [
     camPos: {
       x: 0,
       y: 2,
-      z: 59,
+      z: 60,
     },
     lookAt: {
       x: 0,
@@ -120,7 +120,7 @@ const marks = [
     camPos: {
       x: 0,
       y: 2,
-      z: 75,
+      z: 77,
     },
     lookAt: {
       x: 0,
