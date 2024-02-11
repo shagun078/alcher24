@@ -15,7 +15,7 @@
     --font2: "Futura PT";
 }
 
-main{
+.kartavya_main{
     background-color: #141414;
     color: #E8EDD9;
     text-align: center;
@@ -23,6 +23,7 @@ main{
     background-image: url('../resources/TexturePattern.jpg');
     background-blend-mode:color-burn;
     user-select: none;
+    margin-top: 0;
 }
 
 .texture_wheel{
