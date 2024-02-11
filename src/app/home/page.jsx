@@ -363,7 +363,7 @@ function Annotations({ controls }) {
                 <motion.svg
                   initial={{ opacity: 0, pointerEvents: "none" }}
                   animate={{ opacity: 1, pointerEvents: "all" }}
-                  transition={{ duration: 2 }}
+                  transition={{ duration: 2, delay: 3 }}
                   height="34"
                   width="34"
                   transform="translate(-13 -13)"
@@ -452,12 +452,12 @@ function Annotations({ controls }) {
                     className="blur"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ duration: 2 }}
+                    transition={{ duration: 2, delay: 3 }}
                   >
                     <motion.div
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
-                      transition={{ duration: 2 }}
+                      transition={{ duration: 2, delay: 3 }}
                       className="return"
                       onClick={handleReturn}
                     >
@@ -479,7 +479,7 @@ function Annotations({ controls }) {
                         className="title"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ duration: 2 }}
+                        transition={{ duration: 2, delay: 3 }}
                         style={{
                           color: "white",
                           fontSize: window.innerWidth > 840 ? "4.7vh" : "3.5vh",
@@ -514,7 +514,7 @@ function Annotations({ controls }) {
                       <motion.p
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ duration: 2 }}
+                        transition={{ duration: 2, delay: 3 }}
                         style={{
                           color: "white",
                           fontSize: window.innerWidth > 840 ? "2vh" : "1.5vh",
