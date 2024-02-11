@@ -113,7 +113,7 @@ const marks = [
   {
     title2: "INFORMALS",
     title1: "PROSHOWS",
-    currPage:'Join us all from 7th to 8th March',
+    currPage:"JOIN US",
     description: "Alcher-related display image!",
     camPos: {
       x: 0,
