@@ -9,7 +9,7 @@ import TWEEN from "@tweenjs/tween.js";
 import { FaAngleDoubleDown } from "react-icons/fa";
 import "./homepage.css";
 import Animations from "./components/Animations";
-import Loadingpage from "../components/loading/loading";
+
 import circle1 from '/public/footer_img/Frame 15232-min.png';
 import windows1 from '/public/footer_img/Frame 15230-min.png';
 
@@ -504,7 +504,7 @@ export default function App() {
 
   return (
     <React.Fragment>
-      <Suspense fallback={<Loadingpage />}>
+      
         <Navbar />
         <main className="threeD_2dwrapper">
           <div className="threeDWrapper">
@@ -627,7 +627,7 @@ export default function App() {
           </div>
         </main>
       
-      </Suspense>
+     
     </React.Fragment>
   );
 }

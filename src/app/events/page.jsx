@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Museumfinal } from "../components/Museum10Feb";
 //import { Museum1 } from "../components/Museum";
-import Loadingpage from "../components/loading/loading";
+//import Loadingpage from "../components/loading/loading";
 import "./FadeInComponent.css";
 import Navbar from "../components/navbar/page";
 import Footer from "../components/footer/page";
@@ -379,7 +379,7 @@ function App() {
   return (
     <>
       <Navbar reg_bg={"register reg_bg1"} />
-      <Suspense fallback={<Loadingpage />}>
+     
         <div className="wrapper">
           <Canvas>
             <PerspectiveCamera
@@ -540,7 +540,7 @@ function App() {
           circle_src={circle1}
           windows_src={windows1}
         />
-      </Suspense>
+     
     </>
   );
 }
