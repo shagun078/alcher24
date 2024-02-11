@@ -1,12 +1,13 @@
 "use client";
 
-import React, { Suspense, useRef, useState, useEffect } from "react";
-import { useGLTF, useVideoTexture, useTexture } from "@react-three/drei";
+import React, { useRef, useState, useEffect } from "react";
+import { useGLTF, useTexture } from "@react-three/drei";
 import url from "../../../public/video.mp4";
 import "../home/homepage.css";
 import * as THREE from "three";
 
 export default function RoomScene(props) {
+  const rotateRef = useRef();
   const texture = useTexture("BakedTexture.png");
   texture.flipY = false;
   texture.colorSpace = THREE.SRGBColorSpace;
@@ -58,7 +59,7 @@ export default function RoomScene(props) {
   const mobileScreen = useTexture("qr.png");
 
   return (
-    <group {...props} dispose={null}>
+    <group {...props} ref={rotateRef} dispose={null}>
       <mesh
         name="WallsF"
         geometry={nodes.WallsF.geometry}
@@ -340,9 +341,9 @@ export default function RoomScene(props) {
           rotation={[0, -0.903, -1.295]}
         />
         <mesh
-          position={[-4.755, 1.008, -3.208]}
-          rotation={[0, -0.903, -1.295]}
-          scale={[0.03, 0.12, 0]}
+          position={[-4.755, 1.008, -3.197]}
+          rotation={[-0.3, 0.53, 0.17]}
+          scale={[0.03, 0.12, 0.1]}
         >
           <planeGeometry args={[3.2, 1.9]} />
           <meshStandardMaterial

@@ -262,7 +262,7 @@ main {
   height: 10vh;
 }
 
-@media screen and (orientation: potrait) {
+@media screen and (orientation: portrait) {
   .wrapper{
     display: none;
   }
