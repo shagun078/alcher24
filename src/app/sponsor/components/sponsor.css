@@ -36,6 +36,11 @@
   flex-direction: column;
   justify-content: center;
   position: relative;
+  overflow: hidden;
+  background-image: url("../resources/bg1.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  opacity: 0.8;
 }
 
 .coming_soon::before{
