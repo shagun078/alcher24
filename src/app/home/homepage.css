@@ -465,14 +465,12 @@ iframe {
   color: white;
 }
 
-#appDownloadBtn{
-  align-self: flex-start;
 
-}
 
 .googlePlayImage {
-  width: 15vw;
-  height: 15vw;
+  width:15vw;
+  position: relative;
+  top:3vh;
   cursor: pointer;
 }
 

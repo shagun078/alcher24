@@ -1,7 +1,7 @@
 "use client";
 
 import React, { Suspense, useRef, useState, useEffect } from "react";
-import { useGLTF, useVideoTexture, useTexture } from "@react-three/drei";
+import { useGLTF, useVideoTexture, useTexture , Html } from "@react-three/drei";
 import url from "../../../public/video.mp4";
 import "../home/homepage.css";
 import * as THREE from "three";
@@ -14,27 +14,45 @@ export default function RoomScene(props) {
     map: texture,
   });
   const { nodes, materials } = useGLTF("RoomScene.gltf");
+  /* const calculateTimeRemaining = () => {
+     const currentDate = new Date();
+     const targetDate = new Date("2024-04-7"); // Replace with your target date
+     const timeDifference = targetDate.getTime() - currentDate.getTime();
+ 
+     // Calculate hours, minutes, and seconds remaining
+     const hoursRemaining = Math.floor(timeDifference / (1000 * 60 * 60));
+     const minutesRemaining = Math.floor(
+       (timeDifference % (1000 * 60 * 60)) / (1000 * 60)
+     );
+     const secondsRemaining = Math.floor((timeDifference % (1000 * 60)) / 1000);
+ 
+     return {
+       hours: hoursRemaining,
+       minutes: minutesRemaining,
+       seconds: secondsRemaining,
+     };
+   };
+ 
+   const clockModelRef = useRef();
+   const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining());
+   console.log(timeRemaining);*/
+
   const calculateTimeRemaining = () => {
     const currentDate = new Date();
-    const targetDate = new Date("2024-01-23"); // Replace with your target date
+    const targetDate = new Date("2024-03-7"); // Replace with your target date
     const timeDifference = targetDate.getTime() - currentDate.getTime();
 
-    // Calculate hours, minutes, and seconds remaining
-    const hoursRemaining = Math.floor(timeDifference / (1000 * 60 * 60));
-    const minutesRemaining = Math.floor(
-      (timeDifference % (1000 * 60 * 60)) / (1000 * 60)
-    );
-    const secondsRemaining = Math.floor((timeDifference % (1000 * 60)) / 1000);
+    // Calculate days remaining
+    const daysRemaining = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
 
     return {
-      hours: hoursRemaining,
-      minutes: minutesRemaining,
-      seconds: secondsRemaining,
+      days: daysRemaining,
     };
   };
 
   const clockModelRef = useRef();
   const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining());
+
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -56,6 +74,7 @@ export default function RoomScene(props) {
   });
   const laptopScreen = useTexture("alcher.png");
   const mobileScreen = useTexture("qr.png");
+
 
   return (
     <group {...props} dispose={null}>
@@ -352,13 +371,29 @@ export default function RoomScene(props) {
           />
         </mesh>
       </group>
-      <mesh
-        name="ClockScreen"
-        geometry={nodes.ClockScreen.geometry}
-        material={materials["AlarmScreen.001"]}
-        position={[-5.402, 0.916, -1.313]}
-        rotation={[0, -0.279, 0]}
-      />
+      <group>
+        <mesh
+          name="ClockScreen"
+          geometry={nodes.ClockScreen.geometry}
+          material={materials["AlarmScreen.001"]}
+          position={[-5.402, 0.916, -1.313]}
+          rotation={[0, -0.279, 0]}
+        />
+        <mesh
+        position={[-5.400, 0.916, -1.313]}
+        rotation={[0,1.2925,0]}
+        scale={[0.1,0.1,0.1]}
+        >
+          <planeGeometry args={[3.588, 1.82]} />
+          <meshStandardMaterial
+            side={THREE.DoubleSide}
+            color={"black"}
+          />
+          
+        </mesh>
+       
+      </group>
+
     </group>
   );
 }

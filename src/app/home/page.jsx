@@ -519,10 +519,10 @@ export default function App() {
               <OrbitControls
                 ref={ref}
                 target={[-3.5, 1.4, -1.8]}
-                enableZoom={false}
+                enableZoom={true}
                 enableDamping={true}
-                minPolarAngle={Math.PI / 3}
-                maxPolarAngle={Math.PI / 2}
+               //  minPolarAngle={Math.PI / 3}
+                //maxPolarAngle={Math.PI / 2}
                 dampingFactor={0.02}
                 enabled={true}
               />
@@ -601,7 +601,7 @@ export default function App() {
             <div id='text_home'>
               <h1>GET THE <br /> ALCHERINGA APP</h1>
               <p>Download our app and get access to app exclusive<br/> features like Alcheringa passes, Merches,<br/> Schedule, Campus maps, Real-time updates and<br/> much more.</p>
-              <div id='appDownloadBtn'><img src='googlePlay.svg' className="googlePlayImage"></img></div>
+              <div id='appDownloadBtn'><img src='googlePlay.png' className="googlePlayImage"></img></div>
             </div>
           </div>
           <div className="imageWrapper">

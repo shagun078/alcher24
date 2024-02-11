@@ -180,6 +180,7 @@ function App() {
   const [eventStyle,setEventStyle]=useState({opacity:1});
   const [boxStyle,setBoxStyle]=useState({opacity:0});
   const[currStyle,setCurrStyle]=useState({opacity:0});
+  const [bgcolor,setbgcolor]=useState({backgroundColor:'#181818'})
   const controls = useRef();
   const camera = useRef();
   let [now, setNow] = useState(list.head);
@@ -266,6 +267,7 @@ function App() {
 
   const showEvent = () => {
     setCurrStyle({opacity:1});
+    setbgcolor({backgroundColor:'transparent'});
     setClick(true);
     setBoxStyle({
       opacity: 1,
@@ -398,7 +400,7 @@ function App() {
             <Museumfinal />
             <Tween />
           </Canvas>
-          {<div id="ui">{buttons}</div>}
+          {<div id="ui" style={bgcolor}>{buttons}</div>}
         </div>
         <div className="wrapper-2d">
           <main>
@@ -416,7 +418,7 @@ function App() {
                 />
               </div>
               <h1 className="heading">EVENTS</h1>
-              <Link className="button" href="#events">
+              <Link className="button_view" href="#events">
                 VIEW OUR EVENTS
               </Link>
               <div className="hand_lower">
