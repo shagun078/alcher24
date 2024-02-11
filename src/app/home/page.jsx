@@ -10,15 +10,14 @@ import { FaAngleDoubleDown } from "react-icons/fa";
 import "./homepage.css";
 import Animations from "./components/Animations";
 
-import circle1 from '/public/footer_img/Frame 15232-min.png';
-import windows1 from '/public/footer_img/Frame 15230-min.png';
+import circle1 from "/public/footer_img/Frame 15232-min.png";
+import windows1 from "/public/footer_img/Frame 15230-min.png";
 
 import Navbar from "../components/navbar/page";
 import Footer from "../components/footer/page";
 import Image from "next/image";
 
-import merch from "./resources/home_merch.png"
-
+import merch from "./resources/home_merch.png";
 
 const marks = [
   {
@@ -46,6 +45,11 @@ const marks = [
       y: 2.6,
       z: -5,
     },
+    textAt2: {
+      x: -5.1,
+      y: 2.4,
+      z: -5,
+    },
   },
   {
     key: "B",
@@ -58,7 +62,7 @@ const marks = [
       z: -2.5,
     },
     lookAt: {
-      x: -6.5,
+      x: -6,
       y: -0.2,
       z: -4.5,
     },
@@ -71,6 +75,11 @@ const marks = [
       x: -11,
       y: 0.8,
       z: -3,
+    },
+    textAt2: {
+      x: -8,
+      y: -0.7,
+      z: -5,
     },
   },
   {
@@ -96,6 +105,11 @@ const marks = [
       x: -7.5,
       y: 1.3,
       z: -0.65,
+    },
+    textAt2: {
+      x: -7.5,
+      y: 1.3,
+      z: -1.3,
     },
   },
   {
@@ -123,6 +137,11 @@ const marks = [
       y: 2.6,
       z: -2.5,
     },
+    textAt2: {
+      x: -7.5,
+      y: 3.8,
+      z: -0.6,
+    },
   },
   {
     key: "E",
@@ -130,12 +149,12 @@ const marks = [
     description:
       "Alcheringa hosts several campaigns under Initiatives for cultural development and the betterment of society. These campaigns are conducted round the year to serve the mankind.",
     camPos: {
-      x: -3.2,
+      x: -3,
       y: 2,
       z: -2,
     },
     lookAt: {
-      x: -2.5,
+      x: -2.8,
       y: 2,
       z: -3,
     },
@@ -146,7 +165,12 @@ const marks = [
     },
     textAt: {
       x: -3.55,
-      y: 3.1,
+      y: 3.2,
+      z: -5,
+    },
+    textAt2: {
+      x: -3.2,
+      y: 3.2,
       z: -5,
     },
   },
@@ -175,6 +199,11 @@ const marks = [
       y: 1.9,
       z: 2.4,
     },
+    textAt2: {
+      x: -8,
+      y: 3.5,
+      z: 0,
+    },
   },
   {
     key: "G",
@@ -182,12 +211,12 @@ const marks = [
     description:
       "Alcheringa has more than 80 events spread across various genres like fashion, music, art, sports, etc. They take place during the three days in which many events take place which includes panel discussions with various famous creators, informal activities like hot air balloon, ATV rides, paint ball shoot etc.",
     camPos: {
-      x: -3,
+      x: -4.5,
       y: 1,
       z: 0.1,
     },
     lookAt: {
-      x: -5,
+      x: -6.5,
       y: 1,
       z: 0.1,
     },
@@ -201,6 +230,11 @@ const marks = [
       y: 1.2,
       z: 4.5,
     },
+    textAt2: {
+      x: -8,
+      y: 2.3,
+      z: 1.2,
+    },
   },
   {
     key: "H",
@@ -210,7 +244,7 @@ const marks = [
     camPos: {
       x: -3.8,
       y: 1.66,
-      z: -2.4,
+      z: -3,
     },
     lookAt: {
       x: -3.62,
@@ -223,8 +257,13 @@ const marks = [
       z: -3.7,
     },
     textAt: {
-      x: -4.62,
-      y: 1.9,
+      x: -4.12,
+      y: 1.75,
+      z: -3.4,
+    },
+    textAt2: {
+      x: -3.9,
+      y: 1.825,
       z: -3.4,
     },
   },
@@ -234,7 +273,7 @@ const marks = [
     description:
       "The grandest simulation of the UN in the North-East, IIT Guwahati Model United Nations presents its Edition XVI, bigger and better than ever before. This year we bring to you four committees that are bound to get you thinking about and deliberating on the issues that we face in the real world.",
     camPos: {
-      x: -3.8,
+      x: -4,
       y: 1.2,
       z: -2.4,
     },
@@ -249,7 +288,12 @@ const marks = [
       z: -3,
     },
     textAt: {
-      x: -3.7,
+      x: -3.8,
+      y: 1.1,
+      z: -3.4,
+    },
+    textAt2: {
+      x: -4,
       y: 1.5,
       z: -3.4,
     },
@@ -394,7 +438,14 @@ function Annotations({ controls }) {
                 </motion.svg>
               )}
             </Html>
-            <Html key={i} position={[a.textAt.x, a.textAt.y, a.textAt.z]}>
+            <Html
+              key={i}
+              position={
+                window.innerWidth > 840
+                  ? [a.textAt.x, a.textAt.y, a.textAt.z]
+                  : [a.textAt2.x, a.textAt2.y, a.textAt2.z]
+              }
+            >
               {a.key === selected && backtrack && (
                 <>
                   <motion.div
@@ -429,7 +480,10 @@ function Annotations({ controls }) {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 2 }}
-                        style={{ color: "white", fontSize: "4.7vh" }}
+                        style={{
+                          color: "white",
+                          fontSize: window.innerWidth > 840 ? "4.7vh" : "3.5vh",
+                        }}
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -461,7 +515,10 @@ function Annotations({ controls }) {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 2 }}
-                        style={{ color: "white", fontSize: "2vh" }}
+                        style={{
+                          color: "white",
+                          fontSize: window.innerWidth > 840 ? "2vh" : "1.5vh",
+                        }}
                       >
                         {a.description}
                       </motion.p>
@@ -486,12 +543,20 @@ function Tween() {
 export default function App() {
   const contentRef = useRef(null);
   const ref = useRef();
+  const rotateRef = useRef();
   const [isHovered, setIsHovered] = useState(false);
   const scrollToContent = () => {
     console.log("clicked!");
     contentRef.current &&
       contentRef.current.scrollIntoView({ behavior: "smooth" });
   };
+  // const deg = rotateRef.current.rotation.y;
+  // useFrame((state, delta) => {
+  //   while (rotateRef.current.rotation.y!=deg) {
+  //     rotateRef.current.rotation.y += 0.01;
+  //   }
+  // });
+
   const hoverEffect = () => {
     setIsHovered(!isHovered);
     console.log(isHovered);
@@ -504,130 +569,140 @@ export default function App() {
 
   return (
     <React.Fragment>
-      
-        <Navbar />
-        <main className="threeD_2dwrapper">
-          <div className="threeDWrapper">
-            <Canvas
-              camera={{
-                fov: 70,
-                position: [-2, 1.5, -2],
-                zoom: 1,
-              }}
-              shadows
-            >
-              <OrbitControls
-                ref={ref}
-                target={[-3.5, 1.4, -1.8]}
-                enableZoom={true}
-                enableDamping={true}
-               //  minPolarAngle={Math.PI / 3}
-                //maxPolarAngle={Math.PI / 2}
-                dampingFactor={0.02}
-                enabled={true}
-              />
-              <ambientLight intensity={1.5} />
-              <Annotations controls={ref} />
-              <RoomScene></RoomScene>
-              <Tween />
-            </Canvas>
-            <div id="ui_home">{buttons}</div>
-          </div>
-          <div className="mainContainer " ref={contentRef}>
-            {/*Video-container section starts*/}
-            <div className="videoWrapper">
-              <div className="videoBox">
-                <iframe
-                  src="https://www.youtube.com/embed/CWhFx8v1mg8?autoplay=1&controls=0"
-                  frameBorder="0"
-                  allowFullScreen
-                ></iframe>
-              </div>
-              {/*Video-container section ends*/}
+      <Navbar />
+      <main className="threeD_2dwrapper">
+        <div className="threeDWrapper">
+          <Canvas
+            camera={{
+              fov: 70,
+              position: [-2, 1.5, -2],
+              zoom: 1,
+            }}
+            shadows
+          >
+            <OrbitControls
+              ref={ref}
+              target={[-3.5, 1.4, -1.8]}
+              enableZoom={false}
+              enableDamping={true}
+              minPolarAngle={Math.PI / 3}
+              maxPolarAngle={Math.PI / 2}
+              dampingFactor={0.02}
+              enabled={true}
+            />
+            <ambientLight intensity={1.5} />
+            <Annotations controls={ref} />
+            <mesh ref={rotateRef}>
+              <RoomScene />
+            </mesh>
+            <Tween />
+          </Canvas>
+          <div id="ui_home">{buttons}</div>
+        </div>
+        <div className="mainContainer " ref={contentRef}>
+          {/*Video-container section starts*/}
+          <div className="videoWrapper">
+            <div className="videoBox">
+              <iframe
+                src="https://www.youtube.com/embed/CWhFx8v1mg8?autoplay=1&controls=0"
+                frameBorder="0"
+                allowFullScreen
+              ></iframe>
             </div>
-
-        {/*Sponsor section starts*/}
-        <div className='decorationContainer'>
-          <div className='left'>
-            <img className="image" src="Subtract.svg"></img>
+            {/*Video-container section ends*/}
           </div>
-          <div className="centerDiv">
-            <img className="center_image" src="center_final.svg"></img>
-            <div className="animation-container"> <Animations/></div>
-           
-          </div>
-          <div className='right'>
-            <img className="image" src="Subtract1.svg"></img>
-          </div>
-        </div>
-        <div className='sponsor_homepage'>
-         {/* <MySlider />*/}
-         <div className='img_text_wrapper'>
-         <img src="left_final_gate.svg" id="leftGate"></img>
-         <div className="text_sponsor_content">
-         <h1>SPONSORS</h1>
-         <h2>Coming <span>Soon</span></h2>
-         <p>Stay tuned, sponsors are on the horizon!</p>
-         </div>
-         
-         <img src="right_final_gate.svg" id="rightGate"></img>
-         </div>
-        </div>
-        {/*Sponsorsection ends*/}
 
+          {/*Sponsor section starts*/}
+          <div className="decorationContainer">
+            <div className="left">
+              <img className="image" src="Subtract.svg"></img>
+            </div>
+            <div className="centerDiv">
+              <img className="center_image" src="center_final.svg"></img>
+              <div className="animation-container">
+                {" "}
+                <Animations />
+              </div>
+            </div>
+            <div className="right">
+              <img className="image" src="Subtract1.svg"></img>
+            </div>
+          </div>
+          <div className="sponsor_homepage">
+            {/* <MySlider />*/}
+            <div className="img_text_wrapper">
+              <img src="left_final_gate.svg" id="leftGate"></img>
+              <div className="text_sponsor_content">
+                <h1>SPONSORS</h1>
+                <h2>
+                  Coming <span>Soon</span>
+                </h2>
+                <p>Stay tuned, sponsors are on the horizon!</p>
+              </div>
 
-        <div className="alcher_merch_section">
+              <img src="right_final_gate.svg" id="rightGate"></img>
+            </div>
+          </div>
+          {/*Sponsorsection ends*/}
+
+          <div className="alcher_merch_section">
             <h1>ALCHER MERCH</h1>
             <div className="merch_holder">
               <Image
                 src={merch}
                 style={{
-                  width: '100vw',
-                  height: 'auto',
-                  alignItems: 'center',
+                  width: "100vw",
+                  height: "auto",
+                  alignItems: "center",
                 }}
               />
             </div>
             <p>Get Your Own</p>
             <button className="buy_merch_button">BUY NOW</button>
+          </div>
+
+          <div className="getAppSection">
+            <img src="upperHand.svg" id="upperHand"></img>
+            <img src="lowerHand.svg" id="lowerHand"></img>
+            <div className="textSection">
+              <div id="text_home">
+                <h1>
+                  GET THE <br /> ALCHERINGA APP
+                </h1>
+                <p>
+                  Download our app and get access to app exclusive
+                  <br /> features like Alcheringa passes, Merches,
+                  <br /> Schedule, Campus maps, Real-time updates and
+                  <br /> much more.
+                </p>
+                <div id="appDownloadBtn">
+                  <img src="googlePlay.svg" className="googlePlayImage"></img>
+                </div>
+              </div>
+            </div>
+            <div className="imageWrapper">
+              <div className="home_alcher_app_container">
+                <img src="mobileapp.png"></img>
+              </div>
+            </div>
+          </div>
+
+          <div className="passesSection">
+            <p id="getYour">Get your Own</p>
+            <h1 id="alcherPass">Alcheringa'24 Passes</h1>
+            <button id="registerBtn">REGISTER</button>
+          </div>
+
+          <div
+            className={`cardHoverSection ${isHovered ? "hovered" : ""}`}
+            onMouseEnter={hoverEffect}
+            onMouseLeave={hoverEffect}
+          >
+            <img src="BoardOrange.svg" id="cardHoverLeft"></img>
+            <img src="BoardBlue.svg" id="cardHoverRight"></img>
+          </div>
         </div>
-
-
-
-        <div className='getAppSection'>
-          <img src='upperHand.svg' id='upperHand'></img>
-          <img src='lowerHand.svg' id='lowerHand'></img>
-          <div className='textSection'>
-            <div id='text_home'>
-              <h1>GET THE <br /> ALCHERINGA APP</h1>
-              <p>Download our app and get access to app exclusive<br/> features like Alcheringa passes, Merches,<br/> Schedule, Campus maps, Real-time updates and<br/> much more.</p>
-              <div id='appDownloadBtn'><img src='googlePlay.png' className="googlePlayImage"></img></div>
-            </div>
-          </div>
-          <div className="imageWrapper">
-           <div className="home_alcher_app_container"><img src='mobileapp.png'></img></div>
-        
-          </div>
-        </div>
-
-            <div className="passesSection">
-              <p id="getYour">Get your Own</p>
-              <h1 id="alcherPass">Alcheringa'24 Passes</h1>
-              <button id="registerBtn">REGISTER</button>
-            </div>
-
-            <div
-              className={`cardHoverSection ${isHovered ? "hovered" : ""}`}
-              onMouseEnter={hoverEffect}
-              onMouseLeave={hoverEffect}
-            >
-              <img src="BoardOrange.svg" id="cardHoverLeft"></img>
-              <img src="BoardBlue.svg" id="cardHoverRight"></img>
-            </div>
-          </div>
-        </main>
-      
-     
+      </main>
     </React.Fragment>
   );
 }

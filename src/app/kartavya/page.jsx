@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <>
     <Navbar reg_bg= {"register reg_bg3"}/>
-    <main>
+    <main className='kartavya_main'>
       <section className='texture_wheel'>
 
         <div className='hand_upper'>

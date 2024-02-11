@@ -18,7 +18,7 @@ function App () {
   return (
     <>
     <Navbar  reg_bg={ "register reg_bg7"}/>
-    <main>
+    <main className="sponsor_main">
       
       <div className="top_sun">
       </div>

@@ -65,7 +65,7 @@ main {
 .hand_upper {
   width: 40%;
   position: absolute;
-  left: 0;
+  left: -15px;
   top: 10dvh;
   -webkit-animation: cspin 8s ease-in-out infinite;
   -moz-animation: cspin 8s ease-in-out infinite;
@@ -262,7 +262,7 @@ main {
   height: 10vh;
 }
 
-@media screen and (orientation: potrait) {
+@media screen and (orientation: portrait) {
   .wrapper{
     display: none;
   }
