@@ -30,10 +30,10 @@ const Footer = ({bg,star,circle_src1,circle_src2,windows_src,alcheringa_logo}) =
                             <Link href="/competition">Competitions</Link></li>
                         <li onClick={() => router.push("/kartavya")} className={path === '/kartavya' ? 'c c3' : ''}>
                             <Link href="/kartavya">Kartayva</Link></li>
-                        <li onClick={() => router.push("/mun")} className={path === '/mun' ? 'c c4' : ''}>
-                            <Link href="/mun">MUN</Link></li>
-                        <li onClick={() => router.push("/merch")} className={path === '/merch' ? 'c c5' : ''}>
-                            <Link href="/merch">Merch</Link></li>
+                        {/* <li onClick={() => router.push("/mun")} className={path === '/mun' ? 'c c4' : ''}> */}
+                            {/* <Link href="/mun">MUN</Link></li> */}
+                        {/* <li onClick={() => router.push("/merch")} className={path === '/merch' ? 'c c5' : ''}> */}
+                            {/* <Link href="/merch">Merch</Link></li> */}
                         <li onClick={() => router.push("/teams")} className={path === '/teams' ? 'c c6' : ''}>
                             <Link href="/team">Teams</Link></li>
                         <li onClick={() => router.push("/sponsor")} className={path === '/sponsor' ? 'c c7' : ''}>
