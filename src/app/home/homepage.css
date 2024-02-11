@@ -376,7 +376,7 @@ iframe {
 
 .threeDWrapper {
   width: 100%;
-  height: calc(100vh - 6vw);
+  height: calc(100dvh - 6dvw);
   position: relative;
   overflow: hidden;
 }
@@ -387,6 +387,7 @@ iframe {
   width: fit-content;
   height: fit-content;
   left: 50%;
+  translate: -50%;
 }
 
 .content-btn {
@@ -573,7 +574,7 @@ iframe {
 
 @media screen and (max-width:1025px){
   .threeDWrapper{
-    height: calc(100vh - 9vw);
+    height: calc(100dvh - 9dvw);
   }
 }
  /* #cardHoverLeft{
