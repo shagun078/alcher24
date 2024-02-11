@@ -6,7 +6,7 @@ import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import TWEEN from "@tweenjs/tween.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { Museum } from "../components/Museum_FinalExport1";
+import { Museumfinal } from "../components/Museum10Feb";
 //import { Museum1 } from "../components/Museum";
 import Loadingpage from "../components/loading/loading";
 import "./FadeInComponent.css";
@@ -31,13 +31,14 @@ import { Cardleft, Cardright } from "./components/card";
 
 const marks = [
   {
-    title2: "last-room",
-    title1: "room-1",
+    title2: "JOINS US",
+    title1: "PRONITES",
+    currPage:'PROSHOWS',
     description: "Alcher-related display image!",
     camPos: {
       x: 0,
       y: 2,
-      z: -13,
+      z: -10,
     },
     lookAt: {
       x: 0,
@@ -46,13 +47,14 @@ const marks = [
     },
   },
   {
-    title2: "room-1",
-    title1: "room-2",
+    title2: "PROSHOWS",
+    title1: "CREATORS CAMP",
+    currPage:'PRONITES',
     description: "Alcher-related display image!",
     camPos: {
       x: 0,
       y: 2,
-      z: 5,
+      z: 8,
     },
     lookAt: {
       x: 0,
@@ -61,13 +63,14 @@ const marks = [
     },
   },
   {
-    title2: "room-2",
-    title1: "room-3",
+    title2: "PRONITES",
+    title1: "CRITICAL DAMAGE",
+    currPage:'CREATORS CAMP',
     description: "Alcher-related display image!",
     camPos: {
       x: 0,
       y: 2,
-      z: 22,
+      z: 25,
     },
     lookAt: {
       x: 0,
@@ -76,8 +79,9 @@ const marks = [
     },
   },
   {
-    title2: "room-3",
-    title1: "room-4",
+    title2: "CREATORS CAMP",
+    title1: "INFORMALS",
+    currPage:'CRITICAL DAMAGE',
     description: "Alcher-related display image!",
     camPos: {
       x: 0,
@@ -91,13 +95,14 @@ const marks = [
     },
   },
   {
-    title2: "room-4",
-    title1: "room-5",
+    title2: "CRITICAL DAMAGE",
+    title1: "JOIN US",
+    currPage:'INFORMALS',
     description: "Alcher-related display image!",
     camPos: {
       x: 0,
       y: 2,
-      z: 58,
+      z: 59,
     },
     lookAt: {
       x: 0,
@@ -106,8 +111,9 @@ const marks = [
     },
   },
   {
-    title2: "room-5",
-    title1: "Home",
+    title2: "INFORMALS",
+    title1: "PROSHOWS",
+    currPage:'Join us all from 7th to 8th March',
     description: "Alcher-related display image!",
     camPos: {
       x: 0,
@@ -166,17 +172,18 @@ function Tween() {
 }
 
 function App() {
-  const contentRef = useRef(null);
-
   const [isAnimating, setIsAnimating] = useState(false);
   const [title1, setTitle1] = useState(list.head.data.title1);
   const [title2, setTitle2] = useState(list.head.data.title2);
-  const [isClick, setClick] = useState(false);
-  const [eventStyle, setEventStyle] = useState({ opacity: 1 });
-  const [boxStyle, setBoxStyle] = useState({ opacity: 0 });
+  const [currPage,setCurrpage]=useState(list.head.data.currPage);
+  const [isClick , setClick]=useState(false);
+  const [eventStyle,setEventStyle]=useState({opacity:1});
+  const [boxStyle,setBoxStyle]=useState({opacity:0});
+  const[currStyle,setCurrStyle]=useState({opacity:0});
   const controls = useRef();
   const camera = useRef();
   let [now, setNow] = useState(list.head);
+
 
   const forward = () => {
     setIsAnimating(true);
@@ -190,6 +197,7 @@ function App() {
       setTimeout(() => {
         setTitle1(prevNow.next.data.title1);
         setTitle2(prevNow.next.data.title2);
+        setCurrpage(prevNow.next.data.currPage);
       }, updateDelay);
       return prevNow.next;
     });
@@ -207,6 +215,7 @@ function App() {
     setTimeout(() => {
       setTitle1(now.prev.data.title1);
       setTitle2(now.prev.data.title2);
+      setCurrpage(now.prev.data.currPage);
     }, updateDelay);
     setNow(now.prev);
   };
@@ -223,6 +232,7 @@ function App() {
     setTimeout(() => {
       setTitle1(list.head.data.title1);
       setTitle2(list.head.data.title2);
+      setCurrpage(list.head.data.currPage);
     }, updateDelay);
 
     setNow(list.head);
@@ -255,8 +265,7 @@ function App() {
   }, [now]);
 
   const showEvent = () => {
-    contentRef.current &&
-      contentRef.current.scrollIntoView({ behavior: "smooth" });
+    setCurrStyle({opacity:1});
     setClick(true);
     setBoxStyle({
       opacity: 1,
@@ -268,7 +277,7 @@ function App() {
     const targetY = 2;
     const targetZ = 0;
 
-    const camZ = -13;
+    const camZ = -10;
     new TWEEN.Tween(controls.current.target)
       .to(
         {
@@ -293,63 +302,85 @@ function App() {
   };
 
   const buttons = (
+   
     <React.Fragment>
-      <div className="event_box" style={isClick ? eventStyle : eventStyle}>
-        <span>EVENTS</span>
-        <button className="show-event-btn" onClick={showEvent}>
-          View our Events
-        </button>
-      </div>
-      <div className="btn_box" style={isClick ? boxStyle : boxStyle}>
-        <span className="backward-container">
-          <FontAwesomeIcon icon={faArrowLeft} className="backward-svg" />
-          <button
-            className="btn btn-backward"
-            onClick={() => {
-              backward();
-            }}
-          >
-            <span className={`fade-in ${isAnimating ? "animating" : ""}`}>
-              {title2}
-            </span>
-          </button>
-        </span>
+    <div  className="event_box" >
+    <span className={`fade-in ${isAnimating ? "animating" : ""}`} id='museum_events_name' style={currStyle}>{currPage}</span>
+    <span className='event_tag' style={isClick?eventStyle:eventStyle}>EVENTS</span>
+    <button
+    className="show-event-btn"
+    onClick={showEvent}
+    style={isClick?eventStyle:eventStyle}
+  >
+    VIEW OUR EVENTS
+  </button>
+    </div>
+    <div className="btn_box" style={isClick?boxStyle:boxStyle}>
+    <div className="responsive_btn_box">
+    <span className="backward-container">
+    <FontAwesomeIcon icon={faArrowLeft} className="backward-svg" />
+    <button
+      className="btn btn-backward"
+      onClick={() => {
+        backward();
+      }}
+    >
+      <span className={`fade-in ${isAnimating ? "animating" : ""}`}>
+        {title2}
+      </span>
+    </button>
+  </span>
+    </div>
+  
 
-        <button
-          className="back-to-home"
-          onClick={() => {
-            backToHome();
-          }}
-        >
-          Back to home
-        </button>
+    <div className="responsive_btn_box">
+    <button
+    className="back-to-home"
+    onClick={() => {
+      backToHome();
+    }}
+  >
+    BACK TO HOME
+  </button>
+    </div>
+ 
 
-        <span className="forward-container">
-          <button
-            className="btn btn-forward"
-            onClick={() => {
-              forward();
-            }}
-          >
-            <span className={`fade-in ${isAnimating ? "animating" : ""}`}>
-              {title1}
-            </span>
-          </button>
+<div className="responsive_btn_box">
+<span className="forward-container">
+<button
+  className="btn btn-forward"
+  onClick={() => {
+    forward();
+  }}
+>
+  <span className={`fade-in ${isAnimating ? "animating" : ""}`}>
+    {title1}
+  </span>
+</button>
 
-          <FontAwesomeIcon icon={faArrowRight} className="forward-svg" />
-        </span>
-      </div>
+<FontAwesomeIcon icon={faArrowRight} className="forward-svg" />
+</span>
+</div>
+  
+    </div>
+      
+
+
+
+
     </React.Fragment>
-  );
+  );  
 
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState("PRONITES");
 
+
+  
   return (
     <>
       <Navbar reg_bg={"register reg_bg1"} />
       <Suspense fallback={<Loadingpage />}>
-        <div className="wrapper" ref={contentRef}>
+        <div className="wrapper">
           <Canvas>
             <PerspectiveCamera
               ref={camera}
@@ -364,7 +395,7 @@ function App() {
               target={[0, 2, 0]}
             />
             <ambientLight intensity={3} />
-            <Museum />
+            <Museumfinal />
             <Tween />
           </Canvas>
           {<div id="ui">{buttons}</div>}

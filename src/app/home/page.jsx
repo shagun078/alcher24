@@ -553,7 +553,8 @@ export default function App() {
           </div>
           <div className="centerDiv">
             <img className="center_image" src="center_final.svg"></img>
-            <Animations className='animation-container' />
+            <div className="animation-container"> <Animations/></div>
+           
           </div>
           <div className='right'>
             <img className="image" src="Subtract1.svg"></img>
@@ -625,7 +626,7 @@ export default function App() {
             </div>
           </div>
         </main>
-        <Footer />
+      
       </Suspense>
     </React.Fragment>
   );
