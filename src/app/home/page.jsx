@@ -9,10 +9,11 @@ import TWEEN from "@tweenjs/tween.js";
 import { FaAngleDoubleDown } from "react-icons/fa";
 import "./homepage.css";
 import Animations from "./components/Animations";
-
-import circle1 from "/public/footer_img/Frame 15232-min.png";
-import windows1 from "/public/footer_img/Frame 15230-min.png";
-
+import Loadingpage from "../components/loading/loading";
+import circle1 from '/public/footer_img/homepage_left_circle.png';
+import circle2 from '/public/footer_img/homepage_right_circle.png';
+import windows1 from '/public/footer_img/Frame 15230-min.png';
+import alcheringa from '/public/footer_img/homepage_alcheringa.png';
 import Navbar from "../components/navbar/page";
 import Footer from "../components/footer/page";
 import Image from "next/image";
@@ -569,7 +570,7 @@ export default function App() {
 
   return (
     <React.Fragment>
-      <Navbar />
+      <Navbar reg_bg= {"register reg_bg1"} />
       <main className="threeD_2dwrapper">
         <div className="threeDWrapper">
           <Canvas
@@ -693,16 +694,18 @@ export default function App() {
             <button id="registerBtn">REGISTER</button>
           </div>
 
-          <div
-            className={`cardHoverSection ${isHovered ? "hovered" : ""}`}
-            onMouseEnter={hoverEffect}
-            onMouseLeave={hoverEffect}
-          >
-            <img src="BoardOrange.svg" id="cardHoverLeft"></img>
-            <img src="BoardBlue.svg" id="cardHoverRight"></img>
+            <div
+              className={`cardHoverSection ${isHovered ? "hovered" : ""}`}
+              onMouseEnter={hoverEffect}
+              onMouseLeave={hoverEffect}
+            >
+              <img src="BoardOrange.svg" id="cardHoverLeft"></img>
+              <img src="BoardBlue.svg" id="cardHoverRight"></img>
+            </div>
           </div>
-        </div>
-      </main>
+        </main>
+        <Footer bg= {"footer img_homepage"} alcheringa_logo={alcheringa} star= {"star_homepage star"} circle_src1= {circle1} circle_src2= {circle2}  windows_src= {windows1} />
+      
     </React.Fragment>
   );
 }

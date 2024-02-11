@@ -32,7 +32,7 @@ const Navbar = ({ reg_bg }) => {
             <div className="logo">
                 <Link href="/home"><Image className="logo" src={alcher_logo} alt="Alcheringa24" /></Link>
             </div>
-            <nav id="navbar_menu" className={state === true ? '.navbar_menu active' : 'navbar_menu'}>
+            <nav id="navbar_menu" className={state === true ? 'navbar_menu active' : 'navbar_menu'}>
                 <ul>
                     <li onClick={() => router.push("/events")} className={path === "/events" ? "c c1" : ""}>
                         <Link href="/events">Events</Link></li>

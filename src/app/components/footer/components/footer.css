@@ -124,23 +124,25 @@
 
 .windows_img{
     display: inline-block;
+    height: 100%;
     width: 87.73vw;
     height: auto;
 }
 
 .complex_grid{
     position: absolute;
-    height: 16.84vw;
-    width: 54.22vw;
-    top: 11vw;
+    height: auto;
+    top: -16vw;
+    width: 48vw;
+    top: 0;
     display: grid;
     grid-template-columns: 4.24vw auto 4.24vw auto 4.27vw;
     grid-template-rows: 4.27vw 8.30vw;
 }
 
 .alcheringa{
-    height: 8.30vw;
-    width: 54.22vw;
+    height: auto;
+    width: 48vw;
     grid-row-start: 2;
     grid-row-end: 4;
     grid-column-start: 1;

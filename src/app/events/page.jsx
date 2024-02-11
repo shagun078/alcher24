@@ -12,8 +12,10 @@ import { Museumfinal } from "../components/Museum10Feb";
 import "./FadeInComponent.css";
 import Navbar from "../components/navbar/page";
 import Footer from "../components/footer/page";
-import circle1 from "/public/footer_img/Frame 15232-min.png";
-import windows1 from "/public/footer_img/Frame 15230-min.png";
+import circle1 from '/public/footer_img/events_left_circle.png';
+import circle2 from '/public/footer_img/events_right_circle.png';
+import windows1 from '/public/footer_img/Frame 15230-min.png';
+import alcheringa from '/public/footer_img/events_alcheringa.png';
 
 import Image from "next/image";
 import Link from "next/link";
@@ -538,11 +540,10 @@ function App() {
 
         <Footer
           bg={"footer img1"}
-          star={"star1 star"}
-          circle_src={circle1}
-          windows_src={windows1}
+          alcheringa_logo={alcheringa} star={"star1 star"}
+          circle_src1={circle1}
+         circle_src2= {circle2}  windows_src={windows1}
         />
-     
     </>
   );
 }

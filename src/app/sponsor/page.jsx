@@ -5,8 +5,11 @@ import gucci from './resources/gucci.png'
 import Image from "next/image";
 import Navbar from "../components/navbar/page";
 import Footer from "../components/footer/page";
-import circle1 from '/public/footer_img/Frame 15232-min.png';
+import circle1 from '/public/footer_img/sponsors_left_circle.png';
+import circle2 from '/public/footer_img/sponsors_right_circle.png';
 import windows1 from '/public/footer_img/Frame 15230-min.png';
+import alcheringa from '/public/footer_img/sponsors_alcheringa.png';
+
 
 
 
@@ -102,7 +105,7 @@ function App () {
       </section>
       
     </main>
-    <Footer  bg={ "footer img7"} star={ "star1 star"} circle_src={ circle1} windows_src={ windows1 }/>
+    <Footer  bg={ "footer img7"} star={ "star7 star"} alcheringa_logo={alcheringa} circle_src1={ circle1} circle_src2={ circle2} windows_src={ windows1 }/>
     </>
   );
   

@@ -8,12 +8,13 @@ import model_web_app from './resources/team_images/model_web_app.png'
 import model_mun from './resources/team_images/model_mun.png'
 import model_finance from './resources/team_images/model_finance.png'
 import model_convener from './resources/team_images/model_convener.png'
-
 import './components/teams.css'
 import Footer from '../components/footer/page'
 import Navbar from '../components/navbar/page'
-import circle1 from '/public/footer_img/Frame 15232-min.png';
+import circle1 from '/public/footer_img/teams_left_circle.png';
+import circle2 from '/public/footer_img/teams_right_circle.png';
 import windows1 from '/public/footer_img/Frame 15230-min.png';
+import alcheringa from '/public/footer_img/teams_alcheringa.png';
 
 export default function Teams() {
   return (
@@ -305,7 +306,7 @@ export default function Teams() {
             </div>
         </section>
     </main>
-    <Footer  bg= {"footer img6"} star= {"star1 star"}  circle_src= {circle1} windows_src= {windows1}/>
+    <Footer  bg= {"footer img6"} star= {"star6 star"}  circle_src1= {circle1} circle_src2= {circle2} windows_src= {windows1} alcheringa_logo={alcheringa}/>
     </>
   )
 }

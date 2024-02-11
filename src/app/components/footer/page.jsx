@@ -3,7 +3,6 @@ import './components/footer.css';
 import './components/mobile_footer.css';
 import './components/bg_change.css';
 import './components/star_change.css';
-import alcheringa from '/public/footer_img/alcheringa.png';
 import icon1 from '/public/footer_img/Vector.png';
 import icon2 from '/public/footer_img/Vector (1).png';
 import icon3 from '/public/footer_img/Vector (2).png';
@@ -14,7 +13,7 @@ import { useRouter } from 'next/navigation';
 import { usePathname } from 'next/navigation';
 
 
-const Footer = ({bg,star,circle_src,windows_src}) => {
+const Footer = ({bg,star,circle_src1,circle_src2,windows_src,alcheringa_logo}) => {
 
     const router = useRouter();
     const path = usePathname();
@@ -46,8 +45,8 @@ const Footer = ({bg,star,circle_src,windows_src}) => {
             </div>
             <div className={bg}>
                 <div className="circle_box">
-                    <Image src={circle_src} alt="" />
-                    <Image id="circle_2nd_img" src={circle_src} alt="" />
+                    <Image src={circle_src1} alt="" />
+                    <Image id="circle_2nd_img" src={circle_src2} alt="" />
                 </div>
                 <div className="extra_box">
                 </div>
@@ -63,7 +62,7 @@ const Footer = ({bg,star,circle_src,windows_src}) => {
                         <div id="spark2" className={star}></div>
                         <div className="blank_box"></div>
                         <div id="spark3" className={star}></div>
-                        <Image className="alcheringa" src={alcheringa} alt="" />
+                        <Image className="alcheringa" src={alcheringa_logo} alt="" />
                         <div id="spark5" className={star}></div>
                         <div className="blank_box"></div>
                         <div id="spark6" className={star}></div>

@@ -10,8 +10,11 @@ import Navbar from '../components/navbar/page';
 import Footer from '../components/footer/page';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faSortDown } from '@fortawesome/free-solid-svg-icons';
-import circle1 from '/public/footer_img/Frame 15232-min.png';
+import circle1 from '/public/footer_img/competition_left_circle.png';
+import circle2 from '/public/footer_img/competition_right_circle.png';
 import windows1 from '/public/footer_img/Frame 15230-min.png';
+import alcheringa from '/public/footer_img/competiton_alcheringa.png';
+
 
 function Body () {
 
@@ -22,36 +25,8 @@ function Body () {
     const [title, setTitle] = useState(["All Competitions"]);
     const [title2, setTitle2] = useState(["Modules"]);
 
-    const [array, setArray] = useState([{
-        key: 1,
-        category: "Dance",
-        img: '/creatort.png',
-        comp_name: "Electric Heels"
-    },
-    {
-        key: 2,
-        category: "Dance",
-        img: '/creatort.png',
-        comp_name: "Step Up"
-    },
-    {
-        key: 3,
-        category: "Dance",
-        img: '/creatort.png',
-        comp_name: "Navras"
-    },
-    {
-        key: 4,
-        category: "Dance",
-        img: '/creatort.png',
-        comp_name: "So You Think You Can Dance"
-    },
-    {
-        key: 5,
-        category: "Dance",
-        img: '/creatort.png',
-        comp_name: "Dancing Duo"
-    }])
+    const [array, setArray] = useState(info);
+    const [array2, setArray2] = useState([""]);
 
     const handleClick = () => {
         setState(!state);
@@ -66,11 +41,15 @@ function Body () {
                 return user.comp_name.toLowerCase().includes(keyword.toLowerCase());
             });
             setArray(result.slice(0, 6));
+            setArray2(result.slice(0, 6));
 
             const result_2 = titledata.filter((user_2) => {
                 return user_2.toLowerCase().includes(keyword.toLowerCase());
             })
             setTitle(result_2.slice(0, 1));
+        }
+        else{
+            setArray2(["No Results Found"]);
         }
     }
 
@@ -97,6 +76,13 @@ function Body () {
                     <form action="" className='form'>
                         <input className='search' type="text" placeholder='Search Competitions' value={value} onChange={e => onChange(e)} />
                         <FontAwesomeIcon icon={faSearch} className='magnifying_glass'/>
+                        <div className="search_list_box">
+                            {array2.map((list)=>{
+                                return(
+                                    <p>{list.comp_name}</p>
+                                )
+                            })}
+                        </div>
                     </form>
                     <div className="list_container">
                         <div className="modules" onClick={handleClick}>
@@ -144,7 +130,7 @@ function Body () {
                 </div>
             </div>
         </div>
-        <Footer bg= {"footer img2"} star={ "star1 star"}  circle_src={ circle1} windows_src={ windows1}/>
+        <Footer bg= {"footer img2"} star={ "star2 star"}  circle_src1={ circle1} circle_src2={circle2} windows_src={ windows1} alcheringa_logo={alcheringa}/>
         </>
     );
 }

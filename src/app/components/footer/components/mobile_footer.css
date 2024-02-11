@@ -48,14 +48,14 @@
     }
 
     .complex_grid{
-        height: 20.43vw;
-        width: 77.68vw;
-        top: 30vh;
+        height: auto;
+        width: 50vw;
+        top: 23vh;
     }
 
     .alcheringa{
-        height: 11.89vw;
-        width: 77.68vw;
+        height: auto;
+        width: 50vw;
     }
 
     .extra_box{

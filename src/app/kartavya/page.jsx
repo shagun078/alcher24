@@ -7,8 +7,10 @@ import CardList from './components/cardList'
 import styles from './components/kartavya.css'
 import Footer from '../components/footer/page'
 import Navbar from '../components/navbar/page'
-import circle1 from '/public/footer_img/Frame 15232-min.png';
+import circle1 from '/public/footer_img/kartavya_left_circle.png';
+import circle2 from '/public/footer_img/kartavya_right_circle.png';
 import windows1 from '/public/footer_img/Frame 15230-min.png';
+import alcheringa from '/public/footer_img/kartavya_alcheringa.png'
 
 
 function getCards(){
@@ -138,7 +140,7 @@ export default function Home() {
           />
       </div>
     </main>
-    <Footer bg={"footer img3"} star={"star1 star"} circle_src={circle1} windows_src={windows1}/>
+    <Footer bg={"footer img3"} alcheringa_logo={alcheringa} star={"star3 star"} circle_src1={circle1} circle_src2={circle2} windows_src={windows1}/>
     </>
   )
 }
