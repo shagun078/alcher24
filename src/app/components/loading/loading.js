@@ -1,4 +1,4 @@
-"use client"
+
 import './loading.css'
 const Loadingpage = () => {
     return (
