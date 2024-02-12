@@ -30,10 +30,10 @@ const Footer = ({bg,star,circle_src1,circle_src2,windows_src,alcheringa_logo}) =
                             <Link href="/competition">Competitions</Link></li>
                         <li onClick={() => router.push("/kartavya")} className={path === '/kartavya' ? 'c c3' : ''}>
                             <Link href="/kartavya">Kartayva</Link></li>
-                        <li onClick={() => router.push("/mun")} className={path === '/mun' ? 'c c4' : ''}>
-                            <Link href="/mun">MUN</Link></li>
-                        <li onClick={() => router.push("/merch")} className={path === '/merch' ? 'c c5' : ''}>
-                            <Link href="/merch">Merch</Link></li>
+                        {/* <li onClick={() => router.push("/mun")} className={path === '/mun' ? 'c c4' : ''}> */}
+                            {/* <Link href="/mun">MUN</Link></li> */}
+                        {/* <li onClick={() => router.push("/merch")} className={path === '/merch' ? 'c c5' : ''}> */}
+                            {/* <Link href="/merch">Merch</Link></li> */}
                         <li onClick={() => router.push("/teams")} className={path === '/teams' ? 'c c6' : ''}>
                             <Link href="/team">Teams</Link></li>
                         <li onClick={() => router.push("/sponsor")} className={path === '/sponsor' ? 'c c7' : ''}>
@@ -76,15 +76,17 @@ const Footer = ({bg,star,circle_src1,circle_src2,windows_src,alcheringa_logo}) =
                     <div className="cred grid_1">
                         <h1>Anurag</h1>
                         <div className="info">
-                            <p>+91 7061520276</p>
-                            <p>anurag@alcheringa.in</p>
+                            <a href="tel:+91 7061520276">+91 7061520276</a>
+                            <br />
+                            <a href="mailto:anurag@alcheringa.in">anurag@alcheringa.in</a>
                         </div>
                     </div>
                     <div className="cred grid_2">
                         <h1>Ankit Kumar</h1>
                         <div className="info">
-                            <p>+91 8340349585</p>
-                            <p>ankit.k@alcheringa.in</p>
+                            <a href="tel:+91 8340349585">+91 8340349585</a>
+                            <br />
+                            <a href="mailto:ankit.k@alcheringa.in">ankit.k@alcheringa.in</a>
                         </div>
                     </div>
                     <div className="cred_1" id="seperate">
@@ -92,18 +94,18 @@ const Footer = ({bg,star,circle_src1,circle_src2,windows_src,alcheringa_logo}) =
                         <p id="follow_text">Follow us</p>
                         <p id="on_text">on</p>
                         <div className="icons">
-                            <Link href="https://www.instagram.com/alcheringaiitg/"><Image src={icon1} alt="" /></Link>
-                            <Link href="https://www.facebook.com/alcheringaiitg"><Image src={icon2} alt="" /></Link>
-                            <Link href="https://twitter.com/alcheringaiitg"><Image src={icon3} alt="" /></Link>
-                            <Link href="https://www.youtube.com/@alcheringaIITG"><Image src={icon4} alt="" className='yt_icon'/></Link>
+                            <a href="https://www.instagram.com/alcheringaiitg/" target="_blank" ><Image src={icon1} alt="" /></a>
+                            <a href="https://www.facebook.com/alcheringaiitg" target="_blank" ><Image src={icon2} alt="" /></a>
+                            <a href="https://twitter.com/alcheringaiitg" target="_blank" ><Image src={icon3} alt="" /></a>
+                            <a href="https://www.youtube.com/@alcheringaIITG" target="_blank" ><Image src={icon4} alt="" className='yt_icon'/></a>
                         </div>
                     </div>
                 </div>
                 <div className="credits_2">
-                    <p className='extra_width'>Designed and Developed by <a href="">Alcher Creatives</a> & <a href="">Alcher Web Operations</a></p>
+                    <p className='extra_width'>Designed and Developed by <a href="#">Alcher Creatives</a> & <a href="#">Alcher Web Operations</a></p>
                     <div>
                         <p>For Business Enquiries</p>
-                        <a href="">publicrelations24@alcheringa.in</a>
+                        <a href="mailto:publicrelations24@alcheringa.in">publicrelations24@alcheringa.in</a>
                     </div>
                 </div>
             </div>
