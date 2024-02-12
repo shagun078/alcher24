@@ -20,11 +20,11 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-
 //images
 import hand_upper from "./resources/hand_upper.png";
 import hand_lower from "./resources/hand_lower.png";
 import down_arrow from "./resources/down.png";
+import Loading from "../components/loading/loading"
 
 import "./events_2d.css";
 
@@ -176,6 +176,29 @@ function Tween() {
 }
 
 function Events() {
+   
+    const [showSplash, setShowSplash] = useState(true);
+
+  useEffect(() => {
+    if (document.readyState !== 'complete') {
+      const handler = () => {
+        console.log('load');
+        setShowSplash(false);
+      };
+      window.addEventListener('load', handler);
+
+      return () => {
+        window.removeEventListener('load', handler);
+      };
+    } else {
+      const timeout = window.setTimeout(() => {
+        console.log('timeout');
+        setShowSplash(false);
+      }, 0);
+      return () => window.clearTimeout(timeout);
+    }
+  }, []);
+
   const [isAnimating, setIsAnimating] = useState(false);
   const [title1, setTitle1] = useState(list.head.data.title1);
   const [title2, setTitle2] = useState(list.head.data.title2);
@@ -409,6 +432,7 @@ function Events() {
   };
 
   return (
+    !showSplash?(
     <>
       <Navbar reg_bg={"register reg_bg1"} />
       <Cursor />
@@ -574,7 +598,7 @@ function Events() {
         circle_src2={circle2}
         windows_src={windows1}
       />
-    </>
+    </>):<Loading/>
   );
 }
 

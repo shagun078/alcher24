@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect } from "react";
+import React, { useEffect , useState } from "react";
 import "./components/sponsor.css";
 import design from "./resources/design.png";
 import SponsorList from "./components/sponsor_list";
@@ -11,8 +11,33 @@ import circle1 from "/public/footer_img/sponsors_left_circle.png";
 import circle2 from "/public/footer_img/sponsors_right_circle.png";
 import windows1 from "/public/footer_img/Frame 15230-min.png";
 import alcheringa from "/public/footer_img/sponsors_alcheringa.png";
+import Loading from "../components/loading/loading"
+
+
 
 function Sponsor() {
+   
+    const [showSplash, setShowSplash] = useState(true);
+
+  useEffect(() => {
+    if (document.readyState !== 'complete') {
+      const handler = () => {
+        console.log('load');
+        setShowSplash(false);
+      };
+      window.addEventListener('load', handler);
+
+      return () => {
+        window.removeEventListener('load', handler);
+      };
+    } else {
+      const timeout = window.setTimeout(() => {
+        console.log('timeout');
+        setShowSplash(false);
+      }, 0);
+      return () => window.clearTimeout(timeout);
+    }
+  }, []);
   const image = [gucci];
 
   const Cursor = () => {
@@ -26,7 +51,11 @@ function Sponsor() {
         cursor.style.top = `${clientY}px`;
       });
     }, []);
+
+
+
     return (
+        
       <div className="cursor">
         <img
           src={"cursor.png"}
@@ -39,7 +68,10 @@ function Sponsor() {
       </div>
     );
   };
+
+
   return (
+    !showSplash?(
     <>
       <Navbar reg_bg={"register reg_bg7"} />
       <Cursor />
@@ -125,7 +157,7 @@ function Sponsor() {
         circle_src2={circle2}
         windows_src={windows1}
       />
-    </>
+    </>):<Loading/>
   );
 }
 export default Sponsor;

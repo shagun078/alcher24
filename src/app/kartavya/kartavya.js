@@ -5,9 +5,9 @@ import hand_upper from "./resources/hand_upper.png";
 import hand_lower from "./resources/hand_lower.png";
 import stars from "./resources/stars.png";
 import CardList from "./components/cardList";
-import { useEffect } from "react";
-
-import "./components/kartavya.css";
+import { useEffect , useState } from "react";
+import Loading from "../components/loading/loading";
+import styles from "./components/kartavya.css";
 import Footer from "../components/footer/page";
 import Navbar from "../components/navbar/page";
 import circle1 from "/public/footer_img/kartavya_left_circle.png";
@@ -31,6 +31,28 @@ function getCards() {
 }
 
 export default function Kartavya() {
+
+    const [showSplash, setShowSplash] = useState(true);
+
+  useEffect(() => {
+    if (document.readyState !== 'complete') {
+      const handler = () => {
+        console.log('load');
+        setShowSplash(false);
+      };
+      window.addEventListener('load', handler);
+
+      return () => {
+        window.removeEventListener('load', handler);
+      };
+    } else {
+      const timeout = window.setTimeout(() => {
+        console.log('timeout');
+        setShowSplash(false);
+      }, 0);
+      return () => window.clearTimeout(timeout);
+    }
+  }, []);
   let flip_cards = getCards();
 
   var sectionStyle = {
@@ -64,6 +86,7 @@ export default function Kartavya() {
   };
 
   return (
+    !showSplash?(
     <>
       <Navbar reg_bg={"register reg_bg3"} />
       <Cursor />
@@ -176,7 +199,7 @@ export default function Kartavya() {
         circle_src2={circle2}
         windows_src={windows1}
       />
-    </>
+    </>):<Loading/>
   );
 }
 

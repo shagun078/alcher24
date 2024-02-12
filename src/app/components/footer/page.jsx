@@ -5,7 +5,7 @@ import './components/bg_change.css';
 import './components/star_change.css';
 import icon1 from '/public/footer_img/Vector.png';
 import icon2 from '/public/footer_img/Vector (1).png';
-import icon3 from '/public/footer_img/Vector (2).png';
+import icon3 from '/public/footer_img/Vector (5).png';
 import icon4 from '/public/footer_img/Vector (3).png';
 import Link from 'next/link';
 import Image from 'next/image';
