@@ -530,7 +530,7 @@ iframe {
   padding: 0.2vw 1vw;
   border-radius: 2vw;
   border: 0;
-  font-weight: 100;
+  font-weight: 400;
 }
 
 .alcher_merch_coming_soon{
@@ -572,6 +572,16 @@ iframe {
 }
 
 @media screen and (max-width: 912px) {
+
+  .alcher_merch_section p {
+    font-size: 3vw;
+  }
+
+  .buy_merch_button {
+    font-size: 3vw;
+    font-weight: 700;
+  }
+
   .decorationContainer {
     margin-top: 0rem;
   }
