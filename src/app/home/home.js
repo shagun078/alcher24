@@ -641,7 +641,6 @@ export default function Home() {
               enabled={true}
             />
             <ambientLight intensity={1.5} />
-            <axesHelper args={[20, 20]} />
             <Annotations controls={ref} />
             <mesh ref={rotateRef}>
               <RoomScene />
