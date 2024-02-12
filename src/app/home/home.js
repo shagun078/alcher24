@@ -650,7 +650,7 @@ export default function Home() {
             <OrbitControls
               ref={ref}
               target={[-3.5, 1.4, -1.8]}
-              enableZoom={true}
+              enableZoom={false}
               enableDamping={true}
               minPolarAngle={Math.PI / 3}
               maxPolarAngle={Math.PI / 2}

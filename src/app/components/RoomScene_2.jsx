@@ -385,9 +385,9 @@ export default function RoomScene(props) {
           />
           
         </mesh>
-       <Html position={[-5.47, 0.941, -1.11]} className="clock_div"  scale={[2,2,2]}
+     {/*  <Html position={[-5.47, 0.941, -1.11]} className="clock_div"  scale={[2,2,2]}
         style={{position:'relative'}}
-  ><div className="clock_font"><span>T-{daysRemaining[0]}</span></div></Html>
+  ><div className="clock_font"><span>T-{daysRemaining[0]}</span></div></Html>*/}
        
       </group>
 

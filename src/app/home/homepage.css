@@ -32,7 +32,7 @@ body,
   top:0;
 }
 .clock_font span{
-  font-size: 1vw !important;
+  font-size: 1.2rem !important;
   width: 6rem;
   font-family: headingAlcher;
 }
