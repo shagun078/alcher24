@@ -21,12 +21,6 @@ import merch from "./resources/home_merch.png";
 import Link from "next/link";
 import Loading from "../components/loading/loading";
 
-
-
-
-
-
-
 const marks = [
   {
     key: "A",
@@ -319,7 +313,6 @@ const marks = [
 
 //a component creating a button as of now!
 function Annotations({ controls }) {
-    
   const { camera } = useThree();
   const [selected, setSelected] = useState("");
   const [backtrack, setBackTrack] = useState(false);
@@ -476,7 +469,7 @@ function Annotations({ controls }) {
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ duration: 2, delay: 1.5 }}
-                      className="return"
+                      className="return-home"
                       onClick={handleReturn}
                     >
                       <svg
@@ -492,9 +485,9 @@ function Annotations({ controls }) {
                         />
                       </svg>
                     </motion.div>
-                    <div className="flex-container">
+                    <div className="flex-container-home">
                       <motion.div
-                        className="title"
+                        className="title-home"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 2, delay: 1.5 }}
@@ -559,27 +552,27 @@ function Tween() {
 }
 
 export default function Home() {
-    const [showSplash, setShowSplash] = useState(true);
+  const [showSplash, setShowSplash] = useState(true);
 
-    useEffect(() => {
-      if (document.readyState !== 'complete') {
-        const handler = () => {
-          console.log('load');
-          setShowSplash(false);
-        };
-        window.addEventListener('load', handler);
-  
-        return () => {
-          window.removeEventListener('load', handler);
-        };
-      } else {
-        const timeout = window.setTimeout(() => {
-          console.log('timeout');
-          setShowSplash(false);
-        }, 0);
-        return () => window.clearTimeout(timeout);
-      }
-    }, []);
+  useEffect(() => {
+    if (document.readyState !== "complete") {
+      const handler = () => {
+        console.log("load");
+        setShowSplash(false);
+      };
+      window.addEventListener("load", handler);
+
+      return () => {
+        window.removeEventListener("load", handler);
+      };
+    } else {
+      const timeout = window.setTimeout(() => {
+        console.log("timeout");
+        setShowSplash(false);
+      }, 0);
+      return () => window.clearTimeout(timeout);
+    }
+  }, []);
   const contentRef = useRef(null);
   const ref = useRef();
   const rotateRef = useRef();
@@ -589,12 +582,6 @@ export default function Home() {
     contentRef.current &&
       contentRef.current.scrollIntoView({ behavior: "smooth" });
   };
-  // const deg = rotateRef.current.rotation.y;
-  // useFrame((state, delta) => {
-  //   while (rotateRef.current.rotation.y!=deg) {
-  //     rotateRef.current.rotation.y += 0.01;
-  //   }
-  // });
 
   const hoverEffect = () => {
     setIsHovered(!isHovered);
@@ -607,8 +594,6 @@ export default function Home() {
   );
 
   const Cursor = () => {
-    // const cursor = useRef(null);
-
     useEffect(() => {
       const cursor = document.querySelector(".cursor");
       window.addEventListener("mousemove", (e) => {
@@ -630,10 +615,8 @@ export default function Home() {
       </div>
     );
   };
-  // const document = typeof window !== "undefined" ? window.document : null;
 
-  return (
-    !showSplash?(
+  return !showSplash ? (
     <React.Fragment>
       <Navbar reg_bg={"register reg_bg1"} />
       <main className="threeD_2dwrapper">
@@ -658,6 +641,7 @@ export default function Home() {
               enabled={true}
             />
             <ambientLight intensity={1.5} />
+            <axesHelper args={[20, 20]} />
             <Annotations controls={ref} />
             <mesh ref={rotateRef}>
               <RoomScene />
@@ -672,7 +656,6 @@ export default function Home() {
             <div className="videoBox">
               <iframe
                 src="https://www.youtube.com/embed/CWhFx8v1mg8?autoplay=1&controls=0"
-                frameBorder="0"
                 allowFullScreen
               ></iframe>
             </div>
@@ -785,7 +768,8 @@ export default function Home() {
         circle_src2={circle2}
         windows_src={windows1}
       />
-    </React.Fragment>):<Loading/>
+    </React.Fragment>
+  ) : (
+    <Loading />
   );
 }
-

@@ -32,7 +32,7 @@ body,
   top:0;
 }
 .clock_font span{
-  font-size: 1.2rem !important;
+  font-size: 1.6vw;
   width: 6rem;
   font-family: headingAlcher;
 }
@@ -91,7 +91,7 @@ body,
   src: url('public/assets/clock.ttf');                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
 } */
 
-.return {
+.return-home {
   cursor: none;
   height: 100%;
   /* width: 20%; */
@@ -116,7 +116,7 @@ body,
   /* align-items: center; */
   box-sizing: content-box;
 }
-.flex-container {
+.flex-container-home {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
@@ -133,7 +133,7 @@ body,
   align-items: center;
   font-family: normalText !important;
 }
-.title {
+.title-home {
   width: 100%;
   word-wrap: none;
   display: flex;
