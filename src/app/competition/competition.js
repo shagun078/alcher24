@@ -28,6 +28,8 @@ function Body () {
     const [array, setArray] = useState(info);
     const [array2, setArray2] = useState([""]);
 
+    console.log(info[1].tag);
+
     const handleClick = () => {
         setState(!state);
     }

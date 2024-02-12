@@ -164,6 +164,15 @@
         z-index: 300000;
     }
 
+    #navbar_menu::before{
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: url("../resources/TexturePattern.jpg");
+        mix-blend-mode: color-burn;
+    }
+
     #navbar_menu.active{
         display: grid;
         place-items: center;
@@ -243,10 +252,11 @@
     
     .icon_ham{
         color: white;
-        background-color: var(--color1);
+        background-color: transparent;
         outline: none;
         border: none;
-        font-size: 3.90vw;
+        height: 6vw;
+        width: 6vw;
         /* position: absolute; */
         right: 6vw;
         display: flex;
