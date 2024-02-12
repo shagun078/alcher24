@@ -620,7 +620,7 @@ export default function Home() {
     <React.Fragment>
       <Navbar reg_bg={"register reg_bg1"} />
       <main className="threeD_2dwrapper">
-        <Cursor />
+       <Cursor />
         <div className="threeDWrapper">
           <Canvas
             camera={{
