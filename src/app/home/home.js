@@ -20,29 +20,6 @@ import Image from "next/image";
 import merch from "./resources/home_merch.png";
 import Link from "next/link";
 
-"use client";
-import React, { useRef, useState, useEffect, Suspense } from "react";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { OrbitControls, Html, Text } from "@react-three/drei";
-import RoomScene from "../components/RoomScene_2";
-import { motion } from "framer-motion";
-import MySlider from "./components/slider";
-import TWEEN from "@tweenjs/tween.js";
-import { FaAngleDoubleDown } from "react-icons/fa";
-import "./homepage.css";
-import Animations from "./components/Animations";
-import Loadingpage from "../components/loading/loading";
-import circle1 from "/public/footer_img/homepage_left_circle.png";
-import circle2 from "/public/footer_img/homepage_right_circle.png";
-import windows1 from "/public/footer_img/Frame 15230-min.png";
-import alcheringa from "/public/footer_img/homepage_alcheringa.png";
-import Navbar from "../components/navbar/page";
-import Footer from "../components/footer/page";
-import Image from "next/image";
-
-import merch from "./resources/home_merch.png";
-import Link from "next/link";
-
 const marks = [
   {
     key: "A",
