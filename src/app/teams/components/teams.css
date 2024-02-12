@@ -15,7 +15,7 @@
     --color_convener: #B357B6;
 }
 
-main{
+.teams_main{
     background-color: #141414;
     color: #E8EDD9;
     text-align: center;
@@ -256,6 +256,9 @@ main{
     }
     .names_prb, .names_crm, .names_creatives, .names_events, .names_web_app, .names_mun, .names_finance, .names_convener{
         margin: 20px auto 0;
+    }
+    .names_crm{
+        gap: 0 8px;
     }
     .finance_img{
         margin-bottom: -0.5vw;

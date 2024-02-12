@@ -116,12 +116,12 @@ body {
 
 .cursor {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 30px;
-  height: 30px;
+  top: -100px;
+  left: -100px;
+  width: 40px!important;
+  height: 40px!important;
   pointer-events: none;
-  z-index: 10000000;
+  z-index: 16797025!important;
   transform: translate(-50%, -50%);
 }
 @media screen and (orientation: portrait) {

@@ -92,7 +92,7 @@ export default function Kartavya() {
       <Cursor />
       <main className="kartavya_main">
         <section className="texture_wheel">
-          <div className="hand_upper">
+          <div className="kartavya_hand_upper">
             <Image
               src={hand_upper}
               alt="upper hand"
@@ -106,7 +106,7 @@ export default function Kartavya() {
             />
           </div>
 
-          <h1 className="head">KARTAVYA</h1>
+          <h1 className="kartavya_head">KARTAVYA</h1>
           <h3 className="detail1">
             &ldquo;Act as if what you do makes a difference. It does&ldquo;
           </h3>
@@ -177,7 +177,7 @@ export default function Kartavya() {
           </section>
         </section>
 
-        <div className="hand_lower">
+        <div className="kartavya_hand_lower">
           <Image
             src={hand_lower}
             alt="lower hand"

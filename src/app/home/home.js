@@ -30,7 +30,7 @@ import Loading from "../components/loading/loading";
 const marks = [
   {
     key: "A",
-    link: "https://www.alcheringa.in/competitions",
+    link: "/competition",
     title: "COMPETITIONS",
     description:
       "Alcheringa has many competitions spread across various genres. They take place during the three days with the prize distribution on the last day. People all over the country participate in these competitions to win exciting prizes and goodies and to witness one of India's biggest cultural festival.",
@@ -467,15 +467,15 @@ function Annotations({ controls }) {
               {a.key === selected && backtrack && (
                 <>
                   <motion.div
-                    className="blur"
+                    className="blur-home"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ duration: 2, delay: 3 }}
+                    transition={{ duration: 2, delay: 1.5 }}
                   >
                     <motion.div
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
-                      transition={{ duration: 2, delay: 3 }}
+                      transition={{ duration: 2, delay: 1.5 }}
                       className="return"
                       onClick={handleReturn}
                     >
@@ -497,7 +497,7 @@ function Annotations({ controls }) {
                         className="title"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ duration: 2, delay: 3 }}
+                        transition={{ duration: 2, delay: 1.5 }}
                         style={{
                           color: "white",
                           fontSize: window.innerWidth > 840 ? "4.7vh" : "3.5vh",
@@ -532,7 +532,7 @@ function Annotations({ controls }) {
                       <motion.p
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ duration: 2, delay: 3 }}
+                        transition={{ duration: 2, delay: 1.5 }}
                         style={{
                           color: "white",
                           fontSize: window.innerWidth > 840 ? "2vh" : "1.5vh",
@@ -652,8 +652,8 @@ export default function Home() {
               target={[-3.5, 1.4, -1.8]}
               enableZoom={true}
               enableDamping={true}
-             //minPolarAngle={Math.PI / 3}
-             //maxPolarAngle={Math.PI / 2}
+              minPolarAngle={Math.PI / 3}
+              maxPolarAngle={Math.PI / 2}
               dampingFactor={0.02}
               enabled={true}
             />
@@ -728,6 +728,13 @@ export default function Home() {
             <button className="buy_merch_button">BUY NOW</button>
           </div>
 
+          <div className="alcher_merch_coming_soon">
+            <h1>ALCHER MERCH</h1>
+            <h2>
+              Coming <span>Soon</span>
+            </h2>
+          </div>
+
           <div className="getAppSection">
             <img src="upperHand.svg" id="upperHand"></img>
             <img src="lowerHand.svg" id="lowerHand"></img>
@@ -781,3 +788,4 @@ export default function Home() {
     </React.Fragment>):<Loading/>
   );
 }
+

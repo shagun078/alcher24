@@ -457,7 +457,7 @@ function Events() {
         }
       </div>
       <div className="wrapper-2d">
-        <main>
+        <main className="events_main">
           <section className="hero-section">
             <div className="hand_upper">
               <Image
