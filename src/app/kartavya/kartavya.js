@@ -7,7 +7,7 @@ import stars from "./resources/stars.png";
 import CardList from "./components/cardList";
 import { useEffect } from "react";
 
-import styles from "./components/kartavya.css";
+import "./components/kartavya.css";
 import Footer from "../components/footer/page";
 import Navbar from "../components/navbar/page";
 import circle1 from "/public/footer_img/kartavya_left_circle.png";
@@ -83,7 +83,7 @@ export default function Kartavya() {
             />
           </div>
 
-          <h1 className="head">KARTAVYA</h1>
+          <h1 className="kartavya_head">KARTAVYA</h1>
           <h3 className="detail1">
             &ldquo;Act as if what you do makes a difference. It does&ldquo;
           </h3>
