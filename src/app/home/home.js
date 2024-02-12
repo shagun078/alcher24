@@ -725,7 +725,7 @@ export default function Home() {
               />
             </div>
             <p>Get Your Own</p>
-            <button className="buy_merch_button">BUY NOW</button>
+            <button className="buy_merch_button">COMING SOON</button>
           </div>
 
           <div className="alcher_merch_coming_soon">
