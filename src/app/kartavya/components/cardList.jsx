@@ -42,7 +42,7 @@ function getCards(){
         "id": "6",
         "heading": "SANRAKSHAN",
         "body": "Sanrakshan is a dual-purpose campaign tackling AIDS awareness and substance abuse, fostering a socially responsible community that is aware of safe practices and at the same time eliminating the stigma surrounding these issues.",
-        "img": "/try_large.jpg"
+        "img": "/UDAAN-min.jpg"
   
       }
     ]

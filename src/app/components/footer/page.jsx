@@ -112,18 +112,25 @@ const Footer = ({bg,star,circle_src1,circle_src2,windows_src,alcheringa_logo}) =
                     </div>
                 </div>
                 <div className="credits_2">
-                    <p className='extra_width'>Designed and Developed by <a onTouchMove={showContent1}>Alcher Creatives</a> & <a onTouchMove={showContent2}>Alcher Web Operations</a></p>
-                    <div id="right_shift_1" className={state1 ? "team_names_list_d list_active_all":"team_names_list_d"}>
-                    <p>Creator 1</p>
-                    <p>Creator 2</p>
-                    <p>Creator 3</p>
+                    <p className='extra_width'>Designed and Developed by 
+                    <a className='hover_parent'>
+                    <div id="right_shift_1" className='hover_child'>
+                        <p>Creator 1</p>
+                        <p>Creator 2</p>
+                        <p>Creator 3</p>
                     </div>
-                    <div id="right_shift_2" className={state2 ? "team_names_list_d list_active_all":"team_names_list_d"}>
-                    <p>Deepak Sutradhar</p>
-                    <p>Aditya Dadhich</p>
-                    <p>Himank Bohara</p>
-                    <p>Shubham Kumar Jha</p>
+                    Alcher Creatives
+                    </a> & 
+                    <a className='hover_parent'>
+                    <div id="right_shift_2" className='hover_child'>
+                        <p>Deepak Sutradhar</p>
+                        <p>Aditya Dadhich</p>
+                        <p>Himank Bohara</p>
+                        <p>Shubham Kumar Jha</p>
                     </div>
+                    Alcher Web Operations
+                    </a></p>
+                    
                     <div>
                         <p>For Business Enquiries</p>
                         <a href="mailto:publicrelations24@alcheringa.in">publicrelations24@alcheringa.in</a>
