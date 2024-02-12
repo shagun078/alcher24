@@ -35,6 +35,7 @@
 }
 
 .left_window{
+    background-image: url('../resources/left_window1.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 10vw;
@@ -46,6 +47,7 @@
 }
 
 .right_window{
+    background-image: url('../resources/right_window1.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 10vw;
@@ -257,8 +259,9 @@
     .names_prb, .names_crm, .names_creatives, .names_events, .names_web_app, .names_mun, .names_finance, .names_convener{
         margin: 20px auto 0;
     }
-    .names_crm{
-        gap: 0 8px;
+    .names_crm a{
+        gap: 0 7px;
+        font-size: calc(0.5vw + 5px);
     }
     .finance_img{
         margin-bottom: -0.5vw;
