@@ -12,7 +12,7 @@ import Footer from "../components/footer/page";
 import Navbar from "../components/navbar/page";
 import circle1 from "/public/footer_img/kartavya_left_circle.png";
 import circle2 from "/public/footer_img/kartavya_right_circle.png";
-import windows1 from "/public/footer_img/Frame 15230-min.png";
+import windows1 from "/public/footer_img/Kartavya-min.png";
 import alcheringa from "/public/footer_img/kartavya_alcheringa.png";
 
 

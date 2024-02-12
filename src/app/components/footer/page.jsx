@@ -11,13 +11,23 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { usePathname } from 'next/navigation';
+import { useState } from 'react';
 
 
 const Footer = ({bg,star,circle_src1,circle_src2,windows_src,alcheringa_logo}) => {
 
     const router = useRouter();
     const path = usePathname();
+    const [state1, setState1] = useState(false);
+    const [state2, setState2] = useState(false);
 
+    function showContent1(){
+        setState1(!state1);
+    }
+
+    function showContent2(){
+        setState2(!state2);
+    }
 
     return (
         <div className="container_footer">
@@ -102,7 +112,18 @@ const Footer = ({bg,star,circle_src1,circle_src2,windows_src,alcheringa_logo}) =
                     </div>
                 </div>
                 <div className="credits_2">
-                    <p className='extra_width'>Designed and Developed by <a href="#">Alcher Creatives</a> & <a href="#">Alcher Web Operations</a></p>
+                    <p className='extra_width'>Designed and Developed by <a onTouchMove={showContent1}>Alcher Creatives</a> & <a onTouchMove={showContent2}>Alcher Web Operations</a></p>
+                    <div id="right_shift_1" className={state1 ? "team_names_list_d list_active_all":"team_names_list_d"}>
+                    <p>Creator 1</p>
+                    <p>Creator 2</p>
+                    <p>Creator 3</p>
+                    </div>
+                    <div id="right_shift_2" className={state2 ? "team_names_list_d list_active_all":"team_names_list_d"}>
+                    <p>Deepak Sutradhar</p>
+                    <p>Aditya Dadhich</p>
+                    <p>Himank Bohara</p>
+                    <p>Shubham Kumar Jha</p>
+                    </div>
                     <div>
                         <p>For Business Enquiries</p>
                         <a href="mailto:publicrelations24@alcheringa.in">publicrelations24@alcheringa.in</a>

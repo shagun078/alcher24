@@ -12,7 +12,7 @@ import Animations from "./components/Animations";
 import Loadingpage from "../components/loading/loading";
 import circle1 from "/public/footer_img/homepage_left_circle.png";
 import circle2 from "/public/footer_img/homepage_right_circle.png";
-import windows1 from "/public/footer_img/Frame 15230-min.png";
+import windows1 from "/public/footer_img/Home-min.png";
 import alcheringa from "/public/footer_img/homepage_alcheringa.png";
 import Navbar from "../components/navbar/page";
 import Footer from "../components/footer/page";

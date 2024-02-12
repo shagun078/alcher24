@@ -30,7 +30,7 @@ const Navbar = ({ reg_bg }) => {
                     crossorigin="anonymous" referrerpolicy="no-referrer" />
             </Head>
             <div className="logo">
-                <Link href="/home"><Image className="logo" src={alcher_logo} alt="Alcheringa24" /></Link>
+                <a href="/home"><Image className="logo" src={alcher_logo} alt="Alcheringa24" /></a>
             </div>
             <nav id="navbar_menu" className={state === true ? 'navbar_menu active' : 'navbar_menu'}>
                 <ul>

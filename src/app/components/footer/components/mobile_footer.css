@@ -79,7 +79,7 @@
         font-weight: 600;
     }
 
-    .info{
+    .info a{
         font-size: var(--font-size-12-mobile) !important;
         font-weight: 400;
     }

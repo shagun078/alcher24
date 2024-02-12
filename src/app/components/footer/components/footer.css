@@ -234,6 +234,10 @@
     width: 50vw;
 }
 
+.extra_width a{
+    z-index: 30;
+}
+
 .credits_2 a{
     color: white;
     font-family: 'Uncut sans regular';
@@ -346,4 +350,21 @@
 .yt_icon{
     height: 1.38vw !important;
     width: 1.73vw !important;
+}
+
+.team_names_list_d{
+    display: none;
+    z-index: 10;
+    border-radius: 1vw;
+    background: gray;
+    box-shadow: 0 0 3vw black;
+    position: absolute;
+    bottom: 5.4vw;
+    display: none;
+    height: 10vw;
+    border: 1px solid red;
+}
+
+.list_active_all{
+    display: inline-block;
 }

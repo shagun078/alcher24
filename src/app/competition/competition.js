@@ -1,7 +1,7 @@
 "use client"
 import './components/body.css';
 import './components/mobile_body.css';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import React from 'react';
 import info from './components/data.js';
 import titledata from './components/title.js';
@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faSortDown } from '@fortawesome/free-solid-svg-icons';
 import circle1 from '/public/footer_img/competition_left_circle.png';
 import circle2 from '/public/footer_img/competition_right_circle.png';
-import windows1 from '/public/footer_img/Frame 15230-min.png';
+import windows1 from '/public/footer_img/Competitions-min.png';
 import alcheringa from '/public/footer_img/competiton_alcheringa.png';
 
 
@@ -31,6 +31,31 @@ function Body () {
     const handleClick = () => {
         setState(!state);
     }
+
+    const Cursor = () => {
+      // const cursor = useRef(null);
+  
+      useEffect(() => {
+        const cursor = document.querySelector(".cursor");
+        window.addEventListener("mousemove", (e) => {
+          const { clientX, clientY } = e;
+          cursor.style.left = `${clientX}px`;
+          cursor.style.top = `${clientY}px`;
+        });
+      }, []);
+      return (
+        <div className="cursor">
+          <img
+            src={"cursor.png"}
+            alt="Hello"
+            style={{
+              width: "100%",
+              height: "100%",
+            }}
+          />
+        </div>
+      );
+    };
 
     const onChange = (event) => {
         setValue(event.target.value);
@@ -70,19 +95,13 @@ function Body () {
     return (
         <>
         <Navbar reg_bg= {"register reg_bg2"}/>
+        <Cursor></Cursor>
         <div className="body">
             <div className="search_box">
                 <div className="container_1">
                     <form action="" className='form'>
                         <input className='search' type="text" placeholder='Search Competitions' value={value} onChange={e => onChange(e)} />
                         <FontAwesomeIcon icon={faSearch} className='magnifying_glass'/>
-                        <div className="search_list_box">
-                            {array2.map((list)=>{
-                                return(
-                                    <p>{list.comp_name}</p>
-                                )
-                            })}
-                        </div>
                     </form>
                     <div className="list_container">
                         <div className="modules" onClick={handleClick}>

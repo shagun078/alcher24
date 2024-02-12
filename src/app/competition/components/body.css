@@ -1,8 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    position: relative;
-}
+
 
 :root {
     --font-size-24-1440: 1.67vw;
@@ -12,6 +8,9 @@
 }
 
 .body {
+    margin: 0;
+    padding: 0;
+    position: relative;
     min-height: 89.11vw;
     width: 100vw;
     background-image: url('../resources/bg_c-min.png');
@@ -34,7 +33,7 @@
 }
 
 .search_box {
-    height: 15.21vw;
+    height: 33vh;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -78,7 +77,7 @@
     color: var(--color-w);
     font-size: 1.33vw;
     position: relative !important;
-    right: 1.4vw;
+    right: 1.5vw;
 }
 
 .magnifying_glass:hover {
@@ -137,10 +136,9 @@
 
 .list_container{
     position: absolute;
-    top: 0vw;
+    top: 12vh;
     right: 5.80vw;
     height: 42.28vw;
-
 }
 
 .list {
@@ -148,7 +146,7 @@
     height: 33.88vw;
     width: 26.87vw;
     position: absolute;
-    top: 5.5vw;
+    margin-top: 2vw;
     box-sizing: border-box;
     display: none;
     align-items: center;
@@ -210,8 +208,8 @@
 }
 
 .title {
-    padding-bottom: 5vw;
-    height: 4.78vw;
+    margin: 3vw 0vw 2.5vw 0vw;
+    height: 10vh;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -231,6 +229,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 5vw ;
 }
 
 .item_box::before {
@@ -324,7 +323,20 @@
     .modules{
         height: auto;
         width: 50vw;
-        margin: 2vw;
+    }
+
+    .list{
+        height: auto;
+        width: 50vw;
+    }
+
+    .list ul{
+        height: auto;
+    }
+
+    .list ul li{
+        padding: 1vw 0vw;
+        font-size: 4vw;
     }
 
     .modules p{
