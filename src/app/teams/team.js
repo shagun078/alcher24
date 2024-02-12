@@ -66,7 +66,7 @@ export default function Teams() {
         <div className="fake_div16"></div>
       </section>
 
-      <main>
+      <main className="teams_main">
         <section className="teams_heading">
           <div className="left_window"></div>
           <div className="teams_head1">

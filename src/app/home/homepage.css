@@ -491,6 +491,12 @@ iframe {
 .alcher_merch_section {
   padding-top: 10vh;
   text-align: center;
+
+
+
+
+  
+  display: none;
 }
 
 .alcher_merch_section h1 {
@@ -525,6 +531,32 @@ iframe {
   border-radius: 2vw;
   border: 0;
   font-weight: 100;
+}
+
+.alcher_merch_coming_soon{
+  padding-top: 10vh;
+  text-align: center;
+}
+
+.alcher_merch_coming_soon h1 {
+  color: #aadcdb;
+  font-weight: 850;
+  font-size: 5.5vw;
+  font-family: sponsor_heading_text;
+}
+
+.alcher_merch_coming_soon span {
+  color: #f12353;
+  font-size: 4.2vw;
+  font-weight: 700;
+  font-family: headingAlcher;
+}
+
+.alcher_merch_coming_soon h2 {
+  color: #ffffff;
+  font-size: 4.2vw;
+  font-weight: 700;
+  font-family: headingAlcher;
 }
 
 @keyframes moveUpDown {
@@ -579,6 +611,10 @@ iframe {
   }
 
   .alcher_merch_section {
+    padding-top: 0vh;
+  }
+
+  .alcher_merch_coming_soon {
     padding-top: 0vh;
   }
 }

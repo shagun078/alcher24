@@ -698,6 +698,13 @@ export default function App() {
             <button className="buy_merch_button">BUY NOW</button>
           </div>
 
+          <div className="alcher_merch_coming_soon">
+            <h1>ALCHER MERCH</h1>
+            <h2>
+              Coming <span>Soon</span>
+            </h2>
+          </div>
+
           <div className="getAppSection">
             <img src="upperHand.svg" id="upperHand"></img>
             <img src="lowerHand.svg" id="lowerHand"></img>
