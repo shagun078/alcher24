@@ -142,7 +142,7 @@
     }
 
     .header{
-        height: 9vw;
+        height: 14vw;
     }
 
     #icons{
@@ -244,7 +244,7 @@
         outline: none;
         border: none;
         font-size: 3.90vw;
-        position: absolute;
+        /* position: absolute; */
         right: 6vw;
         display: flex;
     }

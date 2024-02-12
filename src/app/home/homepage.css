@@ -25,6 +25,18 @@ body,
   src: url("../../../public/Uncut-Sans-Medium.woff2");
 }
 
+
+.clock_font{
+  position: absolute;
+  top:0;
+  
+}
+.clock_font span{
+  font-size: 1.2vw !important;
+  width: 6rem;
+  font-family: headingAlcher;
+}
+
 #info {
   position: absolute;
   top: 10px;
@@ -80,7 +92,7 @@ body,
 } */
 
 .return {
-  cursor: pointer;
+  cursor: none;
   height: 100%;
   /* width: 20%; */
   font-size: large;
@@ -92,12 +104,12 @@ body,
   border: none;
   outline: none;
 }
-.blur {
+.blur-home {
   padding: 0 5%;
   border-radius: 0.5rem;
   min-width: 27vw;
   font-family: Helvetica, sans-serif;
-  backdrop-filter: blur(2px);
+  /* backdrop-filter: blur(2px); */
   background-color: hsla(0, 0%, 9%, 0.3);
   display: flex;
   justify-content: flex-start;
@@ -116,7 +128,7 @@ body,
   height: 100%;
   padding: 1rem;
 }
-.blur p {
+.blur-home p {
   display: flex;
   align-items: center;
   font-family: normalText !important;
@@ -329,7 +341,7 @@ iframe {
   border: none;
   border-radius: 1rem;
   background-color: #f22c5b;
-  cursor: pointer;
+  cursor: none;
   font-family: headingAlcher;
 }
 .cardHoverSection {
@@ -395,7 +407,7 @@ iframe {
   position: relative;
   color: white;
   opacity: 1;
-  cursor: pointer;
+  cursor: none;
   animation: moveUpDown 2s ease-in-out infinite;
 }
 
@@ -465,21 +477,26 @@ iframe {
   color: white;
 }
 
-#appDownloadBtn{
+#appDownloadBtn {
   align-self: flex-start;
-
 }
 
 .googlePlayImage {
-  width:15vw;
+  width: 15vw;
   position: relative;
-  top:3vh;
-  cursor: pointer;
+  top: 3vh;
+  cursor: none;
 }
 
 .alcher_merch_section {
   padding-top: 10vh;
   text-align: center;
+
+
+
+
+  
+  display: none;
 }
 
 .alcher_merch_section h1 {
@@ -514,6 +531,32 @@ iframe {
   border-radius: 2vw;
   border: 0;
   font-weight: 100;
+}
+
+.alcher_merch_coming_soon{
+  padding-top: 10vh;
+  text-align: center;
+}
+
+.alcher_merch_coming_soon h1 {
+  color: #aadcdb;
+  font-weight: 850;
+  font-size: 5.5vw;
+  font-family: sponsor_heading_text;
+}
+
+.alcher_merch_coming_soon span {
+  color: #f12353;
+  font-size: 4.2vw;
+  font-weight: 700;
+  font-family: headingAlcher;
+}
+
+.alcher_merch_coming_soon h2 {
+  color: #ffffff;
+  font-size: 4.2vw;
+  font-weight: 700;
+  font-family: headingAlcher;
 }
 
 @keyframes moveUpDown {
@@ -570,14 +613,18 @@ iframe {
   .alcher_merch_section {
     padding-top: 0vh;
   }
+
+  .alcher_merch_coming_soon {
+    padding-top: 0vh;
+  }
 }
 
-@media screen and (max-width:1025px){
-  .threeDWrapper{
+@media screen and (max-width: 1025px) {
+  .threeDWrapper {
     height: calc(100dvh - 9dvw);
   }
 }
- /* #cardHoverLeft{
+/* #cardHoverLeft{
     left:24vw;
   }
   .videoWrapper{
@@ -713,3 +760,4 @@ iframe {
     height: 93%;
   }
 }
+

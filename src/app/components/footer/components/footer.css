@@ -155,6 +155,7 @@
     color: white;
     display: flex;
     flex-direction: row;
+    z-index: 100;
 }
 
 .cred{
@@ -226,6 +227,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 100;
 }
 
 .extra_width{
@@ -236,6 +238,7 @@
     color: white;
     font-family: 'Uncut sans regular';
     font-size: var(--font-size-16-1440);
+    text-decoration: underline;
 }
 
 .credits_2 div{
@@ -250,11 +253,20 @@
     text-align: right;
 }
 
+.credits_2 div a{
+    /* text-align: right; */
+    text-decoration: none;
+}
+
 .info{
     font-family: 'Uncut sans regular';
     font-weight: 400;
     font-size: var(--font-size-16-1440);
     padding: 1vw 0vw 2vw 0vw;
+}
+
+.info a{
+    font-size: 1vw;
 }
 
 .star{

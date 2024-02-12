@@ -20,6 +20,8 @@ export default function MainPage() {
       <Link href="/teams">Teams Page</Link>
       <br />
       <Footer />
+      <br/>
+      <Link href='/loading'>loading page</Link>
     </>
   );
 }
