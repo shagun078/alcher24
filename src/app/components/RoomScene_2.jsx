@@ -14,7 +14,7 @@ import * as THREE from "three";
 
 export default function RoomScene(props) {
   const rotateRef = useRef();
-  const texture = useTexture("BakedTexture.png");
+  const texture = useTexture("BakedTexture.jpg");
   texture.flipY = false;
   texture.colorSpace = THREE.SRGBColorSpace;
   const textureMaterial = new THREE.MeshStandardMaterial({
@@ -384,13 +384,15 @@ export default function RoomScene(props) {
           <meshStandardMaterial side={THREE.DoubleSide} color={"black"} />
         </mesh>
         <Html
-          position={[-5.5, 1.02, -1.175]}
+          position={[-5.55, 1.25, -1.15]}
           className="clock_div"
+          rotation={[0,1.3,0]}
+          transform
           // style={{ position: "relative" }}
           anchorX="center"
         >
-          <div className="clock_font">
-            <span>T-{daysRemaining[0]}</span>
+          <div className="clock_font" rotation={[0,0.4,0]}>
+            <span>{daysRemaining} Days to go</span>
           </div>
         </Html>
       </group>

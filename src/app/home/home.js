@@ -620,7 +620,7 @@ export default function Home() {
     <React.Fragment>
       <Navbar reg_bg={"register reg_bg1"} />
       <main className="threeD_2dwrapper">
-        <Cursor />
+       <Cursor />
         <div className="threeDWrapper">
           <Canvas
             camera={{
@@ -641,7 +641,6 @@ export default function Home() {
               enabled={true}
             />
             <ambientLight intensity={1.5} />
-            <axesHelper args={[20, 20]} />
             <Annotations controls={ref} />
             <mesh ref={rotateRef}>
               <RoomScene />
