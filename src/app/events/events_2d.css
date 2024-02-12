@@ -87,10 +87,10 @@ body::-webkit-scrollbar {
   font-weight: 600;
 }
 
-.button {
+.button_view {
   width: fit-content;
   padding: 0.5rem;
-  background-color: #fa5045;
+  background-color: #fa5045!important;
   border-radius: 1.5rem;
 }
 .card-section {
@@ -114,7 +114,7 @@ body::-webkit-scrollbar {
   align-items: center;
 }
 .name span {
-  font-size: 10vw;
+  font-size: 9.5vw;
   font-weight: 600;
 }
 .head p {
