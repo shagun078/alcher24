@@ -26,7 +26,6 @@ function Body () {
     const [title2, setTitle2] = useState(["Modules"]);
 
     const [array, setArray] = useState(info);
-    const [array2, setArray2] = useState([""]);
 
     const handleClick = () => {
         setState(!state);
@@ -41,15 +40,11 @@ function Body () {
                 return user.comp_name.toLowerCase().includes(keyword.toLowerCase());
             });
             setArray(result.slice(0, 6));
-            setArray2(result.slice(0, 6));
 
             const result_2 = titledata.filter((user_2) => {
                 return user_2.toLowerCase().includes(keyword.toLowerCase());
             })
             setTitle(result_2.slice(0, 1));
-        }
-        else{
-            setArray2(["No Results Found"]);
         }
     }
 
@@ -76,17 +71,10 @@ function Body () {
                     <form action="" className='form'>
                         <input className='search' type="text" placeholder='Search Competitions' value={value} onChange={e => onChange(e)} />
                         <FontAwesomeIcon icon={faSearch} className='magnifying_glass'/>
-                        <div className="search_list_box">
-                            {array2.map((list)=>{
-                                return(
-                                    <p>{list.comp_name}</p>
-                                )
-                            })}
-                        </div>
                     </form>
                     <div className="list_container">
                         <div className="modules" onClick={handleClick}>
-                        {title2.map((capital) => (<p>{capital}</p>))}
+                        {title2.map((capital) => (<p key={capital.id}>{capital.title}</p>))}
                             <div className="small_box">
                                 <FontAwesomeIcon icon={faSortDown} className={state ? 'fa-solid fa-sort-down fa-active' : 'fa-solid fa-sort-down'}/>
                             </div>
@@ -111,13 +99,13 @@ function Body () {
                 </div>
             </div>
             <div className="title">
-                {title.map((capital) => (<h2 className='capital_prop_name'>{capital}</h2>))}
+                {title.map((capital) => (<h2 key={capital.id} className='capital_prop_name'>{capital.title}</h2>))}
             </div>
             <div className="item_box" >
                 <div className="item_container">
                     {array.map((arr) => {
                         return (
-                        <div className="icon">
+                        <div className="icon" key={arr.id}>
                             <Image src={arr.img} 
                             alt="Photo" 
                             className='iconsIMG'
