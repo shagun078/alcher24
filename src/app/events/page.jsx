@@ -12,10 +12,10 @@ import { Museumfinal } from "../components/Museum10Feb";
 import "./FadeInComponent.css";
 import Navbar from "../components/navbar/page";
 import Footer from "../components/footer/page";
-import circle1 from '/public/footer_img/events_left_circle.png';
-import circle2 from '/public/footer_img/events_right_circle.png';
-import windows1 from '/public/footer_img/Frame 15230-min.png';
-import alcheringa from '/public/footer_img/events_alcheringa.png';
+import circle1 from "/public/footer_img/events_left_circle.png";
+import circle2 from "/public/footer_img/events_right_circle.png";
+import windows1 from "/public/footer_img/Frame 15230-min.png";
+import alcheringa from "/public/footer_img/events_alcheringa.png";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -35,7 +35,7 @@ const marks = [
   {
     title2: "JOINS US",
     title1: "PRONITES",
-    currPage:'PROSHOWS',
+    currPage: "PROSHOWS",
     description: "Alcher-related display image!",
     camPos: {
       x: 0,
@@ -51,7 +51,7 @@ const marks = [
   {
     title2: "PROSHOWS",
     title1: "CREATORS CAMP",
-    currPage:'PRONITES',
+    currPage: "PRONITES",
     description: "Alcher-related display image!",
     camPos: {
       x: 0,
@@ -67,7 +67,7 @@ const marks = [
   {
     title2: "PRONITES",
     title1: "CRITICAL DAMAGE",
-    currPage:'CREATORS CAMP',
+    currPage: "CREATORS CAMP",
     description: "Alcher-related display image!",
     camPos: {
       x: 0,
@@ -83,7 +83,7 @@ const marks = [
   {
     title2: "CREATORS CAMP",
     title1: "INFORMALS",
-    currPage:'CRITICAL DAMAGE',
+    currPage: "CRITICAL DAMAGE",
     description: "Alcher-related display image!",
     camPos: {
       x: 0,
@@ -99,7 +99,7 @@ const marks = [
   {
     title2: "CRITICAL DAMAGE",
     title1: "JOIN US",
-    currPage:'INFORMALS',
+    currPage: "INFORMALS",
     description: "Alcher-related display image!",
     camPos: {
       x: 0,
@@ -115,7 +115,7 @@ const marks = [
   {
     title2: "INFORMALS",
     title1: "PROSHOWS",
-    currPage:"JOIN US",
+    currPage: "JOIN US",
     description: "Alcher-related display image!",
     camPos: {
       x: 0,
@@ -177,16 +177,15 @@ function App() {
   const [isAnimating, setIsAnimating] = useState(false);
   const [title1, setTitle1] = useState(list.head.data.title1);
   const [title2, setTitle2] = useState(list.head.data.title2);
-  const [currPage,setCurrpage]=useState(list.head.data.currPage);
-  const [isClick , setClick]=useState(false);
-  const [eventStyle,setEventStyle]=useState({opacity:1});
-  const [boxStyle,setBoxStyle]=useState({opacity:0});
-  const[currStyle,setCurrStyle]=useState({opacity:0});
-  const [bgcolor,setbgcolor]=useState({backgroundColor:'#181818'})
+  const [currPage, setCurrpage] = useState(list.head.data.currPage);
+  const [isClick, setClick] = useState(false);
+  const [eventStyle, setEventStyle] = useState({ opacity: 1 });
+  const [boxStyle, setBoxStyle] = useState({ opacity: 0 });
+  const [currStyle, setCurrStyle] = useState({ opacity: 0 });
+  const [bgcolor, setbgcolor] = useState({ backgroundColor: "#181818" });
   const controls = useRef();
   const camera = useRef();
   let [now, setNow] = useState(list.head);
-
 
   const forward = () => {
     setIsAnimating(true);
@@ -268,8 +267,8 @@ function App() {
   }, [now]);
 
   const showEvent = () => {
-    setCurrStyle({opacity:1});
-    setbgcolor({backgroundColor:'transparent'});
+    setCurrStyle({ opacity: 1 });
+    setbgcolor({ backgroundColor: "transparent" });
     setClick(true);
     setBoxStyle({
       opacity: 1,
@@ -306,244 +305,268 @@ function App() {
   };
 
   const buttons = (
-   
     <React.Fragment>
-    <div  className="event_box" >
-    <span className={`fade-in ${isAnimating ? "animating" : ""}`} id='museum_events_name' style={currStyle}>{currPage}</span>
-    <span className='event_tag' style={isClick?eventStyle:eventStyle}>EVENTS</span>
-    <button
-    className="show-event-btn"
-    onClick={showEvent}
-    style={isClick?eventStyle:eventStyle}
-  >
-    VIEW OUR EVENTS
-  </button>
-    </div>
-    <div className="btn_box" style={isClick?boxStyle:boxStyle}>
-    <div className="responsive_btn_box">
-    <span className="backward-container">
-    <FontAwesomeIcon icon={faArrowLeft} className="backward-svg" />
-    <button
-      className="btn btn-backward"
-      onClick={() => {
-        backward();
-      }}
-    >
-      <span className={`fade-in ${isAnimating ? "animating" : ""}`}>
-        {title2}
-      </span>
-    </button>
-  </span>
-    </div>
-  
+      <div className="event_box">
+        <span
+          className={`fade-in ${isAnimating ? "animating" : ""}`}
+          id="museum_events_name"
+          style={currStyle}
+        >
+          {currPage}
+        </span>
+        <span className="event_tag" style={isClick ? eventStyle : eventStyle}>
+          EVENTS
+        </span>
+        <button
+          className="show-event-btn"
+          onClick={showEvent}
+          style={isClick ? eventStyle : eventStyle}
+        >
+          VIEW OUR EVENTS
+        </button>
+      </div>
+      <div className="btn_box" style={isClick ? boxStyle : boxStyle}>
+        <div className="responsive_btn_box">
+          <span className="backward-container">
+            <FontAwesomeIcon icon={faArrowLeft} className="backward-svg" />
+            <button
+              className="btn btn-backward"
+              onClick={() => {
+                backward();
+              }}
+            >
+              <span className={`fade-in ${isAnimating ? "animating" : ""}`}>
+                {title2}
+              </span>
+            </button>
+          </span>
+        </div>
 
-    <div className="responsive_btn_box">
-    <button
-    className="back-to-home"
-    onClick={() => {
-      backToHome();
-    }}
-  >
-    BACK TO HOME
-  </button>
-    </div>
- 
+        <div className="responsive_btn_box">
+          <button
+            className="back-to-home"
+            onClick={() => {
+              backToHome();
+            }}
+          >
+            BACK TO HOME
+          </button>
+        </div>
 
-<div className="responsive_btn_box">
-<span className="forward-container">
-<button
-  className="btn btn-forward"
-  onClick={() => {
-    forward();
-  }}
->
-  <span className={`fade-in ${isAnimating ? "animating" : ""}`}>
-    {title1}
-  </span>
-</button>
+        <div className="responsive_btn_box">
+          <span className="forward-container">
+            <button
+              className="btn btn-forward"
+              onClick={() => {
+                forward();
+              }}
+            >
+              <span className={`fade-in ${isAnimating ? "animating" : ""}`}>
+                {title1}
+              </span>
+            </button>
 
-<FontAwesomeIcon icon={faArrowRight} className="forward-svg" />
-</span>
-</div>
-  
-    </div>
-      
-
-
-
-
+            <FontAwesomeIcon icon={faArrowRight} className="forward-svg" />
+          </span>
+        </div>
+      </div>
     </React.Fragment>
-  );  
+  );
 
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState("PRONITES");
 
+  const Cursor = () => {
+    // const cursor = useRef(null);
 
-  
+    useEffect(() => {
+      const cursor = document.querySelector(".cursor");
+      window.addEventListener("mousemove", (e) => {
+        const { clientX, clientY } = e;
+        cursor.style.left = `${clientX}px`;
+        cursor.style.top = `${clientY}px`;
+      });
+    }, []);
+    return (
+      <div className="cursor">
+        <img
+          src={"cursor.png"}
+          alt="Hello"
+          style={{
+            width: "100%",
+            height: "100%",
+          }}
+        />
+      </div>
+    );
+  };
+
   return (
     <>
       <Navbar reg_bg={"register reg_bg1"} />
-     
-        <div className="wrapper">
-          <Canvas>
-            <PerspectiveCamera
-              ref={camera}
-              makeDefault
-              position={[0, 2, -25]}
-            />
-            <OrbitControls
-              ref={controls}
-              enableZoom={false}
-              enableDamping={true}
-              enableRotate={false}
-              target={[0, 2, 0]}
-            />
-            <ambientLight intensity={3} />
-            <Museumfinal />
-            <Tween />
-          </Canvas>
-          {<div id="ui" style={bgcolor}>{buttons}</div>}
-        </div>
-        <div className="wrapper-2d">
-          <main>
-            <section className="hero-section">
-              <div className="hand_upper">
-                <Image
-                  src={hand_upper}
-                  alt="upper hand"
-                  style={{
-                    width: "100%",
-                    height: "auto",
-                  }}
-                  quality={100}
-                  placeholder="blur"
-                />
-              </div>
-              <h1 className="heading">EVENTS</h1>
-              <Link className="button_view" href="#events">
-                VIEW OUR EVENTS
-              </Link>
-              <div className="hand_lower">
-                <Image
-                  src={hand_lower}
-                  alt="lower hand"
-                  style={{
-                    width: "100%",
-                    height: "auto",
-                  }}
-                  quality={100}
-                  placeholder="blur"
-                />
-              </div>
-            </section>
-            <section className="card-section">
-              <div className="head">
-                <div className="name" onClick={() => setOpen(!open)}>
-                  <span>{Array.from(selected)}</span>
-                  <motion.div
-                    id="events"
-                    initial={{ rotate: !open ? "180deg" : 0 }}
-                    animate={{ rotate: !open ? 0 : "-180deg" }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    <Image
-                      src={down_arrow}
-                      alt="down arrow"
-                      style={{
-                        width: "auto",
-                        height: "100%",
-                        padding: "0.7rem 0.4rem",
-                      }}
-                      quality={100}
-                    />
-                  </motion.div>
-                </div>
+      <Cursor />
+      <div className="wrapper">
+        <Canvas>
+          <PerspectiveCamera ref={camera} makeDefault position={[0, 2, -25]} />
+          <OrbitControls
+            ref={controls}
+            enableZoom={false}
+            enableDamping={true}
+            enableRotate={false}
+            target={[0, 2, 0]}
+          />
+          <ambientLight intensity={3} />
+          <Museumfinal />
+          <Tween />
+        </Canvas>
+        {
+          <div id="ui" style={bgcolor}>
+            {buttons}
+          </div>
+        }
+      </div>
+      <div className="wrapper-2d">
+        <main>
+          <section className="hero-section">
+            <div className="hand_upper">
+              <Image
+                src={hand_upper}
+                alt="upper hand"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                }}
+                quality={100}
+                placeholder="blur"
+              />
+            </div>
+            <h1 className="heading">EVENTS</h1>
+            <Link className="button_view" href="#events">
+              VIEW OUR EVENTS
+            </Link>
+            <div className="hand_lower">
+              <Image
+                src={hand_lower}
+                alt="lower hand"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                }}
+                quality={100}
+                placeholder="blur"
+              />
+            </div>
+          </section>
+          <section className="card-section">
+            <div className="head">
+              <div className="name" onClick={() => setOpen(!open)}>
+                <span>{Array.from(selected)}</span>
                 <motion.div
-                  className="dropdown"
-                  initial={{
-                    opacity: open ? 0 : 1,
-                    y: open ? "0vh" : "6vh",
-                    pointerEvents: open ? "none" : "all",
-                  }}
-                  animate={{
-                    opacity: open ? 1 : 0,
-                    y: open ? "6vh" : "0vh",
-                    pointerEvents: open ? "all" : "none",
-                  }}
+                  id="events"
+                  initial={{ rotate: !open ? "180deg" : 0 }}
+                  animate={{ rotate: !open ? 0 : "-180deg" }}
                   transition={{ duration: 0.5 }}
                 >
-                  <ul>
-                    <li
-                      className="names"
-                      onClick={() => {
-                        setSelected("PROSHOWS");
-                        setOpen(!open);
-                      }}
-                    >
-                      PROSHOWS
-                    </li>
-                    <li
-                      className="names"
-                      onClick={() => {
-                        setSelected("PRONITES");
-                        setOpen(!open);
-                      }}
-                    >
-                      PRONITES
-                    </li>
-                    <li
-                      className="names"
-                      onClick={() => {
-                        setSelected("CREATORS CAMP");
-                        setOpen(!open);
-                      }}
-                    >
-                      CREATORS CAMP
-                    </li>
-                    <li
-                      className="names"
-                      onClick={() => {
-                        setSelected("CRITICAL DAMAGE");
-                        setOpen(!open);
-                      }}
-                    >
-                      CRITICAL DAMAGE
-                    </li>
-                    <li
-                      className="names"
-                      onClick={() => {
-                        setSelected("INFORMALS");
-                        setOpen(!open);
-                      }}
-                    >
-                      INFORMALS
-                    </li>
-                  </ul>
+                  <Image
+                    src={down_arrow}
+                    alt="down arrow"
+                    style={{
+                      width: "auto",
+                      height: "100%",
+                      padding: "0.7rem 0.4rem",
+                    }}
+                    quality={100}
+                  />
                 </motion.div>
-
-                <p>Welcome to Alcheringa!! We are loading up.please wait..</p>
               </div>
-              <Cardleft />
-              <Cardright />
-              <Cardleft />
-              <Cardright />
-            </section>
-            <div className="temp-gap"></div>
-          </main>
-          <motion.div
-            className="blur"
-            initial={{ opacity: open ? 0 : 1 }}
-            animate={{ opacity: open ? 1 : 0 }}
-            transition={{ duration: 0.5 }}
-          ></motion.div>
-        </div>
+              <motion.div
+                className="dropdown"
+                initial={{
+                  opacity: open ? 0 : 1,
+                  y: open ? "0vh" : "6vh",
+                  pointerEvents: open ? "none" : "all",
+                }}
+                animate={{
+                  opacity: open ? 1 : 0,
+                  y: open ? "6vh" : "0vh",
+                  pointerEvents: open ? "all" : "none",
+                }}
+                transition={{ duration: 0.5 }}
+              >
+                <ul>
+                  <li
+                    className="names"
+                    onClick={() => {
+                      setSelected("PROSHOWS");
+                      setOpen(!open);
+                    }}
+                  >
+                    PROSHOWS
+                  </li>
+                  <li
+                    className="names"
+                    onClick={() => {
+                      setSelected("PRONITES");
+                      setOpen(!open);
+                    }}
+                  >
+                    PRONITES
+                  </li>
+                  <li
+                    className="names"
+                    onClick={() => {
+                      setSelected("CREATORS CAMP");
+                      setOpen(!open);
+                    }}
+                  >
+                    CREATORS CAMP
+                  </li>
+                  <li
+                    className="names"
+                    onClick={() => {
+                      setSelected("CRITICAL DAMAGE");
+                      setOpen(!open);
+                    }}
+                  >
+                    CRITICAL DAMAGE
+                  </li>
+                  <li
+                    className="names"
+                    onClick={() => {
+                      setSelected("INFORMALS");
+                      setOpen(!open);
+                    }}
+                  >
+                    INFORMALS
+                  </li>
+                </ul>
+              </motion.div>
 
-        <Footer
-          bg={"footer img1"}
-          alcheringa_logo={alcheringa} star={"star1 star"}
-          circle_src1={circle1}
-         circle_src2= {circle2}  windows_src={windows1}
-        />
+              <p>Welcome to Alcheringa!! We are loading up.please wait..</p>
+            </div>
+            <Cardleft />
+            <Cardright />
+            <Cardleft />
+            <Cardright />
+          </section>
+          <div className="temp-gap"></div>
+        </main>
+        <motion.div
+          className="blur"
+          initial={{ opacity: open ? 0 : 1 }}
+          animate={{ opacity: open ? 1 : 0 }}
+          transition={{ duration: 0.5 }}
+        ></motion.div>
+      </div>
+
+      <Footer
+        bg={"footer img1"}
+        alcheringa_logo={alcheringa}
+        star={"star1 star"}
+        circle_src1={circle1}
+        circle_src2={circle2}
+        windows_src={windows1}
+      />
     </>
   );
 }

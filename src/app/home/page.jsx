@@ -10,19 +10,21 @@ import { FaAngleDoubleDown } from "react-icons/fa";
 import "./homepage.css";
 import Animations from "./components/Animations";
 import Loadingpage from "../components/loading/loading";
-import circle1 from '/public/footer_img/homepage_left_circle.png';
-import circle2 from '/public/footer_img/homepage_right_circle.png';
-import windows1 from '/public/footer_img/Frame 15230-min.png';
-import alcheringa from '/public/footer_img/homepage_alcheringa.png';
+import circle1 from "/public/footer_img/homepage_left_circle.png";
+import circle2 from "/public/footer_img/homepage_right_circle.png";
+import windows1 from "/public/footer_img/Frame 15230-min.png";
+import alcheringa from "/public/footer_img/homepage_alcheringa.png";
 import Navbar from "../components/navbar/page";
 import Footer from "../components/footer/page";
 import Image from "next/image";
 
 import merch from "./resources/home_merch.png";
+import Link from "next/link";
 
 const marks = [
   {
     key: "A",
+    link: "https://www.alcheringa.in/competitions",
     title: "COMPETITIONS",
     description:
       "Alcheringa has many competitions spread across various genres. They take place during the three days with the prize distribution on the last day. People all over the country participate in these competitions to win exciting prizes and goodies and to witness one of India's biggest cultural festival.",
@@ -55,6 +57,7 @@ const marks = [
   {
     key: "B",
     title: "ALCHERINGA APP",
+    link: "https://www.alcheringa.in/",
     description:
       "Download our app and visit our website get access to amazing features like E-Alcher passes, Schedule, Campus maps, Real-Time updates and much more.",
     camPos: {
@@ -86,6 +89,7 @@ const marks = [
   {
     key: "C",
     title: "THEME VIDEO",
+    link: "",
     description: "Our this year's theme, Chromatic Elysium",
     camPos: {
       x: -4,
@@ -116,6 +120,7 @@ const marks = [
   {
     key: "D",
     title: "EVENTS",
+    link: "/events",
     description:
       "Alcheringa has more than 80 events spread across various genres like fashion, music, art, sports, etc. They take place during the three days in which many events take place which includes panel discussions with various famous creators, informal activities like hot air balloon, ATV rides, paint ball shoot etc.!",
     camPos: {
@@ -147,6 +152,7 @@ const marks = [
   {
     key: "E",
     title: "KARTAVYA",
+    link: "/kartavya",
     description:
       "Alcheringa hosts several campaigns under Initiatives for cultural development and the betterment of society. These campaigns are conducted round the year to serve the mankind.",
     camPos: {
@@ -178,6 +184,7 @@ const marks = [
   {
     key: "F",
     title: "MERCH",
+    link: "",
     description:
       "Alcheringa has more than 80 events spread across various genres like fashion, music, art, sports, etc. They take place during the three days in which many events take place which includes panel discussions with various famous creators, informal activities like hot air balloon, ATV rides, paint ball shoot etc.",
     camPos: {
@@ -209,6 +216,7 @@ const marks = [
   {
     key: "G",
     title: "SPONSORS",
+    link: "/sponsor",
     description:
       "Alcheringa has more than 80 events spread across various genres like fashion, music, art, sports, etc. They take place during the three days in which many events take place which includes panel discussions with various famous creators, informal activities like hot air balloon, ATV rides, paint ball shoot etc.",
     camPos: {
@@ -240,6 +248,7 @@ const marks = [
   {
     key: "H",
     title: "THE TEAM",
+    link: "/teams",
     description:
       "All students, from the fourth year mentors to the first-year freshers, play an active role in actualising the four days of Alcher. Alcheringa is the most significant cultural festival in the northeast and is build by the yearlong efforts of all the students involved in making their vision of Alcher come to life..",
     camPos: {
@@ -271,6 +280,7 @@ const marks = [
   {
     key: "I",
     title: "MUN",
+    link: "https://www.instagram.com/iitg_mun/",
     description:
       "The grandest simulation of the UN in the North-East, IIT Guwahati Model United Nations presents its Edition XVI, bigger and better than ever before. This year we bring to you four committees that are bound to get you thinking about and deliberating on the issues that we face in the real world.",
     camPos: {
@@ -498,7 +508,7 @@ function Annotations({ controls }) {
                             fill="white"
                           />
                         </svg>
-                        {a.title}
+                        <Link href={a.link}>{a.title}</Link>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="29"
@@ -568,10 +578,37 @@ export default function App() {
     </React.Fragment>
   );
 
+  const Cursor = () => {
+    // const cursor = useRef(null);
+
+    useEffect(() => {
+      const cursor = document.querySelector(".cursor");
+      window.addEventListener("mousemove", (e) => {
+        const { clientX, clientY } = e;
+        cursor.style.left = `${clientX}px`;
+        cursor.style.top = `${clientY}px`;
+      });
+    }, []);
+    return (
+      <div className="cursor">
+        <img
+          src={"cursor.png"}
+          alt="Hello"
+          style={{
+            width: "100%",
+            height: "100%",
+          }}
+        />
+      </div>
+    );
+  };
+  // const document = typeof window !== "undefined" ? window.document : null;
+
   return (
     <React.Fragment>
-      <Navbar reg_bg= {"register reg_bg1"} />
+      <Navbar reg_bg={"register reg_bg1"} />
       <main className="threeD_2dwrapper">
+        <Cursor />
         <div className="threeDWrapper">
           <Canvas
             camera={{
@@ -694,18 +731,24 @@ export default function App() {
             <button id="registerBtn">REGISTER</button>
           </div>
 
-            <div
-              className={`cardHoverSection ${isHovered ? "hovered" : ""}`}
-              onMouseEnter={hoverEffect}
-              onMouseLeave={hoverEffect}
-            >
-              <img src="BoardOrange.svg" id="cardHoverLeft"></img>
-              <img src="BoardBlue.svg" id="cardHoverRight"></img>
-            </div>
+          <div
+            className={`cardHoverSection ${isHovered ? "hovered" : ""}`}
+            onMouseEnter={hoverEffect}
+            onMouseLeave={hoverEffect}
+          >
+            <img src="BoardOrange.svg" id="cardHoverLeft"></img>
+            <img src="BoardBlue.svg" id="cardHoverRight"></img>
           </div>
-        </main>
-        <Footer bg= {"footer img_homepage"} alcheringa_logo={alcheringa} star= {"star_homepage star"} circle_src1= {circle1} circle_src2= {circle2}  windows_src= {windows1} />
-      
+        </div>
+      </main>
+      <Footer
+        bg={"footer img_homepage"}
+        alcheringa_logo={alcheringa}
+        star={"star_homepage star"}
+        circle_src1={circle1}
+        circle_src2={circle2}
+        windows_src={windows1}
+      />
     </React.Fragment>
   );
 }
