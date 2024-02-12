@@ -115,7 +115,7 @@ const marks = [
   {
     title2: "INFORMALS",
     title1: "PROSHOWS",
-    currPage: "JOIN US",
+    currPage: "Join us all from 7th to 10th March",
     description: "Alcher-related display image!",
     camPos: {
       x: 0,
@@ -327,13 +327,14 @@ function App() {
       </div>
       <div className="btn_box" style={isClick ? boxStyle : boxStyle}>
         <div className="responsive_btn_box">
-          <span className="backward-container">
+          <span className="backward-container"
+          onClick={() => {
+            backward();
+          }}>
             <FontAwesomeIcon icon={faArrowLeft} className="backward-svg" />
             <button
               className="btn btn-backward"
-              onClick={() => {
-                backward();
-              }}
+              
             >
               <span className={`fade-in ${isAnimating ? "animating" : ""}`}>
                 {title2}
@@ -354,12 +355,13 @@ function App() {
         </div>
 
         <div className="responsive_btn_box">
-          <span className="forward-container">
+          <span className="forward-container"
+          onClick={() => {
+            forward();
+          }}>
             <button
               className="btn btn-forward"
-              onClick={() => {
-                forward();
-              }}
+              
             >
               <span className={`fade-in ${isAnimating ? "animating" : ""}`}>
                 {title1}
