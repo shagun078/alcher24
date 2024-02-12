@@ -124,7 +124,11 @@ body {
   z-index: 10000000;
   transform: translate(-50%, -50%);
 }
-
+@media screen and (orientation: portrait) {
+  .cursor {
+    display: none;
+  }
+}
 /* from prev */
 /* 
 @font-face {
