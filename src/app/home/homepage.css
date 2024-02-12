@@ -28,11 +28,11 @@ body,
 
 .clock_font{
   position: absolute;
+  width:max-content;
   top:0;
-  
 }
 .clock_font span{
-  font-size: 1.2vw !important;
+  font-size: 1vw !important;
   width: 6rem;
   font-family: headingAlcher;
 }
