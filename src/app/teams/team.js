@@ -15,7 +15,7 @@ import Footer from "../components/footer/page";
 import Navbar from "../components/navbar/page";
 import circle1 from "/public/footer_img/teams_left_circle.png";
 import circle2 from "/public/footer_img/teams_right_circle.png";
-import windows1 from "/public/footer_img/Frame 15230-min.png";
+import windows1 from "/public/footer_img/Teams-min.png";
 import alcheringa from "/public/footer_img/teams_alcheringa.png";
 import Loading from "../components/loading/loading";
 export default function Teams() {

@@ -9,7 +9,7 @@ import Navbar from "../components/navbar/page";
 import Footer from "../components/footer/page";
 import circle1 from "/public/footer_img/sponsors_left_circle.png";
 import circle2 from "/public/footer_img/sponsors_right_circle.png";
-import windows1 from "/public/footer_img/Frame 15230-min.png";
+import windows1 from "/public/footer_img/Sponsors-min.png";
 import alcheringa from "/public/footer_img/sponsors_alcheringa.png";
 import Loading from "../components/loading/loading"
 

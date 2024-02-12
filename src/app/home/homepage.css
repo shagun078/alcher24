@@ -496,7 +496,7 @@ iframe {
 
 
   
-  display: none;
+  /* display: none; */
 }
 
 .alcher_merch_section h1 {
@@ -536,6 +536,8 @@ iframe {
 .alcher_merch_coming_soon{
   padding-top: 10vh;
   text-align: center;
+
+  display: none;
 }
 
 .alcher_merch_coming_soon h1 {
