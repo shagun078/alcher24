@@ -19,6 +19,7 @@ import Footer from "../components/footer/page";
 import Image from "next/image";
 import merch from "./resources/home_merch.png";
 import Link from "next/link";
+import Loading from "../components/loading/loading";
 
 
 
@@ -318,6 +319,7 @@ const marks = [
 
 //a component creating a button as of now!
 function Annotations({ controls }) {
+    
   const { camera } = useThree();
   const [selected, setSelected] = useState("");
   const [backtrack, setBackTrack] = useState(false);
@@ -557,6 +559,27 @@ function Tween() {
 }
 
 export default function Home() {
+    const [showSplash, setShowSplash] = useState(true);
+
+    useEffect(() => {
+      if (document.readyState !== 'complete') {
+        const handler = () => {
+          console.log('load');
+          setShowSplash(false);
+        };
+        window.addEventListener('load', handler);
+  
+        return () => {
+          window.removeEventListener('load', handler);
+        };
+      } else {
+        const timeout = window.setTimeout(() => {
+          console.log('timeout');
+          setShowSplash(false);
+        }, 0);
+        return () => window.clearTimeout(timeout);
+      }
+    }, []);
   const contentRef = useRef(null);
   const ref = useRef();
   const rotateRef = useRef();
@@ -610,6 +633,7 @@ export default function Home() {
   // const document = typeof window !== "undefined" ? window.document : null;
 
   return (
+    !showSplash?(
     <React.Fragment>
       <Navbar reg_bg={"register reg_bg1"} />
       <main className="threeD_2dwrapper">
@@ -626,10 +650,10 @@ export default function Home() {
             <OrbitControls
               ref={ref}
               target={[-3.5, 1.4, -1.8]}
-              enableZoom={false}
+              enableZoom={true}
               enableDamping={true}
-             minPolarAngle={Math.PI / 3}
-             maxPolarAngle={Math.PI / 2}
+             //minPolarAngle={Math.PI / 3}
+             //maxPolarAngle={Math.PI / 2}
               dampingFactor={0.02}
               enabled={true}
             />
@@ -754,6 +778,6 @@ export default function Home() {
         circle_src2={circle2}
         windows_src={windows1}
       />
-    </React.Fragment>
+    </React.Fragment>):<Loading/>
   );
 }
