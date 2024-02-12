@@ -1,7 +1,13 @@
 "use client";
 
 import React, { Suspense, useRef, useState, useEffect } from "react";
-import { useGLTF, useVideoTexture, useTexture , Html , Text } from "@react-three/drei";
+import {
+  useGLTF,
+  useVideoTexture,
+  useTexture,
+  Html,
+  Text,
+} from "@react-three/drei";
 import url from "../../../public/video.mp4";
 import "../home/homepage.css";
 import * as THREE from "three";
@@ -38,22 +44,19 @@ export default function RoomScene(props) {
    const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining());
    console.log(timeRemaining);*/
 
-   const calculateTimeRemaining = () => {
+  const calculateTimeRemaining = () => {
     const currentDate = new Date();
     const targetDate = new Date("2024-03-7"); // Replace with your target date
     const timeDifference = targetDate.getTime() - currentDate.getTime();
-  
+
     // Calculate days remaining
     const daysRemaining = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
-  
+
     return [daysRemaining];
   };
-  
+
   const [daysRemaining] = useState(calculateTimeRemaining());
   console.log(daysRemaining[0]); // Array containing the number of days remaining
-  
-
- 
 
   const [video] = useState(() => {
     const vid = document.createElement("video");
@@ -67,7 +70,6 @@ export default function RoomScene(props) {
   });
   const laptopScreen = useTexture("alcher.png");
   const mobileScreen = useTexture("qr.png");
-
 
   return (
     <group {...props} ref={rotateRef} dispose={null}>
@@ -364,7 +366,7 @@ export default function RoomScene(props) {
           />
         </mesh>
       </group>
-      <group >
+      <group>
         <mesh
           name="ClockScreen"
           geometry={nodes.ClockScreen.geometry}
@@ -372,25 +374,26 @@ export default function RoomScene(props) {
           position={[-5.402, 0.916, -1.313]}
           rotation={[0, -0.279, 0]}
         />
-     
+
         <mesh
-        position={[-5.400, 0.916, -1.313]}
-        rotation={[0,1.2925,0]}
-        scale={[0.1,0.1,0.1]}
+          position={[-5.4, 0.916, -1.313]}
+          rotation={[0, 1.2925, 0]}
+          scale={[0.1, 0.1, 0.1]}
         >
           <planeGeometry args={[3.588, 1.82]} />
-          <meshStandardMaterial
-            side={THREE.DoubleSide}
-            color={"black"}
-          />
-          
+          <meshStandardMaterial side={THREE.DoubleSide} color={"black"} />
         </mesh>
-       <Html position={[-5.47, 0.941, -1.11]} className="clock_div"  scale={[2,2,2]}
-        style={{position:'relative'}}
-  ><div className="clock_font"><span>T-{daysRemaining[0]}</span></div></Html>
-       
+        <Html
+          position={[-5.5, 1.02, -1.175]}
+          className="clock_div"
+          // style={{ position: "relative" }}
+          anchorX="center"
+        >
+          <div className="clock_font">
+            <span>T-{daysRemaining[0]}</span>
+          </div>
+        </Html>
       </group>
-
     </group>
   );
 }
