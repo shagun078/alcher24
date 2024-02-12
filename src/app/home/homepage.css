@@ -25,6 +25,20 @@ body,
   src: url("../../../public/Uncut-Sans-Medium.woff2");
 }
 
+
+
+
+.clock_font{
+  position: absolute;
+  top:0;
+  
+}
+.clock_font span{
+  font-size: 1.2vw !important;
+  width: 6rem;
+  font-family: headingAlcher;
+}
+
 #info {
   position: absolute;
   top: 10px;

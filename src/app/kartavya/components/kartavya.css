@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* PLEASE DEFINE FONTS */
 
 :root{
@@ -32,7 +28,7 @@
     background-repeat: no-repeat;
 }
 
-.hand_upper{
+.kartavya_hand_upper{
     width: 30vw;
     float: left;
     position: absolute;
@@ -43,7 +39,7 @@
     margin-left: -15px;
 }
 
-.hand_lower{
+.kartavya_hand_lower{
     width: 32vw;
     float: right;
     margin-top: -12vh;
@@ -53,7 +49,7 @@
     margin-right: -15px;
 }
 
-.head{
+.kartavya_head{
     padding-top: 12vh;
     font-size: var(--text1);
     font-weight: 900;
@@ -363,15 +359,15 @@ padding-left: 0%;
 }
 
 @media screen and (max-width: 1025px){
-    .hand_upper{
+    .kartavya_hand_upper{
         margin-top: -4vh;
     }
 
-    .hand_lower{
+    .kartavya_hand_lower{
         margin-top: -4vh;
     }
 
-    .head{
+    .kartavya_head{
         font-size: var(--text2);
     }
 
@@ -466,15 +462,15 @@ padding-left: 0%;
 
 @media screen and (max-width: 913px){
 
-    .hand_upper{
+    .kartavya_hand_upper{
         margin-top: 0vh;
     }
 
-    .hand_lower{
+    .kartavya_hand_lower{
         margin-top: -2vh;
     }
 
-    .head{
+    .kartavya_head{
         font-size: var(--text2);
     }
 
