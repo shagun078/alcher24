@@ -238,8 +238,8 @@
 }
 
 .credits_2 div{
-    font-size: var(--font-size-16-1440);
-    padding-left: 20vw;
+    /* font-size: var(--font-size-16-1440); */
+    /* padding-left: 20vw; */
     display: flex;
     justify-content: right;
     flex-direction: column;
@@ -259,15 +259,17 @@
 
 .hover_child{
     display: none !important;
-    border: 2px solid red;
-    border-radius: 2vh !important;
-    background-color: rgba(24,24,24,0.6);
+    border: 2px solid #111;
+    border-radius: 5px !important;
+    background-color: #242424;
     text-align:center !important;
     color: #fff;
-    font-size: 2vw;
+    font-size: 2vh;
     position: absolute;
-    bottom:5vw;
+    bottom:9vh;
     width: max-content;
+    padding: 2vh 4vh;
+    cursor: pointer;
 }
 
 .hover_parent:hover .hover_child{
@@ -378,9 +380,14 @@
 }
 
 .list_active_all{
-    display: block !important;
+    display: inline-block;
 }
 
-#right_shift_2{
-    width: 4vw;
+@media screen and (max-width: 1281px){
+    /* #right_shift_1{
+        
+    } */
+    #right_shift_2{
+        right: 0;
+    }
 }
