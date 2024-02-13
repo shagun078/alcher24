@@ -376,15 +376,15 @@ export default function RoomScene(props) {
         />
 
         <mesh
-          position={[-5.4, 0.916, -1.313]}
+          position={[-5.4, 0.916, -1.312]}
           rotation={[0, 1.2925, 0]}
-          scale={[0.1, 0.1, 0.1]}
+          scale={[0.101, 0.1, 0.1]}
         >
           <planeGeometry args={[3.588, 1.82]} />
           <meshStandardMaterial side={THREE.DoubleSide} color={"black"} />
         </mesh>
         <Html
-          position={[-5.55, 1.25, -1.15]}
+          position={[-5.49, 0.95, -1.35]}
           className="clock_div"
           rotation={[0,1.3,0]}
           transform
@@ -392,7 +392,8 @@ export default function RoomScene(props) {
           anchorX="center"
         >
           <div className="clock_font" rotation={[0,0.4,0]}>
-            <span>{daysRemaining} Days to go</span>
+           <div id='days_to_go'><p id="s1"><span id='time'>{daysRemaining}</span> Days </p></div> 
+            <p id="s2">to go</p>
           </div>
         </Html>
       </group>

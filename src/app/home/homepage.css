@@ -25,15 +25,33 @@ body,
   src: url("../../../public/Uncut-Sans-Medium.woff2");
 }
 
+@font-face {
+  font-family: clockText;
+  src: url("../../../public/Orbitron-Black.ttf");
+}
+
 
 .clock_font{
-  position: absolute;
-  width:40px;
+  width:fit-content;
+  height:max-content;
+  line-height: 4px;
+  display: flex;
+  flex-direction: column;
 }
-.clock_font span{
-  font-size: 0.22vw;
-  width: 6rem;
-  font-family: headingAlcher;
+
+
+#days_to_go{
+  display: flex;
+}
+
+
+#time{
+  font-size: 0.21vw;
+}
+
+.clock_font p{
+  font-size: 0.15vw;
+  font-family: clockText;
 }
 
 #info {
