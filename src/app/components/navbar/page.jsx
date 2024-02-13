@@ -41,9 +41,9 @@ const Navbar = ({ reg_bg }) => {
                     <li onClick={() => router.push("/kartavya")} className={path === "/kartavya" ? "c c3" : ""}>
                         <Link href="/kartavya">Kartayva</Link></li>
                     {/* <li onClick={() => router.push("/mun")} className={path === "/mun" ? "c c4" : ""}> */}
-                        {/* <Link href="/mun">MUN</Link></li> */}
+                    {/* <Link href="/mun">MUN</Link></li> */}
                     {/* <li onClick={() => router.push("/merch")} className={path === "/merch" ? "c c5" : ""}> */}
-                        {/* <Link href="/merch">Merch</Link></li> */}
+                    {/* <Link href="/merch">Merch</Link></li> */}
                     <li onClick={() => router.push("/teams")} className={path === "/teams" ? "c c6" : ""}>
                         <Link href="/teams">Teams</Link></li>
                     <li onClick={() => router.push("/sponsor")} className={path === "/sponsor" ? "c c7" : ""}>
@@ -54,8 +54,8 @@ const Navbar = ({ reg_bg }) => {
                 <button className={reg_bg}><Link href="/register">Register</Link></button>
             </div>
             <div className="hidden_box"></div>
-            <FontAwesomeIcon onClick={handleClick}  icon={faTimes} className={state === true ? 'on_state icon_ham':'off_state icon_ham'}/>
-            <FontAwesomeIcon onClick={handleClick}  icon={faBars} className={state === false ? 'on_state icon_ham':'off_state icon_ham'}/>
+            <FontAwesomeIcon onClick={handleClick} icon={faTimes} className={state === true ? 'on_state icon_ham' : 'off_state icon_ham'} />
+            <FontAwesomeIcon onClick={handleClick} icon={faBars} className={state === false ? 'on_state icon_ham' : 'off_state icon_ham'} />
             <div className="sit_box"></div>
         </div>
     );

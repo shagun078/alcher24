@@ -22,13 +22,10 @@ function Body () {
 
     const [value, setValue] = useState('');
 
-    const [title, setTitle] = useState(["All Competitions"]);
-    const [title2, setTitle2] = useState(["Modules"]);
+    const [title, setTitle] = useState([{title:"All Competitions",id:100}]);
+    const [title2, setTitle2] = useState([{title: "Modules",id: 101}]);
 
     const [array, setArray] = useState(info);
-    const [array2, setArray2] = useState([""]);
-
-    console.log(info[1].tag);
 
     const handleClick = () => {
         setState(!state);
@@ -68,16 +65,14 @@ function Body () {
                 return user.comp_name.toLowerCase().includes(keyword.toLowerCase());
             });
             setArray(result.slice(0, 6));
-            setArray2(result.slice(0, 6));
 
             const result_2 = titledata.filter((user_2) => {
-                return user_2.toLowerCase().includes(keyword.toLowerCase());
+                return user_2.title.toLowerCase().includes(keyword.toLowerCase());
             })
             setTitle(result_2.slice(0, 1));
+            setTitle2(result_2.slice(0, 1));
         }
-        else{
-            setArray2(["No Results Found"]);
-        }
+
     }
 
     const module = (val) => {
@@ -107,7 +102,7 @@ function Body () {
                     </form>
                     <div className="list_container">
                         <div className="modules" onClick={handleClick}>
-                        {title2.map((capital) => (<p>{capital}</p>))}
+                        {title2.map((capital) => (<p key={capital.id}>{capital.title}</p>))}
                             <div className="small_box">
                                 <FontAwesomeIcon icon={faSortDown} className={state ? 'fa-solid fa-sort-down fa-active' : 'fa-solid fa-sort-down'}/>
                             </div>
@@ -125,20 +120,19 @@ function Body () {
                                 <li onClick={() => { module("Sports"); handleClick() }}>Sports</li>
                                 <li onClick={() => { module("Quiz"); handleClick() }}>Quiz</li>
                                 <li onClick={() => { module("Drama"); handleClick() }}>Drama</li>
-                                <li onClick={() => { module("Critical Damage"); handleClick() }}>Critical Damage</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="title">
-                {title.map((capital) => (<h2 className='capital_prop_name'>{capital}</h2>))}
+                {title.map((capital) => (<h2 key={capital.id} className='capital_prop_name'>{capital.title}</h2>))}
             </div>
             <div className="item_box" >
                 <div className="item_container">
                     {array.map((arr) => {
                         return (
-                        <div className="icon">
+                        <a href={arr.tag} target='_blank' key={arr.id} className="icon">
                             <Image src={arr.img} 
                             alt="Photo" 
                             className='iconsIMG'
@@ -146,7 +140,8 @@ function Body () {
                             height={100}
                             />
                             <p className='icon_text'>{arr.comp_name}</p>
-                        </div>)
+                        </a>
+                        )
                     })}
                 </div>
             </div>

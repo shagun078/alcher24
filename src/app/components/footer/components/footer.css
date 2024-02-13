@@ -1,5 +1,3 @@
-
-
 :root{
     --color1: #181818;
     --font-size1: 1.31vw;
@@ -7,14 +5,23 @@
     --font-size-20-1440: 1.38vw;
 }
 
+.container_footer{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+
 .container_footer::before{
-    position: absolute;
     content: "";
-    height: 100vh;
+    position: absolute;
+    height: 100%;
     width: 100vw;
-    background: url('../../../../../public/footer_img/texture_footer.png');
+    background: url("../../../../../public/footer_img/texture_footer.png");
+    background-position: center;
+    background-size: cover;
     mix-blend-mode: color-burn;
-    z-index:1;
+    z-index: 1;
 }
 
 .navbar_footer{
