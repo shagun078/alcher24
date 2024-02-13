@@ -112,7 +112,7 @@ const Footer = ({ bg, star, circle_src1, circle_src2, windows_src, alcheringa_lo
                     </div>
                 </div>
                 <div className="credits_2">
-                    <p className='extra_width'>Designed and Developed by
+                    <div className='extra_width'>Designed and Developed by&nbsp;
                         <a className='hover_parent'>
                             <div id="right_shift_1" className='hover_child'>
                                 <p>Swapnil Banerjee</p>
@@ -122,7 +122,7 @@ const Footer = ({ bg, star, circle_src1, circle_src2, windows_src, alcheringa_lo
                                 <p>Sobha</p>
                             </div>
                             Alcher Creatives
-                        </a> &
+                        </a>&nbsp;&&nbsp;
                         <a className='hover_parent'>
                             <div id="right_shift_2" className='hover_child'>
                                 <p>Shubham Kumar Jha</p>
@@ -132,9 +132,9 @@ const Footer = ({ bg, star, circle_src1, circle_src2, windows_src, alcheringa_lo
                             </div>
                             Alcher Web Operations
                         </a>
-                    </p>
+                    </div>
 
-                    <div>
+                    <div className='hide_text_portrait'>
                         <p>For Business Enquiries</p>
                         <a href="mailto:alcheringa@iitg.ac.in">alcheringa@iitg.ac.in</a>
                     </div>

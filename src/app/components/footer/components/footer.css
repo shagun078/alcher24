@@ -251,7 +251,7 @@
     font-size: var(--font-size-16-1440);
 }
 
-.credits_2 div{
+.hover_child{
     /* font-size: var(--font-size-16-1440); */
     /* padding-left: 20vw; */
     display: flex;
@@ -268,7 +268,9 @@
 } */
 
 .extra_width{
-    display: flex;
+    display: flex !important;
+    flex-direction: row;
+
 }
 
 .hover_child{
@@ -284,7 +286,7 @@
     width: max-content;
     padding: 2vh 4vh;
     cursor: pointer;
-    opacity: 0.4;
+    opacity: 0.9;
 }
 
 .hover_parent{
@@ -395,11 +397,17 @@
     bottom: 5.4vw;
     display: none;
     height: 10vw;
-    border: 1px solid red;
 }
 
 .list_active_all{
     display: inline-block;
+}
+
+.hide_text_portrait{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
 }
 
 @media screen and (orientation:portrait){

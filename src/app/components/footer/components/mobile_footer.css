@@ -154,12 +154,12 @@
 
     }
 
-    .credits_2 div {
-        display: none;
-    }
-
     .windows_img {
         object-fit: cover;
+    }
+
+    .hide_text_portrait{
+        display: none !important;
     }
 
 }
