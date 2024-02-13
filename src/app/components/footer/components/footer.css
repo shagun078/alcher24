@@ -392,6 +392,9 @@
 }
 
 @media screen and (max-width: 1281px){
+    .extra_width a{
+        font-size: 0.5vw;
+    }
     /* #right_shift_1{
         
     } */
