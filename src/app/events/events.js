@@ -557,7 +557,7 @@ function Events() {
           <div className="temp-gap"></div>
         </main>
         <motion.div
-          className="blur"
+          className="blur-events"
           initial={{ opacity: open ? 0 : 1 }}
           animate={{ opacity: open ? 1 : 0 }}
           transition={{ duration: 0.5 }}
