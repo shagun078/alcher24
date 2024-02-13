@@ -143,7 +143,7 @@
 
 .list {
     background: var(--color-db);
-    height: 33.88vw;
+    height: 32vw;
     width: 26.87vw;
     position: absolute;
     margin-top: 2vw;
@@ -172,10 +172,13 @@
 
 .list ul {
     list-style: none;
-    height: 32.22vw;
+    height: 96%;
     width: 23.88vw;
     margin-left: 1.25vw;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 @keyframes hamburger1 {
@@ -196,7 +199,6 @@
     font-family: 'Uncut sans regular';
     font-weight: 400;
     font-size: var(--font-size-20-1440);
-    padding: 0.47vw 0vw;
     color: white;
     animation-name: hamburger1;
     animation-duration: 0.401s;
@@ -292,7 +294,15 @@
     font-weight: 700;
 }
 
-@media screen and (max-width: 1200px) {
+.capital_prop_name{
+    text-align: center;
+}
+
+.above_texture{
+    z-index: 5;
+}
+
+@media screen and (max-width: 1000px) {
     .item_container{
         grid-template-columns: repeat(2, 1fr);
     }

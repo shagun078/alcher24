@@ -90,7 +90,7 @@ body::-webkit-scrollbar {
 .button_view {
   width: fit-content;
   padding: 0.5rem;
-  background-color: #fa5045!important;
+  background-color: #fa5045 !important;
   border-radius: 1.5rem;
 }
 .card-section {
@@ -172,7 +172,7 @@ body::-webkit-scrollbar {
   font-size: var(--text2);
   font-weight: 600;
 }
-.wrap-left p{
+.wrap-left p {
   font-size: var(--text4);
 }
 /* right */
@@ -213,7 +213,7 @@ body::-webkit-scrollbar {
   font-size: var(--text2);
   font-weight: 600;
 }
-.wrap-right p{
+.wrap-right p {
   font-size: var(--text4);
 }
 
@@ -230,7 +230,7 @@ body::-webkit-scrollbar {
   border-radius: 5px;
   pointer-events: none;
 }
-.dropdown ul{
+.dropdown ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -246,7 +246,7 @@ body::-webkit-scrollbar {
 .dropdown > ul > li:last-child {
   border-bottom: none;
 }
-.blur{
+.blur-events {
   opacity: 0;
   z-index: 99;
   position: absolute;
@@ -258,15 +258,23 @@ body::-webkit-scrollbar {
   backdrop-filter: blur(2px);
   pointer-events: none;
 }
-.temp-gap{
+.temp-gap {
   height: 10vh;
 }
 
 @media screen and (orientation: portrait) {
-  .wrapper{
+  .wrapper {
     display: none;
   }
-  .wrapper-2d{
-    display:block;
+  .wrapper-2d {
+    display: block;
+  }
+}
+@media screen and (max-width: 371px) {
+  .coming-soon-left img{
+    width: 100%!important;
+  }
+  .coming-soon-right img {
+    width: 100%!important;
   }
 }
