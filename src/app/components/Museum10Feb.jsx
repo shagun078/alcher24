@@ -32,6 +32,9 @@ export function Museumfinal(props) {
     return vid;
   });
 
+  const proshowsScreen = useTexture("mirrorProShows.jpg");
+  proshowsScreen.flipX=true;
+
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.Corridoor.geometry} material={textureMaterial} position={[0, 2.061, 69.472]} />
@@ -69,9 +72,9 @@ export function Museumfinal(props) {
       <group>
       <mesh position={[-1.80, 1.58, -2.74]} scale={[0.638,1.6,1]} rotation={[0.15,-0.33,0.04]}>
       <planeGeometry args={[3.2, 1.9]} />
-      <meshStandardMaterial emissive={"white"} side={THREE.DoubleSide}>
+      <meshStandardMaterial  side={THREE.DoubleSide} emissive={"white"}>
         <videoTexture attach="map" args={[video]} />
-        <videoTexture attach="emissiveMap" args={[video]} />
+  <videoTexture attach="emissiveMap" args={[video]} />
       </meshStandardMaterial>
       </mesh>
       <mesh geometry={nodes.Plane036.geometry} material={materials.Canvas} position={[-1.735, 0.081, -2.886]} rotation={[-1.442, -0.042, -0.313]}  />

@@ -1,31 +1,29 @@
-"use client"
-import './components/body.css';
-import './components/mobile_body.css';
-import { useState, useEffect } from 'react';
-import React from 'react';
-import info from './components/data.js';
-import titledata from './components/title.js';
-import Image from 'next/image';
-import Navbar from '../components/navbar/page';
-import Footer from '../components/footer/page';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faSortDown } from '@fortawesome/free-solid-svg-icons';
-import circle1 from '/public/footer_img/competition_left_circle.png';
-import circle2 from '/public/footer_img/competition_right_circle.png';
-import windows1 from '/public/footer_img/Competitions-min.png';
-import alcheringa from '/public/footer_img/competiton_alcheringa.png';
-
+"use client";
+import "./components/body.css";
+import "./components/mobile_body.css";
+import { useState, useEffect } from "react";
+import React from "react";
+import info from "./components/data.js";
+import titledata from "./components/title.js";
+import Image from "next/image";
+import Navbar from "../components/navbar/page";
+import Footer from "../components/footer/page";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch, faSortDown } from "@fortawesome/free-solid-svg-icons";
+import circle1 from "/public/footer_img/competition_left_circle.png";
+import circle2 from "/public/footer_img/competition_right_circle.png";
+import windows1 from "/public/footer_img/Competitions-min.png";
+import alcheringa from "/public/footer_img/competiton_alcheringa.png";
 
 function Body() {
+  const [state, setState] = useState(false);
 
-    const [state, setState] = useState(false);
-
-    const [value, setValue] = useState('');
+  const [value, setValue] = useState("");
 
     const [title, setTitle] = useState([{ category: "All Competitions", id: 100 }]);
     const [title2, setTitle2] = useState([{ category: "Modules", id: 101 }]);
 
-    const [array, setArray] = useState(info);
+  const [array, setArray] = useState(info);
 
     const handleClick = () => {
         setState(!state);
@@ -56,15 +54,15 @@ function Body() {
         );
     };
 
-    const onChange = (event) => {
-        setValue(event.target.value);
-        const keyword = event.target.value;
+  const onChange = (event) => {
+    setValue(event.target.value);
+    const keyword = event.target.value;
 
-        if (keyword !== "") {
-            const result = info.filter((user) => {
-                return user.comp_name.toLowerCase().includes(keyword.toLowerCase());
-            });
-            setArray(result.slice(0, 6));
+    if (keyword !== "") {
+      const result = info.filter((user) => {
+        return user.comp_name.toLowerCase().includes(keyword.toLowerCase());
+      });
+      setArray(result.slice(0, 6));
 
             const result_2 = titledata.filter((user_2) => {
                 return user_2.category.toLowerCase().includes(keyword.toLowerCase());
@@ -75,9 +73,8 @@ function Body() {
 
     }
 
-    const module = (val) => {
-
-        var total = [];
+  const module = (val) => {
+    var total = [];
 
         for (let i = 0; i < info.length; i++) {
             if (info[i].category == val) {

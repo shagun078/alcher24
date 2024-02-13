@@ -224,7 +224,7 @@
     font-size: var(--font-size-16-1440);
     box-sizing: border-box;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     z-index: 100;
 }
@@ -243,6 +243,12 @@
     font-family: 'Uncut sans regular';
     font-size: var(--font-size-16-1440);
     text-decoration: underline;
+}
+
+.credits_2 a p{
+    color: white;
+    font-family: 'Uncut sans regular';
+    font-size: var(--font-size-16-1440);
 }
 
 .credits_2 div{
@@ -279,6 +285,10 @@
     padding: 2vh 4vh;
     cursor: pointer;
     opacity: 0.4;
+}
+
+.hover_parent{
+    cursor: pointer;
 }
 
 .hover_parent:hover .hover_child{
@@ -392,7 +402,10 @@
     display: inline-block;
 }
 
-@media screen and (max-width: 1281px){
+@media screen and (orientation:portrait){
+    .extra_width a{
+        font-size: 0.5vw;
+    }
     /* #right_shift_1{
         
     } */

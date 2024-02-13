@@ -1,5 +1,5 @@
-"use client"
-import React, { useEffect , useState } from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import "./components/sponsor.css";
 import design from "./resources/design.png";
 import SponsorList from "./components/sponsor_list";
@@ -11,28 +11,25 @@ import circle1 from "/public/footer_img/sponsors_left_circle.png";
 import circle2 from "/public/footer_img/sponsors_right_circle.png";
 import windows1 from "/public/footer_img/Sponsors-min.png";
 import alcheringa from "/public/footer_img/sponsors_alcheringa.png";
-import Loading from "../components/loading/loading"
-
-
+import Loading from "../components/loading/loading";
 
 function Sponsor() {
-   
-    const [showSplash, setShowSplash] = useState(true);
+  const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
-    if (document.readyState !== 'complete') {
+    if (document.readyState !== "complete") {
       const handler = () => {
-        console.log('load');
+        console.log("load");
         setShowSplash(false);
       };
-      window.addEventListener('load', handler);
+      window.addEventListener("load", handler);
 
       return () => {
-        window.removeEventListener('load', handler);
+        window.removeEventListener("load", handler);
       };
     } else {
       const timeout = window.setTimeout(() => {
-        console.log('timeout');
+        console.log("timeout");
         setShowSplash(false);
       }, 0);
       return () => window.clearTimeout(timeout);
@@ -40,41 +37,9 @@ function Sponsor() {
   }, []);
   const image = [gucci];
 
-  const Cursor = () => {
-    // const cursor = useRef(null);
-
-    useEffect(() => {
-      const cursor = document.querySelector(".cursor");
-      window.addEventListener("mousemove", (e) => {
-        const { clientX, clientY } = e;
-        cursor.style.left = `${clientX}px`;
-        cursor.style.top = `${clientY}px`;
-      });
-    }, []);
-
-
-
-    return (
-        
-      <div className="cursor">
-        <img
-          src={"cursor.png"}
-          alt="Hello"
-          style={{
-            width: "100%",
-            height: "100%",
-          }}
-        />
-      </div>
-    );
-  };
-
-
-  return (
-    !showSplash?(
+  return !showSplash ? (
     <>
       <Navbar reg_bg={"register reg_bg7"} />
-      <Cursor />
       <main className="sponsor_main">
         <div className="top_sun"></div>
 
@@ -157,7 +122,9 @@ function Sponsor() {
         circle_src2={circle2}
         windows_src={windows1}
       />
-    </>):<Loading/>
+    </>
+  ) : (
+    <Loading />
   );
 }
 export default Sponsor;

@@ -1,11 +1,10 @@
-
-"use client"
+"use client";
 import Image from "next/image";
 import hand_upper from "./resources/hand_upper.png";
 import hand_lower from "./resources/hand_lower.png";
 import stars from "./resources/stars.png";
 import CardList from "./components/cardList";
-import { useEffect , useState } from "react";
+import { useEffect, useState } from "react";
 import Loading from "../components/loading/loading";
 import styles from "./components/kartavya.css";
 import Footer from "../components/footer/page";
@@ -15,15 +14,13 @@ import circle2 from "/public/footer_img/kartavya_right_circle.png";
 import windows1 from "/public/footer_img/Kartavya-min.png";
 import alcheringa from "/public/footer_img/kartavya_alcheringa.png";
 
-
-
 function getCards() {
   const data = [
     {
       id: "lg",
       heading: "UDAAN",
       body: "Udaan, launched as 'Bachpan' in 2011, aims to deliver hope to underprivileged children and create an impact in their lives through the conduction of various educational workshops and recreational activities.",
-      img: "./try_large.jpg",
+      img: "./UDAAN-min.jpg",
     },
   ];
 
@@ -31,23 +28,22 @@ function getCards() {
 }
 
 export default function Kartavya() {
-
-    const [showSplash, setShowSplash] = useState(true);
+  const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
-    if (document.readyState !== 'complete') {
+    if (document.readyState !== "complete") {
       const handler = () => {
-        console.log('load');
+        console.log("load");
         setShowSplash(false);
       };
-      window.addEventListener('load', handler);
+      window.addEventListener("load", handler);
 
       return () => {
-        window.removeEventListener('load', handler);
+        window.removeEventListener("load", handler);
       };
     } else {
       const timeout = window.setTimeout(() => {
-        console.log('timeout');
+        console.log("timeout");
         setShowSplash(false);
       }, 0);
       return () => window.clearTimeout(timeout);
@@ -60,36 +56,9 @@ export default function Kartavya() {
     height: "calc((970/772)*24.667vw)",
   };
 
-  const Cursor = () => {
-    // const cursor = useRef(null);
-
-    useEffect(() => {
-      const cursor = document.querySelector(".cursor");
-      window.addEventListener("mousemove", (e) => {
-        const { clientX, clientY } = e;
-        cursor.style.left = `${clientX}px`;
-        cursor.style.top = `${clientY}px`;
-      });
-    }, []);
-    return (
-      <div className="cursor">
-        <img
-          src={"cursor.png"}
-          alt="Hello"
-          style={{
-            width: "100%",
-            height: "100%",
-          }}
-        />
-      </div>
-    );
-  };
-
-  return (
-    !showSplash?(
+  return !showSplash ? (
     <>
       <Navbar reg_bg={"register reg_bg3"} />
-      <Cursor />
       <main className="kartavya_main">
         <section className="texture_wheel">
           <div className="kartavya_hand_upper">
@@ -199,7 +168,9 @@ export default function Kartavya() {
         circle_src2={circle2}
         windows_src={windows1}
       />
-    </>):<Loading/>
+    </>
+  ) : (
+    <Loading />
   );
 }
 

@@ -136,7 +136,7 @@ const Footer = ({ bg, star, circle_src1, circle_src2, windows_src, alcheringa_lo
 
                     <div>
                         <p>For Business Enquiries</p>
-                        <a href="mailto:publicrelations24@alcheringa.in">publicrelations24@alcheringa.in</a>
+                        <a href="mailto:alcheringa@iitg.ac.in">alcheringa@iitg.ac.in</a>
                     </div>
                 </div>
             </div>
