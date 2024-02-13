@@ -14,7 +14,7 @@ import * as THREE from "three";
 
 export default function RoomScene(props) {
   const rotateRef = useRef();
-  const texture = useTexture("BakedTexture.jpg");
+  const texture = useTexture("BakedTexture.png");
   texture.flipY = false;
   texture.colorSpace = THREE.SRGBColorSpace;
   const textureMaterial = new THREE.MeshStandardMaterial({

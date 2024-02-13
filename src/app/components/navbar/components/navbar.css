@@ -25,25 +25,15 @@
 }
 
 .header{
-    background-image: url('/TexturePattern.jpg');
-    background-blend-mode: color-burn;
     background-color: #141414;
     width: 100vw;
     height: 6vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
-}
-
-.header::before{
-    content: "";
-    position: absolute;
-    width: 100vw;
-    height: 100%;
-    background: url('../../../../../public/footer_img/texture_footer.png');
-    mix-blend-mode: color-burn;
-    z-index: -1;
+    overflow: hidden;
+    background-image: url('../resources/TexturePattern.jpg');
+    background-blend-mode:color-burn;
 }
 
 .logo{
@@ -136,7 +126,7 @@
     display: none;
 }
 
-@media only screen and (max-width: 1025px){
+@media screen and (orientation: portrait){
     
     *{
         margin: 0;
@@ -244,10 +234,7 @@
         width: 50.57vw;
         border-radius: 10vw;
         border: none;
-    }
-
-    .sit_box{
-        display: inline-block;
+        margin-left: auto;
     }
     
     .icon_ham{
@@ -268,7 +255,7 @@
 
     .fixing{
         height: auto;
-        width: auto;
+        width: 35vw;
     }
 
     .register{

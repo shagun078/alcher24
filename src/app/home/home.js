@@ -316,6 +316,8 @@ function Annotations({ controls }) {
   const { camera } = useThree();
   const [selected, setSelected] = useState("");
   const [backtrack, setBackTrack] = useState(false);
+  const [hovered, setHovered] = useState(false);
+  const [hoverKey, setHoverkey] = useState("");
 
   const handleReturn = (e) => {
     setTimeout(() => {
@@ -337,9 +339,9 @@ function Annotations({ controls }) {
             y: targetY,
             z: targetZ,
           },
-          3000
+          1000
         )
-        .easing(TWEEN.Easing.Cubic.Out)
+        .easing(TWEEN.Easing.Sinusoidal.InOut)
         .start();
 
       // change camera position
@@ -350,9 +352,9 @@ function Annotations({ controls }) {
             y: camPosY,
             z: camPosZ,
           },
-          3000
+          1000
         )
-        .easing(TWEEN.Easing.Cubic.Out)
+        .easing(TWEEN.Easing.Sinusoidal.InOut)
         .start();
 
       setBackTrack(!backtrack);
@@ -369,19 +371,33 @@ function Annotations({ controls }) {
           <>
             {/* <Navbar reg_bg={"register reg_bg4"} />
             <Footer bg={"footer img4"} star={"star1 star"} circle_src={circle1} windows_src={windows1} /> */}
-            <Html key={a.key} position={[a.pos.x, a.pos.y, a.pos.z]}>
+            <Html
+              className="flex-conatiner"
+              key={a.key}
+              position={[a.pos.x, a.pos.y, a.pos.z]}
+            >
               {!backtrack && (
                 <motion.svg
                   initial={{ opacity: 0, pointerEvents: "none" }}
                   animate={{ opacity: 1, pointerEvents: "all" }}
-                  transition={{ duration: 2, delay: 3 }}
+                  transition={{ duration: 2, delay: 1.5 }}
                   height="34"
                   width="34"
                   transform="translate(-13 -13)"
                   style={{ cursor: "pointer" }}
+                  onHoverStart={() => {
+                    setHoverkey(a.key);
+                    setHovered(true);
+                  }}
+                  onPointerLeave={() => {
+                    setHovered(false);
+                    setHoverkey("");
+                  }}
                   onPointerUp={() => {
                     // console.log(controls.current);
                     // controls.current.enableDamping = false;
+                    setHovered(false);
+                    setHoverkey("");
                     setSelected(a.key);
                     const isSameAnnotation = a.key === selected;
                     setBackTrack(isSameAnnotation ? false : true);
@@ -401,9 +417,9 @@ function Annotations({ controls }) {
                           y: targetY,
                           z: targetZ,
                         },
-                        3000
+                        2000
                       )
-                      .easing(TWEEN.Easing.Cubic.Out)
+                      .easing(TWEEN.Easing.Sinusoidal.InOut)
                       .start();
 
                     // change camera position
@@ -414,39 +430,51 @@ function Annotations({ controls }) {
                           y: camPosY,
                           z: camPosZ,
                         },
-                        3000
+                        2000
                       )
-                      .easing(TWEEN.Easing.Cubic.Out)
+                      .easing(TWEEN.Easing.Sinusoidal.InOut)
                       .start();
                     setSelected(backtrack ? -1 : a.key);
                     setTimeout(() => {
                       controls.current.enabled = backtrack;
-                    }, 3100);
+                    }, 2100);
                     // console.log(controls.current);
                   }}
                 >
-                  {
-                    <>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="30"
-                        height="30"
-                        viewBox="0 0 30 30"
-                        fill="none"
-                      >
-                        <path
-                          d="M12.75 3.03109C14.1423 2.22724 15.8577 2.22724 17.25 3.03109L24.2404 7.06699C25.6327 7.87083 26.4904 9.35641 26.4904 10.9641V19.0359C26.4904 20.6436 25.6327 22.1292 24.2404 22.933L17.25 26.9689C15.8577 27.7728 14.1423 27.7728 12.75 26.9689L5.75962 22.933C4.36731 22.1292 3.50962 20.6436 3.50962 19.0359V10.9641C3.50962 9.35641 4.36731 7.87083 5.75962 7.06699L12.75 3.03109Z"
-                          stroke="white"
-                          strokeWidth="3"
-                        />
-                        <path
-                          d="M19 15.5714H15.5714V19H14.4286V15.5714H11V14.4286H14.4286V11H15.5714V14.4286H19V15.5714Z"
-                          fill="white"
-                        />
-                      </svg>
-                    </>
-                  }
+                  <>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="30"
+                      viewBox="0 0 30 30"
+                      fill="none"
+                    >
+                      <path
+                        d="M12.75 3.03109C14.1423 2.22724 15.8577 2.22724 17.25 3.03109L24.2404 7.06699C25.6327 7.87083 26.4904 9.35641 26.4904 10.9641V19.0359C26.4904 20.6436 25.6327 22.1292 24.2404 22.933L17.25 26.9689C15.8577 27.7728 14.1423 27.7728 12.75 26.9689L5.75962 22.933C4.36731 22.1292 3.50962 20.6436 3.50962 19.0359V10.9641C3.50962 9.35641 4.36731 7.87083 5.75962 7.06699L12.75 3.03109Z"
+                        stroke="white"
+                        strokeWidth="3"
+                      />
+                      <path
+                        d="M19 15.5714H15.5714V19H14.4286V15.5714H11V14.4286H14.4286V11H15.5714V14.4286H19V15.5714Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </>
                 </motion.svg>
+              )}
+              {hovered && a.key === hoverKey && (
+                <motion.div
+                  className="title-hover-home"
+                  initial={{ opacity: !hovered ? 1 : 0, y: -10 }}
+                  animate={{ opacity: !hovered ? 0 : 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  style={{
+                    color: "white",
+                    fontSize: window.innerWidth > 840 ? "2vh" : "1vh",
+                  }}
+                >
+                  {a.title}
+                </motion.div>
               )}
             </Html>
             <Html
@@ -593,34 +621,33 @@ export default function Home() {
     </React.Fragment>
   );
 
-  const Cursor = () => {
-    useEffect(() => {
-      const cursor = document.querySelector(".cursor");
-      window.addEventListener("mousemove", (e) => {
-        const { clientX, clientY } = e;
-        cursor.style.left = `${clientX}px`;
-        cursor.style.top = `${clientY}px`;
-      });
-    }, []);
-    return (
-      <div className="cursor">
-        <img
-          src={"cursor.png"}
-          alt="Hello"
-          style={{
-            width: "100%",
-            height: "100%",
-          }}
-        />
-      </div>
-    );
-  };
+  // const Cursor = () => {
+  //   useEffect(() => {
+  //     const cursor = document.querySelector(".cursor");
+  //     window.addEventListener("mousemove", (e) => {
+  //       const { clientX, clientY } = e;
+  //       cursor.style.left = `${clientX}px`;
+  //       cursor.style.top = `${clientY}px`;
+  //     });
+  //   }, []);
+  //   return (
+  //     <div className="cursor">
+  //       <img
+  //         src={"cursor.png"}
+  //         alt="Hello"
+  //         style={{
+  //           width: "100%",
+  //           height: "100%",
+  //         }}
+  //       />
+  //     </div>
+  //   );
+  // };
 
   return !showSplash ? (
     <React.Fragment>
       <Navbar reg_bg={"register reg_bg1"} />
       <main className="threeD_2dwrapper">
-       <Cursor />
         <div className="threeDWrapper">
           <Canvas
             camera={{
@@ -640,7 +667,7 @@ export default function Home() {
               dampingFactor={0.02}
               enabled={true}
             />
-            <ambientLight intensity={1.5} />
+            <ambientLight intensity={2} />
             <Annotations controls={ref} />
             <mesh ref={rotateRef}>
               <RoomScene />
@@ -743,20 +770,20 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="passesSection">
+          {/* <div className="passesSection">
             <p id="getYour">Get your Own</p>
-            <h1 id="alcherPass">Alcheringa'24 Passes</h1>
+            <h1 id="alcherPass">Alcheringa'24 Cards</h1>
             <button id="registerBtn">REGISTER</button>
-          </div>
+          </div> */}
 
-          <div
+          {/* <div
             className={`cardHoverSection ${isHovered ? "hovered" : ""}`}
             onMouseEnter={hoverEffect}
             onMouseLeave={hoverEffect}
           >
             <img src="BoardOrange.svg" id="cardHoverLeft"></img>
             <img src="BoardBlue.svg" id="cardHoverRight"></img>
-          </div>
+          </div> */}
         </div>
       </main>
       <Footer

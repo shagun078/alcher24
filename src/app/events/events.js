@@ -406,36 +406,10 @@ function Events() {
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState("PRONITES");
 
-  const Cursor = () => {
-    // const cursor = useRef(null);
-
-    useEffect(() => {
-      const cursor = document.querySelector(".cursor");
-      window.addEventListener("mousemove", (e) => {
-        const { clientX, clientY } = e;
-        cursor.style.left = `${clientX}px`;
-        cursor.style.top = `${clientY}px`;
-      });
-    }, []);
-    return (
-      <div className="cursor">
-        <img
-          src={"cursor.png"}
-          alt="Hello"
-          style={{
-            width: "100%",
-            height: "100%",
-          }}
-        />
-      </div>
-    );
-  };
-
   return (
     !showSplash?(
     <>
       <Navbar reg_bg={"register reg_bg1"} />
-      <Cursor />
       <div className="wrapper">
         <Canvas>
           <PerspectiveCamera ref={camera} makeDefault position={[0, 2, -25]} />
@@ -583,7 +557,7 @@ function Events() {
           <div className="temp-gap"></div>
         </main>
         <motion.div
-          className="blur"
+          className="blur-events"
           initial={{ opacity: open ? 0 : 1 }}
           animate={{ opacity: open ? 1 : 0 }}
           transition={{ duration: 0.5 }}

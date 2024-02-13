@@ -109,7 +109,7 @@ body,
 } */
 
 .return-home {
-  cursor: none;
+  cursor: pointer;
   height: 100%;
   /* width: 20%; */
   font-size: large;
@@ -125,6 +125,7 @@ body,
   padding: 0 5%;
   border-radius: 0.5rem;
   min-width: 27vw;
+  /* width: max-content; */
   font-family: Helvetica, sans-serif;
   /* backdrop-filter: blur(2px); */
   background-color: hsla(0, 0%, 9%, 0.3);
@@ -144,6 +145,9 @@ body,
   width: 100%;
   height: 100%;
   padding: 1rem;
+}
+.title-home{
+  text-align: center;
 }
 .blur-home p {
   display: flex;
@@ -200,6 +204,18 @@ body,
 iframe {
   width: 100%;
   height: 100%;
+}
+.title-hover-home {
+  position: absolute;
+  top: 50%;
+  width: max-content;
+  text-align: center;
+  font-weight: 700;
+}
+.flex-container{
+  display: flex;
+  height: min-content;
+  position: absolute;
 }
 
 .decorationContainer {
@@ -358,7 +374,7 @@ iframe {
   border: none;
   border-radius: 1rem;
   background-color: #f22c5b;
-  cursor: none;
+  cursor: pointer;
   font-family: headingAlcher;
 }
 .cardHoverSection {
@@ -424,7 +440,7 @@ iframe {
   position: relative;
   color: white;
   opacity: 1;
-  cursor: none;
+  cursor: pointer;
   animation: moveUpDown 2s ease-in-out infinite;
 }
 
@@ -502,17 +518,13 @@ iframe {
   width: 15vw;
   position: relative;
   top: 3vh;
-  cursor: none;
+  cursor: pointer;
 }
 
 .alcher_merch_section {
   padding-top: 10vh;
   text-align: center;
 
-
-
-
-  
   /* display: none; */
 }
 
@@ -550,7 +562,7 @@ iframe {
   font-weight: 400;
 }
 
-.alcher_merch_coming_soon{
+.alcher_merch_coming_soon {
   padding-top: 10vh;
   text-align: center;
 
@@ -589,7 +601,6 @@ iframe {
 }
 
 @media screen and (max-width: 912px) {
-
   .alcher_merch_section p {
     font-size: 3vw;
   }
@@ -789,4 +800,3 @@ iframe {
     height: 93%;
   }
 }
-

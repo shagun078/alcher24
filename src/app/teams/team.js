@@ -1,5 +1,5 @@
 "use client";
-import { useEffect , useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import React from "react";
 import model_prb from "./resources/team_images/model_prb.png";
@@ -19,57 +19,30 @@ import windows1 from "/public/footer_img/Teams-min.png";
 import alcheringa from "/public/footer_img/teams_alcheringa.png";
 import Loading from "../components/loading/loading";
 export default function Teams() {
-
-    const [showSplash, setShowSplash] = useState(true);
+  const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
-    if (document.readyState !== 'complete') {
+    if (document.readyState !== "complete") {
       const handler = () => {
-        console.log('load');
+        console.log("load");
         setShowSplash(false);
       };
-      window.addEventListener('load', handler);
+      window.addEventListener("load", handler);
 
       return () => {
-        window.removeEventListener('load', handler);
+        window.removeEventListener("load", handler);
       };
     } else {
       const timeout = window.setTimeout(() => {
-        console.log('timeout');
+        console.log("timeout");
         setShowSplash(false);
       }, 0);
       return () => window.clearTimeout(timeout);
     }
   }, []);
-  const Cursor = () => {
-    // const cursor = useRef(null);
-
-    useEffect(() => {
-      const cursor = document.querySelector(".cursor");
-      window.addEventListener("mousemove", (e) => {
-        const { clientX, clientY } = e;
-        cursor.style.left = `${clientX}px`;
-        cursor.style.top = `${clientY}px`;
-      });
-    }, []);
-    return (
-      <div className="cursor">
-        <img
-          src={"cursor.png"}
-          alt="Hello"
-          style={{
-            width: "100%",
-            height: "100%",
-          }}
-        />
-      </div>
-    );
-  };
-  return (
-    !showSplash?(
+  return !showSplash ? (
     <>
       <Navbar reg_bg={"register reg_bg6"} />
-      <Cursor />
       <section>
         <div className="fake_div1"></div>
         <div className="fake_div2"></div>
@@ -374,6 +347,8 @@ export default function Teams() {
         windows_src={windows1}
         alcheringa_logo={alcheringa}
       />
-    </>):<Loading/>
+    </>
+  ) : (
+    <Loading />
   );
 }

@@ -219,103 +219,114 @@ const info = [{
     id: 34,
     category:"Lights Camera Action",
     img: '/creatort.png',
-    comp_name:"Just reel it"
+    comp_name:"Just reel it",
+    tag: "https://registrations.alcheringa.in/competitions/register/e2c2e4b8-59b4-4845-93ea-3d38be9fefee/"
 },
 {
     id: 35,
     category:"Lights Camera Action",
     img: '/creatort.png',
-    comp_name:"Vlog Verse"
+    comp_name:"Vlog Verse",
+    tag: "https://registrations.alcheringa.in/competitions/register/b9bab27a-c4f0-4bcf-94d4-d34d67991757/"
 },
 {
     id: 37,
     category:"Lights Camera Action",
     img: '/creatort.png',
-    comp_name:"Director's Cut"
+    comp_name:"Director's Cut",
+    tag: "https://registrations.alcheringa.in/competitions/register/f4c2826d-6844-414c-9fb1-7d8582b12a94/"
 },
 {
     id: 38,
     category:"Lights Camera Action",
     img: '/creatort.png',
-    comp_name:"Snapthrillz"
+    comp_name:"Snapthrillz",
+    tag:"https://registrations.alcheringa.in/competitions/register/63f475f3-31b2-48f8-84f7-a60cb68152b3/"
 },
 {
     id: 39,
     category:"Sports",
     img: '/creatort.png',
-    comp_name:"5 on 5 Football"
+    comp_name:"5 on 5 Football",
+    tag: "https://registrations.alcheringa.in/competitions/register/5d513ae3-6716-4f0c-af0b-6d0354aa6bac/"
 },
 {
     id: 40,
     category:"Sports",
     img: '/creatort.png',
-    comp_name:"Arm Wrestling"
+    comp_name:"Arm Wrestling",
+    tag: "https://registrations.alcheringa.in/competitions/register/03a105f8-a989-4601-9e4e-a70a3d398af4/"
 },
 {
     id: 41,
     category:"Sports",
     img: '/creatort.png',
-    comp_name:"Gully Cricket"
+    comp_name:"Gully Cricket",
+    tag: "https://registrations.alcheringa.in/competitions/register/e41f7de8-197f-45db-9317-8a1bd81a3fc9/"
 },
 {
     id: 42,
     category:"Sports",
     img: '/creatort.png',
-    comp_name:"3 vs 3 Basketball"
+    comp_name:"3 vs 3 Basketball",
+    tag: "https://registrations.alcheringa.in/competitions/register/8f18a618-7fa9-4872-ad22-c9f80704c159/"
 },
 {
     id: 43,
     category:"Sports",
     img: '/creatort.png',
-    comp_name:"3 vs 3 Volleyball"
+    comp_name:"3 vs 3 Volleyball",
+    tag: "https://registrations.alcheringa.in/competitions/register/2c76d16c-4d52-4568-9656-ef57389c48f6/"
 },
 {
     id: 44,
     category:"Quiz",
     img: '/creatort.png',
-    comp_name:"Genral Quiz"
+    comp_name:"Genral Quiz",
+    tag: "https://registrations.alcheringa.in/competitions/register/9e2c0370-bba3-4144-adec-b1551c8ff7e8/"
 },
 {
     id: 45,
     category:"Quiz",
     img: '/creatort.png',
-    comp_name:"Buisness Quiz"
+    comp_name:"Buisness Quiz",
+    tag: "https://registrations.alcheringa.in/competitions/register/743b9524-d521-473a-b50b-47d3c764be0a/"
 },
 {
     id: 46,
     category:"Quiz",
     img: '/creatort.png',
-    comp_name:"Comic Quiz"
+    comp_name:"Comic Quiz",
+    tag: "https://registrations.alcheringa.in/competitions/register/bd716e79-c5e1-4c3d-863c-fed6fc7d79f4/"
 },
 {
     id: 47,
     category:"Quiz",
     img: '/creatort.png',
-    comp_name:"Sports Quiz"
+    comp_name:"Sports Quiz",
+    tag: "https://registrations.alcheringa.in/competitions/register/6a8468f1-abff-4f3d-b2e4-33f62b576a1e/"
 },
 {
     id: 48,
     category:"Drama",
     img: '/creatort.png',
-    comp_name:"Theatrix"
+    comp_name:"Theatrix",
+    tag: "https://registrations.alcheringa.in/competitions/register/a8b1e7fa-27d2-4163-87ea-1e0896225cb3/"
 },
 {
     id: 49,
     category:"Drama",
     img: '/creatort.png',
-    comp_name:"Halla Bol"
+    comp_name:"Halla Bol",
+    tag: "https://registrations.alcheringa.in/competitions/register/e26bb13f-0010-43c9-9272-b661badc5717/"
 },
 {
     id: 50,
     category:"Drama",
     img: '/creatort.png',
-    comp_name:"Monodrama"
+    comp_name:"Monodrama",
+    tag: "https://registrations.alcheringa.in/competitions/register/9376821b-7c51-40aa-881e-fc712a6e5a74/"
 },
-{
-    id: 51,
-    category:"Critical Damage",
-    img: '/creatort.png',
-    comp_name:"Critical Damage"
-}];
+];
 
 export default info;
