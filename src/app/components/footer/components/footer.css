@@ -224,7 +224,7 @@
     font-size: var(--font-size-16-1440);
     box-sizing: border-box;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     z-index: 100;
 }
@@ -276,6 +276,10 @@
     bottom:9vh;
     width: max-content;
     padding: 2vh 4vh;
+    cursor: pointer;
+}
+
+.hover_parent{
     cursor: pointer;
 }
 
