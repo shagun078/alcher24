@@ -449,6 +449,7 @@ iframe {
   height: 100vh;
   position: relative;
   margin-top: 6rem;
+  margin-bottom: 6rem;
   display: flex;
 }
 #upperHand {
