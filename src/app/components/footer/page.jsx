@@ -114,20 +114,20 @@ const Footer = ({bg,star,circle_src1,circle_src2,windows_src,alcheringa_logo}) =
                 <div className="credits_2">
                     <p className='extra_width'>Designed and Developed by&nbsp;
                         <a className='hover_parent'>
-                        <div id="right_shift_1" className='hover_child'>
-                            <p>Creator 1</p>
-                            <p>Creator 2</p>
-                            <p>Creator 3</p>
-                        </div>
+                            <div id="right_shift_1" className='hover_child'>
+                                <p>Creator 1</p>
+                                <p>Creator 2</p>
+                                <p>Creator 3</p>
+                            </div>
                         Alcher Creatives
                         </a>&nbsp;&&nbsp;
                         <a className='hover_parent'>
-                        <div id="right_shift_2" className='hover_child'>
-                            <p>Shubham Kumar Jha</p>
-                            <p>Deepak Sutradhar</p>
-                            <p>Aditya Dadhich</p>
-                            <p>Himank Bohara</p>
-                        </div>
+                            <div id="right_shift_2" className='hover_child'>
+                                <p>Shubham Kumar Jha</p>
+                                <p>Deepak Sutradhar</p>
+                                <p>Aditya Dadhich</p>
+                                <p>Himank Bohara</p>
+                            </div>
                         Alcher Web Operations
                         </a>
                     </p>

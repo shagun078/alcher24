@@ -244,6 +244,12 @@
     text-decoration: underline;
 }
 
+.credits_2 a p{
+    color: white;
+    font-family: 'Uncut sans regular';
+    font-size: var(--font-size-16-1440);
+}
+
 .credits_2 div{
     /* font-size: var(--font-size-16-1440); */
     /* padding-left: 20vw; */
@@ -394,7 +400,7 @@
     display: inline-block;
 }
 
-@media screen and (max-width: 1281px){
+@media screen and (orientation:portrait){
     .extra_width a{
         font-size: 0.5vw;
     }
