@@ -14,18 +14,18 @@ import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
 
-const Footer = ({bg,star,circle_src1,circle_src2,windows_src,alcheringa_logo}) => {
+const Footer = ({ bg, star, circle_src1, circle_src2, windows_src, alcheringa_logo }) => {
 
     const router = useRouter();
     const path = usePathname();
     const [state1, setState1] = useState(false);
     const [state2, setState2] = useState(false);
 
-    function showContent1(){
+    function showContent1() {
         setState1(!state1);
     }
 
-    function showContent2(){
+    function showContent2() {
         setState2(!state2);
     }
 
@@ -41,9 +41,9 @@ const Footer = ({bg,star,circle_src1,circle_src2,windows_src,alcheringa_logo}) =
                         <li onClick={() => router.push("/kartavya")} className={path === '/kartavya' ? 'c c3' : ''}>
                             <Link href="/kartavya">Kartayva</Link></li>
                         {/* <li onClick={() => router.push("/mun")} className={path === '/mun' ? 'c c4' : ''}> */}
-                            {/* <Link href="/mun">MUN</Link></li> */}
+                        {/* <Link href="/mun">MUN</Link></li> */}
                         {/* <li onClick={() => router.push("/merch")} className={path === '/merch' ? 'c c5' : ''}> */}
-                            {/* <Link href="/merch">Merch</Link></li> */}
+                        {/* <Link href="/merch">Merch</Link></li> */}
                         <li onClick={() => router.push("/teams")} className={path === '/teams' ? 'c c6' : ''}>
                             <Link href="/team">Teams</Link></li>
                         <li onClick={() => router.push("/sponsor")} className={path === '/sponsor' ? 'c c7' : ''}>
@@ -107,30 +107,33 @@ const Footer = ({bg,star,circle_src1,circle_src2,windows_src,alcheringa_logo}) =
                             <a href="https://www.instagram.com/alcheringaiitg/" target="_blank" ><Image src={icon1} alt="" /></a>
                             <a href="https://www.facebook.com/alcheringaiitg" target="_blank" ><Image src={icon2} alt="" /></a>
                             <a href="https://twitter.com/alcheringaiitg" target="_blank" ><Image src={icon3} alt="" /></a>
-                            <a href="https://www.youtube.com/@alcheringaIITG" target="_blank" ><Image src={icon4} alt="" className='yt_icon'/></a>
+                            <a href="https://www.youtube.com/@alcheringaIITG" target="_blank" ><Image src={icon4} alt="" className='yt_icon' /></a>
                         </div>
                     </div>
                 </div>
                 <div className="credits_2">
-                    <p className='extra_width'>Designed and Developed by 
-                    <a className='hover_parent'>
-                    <div id="right_shift_1" className='hover_child'>
-                        <p>Creator 1</p>
-                        <p>Creator 2</p>
-                        <p>Creator 3</p>
-                    </div>
-                    Alcher Creatives
-                    </a> & 
-                    <a className='hover_parent'>
-                    <div id="right_shift_2" className='hover_child'>
-                        <p>Shubham Kumar Jha</p>
-                        <p>Deepak Sutradhar</p>
-                        <p>Aditya Dadhich</p>
-                        <p>Himank Bohara</p>
-                    </div>
-                    Alcher Web Operations
-                    </a></p>
-                    
+                    <p className='extra_width'>Designed and Developed by
+                        <a className='hover_parent'>
+                            <div id="right_shift_1" className='hover_child'>
+                                <p>Swapnil Banerjee</p>
+                                <p>Rishi Kiran</p>
+                                <p>Nikita Sharma</p>
+                                <p>Farhan</p>
+                                <p>Sobha</p>
+                            </div>
+                            Alcher Creatives
+                        </a> &
+                        <a className='hover_parent'>
+                            <div id="right_shift_2" className='hover_child'>
+                                <p>Shubham Kumar Jha</p>
+                                <p>Deepak Sutradhar</p>
+                                <p>Aditya Dadhich</p>
+                                <p>Himank Bohara</p>
+                            </div>
+                            Alcher Web Operations
+                        </a>
+                    </p>
+
                     <div>
                         <p>For Business Enquiries</p>
                         <a href="mailto:publicrelations24@alcheringa.in">publicrelations24@alcheringa.in</a>

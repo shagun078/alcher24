@@ -21,9 +21,9 @@
   }
 
   .magnifying_glass{
-    height: 3vw;
-    width: 3vw;
-    right: 3vw;
+    height: 4vw;
+    width: 4vw;
+    right: 4vw;
   }
 
   .fa-sort-down{
@@ -31,5 +31,9 @@
     width: 5vw;
     top: -1vw;
     right: 1vw;
+  }
+
+  .small_box{
+    right: 0.8vw;
   }
 }

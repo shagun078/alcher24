@@ -44,12 +44,12 @@
     align-items: center;
 }
 
-#navbar_menu{
+.navbar_menu{
     height: 2.62vw;
-    width: 50.97vw;    
+    width: 50.97vw;
 }
 
-#navbar_menu ul{
+.navbar_menu ul{
     color: white;
     display: flex;
     flex-direction: row;
@@ -59,7 +59,7 @@
     box-sizing: border-box;
 }
 
-#navbar_menu ul li{
+.navbar_menu ul li{
     font-family: 'Futara PT';
     font-weight: 700;
     font-size: 1.31vw;
@@ -69,7 +69,7 @@
     align-items: center;
 }
 
-#navbar_menu ul li a{
+.navbar_menu ul li a{
     text-decoration: none;
     color: white;
     padding: 0.66vw 0.66vw 0.66vw 0.66vw;
@@ -141,7 +141,7 @@
         display: block;
     }
 
-    #navbar_menu{
+    .navbar_menu{
         position: absolute;
         width: 46.81vw;
         height: 71.24vw;
@@ -152,18 +152,13 @@
         justify-content: center;
         align-items: center;
         z-index: 300000;
+        overflow: hidden;
+        background-image: url('../resources/TexturePattern.jpg');
+        background-blend-mode:color-burn;
     }
 
-    #navbar_menu::before{
-        content: "";
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        background: url("../resources/TexturePattern.jpg");
-        mix-blend-mode: color-burn;
-    }
 
-    #navbar_menu.active{
+    .navbar_menu.active{
         display: grid;
         place-items: center;
         animation-name: hamburger;
@@ -182,7 +177,7 @@
        }
     }
     
-    #navbar_menu ul{
+    .navbar_menu ul{
         color: white;
         list-style: none;
         display: flex;
@@ -195,7 +190,7 @@
         z-index: 2;
     }
 
-    #navbar_menu ul li{
+    .navbar_menu ul li{
         font-weight: 400;
         font-size: 4.07vw;
         margin: auto;
@@ -208,7 +203,7 @@
         align-items: center;
     }
 
-    #navbar_menu ul li a{
+    .navbar_menu ul li a{
         padding: 0 1.4vw;
         height: 6.5vw;
         display: flex;
