@@ -24,14 +24,13 @@ import { motion } from "framer-motion";
 import hand_upper from "./resources/hand_upper.png";
 import hand_lower from "./resources/hand_lower.png";
 import down_arrow from "./resources/down.png";
-import Loading from "../components/loading/loading"
+import coming_soon from "./resources/coming_soon_card.png"; 
+import Loading from "../components/loading/loading";
 
 import "./events_2d.css";
 
 //components
 import { Cardleft, Cardright } from "./components/card";
-
-
 
 const marks = [
   {
@@ -176,23 +175,22 @@ function Tween() {
 }
 
 function Events() {
-   
-    const [showSplash, setShowSplash] = useState(true);
+  const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
-    if (document.readyState !== 'complete') {
+    if (document.readyState !== "complete") {
       const handler = () => {
-        console.log('load');
+        console.log("load");
         setShowSplash(false);
       };
-      window.addEventListener('load', handler);
+      window.addEventListener("load", handler);
 
       return () => {
-        window.removeEventListener('load', handler);
+        window.removeEventListener("load", handler);
       };
     } else {
       const timeout = window.setTimeout(() => {
-        console.log('timeout');
+        console.log("timeout");
         setShowSplash(false);
       }, 0);
       return () => window.clearTimeout(timeout);
@@ -204,7 +202,7 @@ function Events() {
   const [title2, setTitle2] = useState(list.head.data.title2);
   const [currPage, setCurrpage] = useState(list.head.data.currPage);
   const [isClick, setClick] = useState(false);
-  const [eventStyle, setEventStyle] = useState({ display:'block'});
+  const [eventStyle, setEventStyle] = useState({ display: "block" });
   const [boxStyle, setBoxStyle] = useState({ opacity: 0 });
   const [currStyle, setCurrStyle] = useState({ opacity: 0 });
   const [bgcolor, setbgcolor] = useState({ backgroundColor: "#181818" });
@@ -299,7 +297,7 @@ function Events() {
       opacity: 1,
     });
     setEventStyle({
-      display:'none',
+      display: "none",
     });
     const targetX = 0;
     const targetY = 2;
@@ -331,9 +329,9 @@ function Events() {
 
   const buttons = (
     <React.Fragment>
-    <Head>
+      <Head>
         <title>Events | Alcheringa</title>
-    </Head>
+      </Head>
       <div className="event_box">
         <span
           className={`fade-in ${isAnimating ? "animating" : ""}`}
@@ -355,15 +353,14 @@ function Events() {
       </div>
       <div className="btn_box" style={isClick ? boxStyle : boxStyle}>
         <div className="responsive_btn_box">
-          <span className="backward-container"
-          onClick={() => {
-            backward();
-          }}>
+          <span
+            className="backward-container"
+            onClick={() => {
+              backward();
+            }}
+          >
             <FontAwesomeIcon icon={faArrowLeft} className="backward-svg" />
-            <button
-              className="btn btn-backward"
-              
-            >
+            <button className="btn btn-backward">
               <span className={`fade-in ${isAnimating ? "animating" : ""}`}>
                 {title2}
               </span>
@@ -383,14 +380,13 @@ function Events() {
         </div>
 
         <div className="responsive_btn_box">
-          <span className="forward-container"
-          onClick={() => {
-            forward();
-          }}>
-            <button
-              className="btn btn-forward"
-              
-            >
+          <span
+            className="forward-container"
+            onClick={() => {
+              forward();
+            }}
+          >
+            <button className="btn btn-forward">
               <span className={`fade-in ${isAnimating ? "animating" : ""}`}>
                 {title1}
               </span>
@@ -406,8 +402,7 @@ function Events() {
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState("PRONITES");
 
-  return (
-    !showSplash?(
+  return !showSplash ? (
     <>
       <Navbar reg_bg={"register reg_bg1"} />
       <div className="wrapper">
@@ -547,14 +542,25 @@ function Events() {
                 </ul>
               </motion.div>
 
-              <p>Welcome to Alcheringa!! We are loading up.please wait..</p>
+              {/* <p>Welcome to Alcheringa!! We are loading up.please wait..</p> */}
             </div>
-            <Cardleft />
+            <div className="image-wrapper">
+              <Image
+                src={coming_soon}
+                alt="lower hand"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                }}
+                quality={100}
+                // placeholder="blur"
+              />
+            </div>
+            {/* <Cardleft />
             <Cardright />
             <Cardleft />
-            <Cardright />
+            <Cardright /> */}
           </section>
-          <div className="temp-gap"></div>
         </main>
         <motion.div
           className="blur-events"
@@ -572,9 +578,10 @@ function Events() {
         circle_src2={circle2}
         windows_src={windows1}
       />
-    </>):<Loading/>
+    </>
+  ) : (
+    <Loading />
   );
 }
 
 export default Events;
-
