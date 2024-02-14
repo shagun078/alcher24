@@ -48,6 +48,9 @@ body,
   justify-content: flex-start;
 }
 
+#s3{
+  font-size: 2px;
+}
 
 #days_to_go{
   margin-bottom: 2px;

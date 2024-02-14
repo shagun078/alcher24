@@ -51,6 +51,9 @@ export default function RoomScene(props) {
 
     // Calculate days remaining
     const daysRemaining = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+    if(daysRemaining<0){
+      return "Website is live";
+    }
 
     return [daysRemaining];
   };
@@ -392,13 +395,12 @@ export default function RoomScene(props) {
           occlude='blending'
           // style={{ position: "relative" }}
           anchorX="center"
-          anchorY="center"
-         
         >
+        {daysRemaining>=0?(
           <div className="clock_font" >
            <div id='days_to_go'><p id="s1"><span id='time'>{daysRemaining}</span> Days </p></div> 
             <p id="s2">to go</p>
-          </div>
+          </div>):<p id='s3'>{daysRemaining}</p>}
         </Html>
       </group>
     </group>
