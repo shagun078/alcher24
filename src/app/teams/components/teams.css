@@ -1,7 +1,7 @@
 :root{
     --page_head: calc(4vw + 20px);
     --page_head_mobile: calc(3vw + 15px);
-    --page_subhead: calc(1.8vw + 10px);
+    --page_subhead: calc(1.3vw + 10px);
     --text_head: 3vw;
     --text_name: calc(0.5vw + 10px);
     --text_detail: calc(0.5vw + 6px);
@@ -259,6 +259,9 @@
     }
     .teams_head1 h2{
         font-size: var(--page_head_mobile);
+    }
+    .teams_head1 h5{
+        font-size: calc(1.3vw + 8px);
     }
     .names_prb, .names_crm, .names_creatives, .names_events, .names_web_app, .names_mun, .names_finance, .names_convener{
         margin: 20px auto 0;
