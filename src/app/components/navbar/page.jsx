@@ -51,7 +51,7 @@ const Navbar = ({ reg_bg }) => {
                 </ul>
             </nav>
             <div className="fixing">
-                <button className={reg_bg}><Link href="#">Soon...</Link></button>
+                <button className={reg_bg}><Link href="#">Get Card</Link></button>
             </div>
             <div className="hidden_box"></div>
             <FontAwesomeIcon onClick={handleClick} icon={faTimes} className={state === true ? 'on_state icon_ham' : 'off_state icon_ham'} />
