@@ -45,6 +45,11 @@ function Body() {
       setTitle(result_2.slice(0, 1));
       setTitle2(result_2.slice(0, 1));
     }
+    else {
+      setArray(info);
+      setTitle([{ category: "All Competitions", id: 100 }]);
+      setTitle2([{ category: "Modules", id: 101 }]);
+    }
 
   }
 
