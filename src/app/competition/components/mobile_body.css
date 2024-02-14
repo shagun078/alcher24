@@ -1,13 +1,13 @@
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
 
-  .list_container{
+  .list_container {
     position: absolute;
-    top: 15vh;
+    top: 25vh;
     right: auto;
-}
+  }
 
-  .search_box{
-    height: 20vh;
+  .title h2 {
+    font-size: 5vw;
   }
 
   .container_1 {
@@ -16,7 +16,24 @@
     justify-content: space-evenly;
   }
 
-  .search{
+  .search {
     height: 2vh;
+  }
+
+  .magnifying_glass{
+    height: 4vw;
+    width: 4vw;
+    right: 4vw;
+  }
+
+  .fa-sort-down{
+    height: 5vw;
+    width: 5vw;
+    top: -1vw;
+    right: 1vw;
+  }
+
+  .small_box{
+    right: 0.8vw;
   }
 }

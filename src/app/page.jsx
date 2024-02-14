@@ -8,20 +8,20 @@ import Footer from "./components/footer/page";
 export default function MainPage() {
   return (
     <>
-    <Navbar/>
-      <Link href="/homepage">Home Page</Link>
+      <Navbar />
+      <Link href="/home"> Home Page</Link>
       <br />
       <Link href="/events">Events Page</Link>
-      <br />
-      <Link href="/events_2d">Events2D Page</Link>
       <br />
       <Link href="/kartavya">Kartavya Page</Link>
       <br></br>
       <Link href="/sponsor">Sponsor Page</Link>
       <br />
       <Link href="/teams">Teams Page</Link>
+      <br />
+      <Link href="/loading">Loading</Link>
+      <Footer />
       <br/>
-    <Footer/>
     </>
   );
 }

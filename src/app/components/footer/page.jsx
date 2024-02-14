@@ -3,134 +3,146 @@ import './components/footer.css';
 import './components/mobile_footer.css';
 import './components/bg_change.css';
 import './components/star_change.css';
-import alcheringa from './resources/alcheringa.png';
-import icon1 from './resources/Vector.png';
-import icon2 from './resources/Vector (1).png';
-import icon3 from './resources/Vector (2).png';
-import icon4 from './resources/Vector (3).png';
+import icon1 from '/public/footer_img/Vector.png';
+import icon2 from '/public/footer_img/Vector (1).png';
+import icon3 from '/public/footer_img/Vector (5).png';
+import icon4 from '/public/footer_img/Vector (3).png';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { usePathname } from 'next/navigation';
-import circle from "./resources/Round_element.png";
-import circle1 from './resources/Frame 15232-min.png';
-import windows from './resources/Windows.png';
-import windows1 from './resources/Frame 15230-min.png';
+import { useState } from 'react';
 
 
-const Footer = () => {
-
-    const props = [
-        { "title": "/", "bg": "footer ", "star": "star", "id": 0, "reg_bg": "register reg_bg", "circle_src": circle, "windows_src": windows },
-        { "title": "/homepage", "bg": "footer img1", "star": "star1 star", "id": 1, "reg_bg": "register reg_bg1", "circle_src": circle1, "windows_src": windows1 },
-        { "title": "/events", "bg": "footer img1", "star": "star1 star", "id": 1, "reg_bg": "register reg_bg1", "circle_src": circle1, "windows_src": windows1 },
-        { "title": "/competition", "bg": "footer img2", "star": "star1 star", "id": 2, "reg_bg": "register reg_bg2", "circle_src": circle1, "windows_src": windows1 },
-        { "title": "/kartavya", "bg": "footer img3", "star": "star1 star", "id": 3, "reg_bg": "register reg_bg3", "circle_src": circle1, "windows_src": windows1 },
-        { "title": "/mun", "bg": "footer img4", "star": "star1 star", "id": 4, "reg_bg": "register reg_bg4", "circle_src": circle1, "windows_src": windows1 },
-        { "title": "/merch", "bg": "footer img5", "star": "star1 star", "id": 5, "reg_bg": "register reg_bg5", "circle_src": circle1, "windows_src": windows1 },
-        { "title": "/teams", "bg": "footer img6", "star": "star1 star", "id": 6, "reg_bg": "register reg_bg6", "circle_src": circle1, "windows_src": windows1 },
-        { "title": "/sponsor", "bg": "footer img7", "star": "star1 star", "id": 7, "reg_bg": "register reg_bg7", "circle_src": circle1, "windows_src": windows1 },
-    ];
+const Footer = ({ bg, star, circle_src1, circle_src2, windows_src, alcheringa_logo }) => {
 
     const router = useRouter();
     const path = usePathname();
+    const [state1, setState1] = useState(false);
+    const [state2, setState2] = useState(false);
 
-    // console.log(props);
+    function showContent1() {
+        setState1(!state1);
+    }
 
-    for (let i = 0; i < props.length; i++) {
-        if (path === props[i].title) {
-            return (
-                <div className="nav_footer_container">
-                    <div className="navbar_footer">
-                        <nav className="navbar_menu_footer">
-                            <ul>
-                                <li onClick={() => router.push("/events")} className={path === '/events' ? 'c c1' : ''}>
-                                    <Link href="/events">Events</Link></li>
-                                <li onClick={() => router.push("/competition")} className={path === '/competition' ? 'c c2' : ''}>
-                                    <Link href="/competition">Competitions</Link></li>
-                                <li onClick={() => router.push("/kartavya")} className={path === '/kartavya' ? 'c c3' : ''}>
-                                    <Link href="/kartavya">Kartayva</Link></li>
-                                <li onClick={() => router.push("/mun")} className={path === '/mun' ? 'c c4' : ''}>
-                                    <Link href="/mun">MUN</Link></li>
-                                <li onClick={() => router.push("/merch")} className={path === '/merch' ? 'c c5' : ''}>
-                                    <Link href="/merch">Merch</Link></li>
-                                <li onClick={() => router.push("/team")} className={path === '/team' ? 'c c6' : ''}>
-                                    <Link href="/team">Team</Link></li>
-                                <li onClick={() => router.push("/sponsor")} className={path === '/sponser' ? 'c c7' : ''}>
-                                    <Link href="/sponsor">Sponsors</Link></li>
-                            </ul>
-                            {/* Change color in color_change.css */}
-                            {/* Change background in bg_change.css */}
-                        </nav>
+    function showContent2() {
+        setState2(!state2);
+    }
+
+    return (
+        <div className="container_footer">
+            <div className="navbar_footer">
+                <nav className="navbar_menu_footer">
+                    <ul>
+                        <li onClick={() => router.push("/events")} className={path === '/events' ? 'c c1' : ''}>
+                            <Link href="/events">Events</Link></li>
+                        <li onClick={() => router.push("/competition")} className={path === '/competition' ? 'c c2' : ''}>
+                            <Link href="/competition">Competitions</Link></li>
+                        <li onClick={() => router.push("/kartavya")} className={path === '/kartavya' ? 'c c3' : ''}>
+                            <Link href="/kartavya">Kartayva</Link></li>
+                        {/* <li onClick={() => router.push("/mun")} className={path === '/mun' ? 'c c4' : ''}> */}
+                        {/* <Link href="/mun">MUN</Link></li> */}
+                        {/* <li onClick={() => router.push("/merch")} className={path === '/merch' ? 'c c5' : ''}> */}
+                        {/* <Link href="/merch">Merch</Link></li> */}
+                        <li onClick={() => router.push("/teams")} className={path === '/teams' ? 'c c6' : ''}>
+                            <Link href="/team">Teams</Link></li>
+                        <li onClick={() => router.push("/sponsor")} className={path === '/sponsor' ? 'c c7' : ''}>
+                            <Link href="/sponsor">Sponsors</Link></li>
+                    </ul>
+                    {/* Change color in color_change.css */}
+                    {/* Change background in bg_change.css */}
+                </nav>
+            </div>
+            <div className={bg}>
+                <div className="circle_box">
+                    <Image src={circle_src1} alt="" />
+                    <Image id="circle_2nd_img" src={circle_src2} alt="" />
+                </div>
+                <div className="extra_box">
+                </div>
+                <div className="windows_box">
+                    <div className="crop_container">
+                        <div className="crop_box">
+                            <Image className="windows_img" src={windows_src} alt="" />
+                        </div>
                     </div>
-                    <div className={props[i].bg}>
-                        <div className="circle_box">
-                            <Image src={props[i].circle_src} alt="" />
-                            <Image id="circle_2nd_img" src={props[i].circle_src} alt="" />
-                        </div>
-                        <div className="extra_box">
-                        </div>
-                        <div className="windows_box">
-                            <div className="crop_container">
-                                <div className="crop_box">
-                                    <Image className="windows_img" src={props[i].windows_src} alt="" />
-                                </div>
-                            </div>
-                            <div className="complex_grid">
-                                <div key={props[i].id} id="spark1" className={props[i].star}></div>
-                                <div className="blank_box"></div>
-                                <div key={props[i].id} id="spark2" className={props[i].star}></div>
-                                <div className="blank_box"></div>
-                                <div key={props[i].id} id="spark3" className={props[i].star}></div>
-                                <Image className="alcheringa" src={alcheringa} alt="" />
-                                <div key={props[i].id} id="spark5" className={props[i].star}></div>
-                                <div className="blank_box"></div>
-                                <div key={props[i].id} id="spark6" className={props[i].star}></div>
-                                <div className="blank_box"></div>
-                                <div key={props[i].id} id="spark4" className={props[i].star}></div>
+                    <div className="complex_grid">
+                        <div id="spark1" className={star}></div>
+                        <div className="blank_box"></div>
+                        <div id="spark2" className={star}></div>
+                        <div className="blank_box"></div>
+                        <div id="spark3" className={star}></div>
+                        <Image className="alcheringa" src={alcheringa_logo} alt="" />
+                        <div id="spark5" className={star}></div>
+                        <div className="blank_box"></div>
+                        <div id="spark6" className={star}></div>
+                        <div className="blank_box"></div>
+                        <div id="spark4" className={star}></div>
 
-                                {/* Change stars color in star_change.css file */}
-                            </div>
+                        {/* Change stars color in star_change.css file */}
+                    </div>
+                </div>
+                <div className="credits_1">
+                    <div className="cred grid_1">
+                        <h1>Anurag</h1>
+                        <div className="info">
+                            <a href="tel:+91 7061520276">+91 7061520276</a>
+                            <br />
+                            <a href="mailto:anurag@alcheringa.in">anurag@alcheringa.in</a>
                         </div>
-                        <div className="credits_1">
-                            <div className="cred grid_1">
-                                <h1>Anurag</h1>
-                                <div className="info">
-                                    <p>+91 7061520276</p>
-                                    <p>anurag@alcheringa.in</p>
-                                </div>
-                            </div>
-                            <div className="cred grid_2">
-                                <h1>Ankit Kumar</h1>
-                                <div className="info">
-                                    <p>+91 8340349585</p>
-                                    <p>ankit.k@alcheringa.in</p>
-                                </div>
-                            </div>
-                            <div className="cred_1" id="seperate">
-                                <p id='normal_text'>Follow us on</p>
-                                <p id="follow_text">Follow us</p>
-                                <p id="on_text">on</p>
-                                <div className="icons">
-                                    <Link href="https://www.instagram.com/alcheringaiitg/"><Image src={icon1} alt="" /></Link>
-                                    <Link href="https://www.facebook.com/alcheringaiitg"><Image src={icon2} alt="" /></Link>
-                                    <Link href="https://twitter.com/alcheringaiitg"><Image src={icon3} alt="" /></Link>
-                                    <Link href="https://www.youtube.com/@alcheringaIITG"><Image src={icon4} alt="" /></Link>
-                                </div>
-                            </div>
+                    </div>
+                    <div className="cred grid_2">
+                        <h1>Ankit Kumar</h1>
+                        <div className="info">
+                            <a href="tel:+91 8340349585">+91 8340349585</a>
+                            <br />
+                            <a href="mailto:ankit.k@alcheringa.in">ankit.k@alcheringa.in</a>
                         </div>
-                        <div className="credits_2">
-                            <p className='extra_width'>Designed and Developed by <a href="">Alcher Creatives</a> & <a href="">Alcher Web Operations</a></p>
-                            <div>
-                                <p>For Business Enquiries</p>
-                                <a href="">publicrelations24@alcheringa.in</a>
-                            </div>
+                    </div>
+                    <div className="cred_1" id="seperate">
+                        <p id='normal_text'>Follow us on</p>
+                        <p id="follow_text">Follow us</p>
+                        <p id="on_text">on</p>
+                        <div className="icons">
+                            <a href="https://www.instagram.com/alcheringaiitg/" target="_blank" ><Image src={icon1} alt="" /></a>
+                            <a href="https://www.facebook.com/alcheringaiitg" target="_blank" ><Image src={icon2} alt="" /></a>
+                            <a href="https://twitter.com/alcheringaiitg" target="_blank" ><Image src={icon3} alt="" /></a>
+                            <a href="https://www.youtube.com/@alcheringaIITG" target="_blank" ><Image src={icon4} alt="" className='yt_icon' /></a>
                         </div>
                     </div>
                 </div>
-            );
-        }
-    }
+                <div className="credits_2">
+                    <div className='extra_width'>Designed and Developed by&nbsp;
+                        <a className='hover_parent'>
+                            <div id="right_shift_1" className='hover_child'>
+                                <p>Swapnil Banerjee</p>
+                                <p>Rishi Kiran</p>
+                                <p>Nikita Sharma</p>
+                                <p>Farhan</p>
+                                <p>Sobha</p>
+                            </div>
+                            Alcher Creatives
+                        </a>&nbsp;&&nbsp;
+                        <a className='hover_parent'>
+                            <div id="right_shift_2" className='hover_child'>
+                                <p>Shubham Kumar Jha</p>
+                                <p>Deepak Sutradhar</p>
+                                <p>Aditya Dadhich</p>
+                                <p>Himank Bohara</p>
+                            </div>
+                            Alcher Web Operations
+                        </a>
+                    </div>
+
+                    <div className='hide_text_portrait'>
+                        <p>For Business Enquiries</p>
+                        <a href="mailto:alcheringa@iitg.ac.in">alcheringa@iitg.ac.in</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
 }
+
 
 export default Footer;

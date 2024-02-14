@@ -1,23 +1,31 @@
+.star_homepage{
+    background-image: url('../../../../../public/footer_img/homepage_star.png');
+}
+
 .star1{
-    background-image: url('../resources/Frame\ 15234-min.png') !important;
+    background-image: url('../../../../../public/footer_img/events_star.png') !important;
 }
 
 .star2{
-    background-image: url('../resources/Frame\ 15234-min.png') !important;
+    background-image: url('../../../../../public/footer_img/competition_star.png') !important;
 }
 
 .star3{
-    background-image: url('../resources/Frame\ 15234-min.png') !important;
+    background-image: url('../../../../../public/footer_img/Frame\ 15234-min.png') !important;
 }
 
 .star4{
-    background-image: url('../resources/Frame\ 15234-min.png') !important;
+    background-image: url('../../../../../public/footer_img/Frame\ 15234-min.png') !important;
 }
 
 .star5{
-    background-image: url('../resources/Frame\ 15234-min.png') !important;
+    background-image: url('../../../../../public/footer_img/Frame\ 15234-min.png') !important;
 }
 
 .star6{
-    background-image: url('../resources/Frame\ 15234-min.png') !important;
+    background-image: url('../../../../../public/footer_img/teams_star.png') !important;
+}
+
+.star7{
+    background-image: url('../../../../../public/footer_img/sponsors_star.png') !important;
 }
