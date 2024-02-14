@@ -187,7 +187,7 @@ body,
   background-image: url("/TexturePattern.jpg");
   background-blend-mode: color-burn;
   background-color: #141414;
-  padding-bottom: 6vh;
+  padding-bottom: 8vh;
 }
 
 .mainContainer {
@@ -573,6 +573,7 @@ iframe {
   border-radius: 2vw;
   border: 0;
   font-weight: 400;
+  cursor: pointer;
 }
 
 .alcher_merch_coming_soon {
