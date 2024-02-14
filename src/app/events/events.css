@@ -107,7 +107,7 @@ button{
 
 #museum_events_name{
   position: relative;
-  bottom:5vh;
+  bottom:10vh;
   font-size: 5vw;
   font-family: EventText;
   transition: all 1s ease-in-out;
@@ -167,8 +167,9 @@ button{
   background-color: #FA5045;
   color:white;
   font-size: 1.15rem;
+  font-weight: 700;
   transition: all 1s ease-in-out;
-  font-weight: 600;
+  font-weight: 700;
  }
 
  

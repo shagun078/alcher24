@@ -204,7 +204,7 @@ function Events() {
   const [title2, setTitle2] = useState(list.head.data.title2);
   const [currPage, setCurrpage] = useState(list.head.data.currPage);
   const [isClick, setClick] = useState(false);
-  const [eventStyle, setEventStyle] = useState({ opacity: 1 });
+  const [eventStyle, setEventStyle] = useState({ display:'block'});
   const [boxStyle, setBoxStyle] = useState({ opacity: 0 });
   const [currStyle, setCurrStyle] = useState({ opacity: 0 });
   const [bgcolor, setbgcolor] = useState({ backgroundColor: "#181818" });
@@ -299,7 +299,7 @@ function Events() {
       opacity: 1,
     });
     setEventStyle({
-      opacity: 0,
+      display:'none',
     });
     const targetX = 0;
     const targetY = 2;
@@ -577,3 +577,4 @@ function Events() {
 }
 
 export default Events;
+
