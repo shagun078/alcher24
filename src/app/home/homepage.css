@@ -12,7 +12,7 @@ body,
 
 @font-face {
   font-family: sponsor_heading_text;
-  src: url(../../../public/Fontspring-DEMO-freigeist-conblack.woff2);
+  src: url("../../../public/Fontspring-DEMO-freigeist-conblack.woff2");
 }
 
 @font-face {
@@ -187,6 +187,7 @@ body,
   background-image: url("/TexturePattern.jpg");
   background-blend-mode: color-burn;
   background-color: #141414;
+  padding-bottom: 6vh;
 }
 
 .mainContainer {
@@ -461,7 +462,6 @@ iframe {
   height: 100vh;
   position: relative;
   margin-top: 6rem;
-  margin-bottom: 6rem;
   display: flex;
 }
 #upperHand {

@@ -48,7 +48,7 @@ body::-webkit-scrollbar {
   background-color: #141414;
   color: #e8edd9;
   overflow: hidden;
-  background-image: url("./resources/TexturePattern.jpg");
+  background-image: url("../../../public/TexturePattern.jpg");
   background-blend-mode: color-burn;
 }
 
