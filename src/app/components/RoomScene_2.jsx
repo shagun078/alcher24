@@ -70,6 +70,7 @@ export default function RoomScene(props) {
   });
   const laptopScreen = useTexture("alcher.png");
   const mobileScreen = useTexture("qr.png");
+  
 
   return (
     <group {...props} ref={rotateRef} dispose={null}>
@@ -375,7 +376,7 @@ export default function RoomScene(props) {
           rotation={[0, -0.279, 0]}
         />
 
-        <mesh
+        <mesh 
           position={[-5.4, 0.916, -1.312]}
           rotation={[0, 1.2925, 0]}
           scale={[0.101, 0.1, 0.1]}
@@ -384,14 +385,17 @@ export default function RoomScene(props) {
           <meshStandardMaterial side={THREE.DoubleSide} color={"black"} />
         </mesh>
         <Html
-          position={[-5.49, 0.95, -1.35]}
+          position={[-5.3964, 0.92, -1.32]}
           className="clock_div"
           rotation={[0,1.3,0]}
-          transform
+          transform={true}
+          occlude='blending'
           // style={{ position: "relative" }}
           anchorX="center"
+          anchorY="center"
+         
         >
-          <div className="clock_font" rotation={[0,0.4,0]}>
+          <div className="clock_font" >
            <div id='days_to_go'><p id="s1"><span id='time'>{daysRemaining}</span> Days </p></div> 
             <p id="s2">to go</p>
           </div>
