@@ -4,8 +4,6 @@ import React, { useRef, useState, useEffect, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import TWEEN from "@tweenjs/tween.js";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Museumfinal } from "../components/Museum10Feb";
 //import { Museum1 } from "../components/Museum";
 //import Loadingpage from "../components/loading/loading";
@@ -359,7 +357,7 @@ function Events() {
           onClick={() => {
             backward();
           }}>
-            <FontAwesomeIcon icon={faArrowLeft} className="backward-svg" />
+            <img src='leftArrow.svg' className="backward-svg" />
             <button
               className="btn btn-backward"
               
@@ -396,7 +394,7 @@ function Events() {
               </span>
             </button>
 
-            <FontAwesomeIcon icon={faArrowRight} className="forward-svg" />
+            <img src='rightArrow.svg' className="forward-svg" />
           </span>
         </div>
       </div>

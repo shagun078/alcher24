@@ -5,6 +5,13 @@
     --color-db: #444A7F;
 }
 
+#menu_nav{
+    filter:invert(1);
+}
+#close_nav{
+    filter:invert(1);
+}
+
 .body {
     margin: 0;
     padding: 0;
@@ -71,12 +78,9 @@
 }
 
 .magnifying_glass {
-    height: 1.5vw;
-    width: 1.5vw;
-    color: var(--color-w);
-    font-size: 1.33vw;
+    filter:invert(1);
     position: relative !important;
-    right: 1.5vw;
+    right: 2vw;
 }
 
 .magnifying_glass:hover {
@@ -128,9 +132,8 @@
 
 .small_box {
     position: relative;
-    bottom: 0.3vw;
-    height: 4vw;
-    width: 4vw;
+    right:0.6vw;
+    filter:invert(1);
 }
 
 .list_container{
@@ -147,7 +150,7 @@
     position: absolute;
     margin-top: 2vw;
     box-sizing: border-box;
-    display: none;
+    display: block;
     align-items: center;
     border-radius: 0.55vw;
 }

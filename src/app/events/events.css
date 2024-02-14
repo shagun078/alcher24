@@ -94,6 +94,7 @@ button{
 
 
 .backward-svg{
+  width:1.2rem;
   color:white;
   margin-right:0.7vw;
 }
@@ -128,6 +129,7 @@ button{
  }
  
  .forward-svg{
+  width:1.2rem;
    color:white;
    margin-left: 0.7vw;
  }
