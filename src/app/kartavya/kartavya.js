@@ -77,7 +77,7 @@ export default function Kartavya() {
 
           <h1 className="kartavya_head">KARTAVYA</h1>
           <h3 className="detail1">
-            &ldquo;Unite for change, ignite hope, and <br />let people's voices shape our journey."&ldquo;
+            &ldquo;Unite for change, ignite hope, and <br />let people's voices shape our journey.&ldquo;
           </h3>
 
           <div className="large_card_shadow">
