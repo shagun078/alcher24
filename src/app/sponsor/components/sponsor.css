@@ -1,5 +1,5 @@
 .sponsor_main{
-  background-image: url('../resources/TexturePattern.jpg');
+  background-image: url('../../../../public/TexturePattern.jpg');
   background-blend-mode:color-burn;
   text-align: center;
   color: white;

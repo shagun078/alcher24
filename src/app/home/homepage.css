@@ -12,7 +12,7 @@ body,
 
 @font-face {
   font-family: sponsor_heading_text;
-  src: url(../../../public/Fontspring-DEMO-freigeist-conblack.woff2);
+  src: url("../../../public/Fontspring-DEMO-freigeist-conblack.woff2");
 }
 
 @font-face {
