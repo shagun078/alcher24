@@ -68,7 +68,7 @@ export default function RoomScene(props) {
     console.log(vid);
     return vid;
   });
-  const laptopScreen = useTexture("alcher.png");
+  const laptopScreen = useTexture("alcher.jpg");
   const mobileScreen = useTexture("qr.png");
 
   return (

@@ -67,7 +67,11 @@ export default function Teams() {
           <div className="left_window"></div>
           <div className="teams_head1">
             <h2>MEET THE TEAMS</h2>
-            <h5>"Act as if what you do makes a difference. It does"</h5>
+            <h5>
+                   "Coming together is a beginning.
+              <br />Keeping together is progress.
+              <br />Working together is success."
+            </h5>
           </div>
           <div className="right_window"></div>
         </section>
