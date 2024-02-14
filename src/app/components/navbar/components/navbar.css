@@ -103,6 +103,8 @@
     width: 11.56vw;
     display: flex;
     justify-content: center;
+
+    visibility: hidden;
 }
 
 .cred{
