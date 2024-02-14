@@ -21,6 +21,7 @@ import merch from "./resources/home_merch.png";
 import Link from "next/link";
 import Loading from "../components/loading/loading";
 
+
 const marks = [
   {
     key: "A",
