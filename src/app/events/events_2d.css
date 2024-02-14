@@ -259,8 +259,14 @@ body::-webkit-scrollbar {
   backdrop-filter: blur(2px);
   pointer-events: none;
 }
-.temp-gap {
-  height: 10vh;
+
+.image-wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 10% 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (orientation: portrait) {
