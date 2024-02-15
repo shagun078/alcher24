@@ -3,12 +3,8 @@
 import React, { Suspense, useRef, useState, useEffect } from "react";
 import {
   useGLTF,
-  useVideoTexture,
   useTexture,
-  Html,
-  Text,
 } from "@react-three/drei";
-import url from "../../../public/video.mp4";
 import "../home/homepage.css";
 import * as THREE from "three";
 
