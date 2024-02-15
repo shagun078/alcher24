@@ -51,7 +51,7 @@ export default function RoomScene(props) {
 
     // Calculate days remaining
     const daysRemaining = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
-    if(daysRemaining<0){
+    if (daysRemaining < 0) {
       return "Website is live";
     }
 
@@ -73,7 +73,17 @@ export default function RoomScene(props) {
   });
   const laptopScreen = useTexture("alcher.jpg");
   const mobileScreen = useTexture("qr.png");
-  
+  const ClockScreen = useTexture("clock_svg/days.svg");
+  const t_0 = useTexture("clock_svg/0.svg");
+  const t_1 = useTexture("clock_svg/1.svg");
+  const t_2 = useTexture("clock_svg/2.svg");
+  const t_3 = useTexture("clock_svg/3.svg");
+  const t_4 = useTexture("clock_svg/4.svg");
+  const t_5 = useTexture("clock_svg/5.svg");
+  const t_6 = useTexture("clock_svg/6.svg");
+  const t_7 = useTexture("clock_svg/7.svg");
+  const t_8 = useTexture("clock_svg/8.svg");
+  const t_9 = useTexture("clock_svg/9.svg");
 
   return (
     <group {...props} ref={rotateRef} dispose={null}>
@@ -379,7 +389,7 @@ export default function RoomScene(props) {
           rotation={[0, -0.279, 0]}
         />
 
-        <mesh 
+        <mesh
           position={[-5.4, 0.916, -1.312]}
           rotation={[0, 1.2925, 0]}
           scale={[0.101, 0.1, 0.1]}
@@ -387,7 +397,30 @@ export default function RoomScene(props) {
           <planeGeometry args={[3.588, 1.82]} />
           <meshStandardMaterial side={THREE.DoubleSide} color={"black"} />
         </mesh>
-        <Html
+        <mesh
+          position={[-5.42, 0.924, -1.24]}
+          rotation={[0, 1.2925, 0]}
+          scale={[0.101, 0.1, 0.1]}
+        >
+          <planeGeometry args={[1, 1]} />
+          <meshStandardMaterial
+            side={THREE.DoubleSide}
+            map={1 == 1 ? t_0 : t_2}
+          />
+        </mesh>
+        <mesh
+          position={[-5.39, 0.922, -1.342]}
+          rotation={[0, 1.2925, 0]}
+          scale={[0.101, 0.1, 0.1]}
+        >
+          <planeGeometry args={[1, 1]} />
+          <meshStandardMaterial
+            side={THREE.DoubleSide}
+            // map={`t_${daysRemaining % 10}`}
+            map={t_2}
+          />
+        </mesh>
+        {/* <Html
           position={[-5.3964, 0.92, -1.32]}
           className="clock_div"
           rotation={[0,1.3,0]}
@@ -400,7 +433,7 @@ export default function RoomScene(props) {
            <div id='days_to_go'><p id="s1"><span id='time'>{daysRemaining}</span> Days </p></div> 
             <p id="s2">to go</p>
           </div>):<p id='s3'>{daysRemaining}</p>}
-        </Html>
+        </Html> */}
       </group>
     </group>
   );
