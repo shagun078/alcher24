@@ -6,14 +6,13 @@ Command: npx gltfjsx@6.2.16 Museum10Feb.gltf
 "use client"
 
 import React, { useRef , useState } from 'react'
-import { useGLTF , useTexture , useVideoTexture} from '@react-three/drei';
+import { useGLTF , useTexture} from '@react-three/drei';
 import * as THREE from 'three';
-import url from "../../../public/video.mp4";
 
 
 
 export function Museumfinal(props) {
-  const texture=useTexture('models/BakedTexture (2).png');
+  const texture=useTexture('BakedTexture_Events.jpg');
   texture.flipY=false;
   texture.colorSpace=THREE.SRGBColorSpace;
   const textureMaterial=new THREE.MeshStandardMaterial({
@@ -21,19 +20,46 @@ export function Museumfinal(props) {
   })
   const { nodes, materials } = useGLTF('models/Museum10Feb.gltf')
   
-  const [video] = useState(() => {
-    const vid = document.createElement("video");
-    vid.src = url;
-    vid.crossOrigin = "Anonymous";
-    vid.loop = true;
-    vid.muted = true;
-    vid.type = "video/mp4" / vid.play();
-    console.log(vid);
-    return vid;
-  });
+  // const [video] = useState(() => {
+  //   const vid = document.createElement("video");
+  //   vid.src = url;
+  //   vid.crossOrigin = "Anonymous";
+  //   vid.loop = true;
+  //   vid.muted = true;
+  //   vid.type = "video/mp4" / vid.play();
+  //   console.log(vid);
+  //   return vid;
+  // });
 
-  const proshowsScreen = useTexture("mirrorProShows.jpg");
+  const proshowsScreen = useTexture("Event Posters.jpg");
   proshowsScreen.flipX=true;
+
+  const proShowsContent=useTexture("ProshowsContent.jpg")
+  proShowsContent.flipX=true;
+
+  const pronitesScreen=useTexture("Pronites.jpg");
+  pronitesScreen.flipX=true;
+
+  const proniteContent=useTexture("PronitesContent.jpg");
+  proniteContent.flipX=true;
+
+  const creatorsScreen=useTexture("Creatorscamp.jpg");
+  creatorsScreen.flipX=true;
+
+  const creatorsContent=useTexture("CreatorsContent.jpg");
+  creatorsContent.flipX=true;
+
+  const CriticalScreen=useTexture("CriticalDamage.jpg")
+  CriticalScreen.flipX=true;
+
+  const criticalContent=useTexture("CriticalDamageContent.jpg");
+  criticalContent.flipX=true;
+
+  const Informals=useTexture("Informals.jpg");
+  Informals.flipX=true;
+
+  const informalContent=useTexture("InformalsContent.jpg");
+  informalContent.flipX=true;
 
   return (
     <group {...props} dispose={null}>
@@ -70,11 +96,11 @@ export function Museumfinal(props) {
 
 
       <group>
-      <mesh position={[-1.80, 1.58, -2.74]} scale={[0.638,1.6,1]} rotation={[0.15,-0.33,0.04]}>
+      <mesh position={[-1.80, 1.58, -2.74]} scale={[0.638,1.67,1]} rotation={[0.15,-0.33,0.04]}>
       <planeGeometry args={[3.2, 1.9]} />
-      <meshStandardMaterial  side={THREE.DoubleSide} emissive={"white"}>
-        <videoTexture attach="map" args={[video]} />
-  <videoTexture attach="emissiveMap" args={[video]} />
+      <meshStandardMaterial  side={THREE.DoubleSide} map={proShowsContent}>
+       {/* <videoTexture attach="map" args={[video]} />
+  <videoTexture attach="emissiveMap" args={[video]} />*/}
       </meshStandardMaterial>
       </mesh>
       <mesh geometry={nodes.Plane036.geometry} material={materials.Canvas} position={[-1.735, 0.081, -2.886]} rotation={[-1.442, -0.042, -0.313]}  />
@@ -83,11 +109,11 @@ export function Museumfinal(props) {
 
 
       <group>
-      <mesh position={[1.982,1.6,-2.867]} scale={[0.65,1.62,1]} rotation={[0.15,0.52,-0.075]}>
+      <mesh position={[1.982,1.6,-2.869]} scale={[0.65,1.68,1]} rotation={[0.15,0.52,-0.075]}>
       <planeGeometry args={[3.2, 1.9]} />
-      <meshStandardMaterial emissive={"white"} side={THREE.DoubleSide}>
-        <videoTexture attach="map" args={[video]} />
-        <videoTexture attach="emissiveMap" args={[video]} />
+      <meshStandardMaterial side={THREE.DoubleSide}  map={proshowsScreen}>
+        {/*<videoTexture attach="map" args={[video]} />
+<videoTexture attach="emissiveMap" args={[video]} />*/}
       </meshStandardMaterial>
       </mesh>
       <mesh geometry={nodes.Plane037.geometry} material={materials.Canvas} position={[1.921, 0.081, -3.037]} rotation={[-1.453, 0.066, 0.506]} />
@@ -97,9 +123,9 @@ export function Museumfinal(props) {
       <group>
       <mesh position={[-1.80, 1.58, 15.71]} scale={[0.638,1.6,1]} rotation={[0.15,-0.33,0.04]}>
       <planeGeometry args={[3.2, 1.9]} />
-      <meshStandardMaterial emissive={"white"} side={THREE.DoubleSide}>
-        <videoTexture attach="map" args={[video]} />
-        <videoTexture attach="emissiveMap" args={[video]} />
+      <meshStandardMaterial  side={THREE.DoubleSide} map={proniteContent}>
+         {/*<videoTexture attach="map" args={[video]} />
+<videoTexture attach="emissiveMap" args={[video]} />*/}
       </meshStandardMaterial>
       </mesh>
       <mesh geometry={nodes.Plane038.geometry} material={materials.Canvas} position={[-1.735, 0.081, 15.553]} rotation={[-1.442, -0.042, -0.313]} />
@@ -109,9 +135,9 @@ export function Museumfinal(props) {
       <group>
       <mesh position={[1.96,1.6,15.5]} scale={[0.68,1.62,1]} rotation={[0.15,0.52,-0.075]}>
       <planeGeometry args={[3.2, 1.9]} />
-      <meshStandardMaterial emissive={"white"} side={THREE.DoubleSide}>
-        <videoTexture attach="map" args={[video]} />
-        <videoTexture attach="emissiveMap" args={[video]} />
+      <meshStandardMaterial side={THREE.DoubleSide} map={pronitesScreen}>
+      {/*  <videoTexture attach="map" args={[video]} />
+<videoTexture attach="emissiveMap" args={[video]} />*/}
       </meshStandardMaterial>
       </mesh>
       <mesh geometry={nodes.Plane039.geometry} material={materials.Canvas} position={[1.921, 0.081, 15.403]} rotation={[-1.453, 0.066, 0.506]} />
@@ -122,9 +148,9 @@ export function Museumfinal(props) {
       <group>
       <mesh position={[-1.80, 1.58, 31.13]} scale={[0.638,1.6,1]} rotation={[0.15,-0.33,0.04]}>
       <planeGeometry args={[3.2, 1.9]} />
-      <meshStandardMaterial emissive={"white"} side={THREE.DoubleSide}>
-        <videoTexture attach="map" args={[video]} />
-        <videoTexture attach="emissiveMap" args={[video]} />
+      <meshStandardMaterial  side={THREE.DoubleSide} map={creatorsContent}>
+         {/*<videoTexture attach="map" args={[video]} />
+<videoTexture attach="emissiveMap" args={[video]} />*/}
       </meshStandardMaterial>
       </mesh>
       <mesh geometry={nodes.Plane040.geometry} material={materials.Canvas} position={[-1.735, 0.081, 31.017]} rotation={[-1.442, -0.042, -0.313]} />
@@ -133,9 +159,9 @@ export function Museumfinal(props) {
       <group>
       <mesh position={[1.982,1.6,30.98]} scale={[0.65,1.62,1]} rotation={[0.15,0.52,-0.075]}>
       <planeGeometry args={[3.2, 1.9]} />
-      <meshStandardMaterial emissive={"white"} side={THREE.DoubleSide}>
-        <videoTexture attach="map" args={[video]} />
-        <videoTexture attach="emissiveMap" args={[video]} />
+      <meshStandardMaterial  side={THREE.DoubleSide} map={creatorsScreen}>
+       {/* <videoTexture attach="map" args={[video]} />
+<videoTexture attach="emissiveMap" args={[video]} />*/}
       </meshStandardMaterial>
       </mesh>
       <mesh geometry={nodes.Plane041.geometry} material={materials.Canvas} position={[1.921, 0.081, 30.867]} rotation={[-1.453, 0.066, 0.506]} />
@@ -146,9 +172,9 @@ export function Museumfinal(props) {
       <group>
       <mesh position={[-1.80, 1.58, 49.6]} scale={[0.638,1.6,1]} rotation={[0.15,-0.33,0.04]}>
       <planeGeometry args={[3.2, 1.9]} />
-      <meshStandardMaterial emissive={"white"} side={THREE.DoubleSide}>
-        <videoTexture attach="map" args={[video]} />
-        <videoTexture attach="emissiveMap" args={[video]} />
+      <meshStandardMaterial  side={THREE.DoubleSide} map={criticalContent}>
+        {/*<videoTexture attach="map" args={[video]} />
+<videoTexture attach="emissiveMap" args={[video]} />*/}
       </meshStandardMaterial>
       </mesh>
       <mesh geometry={nodes.Plane042.geometry} material={materials.Canvas} position={[-1.735, 0.081, 49.456]} rotation={[-1.442, -0.042, -0.313]} />
@@ -158,9 +184,9 @@ export function Museumfinal(props) {
       <group>
       <mesh position={[1.982,1.6,49.45]} scale={[0.65,1.62,1]} rotation={[0.15,0.52,-0.075]}>
       <planeGeometry args={[3.2, 1.9]} />
-      <meshStandardMaterial emissive={"white"} side={THREE.DoubleSide}>
-        <videoTexture attach="map" args={[video]} />
-        <videoTexture attach="emissiveMap" args={[video]} />
+      <meshStandardMaterial map={CriticalScreen} side={THREE.DoubleSide}>
+       {/* <videoTexture attach="map" args={[video]} />
+<videoTexture attach="emissiveMap" args={[video]} />*/}
       </meshStandardMaterial>
       </mesh>
       <mesh geometry={nodes.Plane043.geometry} material={materials.Canvas} position={[1.921, 0.081, 49.306]} rotation={[-1.453, 0.066, 0.506]} />
@@ -169,9 +195,9 @@ export function Museumfinal(props) {
       <group>
       <mesh position={[-1.80, 1.58, 65.25]} scale={[0.638,1.6,1]} rotation={[0.15,-0.33,0.04]}>
       <planeGeometry args={[3.2, 1.9]} />
-      <meshStandardMaterial emissive={"white"} side={THREE.DoubleSide}>
-        <videoTexture attach="map" args={[video]} />
-        <videoTexture attach="emissiveMap" args={[video]} />
+      <meshStandardMaterial side={THREE.DoubleSide} map={informalContent}>
+         {/*<videoTexture attach="map" args={[video]} />
+<videoTexture attach="emissiveMap" args={[video]} />*/}
       </meshStandardMaterial>
       </mesh>
       <mesh geometry={nodes.Plane044.geometry} material={materials.Canvas} position={[-1.735, 0.081, 65.117]} rotation={[-1.442, -0.042, -0.313]} />
@@ -181,9 +207,9 @@ export function Museumfinal(props) {
       <group>
       <mesh position={[1.982,1.6,65.14]} scale={[0.65,1.62,1]} rotation={[0.15,0.52,-0.075]}>
       <planeGeometry args={[3.2, 1.9]} />
-      <meshStandardMaterial emissive={"white"} side={THREE.DoubleSide}>
-        <videoTexture attach="map" args={[video]} />
-        <videoTexture attach="emissiveMap" args={[video]} />
+      <meshStandardMaterial map={Informals} side={THREE.DoubleSide}>
+       {/* <videoTexture attach="map" args={[video]} />
+<videoTexture attach="emissiveMap" args={[video]} /> */}
       </meshStandardMaterial>
       </mesh>
       <mesh geometry={nodes.Plane045.geometry} material={materials.Canvas} position={[1.921, 0.081, 64.967]} rotation={[-1.453, 0.066, 0.506]} />
@@ -193,8 +219,8 @@ export function Museumfinal(props) {
       <mesh position={[-1.80, 1.58, 83.68]} scale={[0.638,1.6,1]} rotation={[0.15,-0.33,0.04]}>
       <planeGeometry args={[3.2, 1.9]} />
       <meshStandardMaterial emissive={"white"} side={THREE.DoubleSide}>
-        <videoTexture attach="map" args={[video]} />
-        <videoTexture attach="emissiveMap" args={[video]} />
+          {/* <videoTexture attach="map" args={[video]} />
+<videoTexture attach="emissiveMap" args={[video]} /> */}
       </meshStandardMaterial>
       </mesh>
       <mesh geometry={nodes.Plane046.geometry} material={materials.Canvas} position={[-1.735, 0.081, 83.557]} rotation={[-1.442, -0.042, -0.313]} />
@@ -204,8 +230,8 @@ export function Museumfinal(props) {
       <mesh position={[1.982,1.6,83.2]} scale={[0.65,1.62,1]} rotation={[0.15,0.52,-0.075]}>
       <planeGeometry args={[3.2, 1.9]} />
       <meshStandardMaterial emissive={"white"} side={THREE.DoubleSide}>
-        <videoTexture attach="map" args={[video]} />
-        <videoTexture attach="emissiveMap" args={[video]} />
+          {/* <videoTexture attach="map" args={[video]} />
+<videoTexture attach="emissiveMap" args={[video]} /> */}
       </meshStandardMaterial>
       </mesh>
       <mesh geometry={nodes.Plane047.geometry} material={materials.Canvas} position={[1.921, 0.081, 83.406]} rotation={[-1.453, 0.066, 0.506]} />

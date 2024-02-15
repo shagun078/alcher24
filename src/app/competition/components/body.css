@@ -5,6 +5,13 @@
     --color-db: #444A7F;
 }
 
+#menu_nav{
+    filter:invert(1);
+}
+#close_nav{
+    filter:invert(1);
+}
+
 .body {
     margin: 0;
     padding: 0;
@@ -12,9 +19,8 @@
     min-height: 89.11vw;
     width: 100vw;
     background-image: url('../resources/bg_c-min.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-repeat: repeat-y;
+    background-size: contain;
     display: flex;
     flex-direction: column;
 }
@@ -71,12 +77,9 @@
 }
 
 .magnifying_glass {
-    height: 1.5vw;
-    width: 1.5vw;
-    color: var(--color-w);
-    font-size: 1.33vw;
+    filter:invert(1);
     position: relative !important;
-    right: 1.5vw;
+    right: 2vw;
 }
 
 .magnifying_glass:hover {
@@ -128,9 +131,8 @@
 
 .small_box {
     position: relative;
-    bottom: 0.3vw;
-    height: 4vw;
-    width: 4vw;
+    right:0.6vw;
+    filter:invert(1);
 }
 
 .list_container{
@@ -147,15 +149,17 @@
     position: absolute;
     margin-top: 2vw;
     box-sizing: border-box;
-    display: none;
+    display: block;
     align-items: center;
     border-radius: 0.55vw;
+    display: none;
 }
 
 .list_active {
     display: grid;
     animation-name: list-anime;
-    animation-duration: 0.4s;
+    animation-duration: 0.5s;
+    transition-timing-function: ease-out;
     z-index: 10;
 }
 
@@ -182,15 +186,15 @@
 
 @keyframes hamburger1 {
     0% {
-        color: transparent;
+        display: none;
     }
 
-    50% {
-        color: transparent;
+    90% {
+        display: none;
     }
 
     100% {
-        color: white;
+        display: block;
     }
 }
 
@@ -200,7 +204,7 @@
     font-size: var(--font-size-20-1440);
     color: white;
     animation-name: hamburger1;
-    animation-duration: 0.401s;
+    animation-duration: 0.502s;
     transition-timing-function: ease-in;
     white-space: nowrap;
 }
@@ -226,7 +230,7 @@
 }
 
 .item_box {
-    min-height: 69.12vw;
+    height: auto;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -263,31 +267,33 @@
 }
 
 .item_container {
-    min-height: 63.96vw;
+    height:auto;
     width: 86.12vw;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(all,1fr);
+    grid-template-rows: repeat(all,26.38vw);
+    border: 0.5px solid red;
 }
 
 .icon{
-    height: 30.48vw;
+    height: 100%;
     width: 26.875vw;
-    margin: 1vw;
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items:center;
     z-index: 5;
+    border: 1px solid red;
 }
 
 .icon_ke_andar{
+    height: auto;
     width: 100%;
 }
 
 .iconsIMG{
-    height: auto;
+    height: 100%;
     width: 100%;
 }
 
@@ -296,7 +302,10 @@
     color: white;
     font-size: 1.94vw;
     font-weight: 700;
-    text-align: center;
+}
+
+.pad_text_arr{
+    margin-top: 5vw;
 }
 
 .capital_prop_name{

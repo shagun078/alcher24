@@ -21,18 +21,19 @@
 }
 
 :root{
-    --color1: #181818 !important;
+    --color1: black !important;
 }
 
 .header{
-    background-color: #141414;
+    background-color: black;
+    position: relative;
     width: 100vw;
     height: 6vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
     overflow: hidden;
-    background-image: url('../resources/TexturePattern.jpg');
+    background-image: url('../../../../../public/TexturePattern.jpg');
     background-blend-mode:color-burn;
 }
 
@@ -79,7 +80,6 @@
     color: black;
     height: 2.49vw;
     width: 8.32vw;
-    background-color: #39A27A;
     border-radius: 10vw;
     border: none;
     opacity: 0.8;
@@ -124,6 +124,7 @@
     height: 4vw;
     height: 4vw;
     display: none;
+    fill: white;
 }
 
 @media screen and (orientation: portrait){
@@ -153,7 +154,7 @@
         align-items: center;
         z-index: 300000;
         overflow: hidden;
-        background-image: url('../resources/TexturePattern.jpg');
+        background-image: url('../../../../../public/TexturePattern.jpg');
         background-blend-mode:color-burn;
     }
 
@@ -215,7 +216,7 @@
         0%{
             color: transparent;
         }
-        50%{
+        80%{
             color: transparent;  
         }
         100%{

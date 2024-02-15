@@ -20,6 +20,15 @@
     height: 2vh;
   }
 
+  .modules{
+    height: 8vw;
+  }
+  
+  .wide_para{
+    width: 40vw;
+    border: 1px solid red;
+  }
+
   .magnifying_glass{
     height: 4vw;
     width: 4vw;
@@ -30,10 +39,15 @@
     height: 5vw;
     width: 5vw;
     top: -1vw;
-    right: 1vw;
   }
 
   .small_box{
     right: 0.8vw;
+  }
+}
+
+@media screen and (max-width: 1500px) and (min-width: 1000px){
+  .list_container{
+    top: 13.5vh !important;
   }
 }

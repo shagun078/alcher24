@@ -3,12 +3,8 @@
 import React, { Suspense, useRef, useState, useEffect } from "react";
 import {
   useGLTF,
-  useVideoTexture,
   useTexture,
-  Html,
-  Text,
 } from "@react-three/drei";
-import url from "../../../public/video.mp4";
 import "../home/homepage.css";
 import * as THREE from "three";
 
@@ -46,30 +42,44 @@ export default function RoomScene(props) {
 
   const calculateTimeRemaining = () => {
     const currentDate = new Date();
-    const targetDate = new Date("2024-03-7"); // Replace with your target date
+    const targetDate = new Date("2024-03-07"); // Replace with your target date
     const timeDifference = targetDate.getTime() - currentDate.getTime();
 
     // Calculate days remaining
     const daysRemaining = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+    if (daysRemaining < 0) {
+      return "Website is live";
+    }
 
     return [daysRemaining];
   };
 
   const [daysRemaining] = useState(calculateTimeRemaining());
-  console.log(daysRemaining[0]); // Array containing the number of days remaining
 
-  const [video] = useState(() => {
-    const vid = document.createElement("video");
-    vid.src = url;
-    vid.crossOrigin = "Anonymous";
-    vid.loop = true;
-    vid.muted = true;
-    vid.type = "video/mp4" / vid.play();
-    console.log(vid);
-    return vid;
-  });
-  const laptopScreen = useTexture("alcher.png");
+  // const [video] = useState(() => {
+  //   const vid = document.createElement("video");
+  //   vid.src = url;
+  //   vid.crossOrigin = "Anonymous";
+  //   vid.loop = true;
+  //   vid.muted = true;
+  //   vid.type = "video/mp4" / vid.play();
+  //   return vid;
+  // });
+  const tab = useTexture("tab.jpg");
+  const laptopScreen = useTexture("alcher.jpg");
   const mobileScreen = useTexture("qr.png");
+  const ClockScreen = useTexture("clock_svg/days.svg");
+  const t_0 = useTexture("clock_svg/0.svg");
+  const t_1 = useTexture("clock_svg/1.svg");
+  const t_2 = useTexture("clock_svg/2.svg");
+  const t_3 = useTexture("clock_svg/3.svg");
+  const t_4 = useTexture("clock_svg/4.svg");
+  const t_5 = useTexture("clock_svg/5.svg");
+  const t_6 = useTexture("clock_svg/6.svg");
+  const t_7 = useTexture("clock_svg/7.svg");
+  const t_8 = useTexture("clock_svg/8.svg");
+  const t_9 = useTexture("clock_svg/9.svg");
+  const ctext = [t_0, t_1, t_2, t_3, t_4, t_5, t_6, t_7, t_8, t_9];
 
   return (
     <group {...props} ref={rotateRef} dispose={null}>
@@ -315,9 +325,9 @@ export default function RoomScene(props) {
           scale={[0.3, 0.3, 0.3]}
         >
           <planeGeometry args={[3.2, 1.9]} />
-          <meshStandardMaterial emissive={"white"} side={THREE.DoubleSide}>
-            <videoTexture attach="map" args={[video]} />
-            <videoTexture attach="emissiveMap" args={[video]} />
+          <meshStandardMaterial side={THREE.DoubleSide} map={tab}>
+            {/* <videoTexture attach="map" args={[video]} />
+            <videoTexture attach="emissiveMap" args={[video]} /> */}
           </meshStandardMaterial>
         </mesh>
         <mesh
@@ -354,8 +364,8 @@ export default function RoomScene(props) {
           rotation={[0, -0.903, -1.295]}
         />
         <mesh
-          position={[-4.755, 1.008, -3.197]}
-          rotation={[-0.3, 0.53, 0.17]}
+          position={[-4.754, 1.008, -3.197]}
+          rotation={[-0.3, 0.58, 0.17]}
           scale={[0.03, 0.12, 0.1]}
         >
           <planeGeometry args={[3.2, 1.9]} />
@@ -383,19 +393,28 @@ export default function RoomScene(props) {
           <planeGeometry args={[3.588, 1.82]} />
           <meshStandardMaterial side={THREE.DoubleSide} color={"black"} />
         </mesh>
-        <Html
-          position={[-5.49, 0.95, -1.35]}
-          className="clock_div"
-          rotation={[0,1.3,0]}
-          transform
-          // style={{ position: "relative" }}
-          anchorX="center"
+        <mesh
+          position={[-5.43, 0.924, -1.2]}
+          rotation={[0, 1.2925, 0]}
+          scale={[0.101, 0.1, 0.1]}
         >
-          <div className="clock_font" rotation={[0,0.4,0]}>
-           <div id='days_to_go'><p id="s1"><span id='time'>{daysRemaining}</span> Days </p></div> 
-            <p id="s2">to go</p>
-          </div>
-        </Html>
+          <planeGeometry args={[0.6, 1]} />
+          <meshStandardMaterial
+            side={THREE.DoubleSide}
+            map={daysRemaining[0] <= 9 ? ctext[0] : ctext[Number(daysRemaining[0].toString()[0])]}
+          />
+        </mesh>
+        <mesh
+          position={[-5.4, 0.925, -1.28]}
+          rotation={[0, 1.2925, 0]}
+          scale={[0.101, 0.1, 0.1]}
+        >
+          <planeGeometry args={[0.6, 1]} />
+          <meshStandardMaterial
+            side={THREE.DoubleSide}
+            map={daysRemaining[0] <= 9 ? ctext[Number(daysRemaining[0].toString()[0])] : ctext[Number(daysRemaining[0].toString()[1])]}
+          />
+        </mesh>
       </group>
     </group>
   );

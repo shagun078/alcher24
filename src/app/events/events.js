@@ -4,8 +4,6 @@ import React, { useRef, useState, useEffect, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import TWEEN from "@tweenjs/tween.js";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Museumfinal } from "../components/Museum10Feb";
 //import { Museum1 } from "../components/Museum";
 //import Loadingpage from "../components/loading/loading";
@@ -24,14 +22,14 @@ import { motion } from "framer-motion";
 import hand_upper from "./resources/hand_upper.png";
 import hand_lower from "./resources/hand_lower.png";
 import down_arrow from "./resources/down.png";
-import Loading from "../components/loading/loading"
+import coming_soon from "./resources/coming_soon_card.png";
+// import ring from "../../../public/ring.png";
+import Loading from "../components/loading/loading";
 
 import "./events_2d.css";
 
 //components
 import { Cardleft, Cardright } from "./components/card";
-
-
 
 const marks = [
   {
@@ -176,23 +174,22 @@ function Tween() {
 }
 
 function Events() {
-   
-    const [showSplash, setShowSplash] = useState(true);
+  const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
-    if (document.readyState !== 'complete') {
+    if (document.readyState !== "complete") {
       const handler = () => {
-        console.log('load');
+        console.log("load");
         setShowSplash(false);
       };
-      window.addEventListener('load', handler);
+      window.addEventListener("load", handler);
 
       return () => {
-        window.removeEventListener('load', handler);
+        window.removeEventListener("load", handler);
       };
     } else {
       const timeout = window.setTimeout(() => {
-        console.log('timeout');
+        console.log("timeout");
         setShowSplash(false);
       }, 0);
       return () => window.clearTimeout(timeout);
@@ -204,12 +201,15 @@ function Events() {
   const [title2, setTitle2] = useState(list.head.data.title2);
   const [currPage, setCurrpage] = useState(list.head.data.currPage);
   const [isClick, setClick] = useState(false);
-  const [eventStyle, setEventStyle] = useState({ opacity: 1 });
+  const [eventStyle, setEventStyle] = useState({ display: "block" });
   const [boxStyle, setBoxStyle] = useState({ opacity: 0 });
   const [currStyle, setCurrStyle] = useState({ opacity: 0 });
-  const [bgcolor, setbgcolor] = useState({ backgroundColor: "#181818" });
+  const [bgcolor, setbgcolor] = useState({ backgroundColor: "#141414" });
+  
+  // const [display, setDisplay] = useState("block");
   const controls = useRef();
   const camera = useRef();
+  const ambientLight=useRef();
   let [now, setNow] = useState(list.head);
 
   const forward = () => {
@@ -299,13 +299,13 @@ function Events() {
       opacity: 1,
     });
     setEventStyle({
-      opacity: 0,
+      display: "none",
     });
     const targetX = 0;
     const targetY = 2;
     const targetZ = 0;
-
     const camZ = -10;
+ 
     new TWEEN.Tween(controls.current.target)
       .to(
         {
@@ -313,28 +313,37 @@ function Events() {
           y: targetY,
           z: targetZ,
         },
-        3000
+        5000
       )
       .easing(TWEEN.Easing.Cubic.Out)
       .start();
-
+    
     new TWEEN.Tween(camera.current.position)
       .to(
         {
           z: camZ,
         },
-        3000
+        5000
       )
       .easing(TWEEN.Easing.Cubic.Out)
       .start();
+
+       console.log(ambientLight);
+      new TWEEN.Tween(ambientLight.current)
+      
+      .to({
+        intensity:3,
+      },8000)
+      .easing(TWEEN.Easing.Cubic.Out)
+      .start();  
   };
 
   const buttons = (
     <React.Fragment>
-    <Head>
+      <Head>
         <title>Events | Alcheringa</title>
-    </Head>
-      <div className="event_box">
+      </Head>
+      <div className="event_box" style={{ zIndex: "5" }}>
         <span
           className={`fade-in ${isAnimating ? "animating" : ""}`}
           id="museum_events_name"
@@ -359,7 +368,7 @@ function Events() {
           onClick={() => {
             backward();
           }}>
-            <FontAwesomeIcon icon={faArrowLeft} className="backward-svg" />
+            <img src='leftArrow.svg' className="backward-svg" />
             <button
               className="btn btn-backward"
               
@@ -383,20 +392,19 @@ function Events() {
         </div>
 
         <div className="responsive_btn_box">
-          <span className="forward-container"
-          onClick={() => {
-            forward();
-          }}>
-            <button
-              className="btn btn-forward"
-              
-            >
+          <span
+            className="forward-container"
+            onClick={() => {
+              forward();
+            }}
+          >
+            <button className="btn btn-forward">
               <span className={`fade-in ${isAnimating ? "animating" : ""}`}>
                 {title1}
               </span>
             </button>
 
-            <FontAwesomeIcon icon={faArrowRight} className="forward-svg" />
+            <img src='rightArrow.svg' className="forward-svg" />
           </span>
         </div>
       </div>
@@ -406,8 +414,7 @@ function Events() {
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState("PRONITES");
 
-  return (
-    !showSplash?(
+  return !showSplash ? (
     <>
       <Navbar reg_bg={"register reg_bg1"} />
       <div className="wrapper">
@@ -420,12 +427,78 @@ function Events() {
             enableRotate={false}
             target={[0, 2, 0]}
           />
-          <ambientLight intensity={3} />
+          <ambientLight  intensity={0} ref={ambientLight}/>
           <Museumfinal />
           <Tween />
         </Canvas>
         {
           <div id="ui" style={bgcolor}>
+            {
+              <>
+                <motion.img
+                  src="/ring2.png"
+                  alt="adjl"
+                  className="rings_event"
+                  initial={{
+                    animationDuration: isClick ? "10s" : "30s",
+                    // opacity: 1,
+                  }}
+                  animate={{
+                    animationDuration: isClick ? "10s" : "30s",
+                    opacity: isClick ? 0 : 1,
+                  }}
+                  transition={{ duration: 3 }}
+                  style={{
+                    width: "85vw",
+                    height: "85vw",
+                    zIndex: "1",
+                    pointerEvents: "none",
+                  }}
+                />
+                <motion.img
+                  src="/ring2.png"
+                  alt="adjl"
+                  className="rings_event"
+                  initial={{
+                    animationDuration: isClick ? "10s" : "30s",
+                    // opacity: 1,
+                  }}
+                  animate={{
+                    animationDuration: isClick ? "10s" : "30s",
+                    opacity: isClick ? 0 : 1,
+                    // opacity: 0,
+                  }}
+                  transition={{ duration: 3 }}
+                  style={{
+                    width: "52vw",
+                    height: "52vw",
+                    zIndex: "1",
+                    pointerEvents: "none",
+                  }}
+                />
+                <motion.img
+                  src="/ring2.png"
+                  alt="adjl"
+                  className="rings_event"
+                  initial={{
+                    animationDuration: isClick ? "10s" : "30s",
+                    // opacity: 1,
+                  }}
+                  animate={{
+                    animationDuration: isClick ? "10s" : "30s",
+                    opacity: isClick ? 0 : 1,
+                    // opacity: 0,
+                  }}
+                  transition={{ duration: 3 }}
+                  style={{
+                    width: "140vw",
+                    height: "140vw",
+                    zIndex: "1",
+                    pointerEvents: "none",
+                  }}
+                />
+              </>
+            }
             {buttons}
           </div>
         }
@@ -547,14 +620,25 @@ function Events() {
                 </ul>
               </motion.div>
 
-              <p>Welcome to Alcheringa!! We are loading up.please wait..</p>
+              {/* <p>Welcome to Alcheringa!! We are loading up.please wait..</p> */}
             </div>
-            <Cardleft />
+            <div className="image-wrapper">
+              <Image
+                src={coming_soon}
+                alt="lower hand"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                }}
+                quality={100}
+                // placeholder="blur"
+              />
+            </div>
+            {/* <Cardleft />
             <Cardright />
             <Cardleft />
-            <Cardright />
+            <Cardright /> */}
           </section>
-          <div className="temp-gap"></div>
         </main>
         <motion.div
           className="blur-events"
@@ -572,7 +656,9 @@ function Events() {
         circle_src2={circle2}
         windows_src={windows1}
       />
-    </>):<Loading/>
+    </>
+  ) : (
+    <Loading />
   );
 }
 
