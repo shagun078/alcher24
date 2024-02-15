@@ -17,12 +17,6 @@ const Navbar = ( reg_bg ) => {
 
     var [state, setState] = useState(false);
 
-    window.addEventListener("scroll",()=>{
-        if(state == true){
-            setState(false);
-        }
-    });
-
     const handleClick = () => {
         setState(state => !state);
     }
