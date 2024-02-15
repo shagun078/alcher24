@@ -153,6 +153,7 @@
     display: block;
     align-items: center;
     border-radius: 0.55vw;
+    display: none;
 }
 
 .list_active {
