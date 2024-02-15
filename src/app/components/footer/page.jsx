@@ -63,7 +63,10 @@ const Footer = ({ bg, star, circle_src1, circle_src2, windows_src, alcheringa_lo
                 <div className="windows_box">
                     <div className="crop_container">
                         <div className="crop_box">
-                            <Image className="windows_img" src={windows_src} alt="" />
+                            <Image className="windows_img"
+                                src={windows_src}
+                                alt=""
+                            />
                         </div>
                     </div>
                     <div className="complex_grid">
@@ -72,7 +75,13 @@ const Footer = ({ bg, star, circle_src1, circle_src2, windows_src, alcheringa_lo
                         <div id="spark2" className={star}></div>
                         <div className="blank_box"></div>
                         <div id="spark3" className={star}></div>
-                        <Image className="alcheringa" src={alcheringa_logo} alt="" />
+                        <Image
+                            className="alcheringa"
+                            src={alcheringa_logo}
+                            alt="Hail Alcher"
+                            height={500}
+                            width={500}
+                        />
                         <div id="spark5" className={star}></div>
                         <div className="blank_box"></div>
                         <div id="spark6" className={star}></div>

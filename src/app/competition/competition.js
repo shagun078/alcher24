@@ -12,7 +12,6 @@ import circle1 from "/public/footer_img/competition_left_circle.png";
 import circle2 from "/public/footer_img/competition_right_circle.png";
 import windows1 from "/public/footer_img/Competitions-min.png";
 import alcheringa from "/public/footer_img/competiton_alcheringa.png";
-import { events } from "@react-three/fiber";
 
 function Body() {
   const [state, setState] = useState(false);
