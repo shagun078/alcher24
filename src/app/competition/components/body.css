@@ -19,9 +19,8 @@
     min-height: 89.11vw;
     width: 100vw;
     background-image: url('../resources/bg_c-min.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-repeat: repeat-y;
+    background-size: contain;
     display: flex;
     flex-direction: column;
 }
@@ -231,7 +230,7 @@
 }
 
 .item_box {
-    min-height: 69.12vw;
+    height: auto;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -268,32 +267,34 @@
 }
 
 .item_container {
-    min-height: 63.96vw;
+    height:auto;
     width: 86.12vw;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(all,1fr);
+    grid-template-rows: repeat(all,26.38vw);
+    border: 0.5px solid red;
 }
 
 .icon{
-    height: 30.48vw;
+    height: 100%;
     width: 26.875vw;
-    margin: 1vw;
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items:center;
     z-index: 5;
+    border: 1px solid red;
 }
 
 .icon_ke_andar{
+    height: auto;
     width: 100%;
 }
 
 .iconsIMG{
     height: 100%;
-    width: 26.875vw;
+    width: 100%;
 }
 
 .icon_text{

@@ -4,7 +4,6 @@ import "./components/mobile_body.css";
 import { useState } from "react";
 import React from "react";
 import info from "./components/data.js";
-import titledata from "./components/title.js";
 import Image from "next/image";
 import Navbar from "../components/navbar/page";
 import Footer from "../components/footer/page";
@@ -19,6 +18,7 @@ function Body() {
   const [value, setValue] = useState("");
 
   const [title, setTitle] = useState([{ category: "All Competitions", id: 100 }]);
+
   const [title2, setTitle2] = useState([{ category: "Modules", id: 101 }]);
 
   const [array, setArray] = useState(info);
@@ -31,6 +31,9 @@ function Body() {
     setValue(event.target.value);
     const keyword = event.target.value;
 
+    setTitle([{ category: "Search Results:", id: 105 }]);
+    setTitle2([{ category: "Modules", id: 101 }]);
+
     if (keyword !== "") {
       const result = info.filter((user) => {
         return (user.comp_name.toLowerCase().includes(keyword.toLowerCase()) || 
@@ -39,11 +42,6 @@ function Body() {
         user.one_liner.toLowerCase().includes(keyword.toLowerCase()));
       });
       setArray(result);
-
-      const result_2 = titledata.filter((user_2) => {
-        return user_2.category.toLowerCase().includes(keyword.toLowerCase());
-      })
-      setTitle(result_2.slice(0, 1));
     }
     else {
       setArray(info);

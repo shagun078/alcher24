@@ -145,7 +145,7 @@
     }
 
     .navbar_menu{
-        position: fixed;
+        position: absolute;
         width: 46.81vw;
         height: 71.24vw;
         top: 14vw;
