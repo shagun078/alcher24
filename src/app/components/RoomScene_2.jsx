@@ -59,7 +59,7 @@ export default function RoomScene(props) {
   };
 
   const [daysRemaining] = useState(calculateTimeRemaining());
-  console.log(daysRemaining[0]); // Array containing the number of days remaining
+  console.log(daysRemaining[0].toString()[0]); // Array containing the number of days remaining
 
   const [video] = useState(() => {
     const vid = document.createElement("video");
@@ -68,7 +68,6 @@ export default function RoomScene(props) {
     vid.loop = true;
     vid.muted = true;
     vid.type = "video/mp4" / vid.play();
-    console.log(vid);
     return vid;
   });
   const laptopScreen = useTexture("alcher.jpg");
@@ -84,6 +83,7 @@ export default function RoomScene(props) {
   const t_7 = useTexture("clock_svg/7.svg");
   const t_8 = useTexture("clock_svg/8.svg");
   const t_9 = useTexture("clock_svg/9.svg");
+  const ctext = [t_0, t_1, t_2, t_3, t_4, t_5, t_6, t_7, t_8, t_9];
 
   return (
     <group {...props} ref={rotateRef} dispose={null}>
@@ -405,7 +405,7 @@ export default function RoomScene(props) {
           <planeGeometry args={[1, 1]} />
           <meshStandardMaterial
             side={THREE.DoubleSide}
-            map={1 == 1 ? t_0 : t_2}
+            map={ctext[daysRemaining[0].toString()[0]]}
           />
         </mesh>
         <mesh
@@ -416,11 +416,9 @@ export default function RoomScene(props) {
           <planeGeometry args={[1, 1]} />
           <meshStandardMaterial
             side={THREE.DoubleSide}
-            // map={`t_${daysRemaining % 10}`}
-            map={t_2}
+            map={ctext[daysRemaining[0].toString()[1]]}
           />
         </mesh>
-        
       </group>
     </group>
   );
