@@ -153,6 +153,7 @@
     display: block;
     align-items: center;
     border-radius: 0.55vw;
+    display: none;
 }
 
 .list_active {
@@ -299,7 +300,10 @@
     color: white;
     font-size: 1.94vw;
     font-weight: 700;
-    text-align: center;
+}
+
+.pad_text_arr{
+    margin-top: 5vw;
 }
 
 .capital_prop_name{

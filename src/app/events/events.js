@@ -22,7 +22,8 @@ import { motion } from "framer-motion";
 import hand_upper from "./resources/hand_upper.png";
 import hand_lower from "./resources/hand_lower.png";
 import down_arrow from "./resources/down.png";
-import coming_soon from "./resources/coming_soon_card.png"; 
+import coming_soon from "./resources/coming_soon_card.png";
+// import ring from "../../../public/ring.png";
 import Loading from "../components/loading/loading";
 
 import "./events_2d.css";
@@ -203,7 +204,8 @@ function Events() {
   const [eventStyle, setEventStyle] = useState({ display: "block" });
   const [boxStyle, setBoxStyle] = useState({ opacity: 0 });
   const [currStyle, setCurrStyle] = useState({ opacity: 0 });
-  const [bgcolor, setbgcolor] = useState({ backgroundColor: "#181818" });
+  const [bgcolor, setbgcolor] = useState({ backgroundColor: "#141414" });
+  // const [display, setDisplay] = useState("block");
   const controls = useRef();
   const camera = useRef();
   let [now, setNow] = useState(list.head);
@@ -309,7 +311,7 @@ function Events() {
           y: targetY,
           z: targetZ,
         },
-        3000
+        5000
       )
       .easing(TWEEN.Easing.Cubic.Out)
       .start();
@@ -319,7 +321,7 @@ function Events() {
         {
           z: camZ,
         },
-        3000
+        5000
       )
       .easing(TWEEN.Easing.Cubic.Out)
       .start();
@@ -330,7 +332,7 @@ function Events() {
       <Head>
         <title>Events | Alcheringa</title>
       </Head>
-      <div className="event_box">
+      <div className="event_box" style={{ zIndex: "5" }}>
         <span
           className={`fade-in ${isAnimating ? "animating" : ""}`}
           id="museum_events_name"
@@ -420,6 +422,69 @@ function Events() {
         </Canvas>
         {
           <div id="ui" style={bgcolor}>
+            {
+              <>
+                <motion.img
+                  src="/ring2.png"
+                  alt="adjl"
+                  initial={{
+                    animationDuration: isClick ? "10s" : "30s",
+                    // opacity: 1,
+                  }}
+                  animate={{
+                    animationDuration: isClick ? "10s" : "30s",
+                    opacity: isClick ? 0 : 1,
+                  }}
+                  transition={{ duration: 3 }}
+                  style={{
+                    width: "85vw",
+                    height: "85vw",
+                    zIndex: "1",
+                    pointerEvents: "none",
+                  }}
+                />
+                <motion.img
+                  src="/ring2.png"
+                  alt="adjl"
+                  initial={{
+                    animationDuration: isClick ? "10s" : "30s",
+                    // opacity: 1,
+                  }}
+                  animate={{
+                    animationDuration: isClick ? "10s" : "30s",
+                    opacity: isClick ? 0 : 1,
+                    // opacity: 0,
+                  }}
+                  transition={{ duration: 3 }}
+                  style={{
+                    width: "52vw",
+                    height: "52vw",
+                    zIndex: "1",
+                    pointerEvents: "none",
+                  }}
+                />
+                <motion.img
+                  src="/ring2.png"
+                  alt="adjl"
+                  initial={{
+                    animationDuration: isClick ? "10s" : "30s",
+                    // opacity: 1,
+                  }}
+                  animate={{
+                    animationDuration: isClick ? "10s" : "30s",
+                    opacity: isClick ? 0 : 1,
+                    // opacity: 0,
+                  }}
+                  transition={{ duration: 3 }}
+                  style={{
+                    width: "140vw",
+                    height: "140vw",
+                    zIndex: "1",
+                    pointerEvents: "none",
+                  }}
+                />
+              </>
+            }
             {buttons}
           </div>
         }

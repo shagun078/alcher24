@@ -51,7 +51,7 @@ export default function RoomScene(props) {
 
     // Calculate days remaining
     const daysRemaining = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
-    if(daysRemaining<0){
+    if (daysRemaining < 0) {
       return "Website is live";
     }
 
@@ -59,7 +59,7 @@ export default function RoomScene(props) {
   };
 
   const [daysRemaining] = useState(calculateTimeRemaining());
-  console.log(daysRemaining[0]); // Array containing the number of days remaining
+  console.log(daysRemaining[0].toString()[0]); // Array containing the number of days remaining
 
   const [video] = useState(() => {
     const vid = document.createElement("video");
@@ -68,12 +68,22 @@ export default function RoomScene(props) {
     vid.loop = true;
     vid.muted = true;
     vid.type = "video/mp4" / vid.play();
-    console.log(vid);
     return vid;
   });
   const laptopScreen = useTexture("alcher.jpg");
   const mobileScreen = useTexture("qr.png");
-  
+  const ClockScreen = useTexture("clock_svg/days.svg");
+  const t_0 = useTexture("clock_svg/0.svg");
+  const t_1 = useTexture("clock_svg/1.svg");
+  const t_2 = useTexture("clock_svg/2.svg");
+  const t_3 = useTexture("clock_svg/3.svg");
+  const t_4 = useTexture("clock_svg/4.svg");
+  const t_5 = useTexture("clock_svg/5.svg");
+  const t_6 = useTexture("clock_svg/6.svg");
+  const t_7 = useTexture("clock_svg/7.svg");
+  const t_8 = useTexture("clock_svg/8.svg");
+  const t_9 = useTexture("clock_svg/9.svg");
+  const ctext = [t_0, t_1, t_2, t_3, t_4, t_5, t_6, t_7, t_8, t_9];
 
   return (
     <group {...props} ref={rotateRef} dispose={null}>
@@ -379,30 +389,36 @@ export default function RoomScene(props) {
           rotation={[0, -0.279, 0]}
         />
 
-        <mesh 
+        <mesh
           position={[-5.4, 0.916, -1.312]}
           rotation={[0, 1.2925, 0]}
           scale={[0.101, 0.1, 0.1]}
         >
           <planeGeometry args={[3.588, 1.82]} />
           <meshStandardMaterial side={THREE.DoubleSide} color={"black"} />
-          <Html
-          position={[0, 0.916, 0]}
-          className="clock_div"
-          rotation={[0,0,0]}
-          transform={true}
-          occulde='blending'
-          // style={{ position: "relative" }}
-          anchorX="center"
-        >
-        {daysRemaining>=0?(
-          <div className="clock_font" >
-           <div id='days_to_go'>
-           <p id="s1">{daysRemaining}</p></div> 
-          </div>):<p id='s3'>{daysRemaining}</p>}
-        </Html>
         </mesh>
-        
+        <mesh
+          position={[-5.42, 0.924, -1.24]}
+          rotation={[0, 1.2925, 0]}
+          scale={[0.101, 0.1, 0.1]}
+        >
+          <planeGeometry args={[1, 1]} />
+          <meshStandardMaterial
+            side={THREE.DoubleSide}
+            map={ctext[daysRemaining[0].toString()[0]]}
+          />
+        </mesh>
+        <mesh
+          position={[-5.39, 0.922, -1.342]}
+          rotation={[0, 1.2925, 0]}
+          scale={[0.101, 0.1, 0.1]}
+        >
+          <planeGeometry args={[1, 1]} />
+          <meshStandardMaterial
+            side={THREE.DoubleSide}
+            map={ctext[daysRemaining[0].toString()[1]]}
+          />
+        </mesh>
       </group>
     </group>
   );
