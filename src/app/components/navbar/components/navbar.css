@@ -1,24 +1,9 @@
 
 
 @font-face {
-    font-family: 'Uncut sans';
-    src: url("/Uncut-Sans-Bold.otf") format('truetype');
-}
-
-@font-face {
-    font-family: 'Futara PT';
-    src: url("/FuturaPTLight.otf") format('truetype');
-}
-
-@font-face {
-    font-family: 'Uncut sans medium';
-    src: url("/Uncut-Sans-Medium.otf") format('truetype');
-}
-
-@font-face {
-    font-family: 'Uncut sans regular';
-    src: url("/Uncut-Sans-Regular.otf") format('truetype');
-}
+    font-family: 'FontSpringText';
+    src:url('../../../../../public/Vacation-Heavy.ttf')
+  }
 
 :root{
     --color1: black !important;
@@ -35,14 +20,20 @@
     overflow: hidden;
     background-image: url('../../../../../public/TexturePattern.jpg');
     background-blend-mode:color-burn;
+    z-index: 30000;
 }
 
 .logo{
-    height: 1.77vw;
-    width: 11.56vw;
+    height:fit-content;
+    width: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.logo a{
+    font-family:FontSpringText;
+    font-size: 2vw;
 }
 
 .navbar_menu{
@@ -61,7 +52,7 @@
 }
 
 .navbar_menu ul li{
-    font-family: 'Futara PT';
+    font-family: 'FontSpringText';
     font-weight: 700;
     font-size: 1.31vw;
     height: 2.62vw;
@@ -143,7 +134,7 @@
     }
 
     .navbar_menu{
-        position: absolute;
+        position: fixed;
         width: 46.81vw;
         height: 71.24vw;
         top: 14vw;
@@ -266,6 +257,10 @@
     .logo{
        height: 5.73vw;
        width: 40.96vw;
+    }
+
+    .logo a{
+        font-size: 6vw;
     }
     
 }
