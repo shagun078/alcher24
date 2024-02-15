@@ -35,6 +35,7 @@
     overflow: hidden;
     background-image: url('../../../../../public/TexturePattern.jpg');
     background-blend-mode:color-burn;
+    z-index: 30000;
 }
 
 .logo{
@@ -143,7 +144,7 @@
     }
 
     .navbar_menu{
-        position: absolute;
+        position: fixed;
         width: 46.81vw;
         height: 71.24vw;
         top: 14vw;

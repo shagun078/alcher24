@@ -10,7 +10,7 @@ import { useRouter } from 'next/navigation';
 import { usePathname } from 'next/navigation';
 
 
-const Navbar = ( reg_bg ) => {
+const Navbar = ( {reg_bg} ) => {
 
     const router = useRouter();
     const path = usePathname();

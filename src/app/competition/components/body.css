@@ -13,14 +13,12 @@
 }
 
 .body {
-    margin: 0;
-    padding: 0;
     position: relative;
     min-height: 89.11vw;
     width: 100vw;
     background-image: url('../resources/bg_c-min.png');
     background-repeat: repeat-y;
-    background-size: contain;
+    background-size: 100% ;
     display: flex;
     flex-direction: column;
 }
@@ -271,29 +269,20 @@
     width: 86.12vw;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(all,26.38vw);
-    border: 0.5px solid red;
+    grid-gap: 2vw;
 }
 
 .icon{
     height: 100%;
-    width: 26.875vw;
-    color: white;
+    width: 100%;
+    z-index: 5;
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    align-items:center;
-    z-index: 5;
-    border: 1px solid red;
-}
-
-.icon_ke_andar{
-    height: auto;
-    width: 100%;
+    justify-content: end;
 }
 
 .iconsIMG{
-    height: 100%;
+    height: auto;
     width: 100%;
 }
 
@@ -304,8 +293,8 @@
     font-weight: 700;
 }
 
-.pad_text_arr{
-    margin-top: 5vw;
+.margin_top_text{
+    margin-top: 1vw;
 }
 
 .capital_prop_name{
