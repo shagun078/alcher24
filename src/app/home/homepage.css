@@ -30,35 +30,34 @@ body,
   src: url("../../../public/Orbitron-Black.ttf");
 }
 
-.clock_div{
-  width:15px;
-  height:8px;
+.clock_div {
+  width: 15px;
+  height: 8px;
   position: relative;
 }
 
-.clock_font{
+.clock_font {
   position: absolute !important;
-  top:20% !important; 
-  width:100%;
-  height:100%;
+  top: 20% !important;
+  width: 100%;
+  height: 100%;
   line-height: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-
 }
 
-#days_to_go{
+#days_to_go {
   display: flex;
   flex-direction: column;
 }
 
-#s1{
+#s1 {
   font-size: 25px;
 }
 
-#s2{
+#s2 {
   font-size: 25px;
 }
 
@@ -154,9 +153,6 @@ body,
   height: 100%;
   padding: 1rem;
 }
-.title-home{
-  text-align: center;
-}
 .blur-home p {
   display: flex;
   align-items: center;
@@ -168,7 +164,30 @@ body,
   display: flex;
   gap: 10px;
   justify-content: center;
+  text-align: center;
   align-items: center;
+  background-image: linear-gradient(90deg, #F22C5B 0%, #FF8835 17.5%, #9CCD5D 34.5%, #3083EA 51%, #B357B6 67%, #39A27A 83.5%, #FA5045 100%);
+  background-repeat: repeat;
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shift 3s linear infinite;
+  animation-delay: 2s;
+}
+@keyframes shift {
+  20% {
+    background-position: 0% 0%;
+  }
+  70% {
+    background-position: 100% 100%;
+  }
+  90% {
+    background-position: 0% 0%;
+  }
+}
+.title-home svg {
+  color: linear-gradient(90deg, #f2ac2c, #ff8835, #9ccd5d, #3083ea);
 }
 @font-face {
   font-family: "basicHeading";
@@ -221,7 +240,7 @@ iframe {
   text-align: center;
   font-weight: 700;
 }
-.flex-container{
+.flex-container {
   display: flex;
   height: min-content;
   position: absolute;
@@ -459,6 +478,7 @@ iframe {
   position: relative;
   margin-top: 6rem;
   display: flex;
+
 }
 #upperHand {
   position: absolute;
@@ -484,8 +504,8 @@ iframe {
   position: relative;
 }
 .home_alcher_app_container {
-  width: 100%;
-  height: 100%;
+  width: 87%;
+  height: 87%;
   position: relative;
 }
 .home_alcher_app_container > img {
@@ -494,7 +514,7 @@ iframe {
   top: 18vh;
   width: 100%;
   height: 100%;
-  transform: scale(0.85);
+  transform: scale(1);
 }
 
 #text_home {
@@ -768,6 +788,7 @@ iframe {
   .getAppSection {
     height: 40%;
   }
+  
   .home_alcher_app_container > img {
     top: 10vh;
   }
@@ -809,4 +830,32 @@ iframe {
     width: 34%;
     height: 93%;
   }
+}
+
+.x-A{
+  translate: -47%;
+}
+.x-B{
+  translate: -47%;
+}
+.x-C{
+  translate: -47%;
+}
+.x-D{
+  translate: -41%;
+}
+.x-E{
+  translate: -47%;
+}
+.x-F{
+  translate: -45%;
+}
+.x-G{
+  translate: -48%;
+}
+.x-H{
+  translate: -47%;
+}
+.x-I{
+  translate: -45%;
 }

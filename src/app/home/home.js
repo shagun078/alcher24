@@ -21,7 +21,6 @@ import merch from "./resources/home_merch.png";
 import Link from "next/link";
 import Loading from "../components/loading/loading";
 
-
 const marks = [
   {
     key: "A",
@@ -62,13 +61,13 @@ const marks = [
     description:
       "Download our app and visit our website get access to amazing features like E-Alcher passes, Schedule, Campus maps, Real-Time updates and much more.",
     camPos: {
-      x: -4.2,
-      y: 1.2,
-      z: -2.5,
+      x: -4.65,
+      y: 1,
+      z: -2.95,
     },
     lookAt: {
       x: -6,
-      y: -0.2,
+      y: 0.8,
       z: -4.5,
     },
     pos: {
@@ -89,9 +88,10 @@ const marks = [
   },
   {
     key: "C",
-    title: "THEME VIDEO",
+    title: "THEME",
     link: "",
-    description: "Our this year's theme, Chromatic Elysium",
+    description:
+      "The theme for Alcheringa 24 tells the story of a young girl who is facing a art block in a monotonous world, travels to a art exhibit in a museum. There a weird painting attracts her attention, when she proceeds to touch in she is sucked into a Psychedelic world where she sees paint splashes on the ground, following the splashes leads her to her painting brush and she remembers her joyous past and gets inspiration for a new masterpiece and with a swoosh of the painting returns to the real world but is full with inspiration and motivation to continue living forward.",
     camPos: {
       x: -4,
       y: 2,
@@ -465,13 +465,14 @@ function Annotations({ controls }) {
               )}
               {hovered && a.key === hoverKey && (
                 <motion.div
-                  className="title-hover-home"
+                  className={`title-hover-home x-${a.key}`}
                   initial={{ opacity: !hovered ? 1 : 0, y: -10 }}
                   animate={{ opacity: !hovered ? 0 : 1, y: 0 }}
                   transition={{ duration: 0.5 }}
                   style={{
                     color: "white",
                     fontSize: window.innerWidth > 840 ? "2vh" : "1vh",
+                    cursor: "pointer",
                   }}
                 >
                   {a.title}
@@ -525,31 +526,35 @@ function Annotations({ controls }) {
                           fontSize: window.innerWidth > 840 ? "4.7vh" : "3.5vh",
                         }}
                       >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="29"
-                          height="32"
-                          viewBox="0 0 29 32"
-                          fill="none"
-                        >
-                          <path
-                            d="M14.5 0.5L16.5506 13.808L29 16L16.5506 18.192L14.5 31.5L12.4494 18.192L0 16L12.4494 13.808L14.5 0.5Z"
-                            fill="white"
-                          />
-                        </svg>
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="29"
+                            height="32"
+                            viewBox="0 0 29 32"
+                            fill="none"
+                          >
+                            <path
+                              d="M14.5 0.5L16.5506 13.808L29 16L16.5506 18.192L14.5 31.5L12.4494 18.192L0 16L12.4494 13.808L14.5 0.5Z"
+                              fill="white"
+                            />
+                          </svg>
+                        </span>
                         <Link href={a.link}>{a.title}</Link>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="29"
-                          height="32"
-                          viewBox="0 0 29 32"
-                          fill="none"
-                        >
-                          <path
-                            d="M14.5 0.5L16.5506 13.808L29 16L16.5506 18.192L14.5 31.5L12.4494 18.192L0 16L12.4494 13.808L14.5 0.5Z"
-                            fill="white"
-                          />
-                        </svg>
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="29"
+                            height="32"
+                            viewBox="0 0 29 32"
+                            fill="none"
+                          >
+                            <path
+                              d="M14.5 0.5L16.5506 13.808L29 16L16.5506 18.192L14.5 31.5L12.4494 18.192L0 16L12.4494 13.808L14.5 0.5Z"
+                              fill="white"
+                            />
+                          </svg>
+                        </span>
                       </motion.div>
                       <motion.p
                         initial={{ opacity: 0 }}
@@ -618,9 +623,18 @@ export default function Home() {
   };
   const buttons = (
     <React.Fragment>
-    
-    <svg  className="content-btn" onClick={scrollToContent} xmlns="http://www.w3.org/2000/svg" width="40" height="40" style={{filter:"invert(1)"}} viewBox="0 0 24 24" ><path d="M16.939 10.939 12 15.879l-4.939-4.94-2.122 2.122L12 20.121l7.061-7.06z"></path><path d="M16.939 3.939 12 8.879l-4.939-4.94-2.122 2.122L12 13.121l7.061-7.06z"></path></svg>
-     
+      <svg
+        className="content-btn"
+        onClick={scrollToContent}
+        xmlns="http://www.w3.org/2000/svg"
+        width="40"
+        height="40"
+        style={{ filter: "invert(1)" }}
+        viewBox="0 0 24 24"
+      >
+        <path d="M16.939 10.939 12 15.879l-4.939-4.94-2.122 2.122L12 20.121l7.061-7.06z"></path>
+        <path d="M16.939 3.939 12 8.879l-4.939-4.94-2.122 2.122L12 13.121l7.061-7.06z"></path>
+      </svg>
     </React.Fragment>
   );
 
@@ -655,7 +669,7 @@ export default function Home() {
           <Canvas
             camera={{
               fov: 70,
-              position: [-2, 1.5, -2],
+              position: [-2, 1.5, -1],
               zoom: 1,
             }}
             shadows
@@ -762,13 +776,13 @@ export default function Home() {
                   <br /> much more.
                 </p>
                 <div id="appDownloadBtn">
-                  <img src="googlePlay.svg" className="googlePlayImage"></img>
+                  <img src="home_google_play.png" className="googlePlayImage"></img>
                 </div>
               </div>
             </div>
             <div className="imageWrapper">
               <div className="home_alcher_app_container">
-                <img src="mobileapp.png"></img>
+                <img src="home_mobile_app.png"></img>
               </div>
             </div>
           </div>
