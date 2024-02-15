@@ -124,10 +124,10 @@ button {
   cursor: pointer;
 }
 
-.backward-svg{
-  width:1.2rem;
-  color:white;
-  margin-right:0.7vw;
+.backward-svg {
+  width: 1.2rem;
+  color: white;
+  margin-right: 0.7vw;
 }
 .btn-backward {
   outline: none;
@@ -156,21 +156,21 @@ button {
   height: 40px;
   padding: 0 20px;
   border-radius: 1.2rem;
-  background-color: #FA5045;
- }
- 
- .forward-svg{
-  width:1.2rem;
-   color:white;
-   margin-left: 0.7vw;
- }
- .btn-forward{
-   outline:none;
-   border:none;
-   background: transparent;
-   color:white;
-   font-size: 1rem;
- }
+  background-color: #fa5045;
+}
+
+.forward-svg {
+  width: 1.2rem;
+  color: white;
+  margin-left: 0.7vw;
+}
+.btn-forward {
+  outline: none;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 1rem;
+}
 
 .back-to-home {
   cursor: pointer;
@@ -210,6 +210,11 @@ button {
   justify-content: center;
   width: 18%;
   height: fit-content;
+}
+
+.wrapper-2d {
+  height: max-content;
+  overflow: hidden;
 }
 
 @media screen and (orientation: landscape) {

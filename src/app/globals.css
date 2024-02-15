@@ -95,6 +95,9 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+p {
+  cursor: default;
+}
 
 a {
   color: inherit;
