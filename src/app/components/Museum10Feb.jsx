@@ -13,7 +13,7 @@ import url from "../../../public/video.mp4";
 
 
 export function Museumfinal(props) {
-  const texture=useTexture('models/BakedTexture (2).png');
+  const texture=useTexture('BakedTexture_Events.jpg');
   texture.flipY=false;
   texture.colorSpace=THREE.SRGBColorSpace;
   const textureMaterial=new THREE.MeshStandardMaterial({

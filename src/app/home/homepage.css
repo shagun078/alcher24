@@ -12,7 +12,7 @@ body,
 
 @font-face {
   font-family: sponsor_heading_text;
-  src: url(../../../public/Fontspring-DEMO-freigeist-conblack.woff2);
+  src: url("../../../public/Fontspring-DEMO-freigeist-conblack.woff2");
 }
 
 @font-face {
@@ -30,28 +30,36 @@ body,
   src: url("../../../public/Orbitron-Black.ttf");
 }
 
+.clock_div{
+  width:15px;
+  height:8px;
+  position: relative;
+}
 
 .clock_font{
-  width:fit-content;
-  height:max-content;
-  line-height: 4px;
+  position: absolute !important;
+  top:20% !important; 
+  width:100%;
+  height:100%;
+  line-height: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+}
+
+#days_to_go{
   display: flex;
   flex-direction: column;
 }
 
-
-#days_to_go{
-  display: flex;
+#s1{
+  font-size: 25px;
 }
 
-
-#time{
-  font-size: 0.21vw;
-}
-
-.clock_font p{
-  font-size: 0.15vw;
-  font-family: clockText;
+#s2{
+  font-size: 25px;
 }
 
 #info {
@@ -175,6 +183,7 @@ body,
   background-image: url("/TexturePattern.jpg");
   background-blend-mode: color-burn;
   background-color: #141414;
+  padding-bottom: 8vh;
 }
 
 .mainContainer {
@@ -449,7 +458,6 @@ iframe {
   height: 100vh;
   position: relative;
   margin-top: 6rem;
-  margin-bottom: 6rem;
   display: flex;
 }
 #upperHand {
@@ -561,6 +569,7 @@ iframe {
   border-radius: 2vw;
   border: 0;
   font-weight: 400;
+  cursor: pointer;
 }
 
 .alcher_merch_coming_soon {

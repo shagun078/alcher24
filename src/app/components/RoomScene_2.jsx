@@ -51,6 +51,9 @@ export default function RoomScene(props) {
 
     // Calculate days remaining
     const daysRemaining = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+    if(daysRemaining<0){
+      return "Website is live";
+    }
 
     return [daysRemaining];
   };
@@ -68,8 +71,9 @@ export default function RoomScene(props) {
     console.log(vid);
     return vid;
   });
-  const laptopScreen = useTexture("alcher.png");
+  const laptopScreen = useTexture("alcher.jpg");
   const mobileScreen = useTexture("qr.png");
+  
 
   return (
     <group {...props} ref={rotateRef} dispose={null}>
@@ -375,27 +379,30 @@ export default function RoomScene(props) {
           rotation={[0, -0.279, 0]}
         />
 
-        <mesh
+        <mesh 
           position={[-5.4, 0.916, -1.312]}
           rotation={[0, 1.2925, 0]}
           scale={[0.101, 0.1, 0.1]}
         >
           <planeGeometry args={[3.588, 1.82]} />
           <meshStandardMaterial side={THREE.DoubleSide} color={"black"} />
-        </mesh>
-        <Html
-          position={[-5.49, 0.95, -1.35]}
+          <Html
+          position={[0, 0.916, 0]}
           className="clock_div"
-          rotation={[0,1.3,0]}
-          transform
+          rotation={[0,0,0]}
+          transform={true}
+          occulde='blending'
           // style={{ position: "relative" }}
           anchorX="center"
         >
-          <div className="clock_font" rotation={[0,0.4,0]}>
-           <div id='days_to_go'><p id="s1"><span id='time'>{daysRemaining}</span> Days </p></div> 
-            <p id="s2">to go</p>
-          </div>
+        {daysRemaining>=0?(
+          <div className="clock_font" >
+           <div id='days_to_go'>
+           <p id="s1">{daysRemaining}</p></div> 
+          </div>):<p id='s3'>{daysRemaining}</p>}
         </Html>
+        </mesh>
+        
       </group>
     </group>
   );

@@ -32,7 +32,7 @@
     justify-content: space-around;
     align-items: center;
     overflow: hidden;
-    background-image: url('../resources/TexturePattern.jpg');
+    background-image: url('../../../../../public/TexturePattern.jpg');
     background-blend-mode:color-burn;
 }
 
@@ -103,6 +103,8 @@
     width: 11.56vw;
     display: flex;
     justify-content: center;
+
+    visibility: hidden;
 }
 
 .cred{
@@ -153,7 +155,11 @@
         align-items: center;
         z-index: 300000;
         overflow: hidden;
+<<<<<<< HEAD
         background-image: url("../resources/TexturePattern.jpg");
+=======
+        background-image: url('../../../../../public/TexturePattern.jpg');
+>>>>>>> d3de923ded525280d7fca17f700aa789fab0e1b7
         background-blend-mode:color-burn;
     }
 
