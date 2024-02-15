@@ -20,7 +20,7 @@ function getCards() {
       id: "lg",
       heading: "UDAAN",
       body: "Udaan, launched as 'Bachpan' in 2011, aims to deliver hope to underprivileged children and create an impact in their lives through the conduction of various educational workshops and recreational activities.",
-      img: "./UDAAN-min.jpg",
+      img: "./UDAAN.jpg",
     },
   ];
 
