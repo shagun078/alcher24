@@ -1,7 +1,7 @@
 const info = [{
     id: 1,
     category:"Dance",
-    img: '/creatort.png',
+    img: '/competition_img/Electric Heels-min.png',
     comp_name:"Electric Heels",
     type:"Group",
     one_liner:"Freestyle Dance Competition",
@@ -11,7 +11,7 @@ const info = [{
 {
     id: 2,
     category:"Dance",
-    img: '/creatort.png',
+    img: '/competition_img/StepUP-min.png',
     comp_name:"Step Up",
     type:"Group",
     one_liner:"Streetdance Competition",
@@ -21,7 +21,7 @@ const info = [{
 {
     id: 3,
     category:"Dance",
-    img: '/creatort.png',
+    img: '/competition_img/Navras-min.png',
     comp_name:"Navras",
     type:"Solo",
     one_liner:"Classical Dance Competition",
@@ -31,7 +31,7 @@ const info = [{
 {
     id: 4,
     category:"Dance",
-    img: '/creatort.png',
+    img: '/competition_img/SUTUCD-min.png',
     comp_name: "So You Think You Can Dance",
     type:"Solo",
     one_liner:"Non Classical Dance Competition",
@@ -41,7 +41,7 @@ const info = [{
 {
     id: 5,
     category:"Dance",
-    img: '/creatort.png',
+    img: '/competition_img/Duo-min.png',
     comp_name:"Dancing Duo",
     type:"Duet",
     one_liner:"Duet Dance Competition",
@@ -51,7 +51,7 @@ const info = [{
 {
     id: 7,
     category:"Vogue Nation",
-    img: '/creatort.png',
+    img: '/competition_img/Haute Couture-min.png',
     comp_name:"Haute Couture",
     type:"Group",
     one_liner:"Fashion Designing Competition",
@@ -61,7 +61,7 @@ const info = [{
 {
     id: 8,
     category:"Vogue Nation",
-    img: '/creatort.png',
+    img: '/competition_img/State of Dress-min.png',
     comp_name:"States of Dress",
     type:"Group",
     one_liner:"Paper Dress Designing Competition",
@@ -71,7 +71,7 @@ const info = [{
 {
     id: 9,
     category:"Vogue Nation",
-    img: '/creatort.png',
+    img: '/competition_img/Glamour Nova-min.png',
     comp_name:"Glamour Nova",
     type:"Group",
     one_liner:"Online Fashion Design and Photoshoot Competition",
@@ -81,7 +81,7 @@ const info = [{
 {
     id: 10,
     category:"Class Apart",
-    img: '/creatort.png',
+    img: '/competition_img/Rap Battle-min.png',
     comp_name:"Rap Battle",
     type:"Solo",
     one_liner:"Rap Competition",
@@ -91,7 +91,7 @@ const info = [{
 {
     id: 11,
     category:"Class Apart",
-    img: '/creatort.png',
+    img: '/competition_img/BeatBash-min.png',
     comp_name:"BeatBash",
     type:"Solo",
     one_liner:"Beat Boxing Competition",
@@ -101,7 +101,7 @@ const info = [{
 {
     id: 12,
     category:"Class Apart",
-    img: '/creatort.png',
+    img: '/competition_img/Rock-o-Phonix-min.png',
     comp_name:"Rock-o-phonix",
     type:"Group",
     one_liner:"Rock Band Competition",
@@ -111,7 +111,7 @@ const info = [{
 {
     id: 13,
     category:"Class Apart",
-    img: '/creatort.png',
+    img: '/competition_img/Mr. and Ms. Alcher-min.png',
     comp_name:"Mr & Ms Alcheringa",
     type:"Solo",
     one_liner:"Personality Contest",
@@ -121,7 +121,7 @@ const info = [{
 {
     id: 14,
     category:"Class Apart",
-    img: '/creatort.png',
+    img: '/competition_img/CrossFade-min.png',
     comp_name: "Crossfade",
     type:"Solo",
     one_liner:"DJ Competition",
@@ -131,7 +131,7 @@ const info = [{
 {
     id: 15,
     category:"Class Apart",
-    img: '/creatort.png',
+    img: '/competition_img/AlcherCon-min.png',
     comp_name:"Alcher Con",
     type:"Solo",
     one_liner:"Cosplay Competition",
@@ -141,7 +141,7 @@ const info = [{
 {
     id: 16,
     category:"Music",
-    img: '/creatort.png',
+    img: '/competition_img/VOA-min.png',
     comp_name:"Voice of Alcheringa",
     type:"Solo",
     one_liner:"Singing Competition",
@@ -151,7 +151,7 @@ const info = [{
 {
     id: 17,
     category:"Music",
-    img: '/creatort.png',
+    img: '/competition_img/Unplugged-min.png',
     comp_name:"Unplugged",
     type:"Group",
     one_liner:"Acoustic Band Competition",
@@ -161,7 +161,7 @@ const info = [{
 {
     id: 18,
     category:"Literary",
-    img: '/creatort.png',
+    img: '/competition_img/Parliamentary Debate-min.png',
     comp_name:"Parliamentary Debate",
     type:"Group",
     one_liner:"Parliamentary Debate Competition",
@@ -171,7 +171,7 @@ const info = [{
 {
     id: 19,
     category:"Literary",
-    img: '/creatort.png',
+    img: '/competition_img/Poetry Slam-min.png',
     comp_name:"Poetry Slam-Hindi",
     type:"Solo",
     one_liner:"Hindi Poetry Competition",
@@ -181,7 +181,7 @@ const info = [{
 {
     id: 20,
     category:"Literary",
-    img: '/creatort.png',
+    img: '/competition_img/Poetry Slam-min.png',
     comp_name:"Poetry Slam-English",
     type:"Solo",
     one_liner:"English Poetry Competition",
@@ -191,7 +191,7 @@ const info = [{
 {
     id: 21,
     category:"Literary",
-    img: '/creatort.png',
+    img: '/competition_img/Zephyr-min.png',
     comp_name:"Zephyr",
     type:"Solo",
     one_liner:"Online Creative Writing Competition",
@@ -201,7 +201,7 @@ const info = [{
 {
     id: 22,
     category:"Literary",
-    img: '/creatort.png',
+    img: '/competition_img/MEA-min.png',
     comp_name:"Mehfil-e-Alcheringa",
     type:"Solo",
     one_liner:"Shayari Competition",
@@ -211,7 +211,7 @@ const info = [{
 {
     id: 24,
     category:"Art Talkies",
-    img: '/creatort.png',
+    img: '/competition_img/Live Sketching-min.png',
     comp_name:"Live Sketching",
     type:"Solo",
     one_liner:"Live Sketching Competition",
@@ -221,7 +221,7 @@ const info = [{
 {
     id: 25,
     category:"Art Talkies",
-    img: '/creatort.png',
+    img: '/competition_img/Clay Modelling-min.png',
     comp_name:"Clay Modelling",
     type:"Solo",
     one_liner:"Clay Modeling Competition",
@@ -231,7 +231,7 @@ const info = [{
 {
     id: 26,
     category:"Art Talkies",
-    img: '/creatort.png',
+    img: '/competition_img/Who is it_-min.png',
     comp_name:"Who is it?",
     type:"Solo",
     one_liner:"Portrait Designing Competition",
@@ -241,7 +241,7 @@ const info = [{
 {
     id: 27,
     category:"Art Talkies",
-    img: '/creatort.png',
+    img: '/competition_img/Ink the Tee-min.png',
     comp_name:"Ink the tee",
     type:"Solo/Group",
     one_liner:"T-shirt Painting Competition",
@@ -251,7 +251,7 @@ const info = [{
 {
     id: 28,
     category:"Art Talkies",
-    img: '/creatort.png',
+    img: '/competition_img/Face Art-min.png',
     comp_name:"Face Art",
     type:"Duet",
     one_liner:"Face Painting Competition",
@@ -261,7 +261,7 @@ const info = [{
 {
     id: 29,
     category:"Art Talkies",
-    img: '/creatort.png',
+    img: '/competition_img/Rangoli-min.png',
     comp_name:"Rangoli",
     type:"Group",
     one_liner:"Rangoli Making Competition",
@@ -271,7 +271,7 @@ const info = [{
 {
     id: 30,
     category:"Art Talkies",
-    img: '/creatort.png',
+    img: '/competition_img/Graffiti-min.png',
     comp_name:"Graffiti",
     type:"Group",
     one_liner:"Graffiti Designing Competition",
@@ -281,7 +281,7 @@ const info = [{
 {
     id: 31,
     category:"Digital Dexterity",
-    img: '/creatort.png',
+    img: '/competition_img/Diva Hunk-min.png',
     comp_name:"Alcher Diva/Hunk",
     type:"Solo",
     one_liner:"Online Photo Contest",
@@ -291,7 +291,7 @@ const info = [{
 {
     id: 32,
     category:"Digital Dexterity",
-    img: '/creatort.png',
+    img: '/competition_img/Doodle Pad-min.png',
     comp_name:"Doodle Pad",
     type:"Solo",
     one_liner:"Online Doodle Designing Competition",
@@ -301,7 +301,7 @@ const info = [{
 {
     id: 33,
     category:"Digital Dexterity",
-    img: '/creatort.png',
+    img: '/competition_img/Custom Brush-min.png',
     comp_name:"Custom Brush",
     type:"Solo",
     one_liner:"Online Digital Painting Competition",
@@ -311,7 +311,7 @@ const info = [{
 {
     id: 34,
     category:"Lights Camera Action",
-    img: '/creatort.png',
+    img: '/competition_img/Just Reel it-min.png',
     comp_name:"Just reel it",
     type:"Solo",
     one_liner:"Online Reel Making Competition",
@@ -321,7 +321,7 @@ const info = [{
 {
     id: 35,
     category:"Lights Camera Action",
-    img: '/creatort.png',
+    img: '/competition_img/SUTUCD-min.png',
     comp_name:"Vlog Verse",
     type:"Solo",
     one_liner:"Vlogging Competition",
@@ -331,7 +331,7 @@ const info = [{
 {
     id: 37,
     category:"Lights Camera Action",
-    img: '/creatort.png',
+    img: '/competition_img/Directors Cut-min.png',
     comp_name:"Director's Cut",
     type:"Group",
     one_liner:"Online Short Movie Competition",
@@ -341,7 +341,7 @@ const info = [{
 {
     id: 38,
     category:"Lights Camera Action",
-    img: '/creatort.png',
+    img: '/competition_img/Snapthrillz-min.png',
     comp_name:"Snapthrillz",
     type:"Solo",
     one_liner:"Online Photography Competition",
@@ -351,7 +351,7 @@ const info = [{
 {
     id: 39,
     category:"Sports",
-    img: '/creatort.png',
+    img: '/competition_img/SUTUCD-min.png',
     comp_name:"5 on 5 Football",
     type:"Group",
     one_liner:"",
@@ -361,7 +361,7 @@ const info = [{
 {
     id: 40,
     category:"Sports",
-    img: '/creatort.png',
+    img: '/competition_img/SUTUCD-min.png',
     comp_name:"Arm Wrestling",
     type:"Solo",
     one_liner:"",
@@ -371,7 +371,7 @@ const info = [{
 {
     id: 41,
     category:"Sports",
-    img: '/creatort.png',
+    img: '/competition_img/SUTUCD-min.png',
     comp_name:"Gully Cricket",
     type:"Group",
     one_liner:"",
@@ -381,7 +381,7 @@ const info = [{
 {
     id: 42,
     category:"Sports",
-    img: '/creatort.png',
+    img: '/competition_img/SUTUCD-min.png',
     comp_name:"3 vs 3 Basketball",
     type:"Group",
     one_liner:"",
@@ -391,7 +391,7 @@ const info = [{
 {
     id: 43,
     category:"Sports",
-    img: '/creatort.png',
+    img: '/competition_img/SUTUCD-min.png',
     comp_name:"3 vs 3 Volleyball",
     type:"Group",
     one_liner:"",
@@ -401,7 +401,7 @@ const info = [{
 {
     id: 44,
     category:"Quiz",
-    img: '/creatort.png',
+    img: '/competition_img/SUTUCD-min.png',
     comp_name:"Genral Quiz",
     type:"Duet",
     one_liner:"",
@@ -411,7 +411,7 @@ const info = [{
 {
     id: 45,
     category:"Quiz",
-    img: '/creatort.png',
+    img: '/competition_img/SUTUCD-min.png',
     comp_name:"Buisness Quiz",
     type:"Duet",
     one_liner:"",
@@ -421,7 +421,7 @@ const info = [{
 {
     id: 46,
     category:"Quiz",
-    img: '/creatort.png',
+    img: '/competition_img/SUTUCD-min.png',
     comp_name:"Comic Quiz",
     type:"Duet",
     one_liner:"",
@@ -431,7 +431,7 @@ const info = [{
 {
     id: 47,
     category:"Quiz",
-    img: '/creatort.png',
+    img: '/competition_img/SUTUCD-min.png',
     comp_name:"Sports Quiz",
     type:"Duet",
     one_liner:"",
@@ -441,7 +441,7 @@ const info = [{
 {
     id: 48,
     category:"Drama",
-    img: '/creatort.png',
+    img: '/competition_img/Theatrix-min.png',
     comp_name:"Theatrix",
     type:"Group",
     one_liner:"Stage Play Competition ",
@@ -451,7 +451,7 @@ const info = [{
 {
     id: 49,
     category:"Drama",
-    img: '/creatort.png',
+    img: '/competition_img/Halla Bol-min.png',
     comp_name:"Halla Bol",
     type:"Group",
     one_liner:"Street Play Competition",
@@ -461,7 +461,7 @@ const info = [{
 {
     id: 50,
     category:"Drama",
-    img: '/creatort.png',
+    img: '/competition_img/MonoDrama-min.png',
     comp_name:"Monodrama",
     type:"Solo",
     one_liner:"Solo Play Competition",

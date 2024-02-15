@@ -205,9 +205,11 @@ function Events() {
   const [boxStyle, setBoxStyle] = useState({ opacity: 0 });
   const [currStyle, setCurrStyle] = useState({ opacity: 0 });
   const [bgcolor, setbgcolor] = useState({ backgroundColor: "#141414" });
+  
   // const [display, setDisplay] = useState("block");
   const controls = useRef();
   const camera = useRef();
+  const ambientLight=useRef();
   let [now, setNow] = useState(list.head);
 
   const forward = () => {
@@ -302,8 +304,8 @@ function Events() {
     const targetX = 0;
     const targetY = 2;
     const targetZ = 0;
-
     const camZ = -10;
+ 
     new TWEEN.Tween(controls.current.target)
       .to(
         {
@@ -315,7 +317,7 @@ function Events() {
       )
       .easing(TWEEN.Easing.Cubic.Out)
       .start();
-
+    
     new TWEEN.Tween(camera.current.position)
       .to(
         {
@@ -325,6 +327,15 @@ function Events() {
       )
       .easing(TWEEN.Easing.Cubic.Out)
       .start();
+
+       console.log(ambientLight);
+      new TWEEN.Tween(ambientLight.current)
+      
+      .to({
+        intensity:3,
+      },8000)
+      .easing(TWEEN.Easing.Cubic.Out)
+      .start();  
   };
 
   const buttons = (
@@ -416,7 +427,7 @@ function Events() {
             enableRotate={false}
             target={[0, 2, 0]}
           />
-          <ambientLight intensity={3} />
+          <ambientLight  intensity={0} ref={ambientLight}/>
           <Museumfinal />
           <Tween />
         </Canvas>
@@ -427,6 +438,7 @@ function Events() {
                 <motion.img
                   src="/ring2.png"
                   alt="adjl"
+                  className="rings_event"
                   initial={{
                     animationDuration: isClick ? "10s" : "30s",
                     // opacity: 1,
@@ -446,6 +458,7 @@ function Events() {
                 <motion.img
                   src="/ring2.png"
                   alt="adjl"
+                  className="rings_event"
                   initial={{
                     animationDuration: isClick ? "10s" : "30s",
                     // opacity: 1,
@@ -466,6 +479,7 @@ function Events() {
                 <motion.img
                   src="/ring2.png"
                   alt="adjl"
+                  className="rings_event"
                   initial={{
                     animationDuration: isClick ? "10s" : "30s",
                     // opacity: 1,

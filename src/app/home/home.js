@@ -776,13 +776,13 @@ export default function Home() {
                   <br /> much more.
                 </p>
                 <div id="appDownloadBtn">
-                  <img src="googlePlay.svg" className="googlePlayImage"></img>
+                  <img src="home_google_play.png" className="googlePlayImage"></img>
                 </div>
               </div>
             </div>
             <div className="imageWrapper">
               <div className="home_alcher_app_container">
-                <img src="mobileapp.png"></img>
+                <img src="home_mobile_app.png"></img>
               </div>
             </div>
           </div>
