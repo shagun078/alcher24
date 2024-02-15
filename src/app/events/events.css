@@ -3,10 +3,13 @@
   box-sizing: border-box;
 }
 
+
 @font-face {
   font-family: EventText;
   src: url("../../../public/Fontspring-DEMO-freigeist-conblack.woff2");
 }
+
+
 body {
   position: relative;
   background-color: black;
@@ -39,21 +42,21 @@ body {
   align-items: center;
   transition: all 2s ease-in-out;
 }
-#ui img:nth-child(2) {
+#ui .rings_event:nth-child(2) {
   position: absolute;
   inset: 50%;
   transform: translate(-50%, -50%);
   animation: clockwise 30s linear infinite;
   /* filter: contrast(30%); */
 }
-#ui img:first-child {
+#ui .rings_event:first-child {
   position: absolute;
   inset: 50%;
   transform: translate(-50%, -50%);
   animation: anticlockwise 30s linear infinite;
   /* filter: contrast(100%); */
 }
-#ui img:nth-child(3) {
+#ui .rings_event:nth-child(3) {
   position: absolute;
   inset: 50%;
   transform: translate(-50%, -50%);
