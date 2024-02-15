@@ -116,6 +116,11 @@
     padding: 1.11vw 1.11vw;
 }
 
+.para_cover p{
+    text-overflow: ellipsis;
+    line-clamp: 1;
+}
+
 .fa-sort-down {
     height: 2vw;
     width: 4vw;
@@ -138,6 +143,7 @@
     top: 12vh;
     right: 5.80vw;
     height: 42.28vw;
+    z-index: 10;
 }
 
 .list {

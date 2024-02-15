@@ -2,9 +2,7 @@
 import './components/navbar.css';
 import './components/color_changer.css';
 import './components/register_color.css';
-import alcher_logo from './resources/ALCHERINGA_logo.png';
 import Link from 'next/link';
-import Image from 'next/image';
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { usePathname } from 'next/navigation';
@@ -23,7 +21,7 @@ const Navbar = ( {reg_bg} ) => {
     return (
         <div className="header">
             <div className="logo">
-                <a href="/home"><Image className="logo" src={alcher_logo} alt="Alcheringa24" /></a>
+                <a href="/home">Alcheringa</a>
             </div>
             <nav className={state === true ? "navbar_menu active" : "navbar_menu"}>
                 <ul>
@@ -44,7 +42,7 @@ const Navbar = ( {reg_bg} ) => {
                 </ul>
             </nav>
             <div className="fixing">
-                <button className={reg_bg}><Link href="#">Register</Link></button>
+                <button className={reg_bg}><Link href="#">Get Cards</Link></button>
             </div>
             <div className="hidden_box"></div>
             <svg onClick={handleClick} className={state === false ? 'on_state icon_ham' : 'off_state icon_ham'} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg>
