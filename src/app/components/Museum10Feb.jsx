@@ -35,7 +35,7 @@ export function Museumfinal(props) {
   const proshowsScreen = useTexture("Event Posters.jpg");
   proshowsScreen.flipX=true;
 
-  const proShowsContent=useTexture("proshowsContent.jpg")
+  const proShowsContent=useTexture("ProshowsContent.jpg")
   proShowsContent.flipX=true;
 
   const pronitesScreen=useTexture("Pronites.jpg");
