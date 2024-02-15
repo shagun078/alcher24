@@ -49,7 +49,7 @@ export function Museumfinal(props) {
   const creatorsContent=useTexture("CreatorsContent.jpg");
   creatorsContent.flipX=true;
 
-  const CriticalScreen=useTexture("criticalDamage.jpg")
+  const CriticalScreen=useTexture("CriticalDamage.jpg")
   CriticalScreen.flipX=true;
 
   const criticalContent=useTexture("CriticalDamageContent.jpg");
