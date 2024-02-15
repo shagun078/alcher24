@@ -420,20 +420,7 @@ export default function RoomScene(props) {
             map={t_2}
           />
         </mesh>
-        {/* <Html
-          position={[-5.3964, 0.92, -1.32]}
-          className="clock_div"
-          rotation={[0,1.3,0]}
-          transform={true}
-          // style={{ position: "relative" }}
-          anchorX="center"
-        >
-        {daysRemaining>=0?(
-          <div className="clock_font" >
-           <div id='days_to_go'><p id="s1"><span id='time'>{daysRemaining}</span> Days </p></div> 
-            <p id="s2">to go</p>
-          </div>):<p id='s3'>{daysRemaining}</p>}
-        </Html> */}
+        
       </group>
     </group>
   );

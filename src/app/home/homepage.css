@@ -46,24 +46,20 @@ body,
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-}
 
-#s3{
-  font-size: 2px;
 }
 
 #days_to_go{
-  margin-bottom: 2px;
+  display: flex;
+  flex-direction: column;
 }
 
-
-#time{
-  font-size: 3.2px;
+#s1{
+  font-size: 25px;
 }
 
-.clock_font p{
-  font-size: 2px;
-  font-family: clockText;
+#s2{
+  font-size: 25px;
 }
 
 #info {

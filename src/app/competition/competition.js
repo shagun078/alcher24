@@ -1,15 +1,13 @@
 "use client";
 import "./components/body.css";
 import "./components/mobile_body.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import React from "react";
 import info from "./components/data.js";
 import titledata from "./components/title.js";
 import Image from "next/image";
 import Navbar from "../components/navbar/page";
 import Footer from "../components/footer/page";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faSortDown } from "@fortawesome/free-solid-svg-icons";
 import circle1 from "/public/footer_img/competition_left_circle.png";
 import circle2 from "/public/footer_img/competition_right_circle.png";
 import windows1 from "/public/footer_img/Competitions-min.png";
@@ -35,7 +33,7 @@ function Body() {
 
     if (keyword !== "") {
       const result = info.filter((user) => {
-        return user.comp_name.toLowerCase().includes(keyword.toLowerCase());
+        return (user.comp_name.toLowerCase().includes(keyword.toLowerCase()) || user.tags.toLowerCase().includes(keyword.toLowerCase()));
       });
       setArray(result.slice(0, 6));
 
@@ -74,13 +72,15 @@ function Body() {
           <div className="container_1">
             <form action="" className='form'>
               <input className='search' type="text" placeholder='Search Competitions' value={value} onChange={e => onChange(e)} />
-              <FontAwesomeIcon icon={faSearch} className='magnifying_glass' />
+              <svg className='magnifying_glass' xmlns="http://www.w3.org/2000/svg" width="35" height="35"  viewBox="0 0 24 24"><path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path></svg>
             </form>
             <div className="list_container">
               <div className="modules" onClick={handleClick}>
-                {title2.map((capital) => (<p key={capital.id}>{capital.category}</p>))}
+                <div className="para_cover">
+                  {title2.map((capital) => (<p key={capital.id}>{capital.category}</p>))}
+                </div>
                 <div className="small_box">
-                  <FontAwesomeIcon icon={faSortDown} className={state ? 'fa-solid fa-sort-down fa-active' : 'fa-solid fa-sort-down'} />
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="m11.998 17 7-8h-14z"></path></svg>
                 </div>
               </div>
               <div className={state ? 'list list_active' : 'list'}>
@@ -109,13 +109,14 @@ function Body() {
             {array.map((arr) => {
               return (
                 <div key={arr.id} className='icon'>
-                  <a href={arr.tag} target='_blank' className="icon_ke_andar">
+                  <a href={arr.url} target='_blank' className="icon_ke_andar">
                     <Image src={arr.img}
                       alt="Photo"
                       className='iconsIMG'
                       width={100}
                       height={100}
                     />
+                    <span className="pad_text_arr">{arr.type}</span>&nbsp;·&nbsp;<span className="pad_text_arr">{arr.one_liner}</span>
                     <p className='icon_text'>{arr.comp_name}</p>
                   </a>
                 </div>
