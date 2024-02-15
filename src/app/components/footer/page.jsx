@@ -11,23 +11,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
 
 
 const Footer = ({ bg, star, circle_src1, circle_src2, windows_src, alcheringa_logo }) => {
 
     const router = useRouter();
     const path = usePathname();
-    const [state1, setState1] = useState(false);
-    const [state2, setState2] = useState(false);
-
-    function showContent1() {
-        setState1(!state1);
-    }
-
-    function showContent2() {
-        setState2(!state2);
-    }
 
     return (
         <div className="container_footer">
