@@ -153,7 +153,7 @@
         align-items: center;
         z-index: 300000;
         overflow: hidden;
-        background-image: url('../resources/TexturePattern.jpg');
+        background-image: url("../resources/TexturePattern.jpg");
         background-blend-mode:color-burn;
     }
 
@@ -215,7 +215,7 @@
         0%{
             color: transparent;
         }
-        50%{
+        80%{
             color: transparent;  
         }
         100%{

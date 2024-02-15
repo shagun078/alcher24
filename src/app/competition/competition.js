@@ -1,7 +1,7 @@
 "use client";
 import "./components/body.css";
 import "./components/mobile_body.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import React from "react";
 import info from "./components/data.js";
 import titledata from "./components/title.js";
@@ -78,7 +78,9 @@ function Body() {
             </form>
             <div className="list_container">
               <div className="modules" onClick={handleClick}>
-                {title2.map((capital) => (<p key={capital.id}>{capital.category}</p>))}
+                <div className="para_cover">
+                  {title2.map((capital) => (<p key={capital.id}>{capital.category}</p>))}
+                </div>
                 <div className="small_box">
                   <FontAwesomeIcon icon={faSortDown} className={state ? 'fa-solid fa-sort-down fa-active' : 'fa-solid fa-sort-down'} />
                 </div>
@@ -109,13 +111,14 @@ function Body() {
             {array.map((arr) => {
               return (
                 <div key={arr.id} className='icon'>
-                  <a href={arr.tag} target='_blank' className="icon_ke_andar">
+                  <a href={arr.url} target='_blank' className="icon_ke_andar">
                     <Image src={arr.img}
                       alt="Photo"
                       className='iconsIMG'
                       width={100}
                       height={100}
                     />
+                    <span className="pad_text_arr">{arr.type}</span>&nbsp;·&nbsp;<span className="pad_text_arr">{arr.one_liner}</span>
                     <p className='icon_text'>{arr.comp_name}</p>
                   </a>
                 </div>

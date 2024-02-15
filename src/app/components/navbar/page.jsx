@@ -32,7 +32,7 @@ const Navbar = ({ reg_bg }) => {
             <div className="logo">
                 <a href="/home"><Image className="logo" src={alcher_logo} alt="Alcheringa24" /></a>
             </div>
-            <nav className={state === true ? 'navbar_menu active' : 'navbar_menu'}>
+            <nav className={state === true ? "navbar_menu active" : "navbar_menu"}>
                 <ul>
                     <li onClick={() => router.push("/events")} className={path === "/events" ? "c c1" : ""}>
                         <Link href="/events">Events</Link></li>
@@ -54,8 +54,8 @@ const Navbar = ({ reg_bg }) => {
                 <button className={reg_bg}><Link href="/register">Register</Link></button>
             </div>
             <div className="hidden_box"></div>
-            <FontAwesomeIcon onClick={handleClick} icon={faTimes} className={state === true ? 'on_state icon_ham' : 'off_state icon_ham'} />
-            <FontAwesomeIcon onClick={handleClick} icon={faBars} className={state === false ? 'on_state icon_ham' : 'off_state icon_ham'} />
+            <FontAwesomeIcon onClick={handleClick} icon={faTimes} className={state === true ? "on_state icon_ham" : "off_state icon_ham"} />
+            <FontAwesomeIcon onClick={handleClick} icon={faBars} className={state === false ? "on_state icon_ham" : "off_state icon_ham"} />
             <div className="sit_box"></div>
         </div>
     );
