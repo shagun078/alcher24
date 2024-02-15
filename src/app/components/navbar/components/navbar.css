@@ -21,11 +21,12 @@
 }
 
 :root{
-    --color1: #181818 !important;
+    --color1: black !important;
 }
 
 .header{
-    background-color: #141414;
+    background-color: black;
+    position: relative;
     width: 100vw;
     height: 6vw;
     display: flex;
@@ -79,7 +80,6 @@
     color: black;
     height: 2.49vw;
     width: 8.32vw;
-    background-color: #39A27A;
     border-radius: 10vw;
     border: none;
     opacity: 0.8;
@@ -126,6 +126,7 @@
     height: 4vw;
     height: 4vw;
     display: none;
+    fill: white;
 }
 
 @media screen and (orientation: portrait){
@@ -144,7 +145,7 @@
     }
 
     .navbar_menu{
-        position: absolute;
+        position: fixed;
         width: 46.81vw;
         height: 71.24vw;
         top: 14vw;

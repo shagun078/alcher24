@@ -12,6 +12,7 @@ import circle1 from "/public/footer_img/competition_left_circle.png";
 import circle2 from "/public/footer_img/competition_right_circle.png";
 import windows1 from "/public/footer_img/Competitions-min.png";
 import alcheringa from "/public/footer_img/competiton_alcheringa.png";
+import { events } from "@react-three/fiber";
 
 function Body() {
   const [state, setState] = useState(false);
@@ -27,21 +28,23 @@ function Body() {
     setState(!state);
   }
 
-  const onChange = (event) => {
+  function onChange(event){
     setValue(event.target.value);
     const keyword = event.target.value;
 
     if (keyword !== "") {
       const result = info.filter((user) => {
-        return (user.comp_name.toLowerCase().includes(keyword.toLowerCase()) || user.tags.toLowerCase().includes(keyword.toLowerCase()));
+        return (user.comp_name.toLowerCase().includes(keyword.toLowerCase()) || 
+        user.tags.toLowerCase().includes(keyword.toLowerCase()) ||
+        user.type.toLowerCase().includes(keyword.toLowerCase()) ||
+        user.one_liner.toLowerCase().includes(keyword.toLowerCase()));
       });
-      setArray(result.slice(0, 6));
+      setArray(result);
 
       const result_2 = titledata.filter((user_2) => {
         return user_2.category.toLowerCase().includes(keyword.toLowerCase());
       })
       setTitle(result_2.slice(0, 1));
-      setTitle2(result_2.slice(0, 1));
     }
     else {
       setArray(info);
@@ -53,6 +56,8 @@ function Body() {
 
   const module = (val) => {
     var total = [];
+
+    setValue("");
 
     for (let i = 0; i < info.length; i++) {
       if (info[i].category == val) {
@@ -113,8 +118,9 @@ function Body() {
                     <Image src={arr.img}
                       alt="Photo"
                       className='iconsIMG'
-                      width={100}
-                      height={100}
+                      width={1000}
+                      height={1000}
+                      quality={100}
                     />
                     <span className="pad_text_arr">{arr.type}</span>&nbsp;·&nbsp;<span className="pad_text_arr">{arr.one_liner}</span>
                     <p className='icon_text'>{arr.comp_name}</p>
