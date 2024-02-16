@@ -58,7 +58,7 @@ const marks = [
     title: "ALCHER APP",
     link: "https://play.google.com/store/apps/details?id=com.alcheringa.alcheringa2022",
     description:
-      "Download our app and visit our website get access to amazing features like E-Alcher passes, Schedule, Campus maps, Real-Time updates and much more.",
+      "Download our app and visit our website,get access to amazing features like Schedule, Campus maps, Real-Time updates and much more.",
     camPos: {
       x: -4.65,
       y: 1,
@@ -90,7 +90,7 @@ const marks = [
     title: "THEME",
     link: "https://www.youtube.com/watch?v=GJfmkiVj4FA&pp=ygURYWxjaGVyaW5nYSB0aGVtZSA%3D",
     description:
-      "The theme for Alcheringa 24 tells the story of a young girl who is facing a art block in a monotonous world,travels to a art exhibit ina museum and unravels a journey of Psychedelia to find her inspiration.",
+      "The theme for Alcheringa '24 is the story of a young girl facing an art block in a monotonous world, who travels to an art exhibition in a museum, finding inspiration as she unravels a journey of memories and Psychedelia.",
     camPos: {
       x: -4,
       y: 2,
@@ -186,7 +186,7 @@ const marks = [
     title: "MERCH",
     link: "#",
     description:
-      "Alcheringa has more than 80 events spread across various genres like fashion, music, art, sports, etc. They take place during the three days in which many events take place which includes panel discussions with various famous creators, informal activities like hot air balloon, ATV rides, paint ball shoot etc.",
+      "Every year Alcheringa has a different theme and their limited edition of merch, so quickly go and grab out Alcheringa Merchandise. This year we have T-shirt, Sweatshirts and Over-sized T-Shirt in our stores.",
     camPos: {
       x: -4,
       y: 2,
@@ -599,8 +599,20 @@ export default function Home() {
 
   const hoverEffect = () => {
     setIsHovered(!isHovered);
-    console.log(isHovered);
   };
+
+  useEffect(() => {
+    const document = window.document;
+    const cnvs = document.querySelector("canvas");
+    cnvs.classList.add("draggable");
+    cnvs.addEventListener("dragenter", () => {
+      cnvs.classList.add("active");
+    });
+    cnvs.addEventListener("dragleave", () => {
+      cnvs.classList.remove("active");
+    });
+  }, []);
+
   const buttons = (
     <React.Fragment>
       <svg
@@ -717,36 +729,39 @@ export default function Home() {
               </h2>
             </div>
 
-          <div className="getAppSection">
-            <img src="upperHand.svg" id="upperHand"></img>
-            <img src="lowerHand.svg" id="lowerHand"></img>
-            <div className="textSection">
-              <div id="text_home">
-                <h1>
-                  GET THE <br /> ALCHERINGA APP
-                </h1>
-                <p>
-                  Download our app and get access to app exclusive
-                  <br /> features like Alcheringa passes, Merches,
-                  <br /> Schedule, Campus maps, Real-time updates and
-                  <br /> much more.
-                </p>
-                <div id="appDownloadBtn">
-                  <a href="https://play.google.com/store/apps/details?id=com.alcheringa.alcheringa2022" target="_blank">
-                    <img
-                      src="home_google_play.png"
-                      className="googlePlayImage"
-                    ></img>
-                  </a>
+            <div className="getAppSection">
+              <img src="upperHand.svg" id="upperHand"></img>
+              <img src="lowerHand.svg" id="lowerHand"></img>
+              <div className="textSection">
+                <div id="text_home">
+                  <h1>
+                    GET THE <br /> ALCHERINGA APP
+                  </h1>
+                  <p>
+                    Download our app and get access to app exclusive
+                    <br /> features like Alcheringa passes, Merches,
+                    <br /> Schedule, Campus maps, Real-time updates and
+                    <br /> much more.
+                  </p>
+                  <div id="appDownloadBtn">
+                    <a
+                      href="https://play.google.com/store/apps/details?id=com.alcheringa.alcheringa2022"
+                      target="_blank"
+                    >
+                      <img
+                        src="home_google_play.png"
+                        className="googlePlayImage"
+                      ></img>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="imageWrapper">
+                <div className="home_alcher_app_container">
+                  <img src="home_mobile_app.png"></img>
                 </div>
               </div>
             </div>
-            <div className="imageWrapper">
-              <div className="home_alcher_app_container">
-                <img src="home_mobile_app.png"></img>
-              </div>
-            </div>
-          </div>
 
             {/* <div className="passesSection">
             <p id="getYour">Get your Own</p>
