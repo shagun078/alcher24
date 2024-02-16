@@ -4,6 +4,7 @@ import "./components/mobile_body.css";
 import { Suspense, useState } from "react";
 import React from "react";
 import info from "./components/data.js";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Navbar from "../components/navbar/page";
 import Footer from "../components/footer/page";
@@ -112,98 +113,111 @@ function Body() {
                     </svg>
                   </div>
                 </div>
-                <div className={state ? "list list_active" : "list"}>
-                  <ul>
-                    <li
-                      onClick={() => {
-                        module("Dance");
-                        handleClick();
-                      }}
-                    >
-                      Dance
-                    </li>
-                    <li
-                      onClick={() => {
-                        module("Vogue Nation");
-                        handleClick();
-                      }}
-                    >
-                      Vogue Nation
-                    </li>
-                    <li
-                      onClick={() => {
-                        module("Class Apart");
-                        handleClick();
-                      }}
-                    >
-                      Class Apart
-                    </li>
-                    <li
-                      onClick={() => {
-                        module("Music");
-                        handleClick();
-                      }}
-                    >
-                      Music
-                    </li>
-                    <li
-                      onClick={() => {
-                        module("Literary");
-                        handleClick();
-                      }}
-                    >
-                      Literary
-                    </li>
-                    <li
-                      onClick={() => {
-                        module("Art Talkies");
-                        handleClick();
-                      }}
-                    >
-                      Art Talkies
-                    </li>
-                    <li
-                      onClick={() => {
-                        module("Digital Dexterity");
-                        handleClick();
-                      }}
-                    >
-                      Digital Dexterity
-                    </li>
-                    <li
-                      onClick={() => {
-                        module("Lights Camera Action");
-                        handleClick();
-                      }}
-                    >
-                      Lights Camera Action
-                    </li>
-                    <li
-                      onClick={() => {
-                        module("Sports");
-                        handleClick();
-                      }}
-                    >
-                      Sports
-                    </li>
-                    <li
-                      onClick={() => {
-                        module("Quiz");
-                        handleClick();
-                      }}
-                    >
-                      Quiz
-                    </li>
-                    <li
-                      onClick={() => {
-                        module("Drama");
-                        handleClick();
-                      }}
-                    >
-                      Drama
-                    </li>
-                  </ul>
-                </div>
+                {state && (
+                  <motion.div
+                    className="list"
+                    initial={{
+                      height: state ? "0vh" : "80vh",
+                      y: state ? "0vh" : "2vh",
+                    }}
+                    animate={{
+                      height: state ? "80vh" : "0vh",
+                      y: state ? "2vh" : "0vh",
+                    }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <ul>
+                      <li
+                        onClick={() => {
+                          module("Dance");
+                          handleClick();
+                        }}
+                      >
+                        Dance
+                      </li>
+                      <li
+                        onClick={() => {
+                          module("Vogue Nation");
+                          handleClick();
+                        }}
+                      >
+                        Vogue Nation
+                      </li>
+                      <li
+                        onClick={() => {
+                          module("Class Apart");
+                          handleClick();
+                        }}
+                      >
+                        Class Apart
+                      </li>
+                      <li
+                        onClick={() => {
+                          module("Music");
+                          handleClick();
+                        }}
+                      >
+                        Music
+                      </li>
+                      <li
+                        onClick={() => {
+                          module("Literary");
+                          handleClick();
+                        }}
+                      >
+                        Literary
+                      </li>
+                      <li
+                        onClick={() => {
+                          module("Art Talkies");
+                          handleClick();
+                        }}
+                      >
+                        Art Talkies
+                      </li>
+                      <li
+                        onClick={() => {
+                          module("Digital Dexterity");
+                          handleClick();
+                        }}
+                      >
+                        Digital Dexterity
+                      </li>
+                      <li
+                        onClick={() => {
+                          module("Lights Camera Action");
+                          handleClick();
+                        }}
+                      >
+                        Lights Camera Action
+                      </li>
+                      <li
+                        onClick={() => {
+                          module("Sports");
+                          handleClick();
+                        }}
+                      >
+                        Sports
+                      </li>
+                      <li
+                        onClick={() => {
+                          module("Quiz");
+                          handleClick();
+                        }}
+                      >
+                        Quiz
+                      </li>
+                      <li
+                        onClick={() => {
+                          module("Drama");
+                          handleClick();
+                        }}
+                      >
+                        Drama
+                      </li>
+                    </ul>
+                  </motion.div>
+                )}
               </div>
             </div>
           </div>
