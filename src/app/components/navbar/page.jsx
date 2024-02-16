@@ -6,7 +6,6 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { usePathname } from 'next/navigation';
-import { useEffect } from 'react';
 
 const Navbar = ({ reg_bg }) => {
 
@@ -18,14 +17,6 @@ const Navbar = ({ reg_bg }) => {
     const handleClick = () => {
         setStatey(statey => !statey);
     }
-
-    useEffect(() => {
-        window.addEventListener("scroll", () => {
-            if (statey == true) {
-                setStatey(false);
-            }
-        });
-    })
 
     return (
         <div className="header">
