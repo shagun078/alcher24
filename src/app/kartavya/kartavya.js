@@ -106,10 +106,11 @@ export default function Kartavya() {
                     width: "5vw",
                     height: "auto",
                     float: "left",
+                    backgroundRepeat: "no-repeat",
                   }}
                   quality={100}
                   placeholder="blur"
-                  className="star2"
+                  className="star2_k"
                 />
               </div>
             </div>
