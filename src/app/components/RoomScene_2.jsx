@@ -17,44 +17,26 @@ export default function RoomScene(props) {
     map: texture,
   });
   const { nodes, materials } = useGLTF("RoomScene.gltf");
-  /* const calculateTimeRemaining = () => {
-     const currentDate = new Date();
-     const targetDate = new Date("2024-04-7"); // Replace with your target date
-     const timeDifference = targetDate.getTime() - currentDate.getTime();
- 
-     // Calculate hours, minutes, and seconds remaining
-     const hoursRemaining = Math.floor(timeDifference / (1000 * 60 * 60));
-     const minutesRemaining = Math.floor(
-       (timeDifference % (1000 * 60 * 60)) / (1000 * 60)
-     );
-     const secondsRemaining = Math.floor((timeDifference % (1000 * 60)) / 1000);
- 
-     return {
-       hours: hoursRemaining,
-       minutes: minutesRemaining,
-       seconds: secondsRemaining,
-     };
-   };
- 
-   const clockModelRef = useRef();
-   const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining());
-   console.log(timeRemaining);*/
 
   const calculateTimeRemaining = () => {
-    const currentDate = new Date();
-    const targetDate = new Date("2024-03-07"); // Replace with your target date
+    const currentDate = new Date(2024, 2, 7, 17, 29, 0, 0);
+    const targetDate = new Date(2024, 2, 7, 17, 30, 0, 0); // Replace with your target date
     const timeDifference = targetDate.getTime() - currentDate.getTime();
 
     // Calculate days remaining
     const daysRemaining = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
-    if (daysRemaining < 0) {
-      return "Website is live";
-    }
-
-    return [daysRemaining];
+    const hoursRemaining = Math.floor(timeDifference / (1000 * 60 * 60));
+    const minutesRemaining = Math.floor(
+      (timeDifference % (1000 * 60 * 60)) / (1000 * 60)
+    );
+    return {
+      days: daysRemaining,
+      hours: hoursRemaining,
+      minutes: minutesRemaining,
+    };
   };
 
-  const [daysRemaining] = useState(calculateTimeRemaining());
+  const timeRemaining = useState(calculateTimeRemaining());
 
   // const [video] = useState(() => {
   //   const vid = document.createElement("video");
@@ -69,6 +51,8 @@ export default function RoomScene(props) {
   const laptopScreen = useTexture("alcher.jpg");
   const mobileScreen = useTexture("qr.png");
   const ClockScreen = useTexture("clock_svg/days.svg");
+  const colon = useTexture("clock_svg/colon.svg");
+  const live = useTexture("clock_svg/live.svg");
   const t_0 = useTexture("clock_svg/0.svg");
   const t_1 = useTexture("clock_svg/1.svg");
   const t_2 = useTexture("clock_svg/2.svg");
@@ -384,7 +368,6 @@ export default function RoomScene(props) {
           position={[-5.402, 0.916, -1.313]}
           rotation={[0, -0.279, 0]}
         />
-
         <mesh
           position={[-5.4, 0.916, -1.312]}
           rotation={[0, 1.2925, 0]}
@@ -393,28 +376,106 @@ export default function RoomScene(props) {
           <planeGeometry args={[3.588, 1.82]} />
           <meshStandardMaterial side={THREE.DoubleSide} color={"black"} />
         </mesh>
-        <mesh
-          position={[-5.43, 0.924, -1.2]}
+        {timeRemaining[0].days > 3 && (<><mesh
+          position={[-5.431, 0.924, -1.2]}
           rotation={[0, 1.2925, 0]}
           scale={[0.101, 0.1, 0.1]}
         >
-          <planeGeometry args={[0.6, 1]} />
+          <planeGeometry args={[0.5, 1]} />
           <meshStandardMaterial
             side={THREE.DoubleSide}
-            map={daysRemaining[0] <= 9 ? ctext[0] : ctext[Number(daysRemaining[0].toString()[0])]}
+            map={timeRemaining[0].days <= 9 ? ctext[0] : ctext[Number(timeRemaining[0].days.toString()[0])]}
           />
         </mesh>
-        <mesh
-          position={[-5.4, 0.925, -1.28]}
+          <mesh
+            position={[-5.41, 0.923, -1.272]}
+            rotation={[0, 1.2925, 0]}
+            scale={[0.101, 0.1, 0.1]}
+          >
+            <planeGeometry args={[0.5, 1]} />
+            <meshStandardMaterial
+              side={THREE.DoubleSide}
+              map={timeRemaining[0].days <= 9 ? ctext[Number(timeRemaining[0].days.toString()[0])] : ctext[Number(timeRemaining[0].days.toString()[1])]}
+            />
+          </mesh>
+          <mesh
+            position={[-5.365, 0.92, -1.4]}
+            rotation={[0, 1.2925, 0]}
+            scale={[0.101, 0.1, 0.1]}
+          >
+            <planeGeometry args={[1.5, 1.1]} />
+            <meshStandardMaterial
+              side={THREE.DoubleSide}
+              map={ClockScreen}
+            />
+          </mesh></>)}
+        {timeRemaining[0].days > 0 && timeRemaining[0].days <= 3 && (
+          <>
+            <mesh
+              position={[-5.43, 0.924, -1.185]}
+              rotation={[0, 1.2925, 0]}
+              scale={[0.101, 0.1, 0.1]}
+            >
+              <planeGeometry args={[0.5, 1]} />
+              <meshStandardMaterial
+                side={THREE.DoubleSide}
+                map={timeRemaining[0].hours <= 9 ? ctext[0] : ctext[Number(timeRemaining[0].hours.toString()[0])]}
+              />
+            </mesh>
+            <mesh
+              position={[-5.41, 0.924, -1.26]}
+              rotation={[0, 1.2925, 0]}
+              scale={[0.101, 0.1, 0.1]}
+            >
+              <planeGeometry args={[0.5, 1]} />
+              <meshStandardMaterial
+                side={THREE.DoubleSide}
+                map={timeRemaining[0].hours <= 9 ? ctext[Number(timeRemaining[0].hours.toString()[0])] : ctext[Number(timeRemaining[0].hours.toString()[1])]}
+              />
+            </mesh>
+            <mesh
+              position={[-5.393, 0.92, -1.32]}
+              rotation={[0, 1.2925, 0]}
+              scale={[0.101, 0.1, 0.1]}
+            >
+              <planeGeometry args={[0.3, 1]} />
+              <meshStandardMaterial
+                side={THREE.DoubleSide}
+                map={colon}
+              />
+            </mesh>
+            <mesh
+              position={[-5.38, 0.92, -1.381]}
+              rotation={[0, 1.2925, 0]}
+              scale={[0.101, 0.1, 0.1]}
+            >
+              <planeGeometry args={[0.5, 1]} />
+              <meshStandardMaterial
+                side={THREE.DoubleSide}
+                map={timeRemaining[0].minutes <= 9 ? ctext[0] : ctext[Number((timeRemaining[0].minutes % 60).toString()[0])]}
+              />
+            </mesh>
+            <mesh
+              position={[-5.36, 0.92, -1.45]}
+              rotation={[0, 1.2925, 0]}
+              scale={[0.101, 0.1, 0.1]}
+            >
+              <planeGeometry args={[0.5, 1]} />
+              <meshStandardMaterial
+                side={THREE.DoubleSide}
+                map={timeRemaining[0].minutes <= 9 ? ctext[Number((timeRemaining[0].minutes % 60).toString()[0])] : ctext[Number((timeRemaining[0].minutes % 60).toString()[1])]}
+              />
+            </mesh>
+          </>
+        )}
+        {timeRemaining[0].days <= 0 && (<mesh
+          position={[-5.39, 0.916, -1.312]}
           rotation={[0, 1.2925, 0]}
           scale={[0.101, 0.1, 0.1]}
         >
-          <planeGeometry args={[0.6, 1]} />
-          <meshStandardMaterial
-            side={THREE.DoubleSide}
-            map={daysRemaining[0] <= 9 ? ctext[Number(daysRemaining[0].toString()[0])] : ctext[Number(daysRemaining[0].toString()[1])]}
-          />
-        </mesh>
+          <planeGeometry args={[3.2, 1.5]} />
+          <meshStandardMaterial side={THREE.DoubleSide} map={live} />
+        </mesh>)}
       </group>
     </group>
   );
