@@ -1,5 +1,3 @@
-"use client";
-import React, { useEffect, useState } from "react";
 import "./components/card.css";
 import Navbar from "../components/navbar/page";
 import Footer from "../components/footer/page";
@@ -10,29 +8,7 @@ import alcheringa from "/public/footer_img/sponsors_alcheringa.png";
 import Loading from "../components/loading/loading";
 
 function Card() {
-  const [showSplash, setShowSplash] = useState(true);
-
-  useEffect(() => {
-    if (document.readyState !== "complete") {
-      const handler = () => {
-        console.log("load");
-        setShowSplash(false);
-      };
-      window.addEventListener("load", handler);
-
-      return () => {
-        window.removeEventListener("load", handler);
-      };
-    } else {
-      const timeout = window.setTimeout(() => {
-        console.log("timeout");
-        setShowSplash(false);
-      }, 0);
-      return () => window.clearTimeout(timeout);
-    }
-  }, []);
-
-  return !showSplash ? (
+  return (
     <>
       <Navbar reg_bg={"register reg_bg7"} />
       <main className="card_main">
@@ -44,7 +20,6 @@ function Card() {
             <h5></h5>
           </div>
         </section>
-
       </main>
       <Footer
         bg={"footer img7"}
@@ -55,8 +30,6 @@ function Card() {
         windows_src={windows1}
       />
     </>
-  ) : (
-    <Loading />
   );
 }
 export default Card;

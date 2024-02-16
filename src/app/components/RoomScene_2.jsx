@@ -490,7 +490,7 @@ export default function RoomScene(props) {
           rotation={[0, 1.2925, 0]}
           scale={[0.101, 0.1, 0.1]}
         >
-          <planeGeometry args={[3.2, 1.5]} />
+          <planeGeometry args={[3, 1]} />
           <meshStandardMaterial side={THREE.DoubleSide} map={live} />
         </mesh>)}
       </group>
