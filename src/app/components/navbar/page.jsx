@@ -23,7 +23,7 @@ const Navbar = ( reg_bg ) => {
     return (
         <div className="header">
             <div className="logo">
-                <a href="/home"><Image className="logo" src={alcher_logo} alt="Alcheringa24" /></a>
+                <a href="/home">ALCHERINGA</a>
             </div>
             <nav className={state === true ? "navbar_menu active" : "navbar_menu"}>
                 <ul>

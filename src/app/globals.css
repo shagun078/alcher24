@@ -1,3 +1,21 @@
+@font-face {
+  font-family: FontSpringText;
+  src:url('../../public/Vacation-Heavy.ttf')
+}
+
+@font-face {
+  font-family: CruffySans;
+  src: url("../../public/CruyffSans-Bold.ecd5078c.woff2");
+}
+
+@font-face {
+  font-family: UncutSans;
+  src: url("../../public/Uncut-Sans-Medium.woff2");
+}
+
+
+
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
@@ -95,6 +113,9 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+p {
+  cursor: default;
+}
 
 a {
   color: inherit;
@@ -106,6 +127,8 @@ a {
     color-scheme: dark;
   }
 }
+
+
 /* from prev */
 /* 
 @font-face {

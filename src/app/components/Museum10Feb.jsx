@@ -6,9 +6,8 @@ Command: npx gltfjsx@6.2.16 Museum10Feb.gltf
 "use client"
 
 import React, { useRef , useState } from 'react'
-import { useGLTF , useTexture , useVideoTexture} from '@react-three/drei';
+import { useGLTF , useTexture} from '@react-three/drei';
 import * as THREE from 'three';
-import url from "../../../public/video.mp4";
 
 
 
@@ -21,16 +20,16 @@ export function Museumfinal(props) {
   })
   const { nodes, materials } = useGLTF('models/Museum10Feb.gltf')
   
-  const [video] = useState(() => {
-    const vid = document.createElement("video");
-    vid.src = url;
-    vid.crossOrigin = "Anonymous";
-    vid.loop = true;
-    vid.muted = true;
-    vid.type = "video/mp4" / vid.play();
-    console.log(vid);
-    return vid;
-  });
+  // const [video] = useState(() => {
+  //   const vid = document.createElement("video");
+  //   vid.src = url;
+  //   vid.crossOrigin = "Anonymous";
+  //   vid.loop = true;
+  //   vid.muted = true;
+  //   vid.type = "video/mp4" / vid.play();
+  //   console.log(vid);
+  //   return vid;
+  // });
 
   const proshowsScreen = useTexture("Event Posters.jpg");
   proshowsScreen.flipX=true;
@@ -50,7 +49,7 @@ export function Museumfinal(props) {
   const creatorsContent=useTexture("CreatorsContent.jpg");
   creatorsContent.flipX=true;
 
-  const CriticalScreen=useTexture("criticalDamage.jpg")
+  const CriticalScreen=useTexture("CriticalDamage.jpg")
   CriticalScreen.flipX=true;
 
   const criticalContent=useTexture("CriticalDamageContent.jpg");
