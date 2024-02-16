@@ -6,19 +6,19 @@
   }
 
 :root{
-    --color1: black !important;
+    --color1: #141414 !important;
 }
 
 .header{
-    background-color: black;
+    background-color: #141414;
     position: relative;
     width: 100vw;
     height: 6vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    overflow: hidden;
-    background-image: url('../../../../../public/TexturePattern.jpg');
+    overflow: visible;
+    background-image: url('../../../../../public/texture_black_bg.jpg');
     background-blend-mode:color-burn;
     z-index: 30000;
 }
@@ -68,7 +68,7 @@
 }
 
 .register{
-    color: black;
+    color: #141414;
     height: 2.49vw;
     width: 8.32vw;
     border-radius: 10vw;
@@ -82,7 +82,7 @@
     font-size: var(--font-size1);
     font-weight: 700;
     text-decoration: none;
-    color: black;
+    color: #141414;
     margin: auto;
 }
 
@@ -116,6 +116,7 @@
     height: 4vw;
     display: none;
     fill: white;
+    z-index: 10;
 }
 
 @media screen and (orientation: portrait){
@@ -133,19 +134,35 @@
         display: block;
     }
 
+    .logo{
+        position: absolute;
+        left: -1vw;
+    }
+
+    .register{
+        position: absolute;
+        right: 14vw;
+        top: 4vw;
+    }
+
+    .icon_ham{
+        position: absolute;
+        right: 3vw !important;
+    }
+
     .navbar_menu{
-        position: fixed;
-        width: 46.81vw;
+        position: relative;
+        width: 46.81vw !important;
         height: 71.24vw;
-        top: 14vw;
-        right: 0;
-        background-color: black;
+        top: 42.5vw;
+        left: 48.5vw;
+        background-color: #141414;
         display: none;
         justify-content: center;
         align-items: center;
         z-index: 300000;
         overflow: hidden;
-        background-image: url('../../../../../public/TexturePattern.jpg');
+        background-image: url('../../../../../public/texture_black_bg.jpg');
         background-blend-mode:color-burn;
     }
 
@@ -216,7 +233,7 @@
     }
 
     .register{
-        color: black;
+        color: #141414;
         height: 7.65vw;
         width: 50.57vw;
         border-radius: 10vw;
