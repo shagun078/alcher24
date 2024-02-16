@@ -31,34 +31,34 @@ export function Museumfinal(props) {
       //   return vid;
       // });
 
-      const proshowsScreen = useTexture("pronites2.png");
+      const proshowsScreen = useTexture("Frame 15624-min.jpg");
       proshowsScreen.flipX = true;
 
-      const proShowsContent = useTexture("pronites2content.jpg");
+      const proShowsContent = useTexture("Frame 15625-min.jpg");
       proShowsContent.flipX = true;
 
-      const pronitesScreen = useTexture("Pronites.jpg");
+      const pronitesScreen = useTexture("Frame 15617-min.jpg");
       pronitesScreen.flipX = true;
 
-      const proniteContent = useTexture("PronitesContent.jpg");
+      const proniteContent = useTexture("Frame 15621-min.jpg");
       proniteContent.flipX = true;
 
-      const creatorsScreen = useTexture("Creatorscamp.jpg");
+      const creatorsScreen = useTexture("Frame 15612-min.jpg");
       creatorsScreen.flipX = true;
 
-      const creatorsContent = useTexture("CreatorsContent.jpg");
+      const creatorsContent = useTexture("Frame 15613-min.jpg");
       creatorsContent.flipX = true;
 
-      const CriticalScreen = useTexture("CriticalDamage.jpg")
+      const CriticalScreen = useTexture("Frame 15619-min.jpg")
       CriticalScreen.flipX = true;
 
-      const criticalContent = useTexture("CriticalDamageContent.jpg");
+      const criticalContent = useTexture("Frame 15623-min.jpg");
       criticalContent.flipX = true;
 
-      const Informals = useTexture("Informals.jpg");
+      const Informals = useTexture("Frame 15618-min.jpg");
       Informals.flipX = true;
 
-      const informalContent = useTexture("InformalsContent.jpg");
+      const informalContent = useTexture("Frame 15622-min.jpg");
       informalContent.flipX = true;
 
       return (
