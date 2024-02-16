@@ -5,11 +5,12 @@
     --color-db: #444A7F;
 }
 
-#menu_nav{
-    filter:invert(1);
+#menu_nav {
+    filter: invert(1);
 }
-#close_nav{
-    filter:invert(1);
+
+#close_nav {
+    filter: invert(1);
 }
 
 .body {
@@ -18,19 +19,19 @@
     width: 100vw;
     background-image: url('../resources/bg_c-min.png');
     background-repeat: repeat-y;
-    background-size: 100% ;
+    background-size: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.body::before{
+.body::before {
     content: "";
     position: absolute;
     min-height: 100%;
     width: 100vw;
     background: url('../resources/Texture\ Pattern\ \(to\ be\ used\ as\ Color\ Burn\).jpg'), url('../resources/top\ black\ overlay\ for\ infinite\ tiles-min.jpg');
-    background-repeat:repeat, repeat;
-    background-position:center,center;
+    background-repeat: repeat, repeat;
+    background-position: center, center;
     mix-blend-mode: color-burn;
 }
 
@@ -51,7 +52,7 @@
     align-items: center;
 }
 
-.form{
+.form {
     z-index: 5000;
 }
 
@@ -75,7 +76,7 @@
 }
 
 .magnifying_glass {
-    filter:invert(1);
+    filter: invert(1);
     position: relative !important;
     right: 2vw;
 }
@@ -108,7 +109,7 @@
     border-radius: 0.55vw;
 }
 
-.modules:hover{
+.modules:hover {
     cursor: pointer;
 }
 
@@ -116,7 +117,7 @@
     padding: 1.11vw 1.11vw;
 }
 
-.para_cover p{
+.para_cover p {
     text-overflow: ellipsis;
     line-clamp: 1;
 }
@@ -134,11 +135,11 @@
 
 .small_box {
     position: relative;
-    right:0.6vw;
-    filter:invert(1);
+    right: 0.6vw;
+    filter: invert(1);
 }
 
-.list_container{
+.list_container {
     position: absolute;
     top: 12vh;
     right: 5.80vw;
@@ -213,7 +214,7 @@
     white-space: nowrap;
 }
 
-.list ul li:hover{
+.list ul li:hover {
     cursor: pointer;
 }
 
@@ -239,7 +240,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5vw ;
+    margin-bottom: 5vw;
 }
 
 .item_box::before {
@@ -271,14 +272,14 @@
 }
 
 .item_container {
-    height:auto;
+    height: auto;
     width: 86.12vw;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2vw;
 }
 
-.icon{
+.icon {
     height: 100%;
     width: 100%;
     z-index: 5;
@@ -287,85 +288,91 @@
     justify-content: end;
 }
 
-.iconsIMG{
+.iconsIMG {
     height: auto;
     width: 100%;
 }
 
-.icon_text{
+.icon_text {
     margin: 1vw 0vw;
     color: white;
     font-size: 1.94vw;
     font-weight: 700;
 }
 
-.margin_top_text{
+.margin_top_text {
     margin-top: 1vw;
 }
 
-.capital_prop_name{
+.capital_prop_name {
     text-align: center;
 }
 
-.above_texture{
+.above_texture {
     z-index: 5;
 }
 
+.para_cover p {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 40vw;
+}
+
 @media screen and (max-width: 1000px) {
-    .item_container{
+    .item_container {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .icon_text{
+    .icon_text {
         font-size: 4vw;
     }
 
-    .icon{
+    .icon {
         height: auto;
         width: auto;
     }
 
-    .search{
+    .search {
         height: 5vw !important;
         width: 60vw !important;
         font-size: 5vw;
     }
 
-    .search::placeholder{
+    .search::placeholder {
         font-size: 5vw;
     }
 
-    .container_1{
+    .container_1 {
         height: auto;
     }
 
-    .modules{
-        height: auto;
-        width: 50vw;
-    }
-
-    .list{
+    .modules {
         height: auto;
         width: 50vw;
     }
 
-    .list ul{
+    .list {
+        height: auto;
+        width: 50vw;
+    }
+
+    .list ul {
         height: auto;
     }
 
-    .list ul li{
+    .list ul li {
         padding: 1vw 0vw;
         font-size: 4vw;
     }
 
-    .modules p{
+    .modules p {
         font-size: 5vw;
         padding: 1vw;
     }
 }
 
 @media screen and (max-width: 800px) {
-    .item_container{
+    .item_container {
         grid-template-columns: repeat(1, 1fr);
     }
 }
