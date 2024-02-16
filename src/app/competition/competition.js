@@ -207,7 +207,7 @@ function Body() {
               </div>
             </div>
           </div>
-          <div className="title">
+          <div className="comp_title">
             {title.map((capital) => (
               <h2 key={capital.id} className="capital_prop_name">
                 {capital.category}
