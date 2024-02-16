@@ -286,6 +286,7 @@
     display: flex;
     flex-direction: column;
     justify-content: end;
+    margin: 2vw 0vw;
 }
 
 .iconsIMG {
@@ -316,6 +317,10 @@
     white-space: nowrap;
     overflow: hidden;
     width: 40vw;
+}
+
+#Literary{
+    margin-bottom: 5vw 0vw !important;
 }
 
 @media screen and (max-width: 1000px) {

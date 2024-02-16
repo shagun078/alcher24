@@ -9,7 +9,6 @@ const Animations = () => {
             <div className={styles.second}><div>140K FOOTFALL</div></div>
             <div className={styles.third}><div>100+ EVENTS</div></div>
             <div className={styles.fourth}><div>500+ COLLEGES</div></div>
-
         </div>
     );
 }

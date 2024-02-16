@@ -677,15 +677,16 @@ export default function Home() {
           <div id="ui_home">{buttons}</div>
         </div>
         <div className="mainContainer " ref={contentRef}>
-          {/*Video-container section starts*/}
-          {/* <div className="videoWrapper">
+         {/*
+          <div className="videoWrapper">
             <div className="videoBox">
               <iframe
                 src="https://www.youtube.com/embed/CWhFx8v1mg8?autoplay=1&controls=0"
                 allowFullScreen
               ></iframe>
             </div>
-          </div> */}
+
+          </div>*/}
 
           {/*Sponsor section starts*/}
           <div className="decorationContainer">
