@@ -589,6 +589,7 @@ function Tween() {
 
 export default function Home() {
   const [showSplash, setShowSplash] = useState(true);
+  const rotateRef = useRef();
 
   useEffect(() => {
     if (document.readyState !== "complete") {
@@ -603,7 +604,6 @@ export default function Home() {
       };
     } else {
       const timeout = window.setTimeout(() => {
-        console.log("timeout");
         setShowSplash(false);
       }, 0);
       return () => window.clearTimeout(timeout);
@@ -611,7 +611,6 @@ export default function Home() {
   }, []);
   const contentRef = useRef(null);
   const ref = useRef();
-  const rotateRef = useRef();
   const [isHovered, setIsHovered] = useState(false);
   const scrollToContent = () => {
     console.log("clicked!");
@@ -640,44 +639,47 @@ export default function Home() {
     </React.Fragment>
   );
 
-  // useFrame(() => {
-  //   rotateRef.current.rotation.y += 0.005;
-  // });
+  // const [show, setShow] = useState(false);
+  // setTimeout(() => {
+  //   console.log(show);
+  //   setShow(true);
+  // }, 6000);
+  // console.log(show);
 
   return !showSplash ? (
     <React.Fragment>
       <Navbar reg_bg={"register reg_bg1"} />
       <main className="threeD_2dwrapper">
         <div className="threeDWrapper">
-          <Canvas
-            camera={{
-              fov: 70,
-              position: [-2, 1.5, -1],
-              zoom: 1,
-            }}
-            shadows
-          >
-            <OrbitControls
-              ref={ref}
-              target={[-3.5, 1.4, -1.8]}
-              enableZoom={false}
-              enableDamping={true}
-              minPolarAngle={Math.PI / 3}
-              maxPolarAngle={Math.PI / 2}
-              dampingFactor={0.02}
-              enabled={true}
-            />
-            <ambientLight intensity={2} />
-            <Annotations controls={ref} />
-            <mesh ref={rotateRef}>
-              <RoomScene />
-            </mesh>
-            <Tween />
-          </Canvas>
+          <Suspense fallback={null}>
+            <Canvas
+              camera={{
+                fov: 70,
+                position: [-2, 1.5, -1],
+                zoom: 1,
+              }}
+              shadows
+            >
+              <OrbitControls
+                ref={ref}
+                target={[-3.5, 1.4, -1.8]}
+                enableZoom={false}
+                enableDamping={true}
+                minPolarAngle={Math.PI / 3}
+                maxPolarAngle={Math.PI / 2}
+                dampingFactor={0.02}
+                enabled={true}
+              />
+              <ambientLight intensity={2} />
+              <Annotations controls={ref} />
+              <RoomScene rotate={rotateRef} />
+              <Tween />
+            </Canvas>
+          </Suspense>
           <div id="ui_home">{buttons}</div>
         </div>
         <div className="mainContainer " ref={contentRef}>
-         {/*
+          {/*
           <div className="videoWrapper">
             <div className="videoBox">
               <iframe
