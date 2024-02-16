@@ -33,7 +33,7 @@ import { Cardleft, Cardright } from "./components/card";
 
 const marks = [
   {
-    title2: "JOINS US",
+    title2: "JOIN US",
     title1: "PRONITES",
     currPage: "PROSHOWS",
     description: "Alcher-related display image!",
@@ -115,7 +115,7 @@ const marks = [
   {
     title2: "INFORMALS",
     title1: "PROSHOWS",
-    currPage: "Join us all from 7th to 10th March",
+    currPage: "Join us all from 8th to 10th March",
     description: "Alcher-related display image!",
     camPos: {
       x: 0,
@@ -648,14 +648,14 @@ function Events() {
         ></motion.div>
       </div>
 
-      <Footer
+      {/* <Footer
         bg={"footer img1"}
         alcheringa_logo={alcheringa}
         star={"star1 star"}
         circle_src1={circle1}
         circle_src2={circle2}
         windows_src={windows1}
-      />
+      /> */}
     </>
   ) : (
     <Loading />

@@ -256,7 +256,7 @@ iframe {
 }
 .title-hover-home {
   position: absolute;
-  top: 50%;
+  top: -100%;
   width: max-content;
   text-align: center;
   font-weight: 700;
