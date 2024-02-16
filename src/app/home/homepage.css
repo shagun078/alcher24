@@ -168,7 +168,7 @@ canvas {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shift 8s linear infinite;
+  animation: shift 10s linear infinite;
   animation-delay: 2s;
 }
 .title-home a {

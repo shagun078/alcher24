@@ -204,8 +204,12 @@ function Events() {
   const [eventStyle, setEventStyle] = useState({ display: "block" });
   const [boxStyle, setBoxStyle] = useState({ opacity: 0 });
   const [currStyle, setCurrStyle] = useState({ opacity: 0 });
-  const [bgcolor, setbgcolor] = useState({ backgroundColor: "#141414" , backgroundImage:"url('TexturePattern.jpg')" , backgroundBlendMode:"color-burn"});
-  
+  const [bgcolor, setbgcolor] = useState({
+    backgroundColor: "#141414",
+    backgroundImage: "url('TexturePattern.jpg')",
+    backgroundBlendMode: "color-burn",
+  });
+
   // const [display, setDisplay] = useState("block");
   const controls = useRef();
   const camera = useRef();
@@ -383,12 +387,15 @@ function Events() {
         </div>
 
         <div className="responsive_btn_box center_btn_box">
-        <div className="events_arrow_div"   onClick={() => {
-          forward();
-        }}>
-        <img src="Events arrow.png" ></img>
-        </div>
-       
+          <div
+            className="events_arrow_div"
+            onClick={() => {
+              forward();
+            }}
+          >
+            <img src="Events arrow.png"></img>
+          </div>
+
           <button
             className="back-to-home"
             onClick={() => {
@@ -646,6 +653,14 @@ function Events() {
             <Cardright /> */}
           </section>
         </main>
+        <Footer
+          bg={"footer img1"}
+          alcheringa_logo={alcheringa}
+          star={"star1 star"}
+          circle_src1={circle1}
+          circle_src2={circle2}
+          windows_src={windows1}
+        />
         <motion.div
           className="blur-events"
           initial={{ opacity: open ? 0 : 1 }}
@@ -653,15 +668,6 @@ function Events() {
           transition={{ duration: 0.5 }}
         ></motion.div>
       </div>
-
-      {/* <Footer
-        bg={"footer img1"}
-        alcheringa_logo={alcheringa}
-        star={"star1 star"}
-        circle_src1={circle1}
-        circle_src2={circle2}
-        windows_src={windows1}
-      /> */}
     </>
   ) : (
     <Loading />
