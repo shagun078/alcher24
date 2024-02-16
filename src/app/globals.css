@@ -117,7 +117,7 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-p {
+p,span {
   cursor: default;
 }
 
