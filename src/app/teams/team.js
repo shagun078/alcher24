@@ -101,7 +101,7 @@ export default function Teams() {
                 <h6>Anurag</h6>
                 <a>Public Relation <br className="line_break" /> Head</a>
                 <br />
-                <a href="tel:+91 7061520276">+91 7061520276</a>
+                <a href="tel:+91 9864558336">+91 9864558336</a>
                 <br />
                 <a href="mailto:anurag@alcheringa.in">anurag@alcheringa.in</a>
               </div>
@@ -109,7 +109,7 @@ export default function Teams() {
                 <h6>Ankit Kumar</h6>
                 <a>Public Relation <br className="line_break" /> Head</a>
                 <br />
-                <a href="tel:+91 8340349585">+91 8340349585</a>
+                <a href="tel:+91 8092267185">+91 8092267185</a>
                 <br />
                 <a href="mailto:ankit.k@alcheringa.in">ankit.k@alcheringa.in</a>
               </div>

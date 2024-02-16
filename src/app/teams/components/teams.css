@@ -279,6 +279,10 @@
     .line_break{
         display: inline-block;
     }
+    .head_prb, .head_events, .head_creatives, .head_crm, .head_web_app, .head_mun, .head_finance, .head_convener{
+        padding-top: 10vh;
+        font-size: 4vw;
+    }
 }
 
 @media screen and (max-width: 431px){

@@ -84,7 +84,7 @@ const Footer = ({ bg, star, circle_src1, circle_src2, windows_src, alcheringa_lo
                     <div className="cred grid_1">
                         <h1>Anurag</h1>
                         <div className="info">
-                            <a href="tel:+91 7061520276">+91 7061520276</a>
+                            <a href="tel:+91 9864558336">+91 9864558336</a>
                             <br />
                             <a href="mailto:anurag@alcheringa.in">anurag@alcheringa.in</a>
                         </div>
@@ -92,7 +92,7 @@ const Footer = ({ bg, star, circle_src1, circle_src2, windows_src, alcheringa_lo
                     <div className="cred grid_2">
                         <h1>Ankit Kumar</h1>
                         <div className="info">
-                            <a href="tel:+91 8340349585">+91 8340349585</a>
+                            <a href="tel:+91 8092267185">+91 8092267185</a>
                             <br />
                             <a href="mailto:ankit.k@alcheringa.in">ankit.k@alcheringa.in</a>
                         </div>

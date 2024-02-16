@@ -172,7 +172,7 @@
 }
 
 .cred h1,p{
-    font-family: 'Uncut sans regular';
+    font-family: 'UncutSans';
 }
 
 .cred h1{
@@ -181,7 +181,7 @@
 }
 
 .cred_1 h1{
-    font-family: 'Uncut sans regular';
+    font-family: 'UncutSans';
     font-size: var(--font-size-20-1440);
     font-weight: 600;
 }
@@ -199,7 +199,7 @@
     width: 30vw;
     display: flex;
     justify-content: right;
-    font-family: 'Uncut sans regular';
+    font-family: 'UncutSans';
     font-size: var(--font-size-16-1440);
 }
 
@@ -226,7 +226,7 @@
     color: white;
     display: flex;
     flex-direction: row;
-    font-family: 'Uncut sans regular';
+    font-family: 'UncutSans';
     font-size: var(--font-size-16-1440);
     box-sizing: border-box;
     display: flex;
@@ -246,14 +246,14 @@
 
 .credits_2 a{
     color: white;
-    font-family: 'Uncut sans regular';
+    font-family: 'UncutSans';
     font-size: var(--font-size-16-1440);
     text-decoration: underline;
 }
 
 .credits_2 a p{
     color: white;
-    font-family: 'Uncut sans regular';
+    font-family: 'UncutSans';
     font-size: var(--font-size-16-1440);
 }
 
@@ -304,7 +304,7 @@
 }
 
 .info{
-    font-family: 'Uncut sans regular';
+    font-family: 'UncutSans';
     font-weight: 400;
     font-size: var(--font-size-16-1440);
     padding: 1vw 0vw 2vw 0vw;

@@ -105,7 +105,7 @@
     font-size: var(--font-size-20-1440);
     color: var(--color-w);
     box-sizing: border-box;
-    font-family: 'Uncut sans regular';
+    font-family: 'UncutSans';
     border-radius: 0.55vw;
 }
 
@@ -204,7 +204,7 @@
 }
 
 .list ul li {
-    font-family: 'Uncut sans regular';
+    font-family: 'UncutSans';
     font-weight: 400;
     font-size: var(--font-size-20-1440);
     color: white;

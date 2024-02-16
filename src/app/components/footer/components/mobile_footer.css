@@ -110,7 +110,7 @@
 
     #follow_text,
     #on_text {
-        font-family: 'Uncut sans regular';
+        font-family: 'UncutSans';
         display: inline-block;
         font-size: var(--font-size-16-mobile) !important;
         height: 3vh;
