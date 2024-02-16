@@ -246,7 +246,7 @@ body::-webkit-scrollbar {
 .dropdown > ul > li:last-child {
   border-bottom: none;
 }
-.blur-events {
+/* .blur-events {
   opacity: 0;
   z-index: 99;
   position: absolute;
@@ -257,7 +257,7 @@ body::-webkit-scrollbar {
   background-color: rgba(255, 255, 255, 0.294);
   backdrop-filter: blur(2px);
   pointer-events: none;
-}
+} */
 
 .image-wrapper {
   width: 100%;
