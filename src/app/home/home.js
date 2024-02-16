@@ -640,35 +640,9 @@ export default function Home() {
     </React.Fragment>
   );
 
-  // useEffect(() => {
-  //   const cnvs = document.querySelector("canvas");
-  //   cnvs.addEventListener("dragover", () => {
-  //     cnvs.style.cursor = "grabbing!important";
-  //   });
-  // }, []);
-
-  // const Cursor = () => {
-  //   useEffect(() => {
-  //     const cursor = document.querySelector(".cursor");
-  //     window.addEventListener("mousemove", (e) => {
-  //       const { clientX, clientY } = e;
-  //       cursor.style.left = `${clientX}px`;
-  //       cursor.style.top = `${clientY}px`;
-  //     });
-  //   }, []);
-  //   return (
-  //     <div className="cursor">
-  //       <img
-  //         src={"cursor.png"}
-  //         alt="Hello"
-  //         style={{
-  //           width: "100%",
-  //           height: "100%",
-  //         }}
-  //       />
-  //     </div>
-  //   );
-  // };
+  // useFrame(() => {
+  //   rotateRef.current.rotation.y += 0.005;
+  // });
 
   return !showSplash ? (
     <React.Fragment>
@@ -703,15 +677,16 @@ export default function Home() {
           <div id="ui_home">{buttons}</div>
         </div>
         <div className="mainContainer " ref={contentRef}>
-          {/*Video-container section starts*/}
-          {/* <div className="videoWrapper">
+         {/*
+          <div className="videoWrapper">
             <div className="videoBox">
               <iframe
                 src="https://www.youtube.com/embed/CWhFx8v1mg8?autoplay=1&controls=0"
                 allowFullScreen
               ></iframe>
             </div>
-          </div> */}
+
+          </div>*/}
 
           {/*Sponsor section starts*/}
           <div className="decorationContainer">

@@ -1,21 +1,16 @@
 @font-face {
-  font-family: 'Uncut sans';
-  src: url("/Uncut-Sans-Bold.otf") format('truetype');
+  font-family: FontSpringText;
+  src:url('../../public/Vacation-Heavy.ttf')
 }
 
 @font-face {
-  font-family: 'Futara PT';
-  src: url("/FuturaPTLight.otf") format('truetype');
+  font-family: CruffySans;
+  src: url("../../public/CruyffSans-Bold.ecd5078c.woff2");
 }
 
 @font-face {
-  font-family: 'Uncut sans medium';
-  src: url("/Uncut-Sans-Medium.otf") format('truetype');
-}
-
-@font-face {
-  font-family: 'Uncut sans regular';
-  src: url("/Uncut-Sans-Regular.otf") format('truetype');
+  font-family: UncutSans;
+  src: url("../../public/Uncut-Sans-Medium.woff2");
 }
 
 
@@ -131,6 +126,8 @@ a {
     color-scheme: dark;
   }
 }
+
+
 /* from prev */
 /* 
 @font-face {

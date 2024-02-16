@@ -96,7 +96,7 @@
 .fixing{ 
     width: 11.56vw;
     display: flex;
-    justify-content: center;
+    justify-content: center;    
 }
 
 .cred{
@@ -172,6 +172,9 @@
 
     .navbar_menu.active{
         display: grid;
+        position: absolute;
+        top:0;
+        right:0;    
         place-items: center;
         animation-duration: 0.4s;
     }
@@ -190,6 +193,7 @@
     }
 
     .navbar_menu ul li{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-weight: 400;
         font-size: 4.07vw;
         margin: auto;

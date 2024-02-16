@@ -15,25 +15,9 @@ canvas {
   cursor: -moz-grab;
 }
 
-@font-face {
-  font-family: sponsor_heading_text;
-  src: url("../../../public/Fontspring-DEMO-freigeist-conblack.woff2");
-}
 
-@font-face {
-  font-family: headingAlcher;
-  src: url("../../../public/CruyffSans-Bold.ecd5078c.woff2");
-}
 
-@font-face {
-  font-family: normalText;
-  src: url("../../../public/Uncut-Sans-Medium.woff2");
-}
 
-@font-face {
-  font-family: clockText;
-  src: url("../../../public/Orbitron-Black.ttf");
-}
 
 .clock_div {
   width: 15px;
@@ -58,13 +42,7 @@ canvas {
   flex-direction: column;
 }
 
-#s1 {
-  font-size: 25px;
-}
 
-#s2 {
-  font-size: 25px;
-}
 
 #info {
   position: absolute;
@@ -110,7 +88,7 @@ canvas {
   width: 200px;
   background: rgba(0, 0, 0, 0.66);
   color: white;
-  font-family: normalText;
+  font-family: UncutSans;
   border-radius: 0.5em;
   display: block;
 }
@@ -155,7 +133,7 @@ canvas {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-  font-family: headingAlcher;
+  font-family: CruffySans;
   font-weight: 400 !important;
   align-items: center;
   justify-content: center;
@@ -167,7 +145,7 @@ canvas {
   text-align: justify;
   display: flex;
   align-items: center;
-  font-family: normalText !important;
+  font-family: UncutSans !important;
 }
 .title-home {
   width: 100%;
@@ -256,7 +234,7 @@ iframe {
 }
 .title-hover-home {
   position: absolute;
-  top: 50%;
+  top: -100%;
   width: max-content;
   text-align: center;
   font-weight: 700;
@@ -345,28 +323,28 @@ iframe {
   color: #aadcdb;
   font-weight: 850;
   font-size: 4.5vw;
-  font-family: sponsor_heading_text;
+  font-family: FontSpringText;
 }
 
 .text_sponsor_content span {
   color: #f12353;
   font-size: 4.2vw;
   font-weight: 700;
-  font-family: headingAlcher;
+  font-family: CruffySans;
 }
 
 .text_sponsor_content h2 {
   color: #ffffff;
   font-size: 4.2vw;
   font-weight: 700;
-  font-family: headingAlcher;
+  font-family: CruffySans;
 }
 
 .text_sponsor_content p {
   color: #ffffff;
   margin-top: 1.4rem;
   font-size: 1.8vw;
-  font-family: normalText;
+  font-family: UncutSans;
 }
 .splide {
   width: 90%;
@@ -402,7 +380,7 @@ iframe {
   color: #ffffff;
   font-size: 1.6rem;
   margin-bottom: 1rem;
-  font-family: normalText;
+  font-family: UncutSans;
   font-weight: 900;
 }
 
@@ -410,7 +388,7 @@ iframe {
   color: #f22c5b;
   font-size: 3rem;
   margin-bottom: 1.4rem;
-  font-family: headingAlcher;
+  font-family: CruffySans;
 }
 
 #registerBtn {
@@ -424,7 +402,7 @@ iframe {
   border-radius: 1rem;
   background-color: #f22c5b;
   cursor: pointer;
-  font-family: headingAlcher;
+  font-family: CruffySans;
 }
 .cardHoverSection {
   display: flex;
@@ -549,13 +527,13 @@ iframe {
   color: #aadcdb;
   font-size: 3.8vw;
   text-align: left;
-  font-family: headingAlcher;
+  font-family: FontSpringText;
 }
 
 #text_home p {
   margin-top: 2vh;
   font-size: 1.2vw;
-  font-family: normalText;
+  font-family: UncutSans;
   color: white;
 }
 
@@ -581,7 +559,7 @@ iframe {
   color: #aadcdb;
   font-weight: 850;
   font-size: 5.5vw;
-  font-family: sponsor_heading_text;
+  font-family: FontSpringText;
   margin-bottom: -5vh;
 }
 
@@ -598,7 +576,7 @@ iframe {
   color: #ffffff;
   margin-top: -4vh;
   font-size: 2vw;
-  font-family: normalText;
+  font-family: UncutSans;
 }
 
 .buy_merch_button {
@@ -623,21 +601,21 @@ iframe {
   color: #aadcdb;
   font-weight: 850;
   font-size: 5.5vw;
-  font-family: sponsor_heading_text;
+  font-family: FontSpringText;
 }
 
 .alcher_merch_coming_soon span {
   color: #f12353;
   font-size: 4.2vw;
   font-weight: 700;
-  font-family: headingAlcher;
+  font-family: CruffySans;
 }
 
 .alcher_merch_coming_soon h2 {
   color: #ffffff;
   font-size: 4.2vw;
   font-weight: 700;
-  font-family: headingAlcher;
+  font-family: CruffySans;
 }
 
 @keyframes moveUpDown {

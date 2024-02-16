@@ -21,7 +21,7 @@ const Navbar = ({ reg_bg }) => {
     return (
         <div className="header">
             <div className="logo">
-                <a href="/home">Alcheringa</a>
+                <a href="/home">ALCHERINGA</a>
             </div>
             <nav className={statey === true ? "navbar_menu active" : "navbar_menu"}>
                 <ul>

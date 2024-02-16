@@ -33,7 +33,7 @@ import { Cardleft, Cardright } from "./components/card";
 
 const marks = [
   {
-    title2: "JOINS US",
+    title2: "JOIN US",
     title1: "PRONITES",
     currPage: "PROSHOWS",
     description: "Alcher-related display image!",
@@ -115,7 +115,7 @@ const marks = [
   {
     title2: "INFORMALS",
     title1: "PROSHOWS",
-    currPage: "Join us all from 7th to 10th March",
+    currPage: "Join us all from 8th to 10th March",
     description: "Alcher-related display image!",
     camPos: {
       x: 0,
@@ -204,8 +204,8 @@ function Events() {
   const [eventStyle, setEventStyle] = useState({ display: "block" });
   const [boxStyle, setBoxStyle] = useState({ opacity: 0 });
   const [currStyle, setCurrStyle] = useState({ opacity: 0 });
-  const [bgcolor, setbgcolor] = useState({ backgroundColor: "#141414" });
-
+  const [bgcolor, setbgcolor] = useState({ backgroundColor: "#141414" , backgroundImage:"url('TexturePattern.jpg')" , backgroundBlendMode:"color-burn"});
+  
   // const [display, setDisplay] = useState("block");
   const controls = useRef();
   const camera = useRef();
@@ -382,7 +382,13 @@ function Events() {
           </span>
         </div>
 
-        <div className="responsive_btn_box">
+        <div className="responsive_btn_box center_btn_box">
+        <div className="events_arrow_div"   onClick={() => {
+          forward();
+        }}>
+        <img src="Events arrow.png" ></img>
+        </div>
+       
           <button
             className="back-to-home"
             onClick={() => {
@@ -648,14 +654,14 @@ function Events() {
         ></motion.div>
       </div>
 
-      <Footer
+      {/* <Footer
         bg={"footer img1"}
         alcheringa_logo={alcheringa}
         star={"star1 star"}
         circle_src1={circle1}
         circle_src2={circle2}
         windows_src={windows1}
-      />
+      /> */}
     </>
   ) : (
     <Loading />
