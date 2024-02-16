@@ -244,12 +244,17 @@
     font-weight: 600;
 }
 
+.names_prb p, .names_crm p, .names_creatives p, .names_events p, .names_web_app p, .names_mun p, .names_finance p, .names_convener p{
+    font-size: var(--text_detail);
+    font-weight: 600;
+}
+
 .finance_img{
     margin-bottom: -0.3vw;
 }
 
 .convener_img{
-    margin-bottom: 1.4vw;
+    margin-bottom: 1vw;
 }
 
 @media screen and (max-width: 1025px){

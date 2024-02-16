@@ -71,7 +71,7 @@ export default function Kartavya() {
                 height: "auto",
               }}
               quality={100}
-              placeholder="blur"
+              // placeholder="blur"
             />
           </div>
 
@@ -156,7 +156,7 @@ export default function Kartavya() {
               height: "auto",
             }}
             quality={100}
-            placeholder="blur"
+            // placeholder="blur"
           />
         </div>
       </main>
