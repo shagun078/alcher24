@@ -23,8 +23,8 @@
     justify-content: space-around;
     align-items: center;
     overflow: visible;
-    background-image: url('../../../../../public/texture_black_bg.jpg');
-    background-blend-mode:color-burn;
+    background-image: url('../../../../../public/TexturePattern.jpg');
+    /* background-blend-mode:color-burn; */
     z-index: 30000;
 }
 
@@ -170,8 +170,8 @@
         align-items: center;
         z-index: 300000;
         overflow: hidden;
-        background-image: url('../../../../../public/texture_black_bg.jpg');
-        background-blend-mode:color-burn;
+        background-image: url('../../../../../public/TexturePattern.jpg');
+        /* background-blend-mode:color-burn; */
     }
 
 

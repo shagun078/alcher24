@@ -1,6 +1,6 @@
 .sponsor_main{
   background-image: url('../../../../public/TexturePattern.jpg');
-  background-blend-mode:color-burn;
+  /* background-blend-mode:color-burn; */
   text-align: center;
   color: white;
   font-size: 1.2vw;

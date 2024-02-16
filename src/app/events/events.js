@@ -204,7 +204,7 @@ function Events() {
   const [eventStyle, setEventStyle] = useState({ display: "block" });
   const [boxStyle, setBoxStyle] = useState({ opacity: 0 });
   const [currStyle, setCurrStyle] = useState({ opacity: 0 });
-  const [bgcolor, setbgcolor] = useState({ backgroundColor: "#141414" , backgroundImage:"url('TexturePattern.jpg')" , backgroundBlendMode:"color-burn"});
+  const [bgcolor, setbgcolor] = useState({ backgroundColor: "#141414" , backgroundImage:"url('TexturePattern.jpg')"});
   
   // const [display, setDisplay] = useState("block");
   const controls = useRef();

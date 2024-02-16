@@ -17,7 +17,7 @@
     text-align: center;
     overflow: hidden;
     background-image: url('../../../../public/TexturePattern.jpg');
-    background-blend-mode:color-burn;
+    /* background-blend-mode:color-burn; */
     user-select: none;
     margin-top: 0;
 }
