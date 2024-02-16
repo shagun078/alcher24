@@ -1,3 +1,25 @@
+@font-face {
+  font-family: 'Uncut sans';
+  src: url("/Uncut-Sans-Bold.otf") format('truetype');
+}
+
+@font-face {
+  font-family: 'Futara PT';
+  src: url("/FuturaPTLight.otf") format('truetype');
+}
+
+@font-face {
+  font-family: 'Uncut sans medium';
+  src: url("/Uncut-Sans-Medium.otf") format('truetype');
+}
+
+@font-face {
+  font-family: 'Uncut sans regular';
+  src: url("/Uncut-Sans-Regular.otf") format('truetype');
+}
+
+
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;

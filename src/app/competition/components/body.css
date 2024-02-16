@@ -13,15 +13,12 @@
 }
 
 .body {
-    margin: 0;
-    padding: 0;
     position: relative;
     min-height: 89.11vw;
     width: 100vw;
     background-image: url('../resources/bg_c-min.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-repeat: repeat-y;
+    background-size: 100% ;
     display: flex;
     flex-direction: column;
 }
@@ -119,6 +116,11 @@
     padding: 1.11vw 1.11vw;
 }
 
+.para_cover p{
+    text-overflow: ellipsis;
+    line-clamp: 1;
+}
+
 .fa-sort-down {
     height: 2vw;
     width: 4vw;
@@ -141,6 +143,7 @@
     top: 12vh;
     right: 5.80vw;
     height: 42.28vw;
+    z-index: 10;
 }
 
 .list {
@@ -231,7 +234,7 @@
 }
 
 .item_box {
-    min-height: 69.12vw;
+    height: auto;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -268,32 +271,25 @@
 }
 
 .item_container {
-    min-height: 63.96vw;
+    height:auto;
     width: 86.12vw;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(all,1fr);
+    grid-gap: 2vw;
 }
 
 .icon{
-    height: 30.48vw;
-    width: 26.875vw;
-    margin: 1vw;
-    color: white;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 5;
-}
-
-.icon_ke_andar{
-    width: 100%;
+    justify-content: end;
 }
 
 .iconsIMG{
-    height: 100%;
-    width: 26.875vw;
+    height: auto;
+    width: 100%;
 }
 
 .icon_text{
@@ -303,8 +299,8 @@
     font-weight: 700;
 }
 
-.pad_text_arr{
-    margin-top: 5vw;
+.margin_top_text{
+    margin-top: 1vw;
 }
 
 .capital_prop_name{
