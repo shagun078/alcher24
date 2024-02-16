@@ -56,8 +56,8 @@ const marks = [
   },
   {
     key: "B",
-    title: "ALCHERINGA APP",
-    link: "https://www.alcheringa.in/",
+    title: "ALCHER APP",
+    link: "https://play.google.com/store/apps/details?id=com.alcheringa.alcheringa2022",
     description:
       "Download our app and visit our website get access to amazing features like E-Alcher passes, Schedule, Campus maps, Real-Time updates and much more.",
     camPos: {
@@ -91,7 +91,7 @@ const marks = [
     title: "THEME",
     link: "",
     description:
-      "The theme for Alcheringa 24 tells the story of a young girl who is facing a art block in a monotonous world, travels to a art exhibit in a museum. There a weird painting attracts her attention, when she proceeds to touch in she is sucked into a Psychedelic world where she sees paint splashes on the ground, following the splashes leads her to her painting brush and she remembers her joyous past and gets inspiration for a new masterpiece and with a swoosh of the painting returns to the real world but is full with inspiration and motivation to continue living forward.",
+      "The theme for Alcheringa 24 tells the story of a young girl who is facing a art block in a monotonous world,travels to a art exhibit ina museum and unravels a journey of Psychedelia to find her inspiration.",
     camPos: {
       x: -4,
       y: 2,
@@ -495,26 +495,6 @@ function Annotations({ controls }) {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 2, delay: 1.5 }}
                   >
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ duration: 2, delay: 1.5 }}
-                      className="return-home"
-                      onClick={handleReturn}
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="22"
-                        height="22"
-                        viewBox="0 0 22 22"
-                        fill="none"
-                      >
-                        <path
-                          d="M21.333 9.70835V12.2917H5.83305L12.9372 19.3959L11.103 21.23L0.873047 11L11.103 0.77002L12.9372 2.60419L5.83305 9.70835H21.333Z"
-                          fill="white"
-                        />
-                      </svg>
-                    </motion.div>
                     <div className="flex-container-home">
                       <motion.div
                         className="title-home"
@@ -526,35 +506,55 @@ function Annotations({ controls }) {
                           fontSize: window.innerWidth > 840 ? "4.7vh" : "3.5vh",
                         }}
                       >
-                        <span>
+                        <motion.div
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 2, delay: 1.5 }}
+                          className="return-home"
+                          onClick={handleReturn}
+                        >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            width="29"
-                            height="32"
-                            viewBox="0 0 29 32"
+                            width="22"
+                            height="22"
+                            viewBox="0 0 22 22"
                             fill="none"
                           >
                             <path
-                              d="M14.5 0.5L16.5506 13.808L29 16L16.5506 18.192L14.5 31.5L12.4494 18.192L0 16L12.4494 13.808L14.5 0.5Z"
+                              d="M21.333 9.70835V12.2917H5.83305L12.9372 19.3959L11.103 21.23L0.873047 11L11.103 0.77002L12.9372 2.60419L5.83305 9.70835H21.333Z"
                               fill="white"
                             />
                           </svg>
-                        </span>
+                        </motion.div>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="29"
+                          height="32"
+                          viewBox="0 0 29 32"
+                          fill="none"
+                        >
+                          <path
+                            d="M14.5 0.5L16.5506 13.808L29 16L16.5506 18.192L14.5 31.5L12.4494 18.192L0 16L12.4494 13.808L14.5 0.5Z"
+                            fill="white"
+                          />
+                        </svg>
                         <Link href={a.link}>{a.title}</Link>
-                        <span>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="29"
-                            height="32"
-                            viewBox="0 0 29 32"
-                            fill="none"
-                          >
-                            <path
-                              d="M14.5 0.5L16.5506 13.808L29 16L16.5506 18.192L14.5 31.5L12.4494 18.192L0 16L12.4494 13.808L14.5 0.5Z"
-                              fill="white"
-                            />
-                          </svg>
-                        </span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="29"
+                          height="32"
+                          viewBox="0 0 29 32"
+                          fill="none"
+                        >
+                          <path
+                            d="M14.5 0.5L16.5506 13.808L29 16L16.5506 18.192L14.5 31.5L12.4494 18.192L0 16L12.4494 13.808L14.5 0.5Z"
+                            fill="white"
+                          />
+                        </svg>
+                        <div
+                          className="return-home"
+                        >
+                        </div>
                       </motion.div>
                       <motion.p
                         initial={{ opacity: 0 }}
@@ -695,15 +695,14 @@ export default function Home() {
         </div>
         <div className="mainContainer " ref={contentRef}>
           {/*Video-container section starts*/}
-          <div className="videoWrapper">
+          {/* <div className="videoWrapper">
             <div className="videoBox">
               <iframe
                 src="https://www.youtube.com/embed/CWhFx8v1mg8?autoplay=1&controls=0"
                 allowFullScreen
               ></iframe>
             </div>
-            {/*Video-container section ends*/}
-          </div>
+          </div> */}
 
           {/*Sponsor section starts*/}
           <div className="decorationContainer">
@@ -776,7 +775,10 @@ export default function Home() {
                   <br /> much more.
                 </p>
                 <div id="appDownloadBtn">
-                  <img src="home_google_play.png" className="googlePlayImage"></img>
+                  <img
+                    src="home_google_play.png"
+                    className="googlePlayImage"
+                  ></img>
                 </div>
               </div>
             </div>

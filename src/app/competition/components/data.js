@@ -318,16 +318,16 @@ const info = [{
     url: "https://registrations.alcheringa.in/competitions/register/e2c2e4b8-59b4-4845-93ea-3d38be9fefee/",
     tags:"reel making, reels, online, creative, story, photography    "
 },
-// {
-//     id: 35,
-//     category:"Lights Camera Action",
-//     img: '/competition_img/SUTUCD-min.png',
-//     comp_name:"Vlog Verse",
-//     type:"Solo ·",
-//     one_liner:"Vlogging Competition",
-//     url: "https://registrations.alcheringa.in/competitions/register/b9bab27a-c4f0-4bcf-94d4-d34d67991757/",
-//     tags:"vlogging, photography, story, short film, director, offline, documentary    "
-// },
+{
+    id: 35,
+    category:"Lights Camera Action",
+    img: '/competition_img/Vlog Verse-min.png',
+    comp_name:"Vlog Verse",
+    type:"Solo ·",
+    one_liner:"Vlogging Competition",
+    url: "https://registrations.alcheringa.in/competitions/register/b9bab27a-c4f0-4bcf-94d4-d34d67991757/",
+    tags:"vlogging, photography, story, short film, director, offline, documentary    "
+},
 {
     id: 37,
     category:"Lights Camera Action",
@@ -348,96 +348,96 @@ const info = [{
     url:"https://registrations.alcheringa.in/competitions/register/63f475f3-31b2-48f8-84f7-a60cb68152b3/",
     tags:"photography, online, creative, photoshoot, DSLR, picture, editing, photo editing    "
 },
-// {
-//     id: 39,
-//     category:"Sports",
-//     img: '/competition_img/SUTUCD-min.png',
-//     comp_name:"5 on 5 Football",
-//     type:"Group ",
-//     one_liner:"",
-//     url: "https://registrations.alcheringa.in/competitions/register/5d513ae3-6716-4f0c-af0b-6d0354aa6bac/",
-//     tags:"football, offline, sports    "
-// },
-// {
-//     id: 40,
-//     category:"Sports",
-//     img: '/competition_img/SUTUCD-min.png',
-//     comp_name:"Arm Wrestling",
-//     type:"Solo ",
-//     one_liner:"",
-//     url: "https://registrations.alcheringa.in/competitions/register/03a105f8-a989-4601-9e4e-a70a3d398af4/",
-//     tags:"arm wrestling, panja, sports, offline    "
-// },
-// {
-//     id: 41,
-//     category:"Sports",
-//     img: '/competition_img/SUTUCD-min.png',
-//     comp_name:"Gully Cricket",
-//     type:"Group ",
-//     one_liner:"",
-//     url: "https://registrations.alcheringa.in/competitions/register/e41f7de8-197f-45db-9317-8a1bd81a3fc9/",
-//     tags:"cricket, gully cricket, sports, offline    "
-// },
-// {
-//     id: 42,
-//     category:"Sports",
-//     img: '/competition_img/SUTUCD-min.png',
-//     comp_name:"3 vs 3 Basketball",
-//     type:"Group ",
-//     one_liner:"",
-//     url: "https://registrations.alcheringa.in/competitions/register/8f18a618-7fa9-4872-ad22-c9f80704c159/",
-//     tags:"basketball, sports, offline    "
-// },
-// {
-//     id: 43,
-//     category:"Sports",
-//     img: '/competition_img/SUTUCD-min.png',
-//     comp_name:"3 vs 3 Volleyball",
-//     type:"Group ",
-//     one_liner:"",
-//     url: "https://registrations.alcheringa.in/competitions/register/2c76d16c-4d52-4568-9656-ef57389c48f6/",
-//     tags:"volleyball, sports, offline    "
-// },
-// {
-//     id: 44,
-//     category:"Quiz",
-//     img: '/competition_img/SUTUCD-min.png',
-//     comp_name:"Genral Quiz",
-//     type:"Duet ",
-//     one_liner:"",
-//     url: "https://registrations.alcheringa.in/competitions/register/9e2c0370-bba3-4144-adec-b1551c8ff7e8/",
-//     tags:"quiz, general quiz, offline    "
-// },
-// {
-//     id: 45,
-//     category:"Quiz",
-//     img: '/competition_img/SUTUCD-min.png',
-//     comp_name:"Buisness Quiz",
-//     type:"Duet ",
-//     one_liner:"",
-//     url: "https://registrations.alcheringa.in/competitions/register/743b9524-d521-473a-b50b-47d3c764be0a/",
-//     tags:"offline, business quiz, strategy quiz, entrepreneurship    "
-// },
-// {
-//     id: 46,
-//     category:"Quiz",
-//     img: '/competition_img/SUTUCD-min.png',
-//     comp_name:"Comic Quiz",
-//     type:"Duet ",
-//     one_liner:"",
-//     url: "https://registrations.alcheringa.in/competitions/register/bd716e79-c5e1-4c3d-863c-fed6fc7d79f4/",
-//     tags:"sports quiz, quiz, offline    "
-// },
-// {
-//     id: 47,
-//     category:"Quiz",
-//     img: '/competition_img/SUTUCD-min.png',
-//     comp_name:"Sports Quiz",
-//     type:"Duet ",
-//     one_liner:"",
-//     url: "https://registrations.alcheringa.in/competitions/register/6a8468f1-abff-4f3d-b2e4-33f62b576a1e/",
-//     tags:"comic quiz, offline, quiz    "
-// },
+{
+    id: 39,
+    category:"Sports",
+    img: '/competition_img/Football-min.png',
+    comp_name:"5 on 5 Football",
+    type:"Group ",
+    one_liner:"",
+    url: "https://registrations.alcheringa.in/competitions/register/5d513ae3-6716-4f0c-af0b-6d0354aa6bac/",
+    tags:"football, offline, sports    "
+},
+{
+    id: 40,
+    category:"Sports",
+    img: '/competition_img/Wrestling-min.png',
+    comp_name:"Arm Wrestling",
+    type:"Solo ",
+    one_liner:"",
+    url: "https://registrations.alcheringa.in/competitions/register/03a105f8-a989-4601-9e4e-a70a3d398af4/",
+    tags:"arm wrestling, panja, sports, offline    "
+},
+{
+    id: 41,
+    category:"Sports",
+    img: '/competition_img/cricket-min.png',
+    comp_name:"Gully Cricket",
+    type:"Group ",
+    one_liner:"",
+    url: "https://registrations.alcheringa.in/competitions/register/e41f7de8-197f-45db-9317-8a1bd81a3fc9/",
+    tags:"cricket, gully cricket, sports, offline    "
+},
+{
+    id: 42,
+    category:"Sports",
+    img: '/competition_img/Basketball-min.png',
+    comp_name:"3 vs 3 Basketball",
+    type:"Group ",
+    one_liner:"",
+    url: "https://registrations.alcheringa.in/competitions/register/8f18a618-7fa9-4872-ad22-c9f80704c159/",
+    tags:"basketball, sports, offline    "
+},
+{
+    id: 43,
+    category:"Sports",
+    img: '/competition_img/Volleyball-min.png',
+    comp_name:"3 vs 3 Volleyball",
+    type:"Group ",
+    one_liner:"",
+    url: "https://registrations.alcheringa.in/competitions/register/2c76d16c-4d52-4568-9656-ef57389c48f6/",
+    tags:"volleyball, sports, offline    "
+},
+{
+    id: 44,
+    category:"Quiz",
+    img: '/competition_img/Quiz-min.png',
+    comp_name:"Genral Quiz",
+    type:"Duet ",
+    one_liner:"",
+    url: "https://registrations.alcheringa.in/competitions/register/9e2c0370-bba3-4144-adec-b1551c8ff7e8/",
+    tags:"quiz, general quiz, offline    "
+},
+{
+    id: 45,
+    category:"Quiz",
+    img: '/competition_img/Quiz-min.png',
+    comp_name:"Buisness Quiz",
+    type:"Duet ",
+    one_liner:"",
+    url: "https://registrations.alcheringa.in/competitions/register/743b9524-d521-473a-b50b-47d3c764be0a/",
+    tags:"offline, business quiz, strategy quiz, entrepreneurship    "
+},
+{
+    id: 46,
+    category:"Quiz",
+    img: '/competition_img/Quiz-min.png',
+    comp_name:"Comic Quiz",
+    type:"Duet ",
+    one_liner:"",
+    url: "https://registrations.alcheringa.in/competitions/register/bd716e79-c5e1-4c3d-863c-fed6fc7d79f4/",
+    tags:"sports quiz, quiz, offline    "
+},
+{
+    id: 47,
+    category:"Quiz",
+    img: '/competition_img/Quiz-min.png',
+    comp_name:"Sports Quiz",
+    type:"Duet ",
+    one_liner:"",
+    url: "https://registrations.alcheringa.in/competitions/register/6a8468f1-abff-4f3d-b2e4-33f62b576a1e/",
+    tags:"comic quiz, offline, quiz    "
+},
 {
     id: 48,
     category:"Drama",

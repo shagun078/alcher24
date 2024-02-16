@@ -68,9 +68,11 @@ export default function Teams() {
           <div className="teams_head1">
             <h2>MEET THE TEAMS</h2>
             <h5>
-                   "Coming together is a beginning.
-              <br />Keeping together is progress.
-              <br />Working together is success."
+              "Coming together is a beginning.
+              <br />
+              Keeping together is progress.
+              <br />
+              Working together is success."
             </h5>
           </div>
           <div className="right_window"></div>
@@ -86,8 +88,8 @@ export default function Teams() {
                 src={model_prb}
                 alt="model_prb"
                 style={{
-                  width: "60vw",
-                  height: "auto",
+                  width: "fit-content",
+                  height: "30vh",
                 }}
               />
             </div>
@@ -121,8 +123,8 @@ export default function Teams() {
                 src={model_crm}
                 alt="Corporate Relation & Marketing"
                 style={{
-                  width: "75vw",
-                  height: "auto",
+                  width: "fit-content",
+                  height: "30vh",
                 }}
               />
             </div>
@@ -134,7 +136,9 @@ export default function Teams() {
                 <a href="mailto:rachit@alcheringa.in">rachit@alcheringa.in</a>
               </div>
               <div>
-                <h6>Harshit <br className="line_break" /> Garg</h6>
+                <h6>
+                  Harshit <br className="line_break" /> Garg
+                </h6>
                 <a href="tel:+91 7014850105">+91 7014850105</a>
                 <br />
                 <a href="mailto:harshit@alcheringa.in">harshit@alcheringa.in</a>
@@ -164,8 +168,8 @@ export default function Teams() {
                 src={model_creatives}
                 alt="Creatives"
                 style={{
-                  width: "60vw",
-                  height: "auto",
+                  width: "fit-content",
+                  height: "30vh",
                   paddingBottom: "0px",
                   marginBottom: "-10px",
                 }}
@@ -189,7 +193,9 @@ export default function Teams() {
                 </a>
               </div>
               <div>
-                <h6>Virat <br className="line_break" /> Dubey</h6>
+                <h6>
+                  Virat <br className="line_break" /> Dubey
+                </h6>
                 <a href="tel:+91 9322603447">+91 9322603447</a>
                 <br />
                 <a href="mailto:creatives@alcheringa.in">
@@ -207,8 +213,8 @@ export default function Teams() {
                 src={model_events}
                 alt="Events"
                 style={{
-                  width: "60vw",
-                  height: "auto",
+                  width: "fit-content",
+                  height: "30vh",
                 }}
               />
             </div>
@@ -220,7 +226,9 @@ export default function Teams() {
                 <a href="mailto:abhinav@alcheringa.in">abhinav@alcheringa.in</a>
               </div>
               <div>
-                <h6>Priyanshu <br className="line_break" /> Sinha</h6>
+                <h6>
+                  Priyanshu <br className="line_break" /> Sinha
+                </h6>
                 <a href="tel:+91 9650757099">+91 9650757099</a>
                 <br />
                 <a href="mailto:priyanshu.s@alcheringa.in">
@@ -228,7 +236,9 @@ export default function Teams() {
                 </a>
               </div>
               <div>
-                <h6>Rahul <br className="line_break" /> Singh</h6>
+                <h6>
+                  Rahul <br className="line_break" /> Singh
+                </h6>
                 <a href="tel:+91 7518509062">+91 7518509062</a>
                 <br />
                 <a href="mailto:rahul@alcheringa.in">rahul@alcheringa.in</a>
@@ -244,8 +254,8 @@ export default function Teams() {
                 src={model_web_app}
                 alt="Web & App Operations"
                 style={{
-                  width: "45vw",
-                  height: "auto",
+                  width: "fit-content",
+                  height: "30vh",
                 }}
               />
             </div>
@@ -273,8 +283,8 @@ export default function Teams() {
                 src={model_mun}
                 alt="IITG MUN"
                 style={{
-                  width: "45vw",
-                  height: "auto",
+                  width: "fit-content",
+                  height: "30vh",
                 }}
               />
             </div>
@@ -286,7 +296,9 @@ export default function Teams() {
                 <a href="mailto:iitgmun@alcheringa.in">iitgmun@alcheringa.in</a>
               </div>
               <div>
-                <h6>Pratham <br className="line_break" /> Garg</h6>
+                <h6>
+                  Pratham <br className="line_break" /> Garg
+                </h6>
                 <a href="tel:+91 7011533630">+91 7011533630</a>
                 <br />
                 <a href="mailto:iitgmun@alcheringa.in">iitgmun@alcheringa.in</a>
@@ -303,8 +315,8 @@ export default function Teams() {
                 alt="Finance and Account"
                 className="finance_img"
                 style={{
-                  width: "25vw",
-                  height: "auto",
+                  width: "fit-content",
+                  height: "30vh",
                 }}
               />
             </div>
@@ -327,8 +339,8 @@ export default function Teams() {
                 alt="Convener"
                 className="convener_img"
                 style={{
-                  width: "25vw",
-                  height: "auto",
+                  width: "fit-content",
+                  height: "30vh",
                 }}
               />
             </div>
