@@ -42,7 +42,7 @@ const Navbar = ({ reg_bg }) => {
                 </ul>
             </nav>
             <div className="fixing">
-                <button className={reg_bg}><Link href="#">Get Cards</Link></button>
+                <button className={reg_bg}><Link href="/card">Get Cards</Link></button>
             </div>
             <div className="hidden_box"></div>
             <svg onClick={handleClick} className={statey === false ? 'on_state icon_ham' : 'off_state icon_ham'} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg>
