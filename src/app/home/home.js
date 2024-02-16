@@ -759,10 +759,12 @@ export default function Home() {
                   <br /> much more.
                 </p>
                 <div id="appDownloadBtn">
-                  <img
-                    src="home_google_play.png"
-                    className="googlePlayImage"
-                  ></img>
+                  <a href="https://play.google.com/store/apps/details?id=com.alcheringa.alcheringa2022" target="_blank">
+                    <img
+                      src="home_google_play.png"
+                      className="googlePlayImage"
+                    ></img>
+                  </a>
                 </div>
               </div>
             </div>

@@ -36,7 +36,7 @@
     background: url('../resources/Texture\ Pattern\ \(to\ be\ used\ as\ Color\ Burn\).jpg'), url('../resources/top\ black\ overlay\ for\ infinite\ tiles-min.jpg');
     background-repeat: repeat, repeat;
     background-position: center, center;
-    /* mix-blend-mode: color-burn; */
+    mix-blend-mode: color-burn;
 }
 
 .search_box {
@@ -139,7 +139,7 @@
 }
 
 .small_box {
-    position: relative;
+    position: absolute;
     right: 0.6vw;
     filter: invert(1);
 }
