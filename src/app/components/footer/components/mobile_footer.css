@@ -1,7 +1,7 @@
 :root {
     --font-size-16-mobile: 4.44vw;
     --font-size-12-mobile: 3.33vw;
-    --font-size-10-mobile: 2.67vw;
+    --font-size-10-mobile: 2.64vw;
 }
 
 
@@ -141,7 +141,7 @@
     }
 
     .extra_width {
-        width: 86.66vw;
+        width: 90vw;
         display: flex;
         justify-content: center;
         align-items: center;
