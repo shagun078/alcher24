@@ -8,6 +8,10 @@
 :root{
     --color1: #141414 !important;
     --opacity-1: 0.8;
+    --ff-vac: FontSpringText;
+    --ff-cs: CruffySans;
+    --ff-usm: UncutSans;
+    --ff-usr: UncutSansRegular;
 }
 
 .header{
@@ -65,6 +69,7 @@
 }
 
 .navbar_menu ul li a{
+    font-family: var(--ff-vac);
     text-decoration: none;
     color: white;
     padding: 0.66vw 0.66vw 0.66vw 0.66vw;
@@ -81,7 +86,7 @@
 }
 
 .register a{
-    font-family: 'UncutSans';
+    font-family: var(--ff-usr);
     font-size: var(--font-size1);
     font-weight: 700;
     text-decoration: none;
@@ -157,8 +162,8 @@
         position: relative;
         width: 46.81vw !important;
         height: 71.24vw;
-        top: 42.5vw;
-        left: 48.8vw;
+        top: 10vw;
+        left: 53.5vw;
         background-color: #141414;
         display: none;
         justify-content: center;
@@ -172,9 +177,7 @@
 
     .navbar_menu.active{
         display: grid;
-        position: absolute;
-        top:0;
-        right:0;    
+        position: absolute;   
         place-items: center;
         animation-duration: 0.4s;
     }

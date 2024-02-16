@@ -1,13 +1,14 @@
-@font-face {
-    font-family: 'FontSpringText';
-    src:url('../../../../../public/Vacation-Heavy.ttf')
-  }
+
 
 :root{
     --color1: #141414;
     --font-size1: 1.31vw;
     --font-size-16-1440: 1.11vw;
     --font-size-20-1440: 1.38vw;
+    --ff-vac: FontSpringText;
+    --ff-cs: CruffySans;
+    --ff-usm: UncutSans;
+    --ff-usr: UncutSansRegular;
 }
 
 .container_footer{
@@ -57,7 +58,6 @@
 }
 
 .navbar_footer ul li{
-    font-family: 'Futara PT';
     font-weight: 400;
     font-size: 1.31vw;
     height: 2.62vw;
@@ -72,7 +72,7 @@
     text-decoration: none;
     color: white;
     padding: 0.66vw 0.66vw 0.66vw 0.66vw;
-    font-family: FontSpringText;
+    font-family: var(--ff-vac);
 }
 
 .footer{
@@ -172,7 +172,7 @@
 }
 
 .cred h1,p{
-    font-family: 'UncutSans';
+    font-family: var(--ff-usr);
 }
 
 .cred h1{
@@ -181,7 +181,7 @@
 }
 
 .cred_1 h1{
-    font-family: 'UncutSans';
+    font-family: var(--ff-usr);
     font-size: var(--font-size-20-1440);
     font-weight: 600;
 }
@@ -199,7 +199,7 @@
     width: 30vw;
     display: flex;
     justify-content: right;
-    font-family: 'UncutSans';
+    font-family: var(--ff-usr);
     font-size: var(--font-size-16-1440);
 }
 
@@ -226,7 +226,7 @@
     color: white;
     display: flex;
     flex-direction: row;
-    font-family: 'UncutSans';
+    font-family: var(--ff-usr);
     font-size: var(--font-size-16-1440);
     box-sizing: border-box;
     display: flex;
@@ -246,14 +246,14 @@
 
 .credits_2 a{
     color: white;
-    font-family: 'UncutSans';
+    font-family: var(--ff-usr);
     font-size: var(--font-size-16-1440);
     text-decoration: underline;
 }
 
 .credits_2 a p{
     color: white;
-    font-family: 'UncutSans';
+    font-family: var(--ff-usr);
     font-size: var(--font-size-16-1440);
 }
 
@@ -304,10 +304,14 @@
 }
 
 .info{
-    font-family: 'UncutSans';
+    font-family: var(--ff-usr);
     font-weight: 400;
     font-size: var(--font-size-16-1440);
     padding: 1vw 0vw 2vw 0vw;
+}
+
+#normal_text,#follow_text,#on_text{
+    font-family: var(--ff-usr) !important;
 }
 
 .info a{
