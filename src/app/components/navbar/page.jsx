@@ -30,7 +30,7 @@ const Navbar = ({ reg_bg }) => {
                     <li onClick={() => router.push("/competition")} className={path === "/competition" ? "c c2" : ""}>
                         <Link href="/competition">Competitions</Link></li>
                     <li onClick={() => router.push("/kartavya")} className={path === "/kartavya" ? "c c3" : ""}>
-                        <Link href="/kartavya">Kartayva</Link></li>
+                        <Link href="/kartavya">Kartavya</Link></li>
                     {/* <li onClick={() => router.push("/mun")} className={path === "/mun" ? "c c4" : ""}> */}
                     {/* <Link href="/mun">MUN</Link></li> */}
                     {/* <li onClick={() => router.push("/merch")} className={path === "/merch" ? "c c5" : ""}> */}
