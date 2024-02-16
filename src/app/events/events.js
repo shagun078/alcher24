@@ -640,12 +640,6 @@ function Events() {
             circle_src2={circle2}
             windows_src={windows1}
           />
-          <motion.div
-            className="blur-events"
-            initial={{ opacity: open ? 0 : 1 }}
-            animate={{ opacity: open ? 1 : 0 }}
-            transition={{ duration: 0.5 }}
-          ></motion.div>
         </div>
       </Suspense>
     </>
