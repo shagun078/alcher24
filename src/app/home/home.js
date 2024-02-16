@@ -640,35 +640,9 @@ export default function Home() {
     </React.Fragment>
   );
 
-  // useEffect(() => {
-  //   const cnvs = document.querySelector("canvas");
-  //   cnvs.addEventListener("dragover", () => {
-  //     cnvs.style.cursor = "grabbing!important";
-  //   });
-  // }, []);
-
-  // const Cursor = () => {
-  //   useEffect(() => {
-  //     const cursor = document.querySelector(".cursor");
-  //     window.addEventListener("mousemove", (e) => {
-  //       const { clientX, clientY } = e;
-  //       cursor.style.left = `${clientX}px`;
-  //       cursor.style.top = `${clientY}px`;
-  //     });
-  //   }, []);
-  //   return (
-  //     <div className="cursor">
-  //       <img
-  //         src={"cursor.png"}
-  //         alt="Hello"
-  //         style={{
-  //           width: "100%",
-  //           height: "100%",
-  //         }}
-  //       />
-  //     </div>
-  //   );
-  // };
+  // useFrame(() => {
+  //   rotateRef.current.rotation.y += 0.005;
+  // });
 
   return !showSplash ? (
     <React.Fragment>
