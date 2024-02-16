@@ -125,8 +125,9 @@ const Footer = ({ bg, star, circle_src1, circle_src2, windows_src, alcheringa_lo
                             <div id="right_shift_2" className='hover_child'>
                                 <p>Shubham Kumar Jha</p>
                                 <p>Aditya Dadhich</p>
-                                <p>Deepak Sutradhar</p>
                                 <p>Himank Bohara</p>
+                                <p>Deepak Sutradhar</p>
+                                <p>Shagun Sharma</p>
                             </div>
                             Alcher Web Operations
                         </a>

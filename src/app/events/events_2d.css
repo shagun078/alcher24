@@ -49,7 +49,7 @@ body::-webkit-scrollbar {
   color: #e8edd9;
   overflow: hidden;
   background-image: url("../../../public/TexturePattern.jpg");
-  background-blend-mode: color-burn;
+  /* background-blend-mode: color-burn; */
 }
 
 .hero-section {

@@ -6,7 +6,7 @@ body,
   background: #000000;
   -ms-content-zooming: none disable browser zoom;
   background-image: url("/TexturePattern.jpg");
-  background-blend-mode: color-burn;
+  /* background-blend-mode: color-burn; */
   background-color: #141414;
 }
 canvas {
@@ -168,7 +168,7 @@ canvas {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shift 8s linear infinite;
+  animation: shift 10s linear infinite;
   animation-delay: 2s;
 }
 .title-home a {
@@ -199,7 +199,7 @@ canvas {
   width: 100%;
   -ms-content-zooming: none disable browser zoom;
   background-image: url("/TexturePattern.jpg");
-  background-blend-mode: color-burn;
+  /* background-blend-mode: color-burn; */
   background-color: #141414;
   padding-bottom: 30vh;
 }

@@ -139,7 +139,7 @@
 }
 
 .small_box {
-    position: relative;
+    position: absolute;
     right: 0.6vw;
     filter: invert(1);
 }

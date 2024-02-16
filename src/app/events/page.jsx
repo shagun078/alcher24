@@ -1,3 +1,4 @@
+// import Events from "./events";
 
 import dynamic from "next/dynamic";
 import Loadingpage from "../components/loading/loading";
@@ -6,8 +7,8 @@ export const metadata = {
 }
 
 const Page = dynamic(() => import('../events/events'), {
-  loading: () => <Loadingpage/>,
+  loading: () => <Loadingpage />,
   ssr: false,
 })
- 
+
 export default Page;
