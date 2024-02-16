@@ -6,10 +6,9 @@ const Animations = () => {
     return (
         <div className={styles.animes}>
             <div className={styles.first}><div>28 EDITIONS</div></div>
-            <div className={styles.second}><div>140K FOOTFALL</div></div>
-            <div className={styles.third}><div>100+ EVENTS</div></div>
-            <div className={styles.fourth}><div>500+ COLLEGES</div></div>
-
+            <div className={styles.first}><div>140K FOOTFALL</div></div>
+            <div className={styles.first}><div>100+ EVENTS</div></div>
+            <div className={styles.first}><div>500+ COLLEGES</div></div>
         </div>
     );
 }

@@ -88,26 +88,35 @@ export default function Teams() {
                 src={model_prb}
                 alt="model_prb"
                 style={{
-                  width: "fit-content",
-                  height: "30vh",
+                  // width: "fit-content",
+                  // height: "50vh",
+                  width: "65vw",
+                  height: "auto",
+                  marginBottom: "-5px"
                 }}
               />
             </div>
             <div className="names_prb">
               <div>
                 <h6>Anurag</h6>
-                <a href="tel:+91 7061520276">+91 7061520276</a>
+                <a>Public Relation <br className="line_break" /> Head</a>
+                <br />
+                <a href="tel:+91 9864558336">+91 9864558336</a>
                 <br />
                 <a href="mailto:anurag@alcheringa.in">anurag@alcheringa.in</a>
               </div>
               <div>
                 <h6>Ankit Kumar</h6>
-                <a href="tel:+91 8340349585">+91 8340349585</a>
+                <a>Public Relation <br className="line_break" /> Head</a>
+                <br />
+                <a href="tel:+91 8092267185">+91 8092267185</a>
                 <br />
                 <a href="mailto:ankit.k@alcheringa.in">ankit.k@alcheringa.in</a>
               </div>
               <div>
                 <h6>Lakshya Kohli</h6>
+                <a>Media & Outreach Head</a>
+                <br />
                 <a href="tel:+91 7082763383">+91 7082763383</a>
                 <br />
                 <a href="mailto:lakshya@alcheringa.in">lakshya@alcheringa.in</a>
@@ -123,14 +132,18 @@ export default function Teams() {
                 src={model_crm}
                 alt="Corporate Relation & Marketing"
                 style={{
-                  width: "fit-content",
-                  height: "30vh",
+                  // width: "fit-content",
+                  // height: "50vh",
+                  width: "75vw",
+                  height: "auto",
                 }}
               />
             </div>
             <div className="names_crm">
               <div>
                 <h6>Rachit Awasthi</h6>
+                <a>CRM Head</a>
+                <br />
                 <a href="tel:+91 8400000512">+91 8400000512</a>
                 <br />
                 <a href="mailto:rachit@alcheringa.in">rachit@alcheringa.in</a>
@@ -139,12 +152,16 @@ export default function Teams() {
                 <h6>
                   Harshit <br className="line_break" /> Garg
                 </h6>
+                <a>CRM Head</a>
+                <br />
                 <a href="tel:+91 7014850105">+91 7014850105</a>
                 <br />
                 <a href="mailto:harshit@alcheringa.in">harshit@alcheringa.in</a>
               </div>
               <div>
                 <h6>Chakradhar Inaganti</h6>
+                <a>CRM Head</a>
+                <br />
                 <a href="tel:+91 8319837535">+91 8319837535</a>
                 <br />
                 <a href="mailto:chakradhar@alcheringa.in">
@@ -153,6 +170,8 @@ export default function Teams() {
               </div>
               <div>
                 <h6>Kanika Tyagi</h6>
+                <a>CRM Head</a>
+                <br />
                 <a href="tel:+91 9917481718">+91 9917481718</a>
                 <br />
                 <a href="mailto:kanika@alcheringa.in">kanika@alcheringa.in</a>
@@ -168,8 +187,9 @@ export default function Teams() {
                 src={model_creatives}
                 alt="Creatives"
                 style={{
-                  width: "fit-content",
-                  height: "30vh",
+                  width: "65vw",
+                  height: "auto",
+                  // height: "60vh",
                   paddingBottom: "0px",
                   marginBottom: "-10px",
                 }}
@@ -178,6 +198,8 @@ export default function Teams() {
             <div className="names_creatives">
               <div>
                 <h6>Sushant Sawant</h6>
+                <a>Creatives Head</a>
+                <br />
                 <a href="tel:+91 9284802056">+91 9284802056</a>
                 <br />
                 <a href="mailto:creatives@alcheringa.in">
@@ -186,6 +208,8 @@ export default function Teams() {
               </div>
               <div>
                 <h6>Swapnil Banerjee</h6>
+                <a>Web-Design Head</a>
+                <br />
                 <a href="tel:+91 8478018310">+91 8478018310</a>
                 <br />
                 <a href="mailto:creatives@alcheringa.in">
@@ -196,6 +220,8 @@ export default function Teams() {
                 <h6>
                   Virat <br className="line_break" /> Dubey
                 </h6>
+                <a>Digital Media Head</a>
+                <br />
                 <a href="tel:+91 9322603447">+91 9322603447</a>
                 <br />
                 <a href="mailto:creatives@alcheringa.in">
@@ -213,14 +239,18 @@ export default function Teams() {
                 src={model_events}
                 alt="Events"
                 style={{
-                  width: "fit-content",
-                  height: "30vh",
+                  // width: "fit-content",
+                  // height: "50vh",
+                  width: "60vw",
+                  height: "auto",
                 }}
               />
             </div>
             <div className="names_events">
               <div>
                 <h6>Abhinav Pratap Singh</h6>
+                <a>Events Head</a>
+                <br />
                 <a href="tel:+91 8299121435">+91 8299121435</a>
                 <br />
                 <a href="mailto:abhinav@alcheringa.in">abhinav@alcheringa.in</a>
@@ -229,6 +259,8 @@ export default function Teams() {
                 <h6>
                   Priyanshu <br className="line_break" /> Sinha
                 </h6>
+                <a>Pro-nites Coordinator</a>
+                <br />
                 <a href="tel:+91 9650757099">+91 9650757099</a>
                 <br />
                 <a href="mailto:priyanshu.s@alcheringa.in">
@@ -239,6 +271,8 @@ export default function Teams() {
                 <h6>
                   Rahul <br className="line_break" /> Singh
                 </h6>
+                <a>Campaigns Head</a>
+                <br />
                 <a href="tel:+91 7518509062">+91 7518509062</a>
                 <br />
                 <a href="mailto:rahul@alcheringa.in">rahul@alcheringa.in</a>
@@ -254,20 +288,26 @@ export default function Teams() {
                 src={model_web_app}
                 alt="Web & App Operations"
                 style={{
-                  width: "fit-content",
-                  height: "30vh",
+                  // width: "fit-content",
+                  // height: "50vh",
+                  width: "46vw",
+                  height: "auto"
                 }}
               />
             </div>
             <div className="names_web_app">
               <div>
                 <h6>Akshat</h6>
+                <a>Web-Ops Head</a>
+                <br />
                 <a href="tel:+91 8875833508">+91 8875833508</a>
                 <br />
                 <a href="mailto:webops@alcheringa.in">webops@alcheringa.in</a>
               </div>
               <div>
                 <h6>Shantanu Chaudhari</h6>
+                <a>App-Ops Head</a>
+                <br />
                 <a href="tel:+91 8275493025">+91 8275493025</a>
                 <br />
                 <a href="mailto:webops@alcheringa.in">webops@alcheringa.in</a>
@@ -283,14 +323,18 @@ export default function Teams() {
                 src={model_mun}
                 alt="IITG MUN"
                 style={{
-                  width: "fit-content",
-                  height: "30vh",
+                  // width: "fit-content",
+                  // height: "50vh",
+                  width: "46vw",
+                  height: "auto"
                 }}
               />
             </div>
             <div className="names_mun">
               <div>
                 <h6>Samarth Jhunjhunwala</h6>
+                <a>Secretary General</a>
+                <br />
                 <a href="tel:+91 7981828510">+91 7981828510</a>
                 <br />
                 <a href="mailto:iitgmun@alcheringa.in">iitgmun@alcheringa.in</a>
@@ -299,6 +343,8 @@ export default function Teams() {
                 <h6>
                   Pratham <br className="line_break" /> Garg
                 </h6>
+                <a>Director General</a>
+                <br />
                 <a href="tel:+91 7011533630">+91 7011533630</a>
                 <br />
                 <a href="mailto:iitgmun@alcheringa.in">iitgmun@alcheringa.in</a>
@@ -315,14 +361,18 @@ export default function Teams() {
                 alt="Finance and Account"
                 className="finance_img"
                 style={{
-                  width: "fit-content",
-                  height: "30vh",
+                  // width: "fit-content",
+                  // height: "50vh",
+                  width: "22vw",
+                  height: "auto"
                 }}
               />
             </div>
             <div className="names_finance">
               <div>
                 <h6>Sabir Singh</h6>
+                <a>Finance Head</a>
+                <br />
                 <a href="tel:+91 8950314110">+91 8950314110</a>
                 <br />
                 <a href="mailto:sabir@alcheringa.in">sabir@alcheringa.in</a>
@@ -339,14 +389,18 @@ export default function Teams() {
                 alt="Convener"
                 className="convener_img"
                 style={{
-                  width: "fit-content",
-                  height: "30vh",
+                  // width: "fit-content",
+                  // height: "50vh",
+                  width: "22vw",
+                  height: "auto"
                 }}
               />
             </div>
             <div className="names_convener">
               <div>
                 <h6>Govind Madhav Vyas</h6>
+                <a>Convener</a>
+                <br />
                 <a href="tel:+91 9406871655">+91 9406871655</a>
                 <br />
                 <a href="mailto:madhav@alcheringa.in">madhav@alcheringa.in</a>

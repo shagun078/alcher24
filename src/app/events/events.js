@@ -33,7 +33,7 @@ import { Cardleft, Cardright } from "./components/card";
 
 const marks = [
   {
-    title2: "JOINS US",
+    title2: "JOIN US",
     title1: "PRONITES",
     currPage: "PROSHOWS",
     description: "Alcher-related display image!",
@@ -115,7 +115,7 @@ const marks = [
   {
     title2: "INFORMALS",
     title1: "PROSHOWS",
-    currPage: "Join us all from 7th to 10th March",
+    currPage: "Join us all from 8th to 10th March",
     description: "Alcher-related display image!",
     camPos: {
       x: 0,
@@ -204,12 +204,16 @@ function Events() {
   const [eventStyle, setEventStyle] = useState({ display: "block" });
   const [boxStyle, setBoxStyle] = useState({ opacity: 0 });
   const [currStyle, setCurrStyle] = useState({ opacity: 0 });
-  const [bgcolor, setbgcolor] = useState({ backgroundColor: "#141414" });
-  
+  const [bgcolor, setbgcolor] = useState({
+    backgroundColor: "#141414",
+    backgroundImage: "url('TexturePattern.jpg')",
+    backgroundBlendMode: "color-burn",
+  });
+
   // const [display, setDisplay] = useState("block");
   const controls = useRef();
   const camera = useRef();
-  const ambientLight=useRef();
+  const ambientLight = useRef();
   let [now, setNow] = useState(list.head);
 
   const forward = () => {
@@ -305,7 +309,7 @@ function Events() {
     const targetY = 2;
     const targetZ = 0;
     const camZ = -10;
- 
+
     new TWEEN.Tween(controls.current.target)
       .to(
         {
@@ -317,7 +321,7 @@ function Events() {
       )
       .easing(TWEEN.Easing.Cubic.Out)
       .start();
-    
+
     new TWEEN.Tween(camera.current.position)
       .to(
         {
@@ -328,14 +332,17 @@ function Events() {
       .easing(TWEEN.Easing.Cubic.Out)
       .start();
 
-       console.log(ambientLight);
-      new TWEEN.Tween(ambientLight.current)
-      
-      .to({
-        intensity:3,
-      },8000)
+    console.log(ambientLight);
+    new TWEEN.Tween(ambientLight.current)
+
+      .to(
+        {
+          intensity: 3,
+        },
+        8000
+      )
       .easing(TWEEN.Easing.Cubic.Out)
-      .start();  
+      .start();
   };
 
   const buttons = (
@@ -364,15 +371,14 @@ function Events() {
       </div>
       <div className="btn_box" style={isClick ? boxStyle : boxStyle}>
         <div className="responsive_btn_box">
-          <span className="backward-container"
-          onClick={() => {
-            backward();
-          }}>
-            <img src='leftArrow.svg' className="backward-svg" />
-            <button
-              className="btn btn-backward"
-              
-            >
+          <span
+            className="backward-container"
+            onClick={() => {
+              backward();
+            }}
+          >
+            <img src="leftArrow.svg" className="backward-svg" />
+            <button className="btn btn-backward">
               <span className={`fade-in ${isAnimating ? "animating" : ""}`}>
                 {title2}
               </span>
@@ -380,7 +386,16 @@ function Events() {
           </span>
         </div>
 
-        <div className="responsive_btn_box">
+        <div className="responsive_btn_box center_btn_box">
+          <div
+            className="events_arrow_div"
+            onClick={() => {
+              forward();
+            }}
+          >
+            <img src="Events arrow.png"></img>
+          </div>
+
           <button
             className="back-to-home"
             onClick={() => {
@@ -404,7 +419,7 @@ function Events() {
               </span>
             </button>
 
-            <img src='rightArrow.svg' className="forward-svg" />
+            <img src="rightArrow.svg" className="forward-svg" />
           </span>
         </div>
       </div>
@@ -427,7 +442,7 @@ function Events() {
             enableRotate={false}
             target={[0, 2, 0]}
           />
-          <ambientLight  intensity={0} ref={ambientLight}/>
+          <ambientLight intensity={0} ref={ambientLight} />
           <Museumfinal />
           <Tween />
         </Canvas>
@@ -461,12 +476,10 @@ function Events() {
                   className="rings_event"
                   initial={{
                     animationDuration: isClick ? "10s" : "30s",
-                    // opacity: 1,
                   }}
                   animate={{
                     animationDuration: isClick ? "10s" : "30s",
                     opacity: isClick ? 0 : 1,
-                    // opacity: 0,
                   }}
                   transition={{ duration: 3 }}
                   style={{
@@ -640,6 +653,14 @@ function Events() {
             <Cardright /> */}
           </section>
         </main>
+        <Footer
+          bg={"footer img1"}
+          alcheringa_logo={alcheringa}
+          star={"star1 star"}
+          circle_src1={circle1}
+          circle_src2={circle2}
+          windows_src={windows1}
+        />
         <motion.div
           className="blur-events"
           initial={{ opacity: open ? 0 : 1 }}
@@ -647,15 +668,6 @@ function Events() {
           transition={{ duration: 0.5 }}
         ></motion.div>
       </div>
-
-      <Footer
-        bg={"footer img1"}
-        alcheringa_logo={alcheringa}
-        star={"star1 star"}
-        circle_src1={circle1}
-        circle_src2={circle2}
-        windows_src={windows1}
-      />
     </>
   ) : (
     <Loading />

@@ -8,6 +8,10 @@
 :root{
     --color1: #141414 !important;
     --opacity-1: 0.8;
+    --ff-vac: FontSpringText;
+    --ff-cs: CruffySans;
+    --ff-usm: UncutSans;
+    --ff-usr: UncutSansRegular;
 }
 
 .header{
@@ -19,8 +23,8 @@
     justify-content: space-around;
     align-items: center;
     overflow: visible;
-    background-image: url('../../../../../public/texture_black_bg.jpg');
-    background-blend-mode:color-burn;
+    background-image: url('../../../../../public/TexturePattern.jpg');
+    /* background-blend-mode:color-burn; */
     z-index: 30000;
 }
 
@@ -65,6 +69,7 @@
 }
 
 .navbar_menu ul li a{
+    font-family: var(--ff-vac);
     text-decoration: none;
     color: white;
     padding: 0.66vw 0.66vw 0.66vw 0.66vw;
@@ -81,7 +86,7 @@
 }
 
 .register a{
-    font-family: 'Uncut sans regular';
+    font-family: var(--ff-usr);
     font-size: var(--font-size1);
     font-weight: 700;
     text-decoration: none;
@@ -96,7 +101,7 @@
 .fixing{ 
     width: 11.56vw;
     display: flex;
-    justify-content: center;
+    justify-content: center;  
 }
 
 .cred{
@@ -157,21 +162,22 @@
         position: relative;
         width: 46.81vw !important;
         height: 71.24vw;
-        top: 42.5vw;
-        left: 48.8vw;
+        top: 10vw;
+        left: 53.5vw;
         background-color: #141414;
         display: none;
         justify-content: center;
         align-items: center;
         z-index: 300000;
         overflow: hidden;
-        background-image: url('../../../../../public/texture_black_bg.jpg');
-        background-blend-mode:color-burn;
+        background-image: url('../../../../../public/TexturePattern.jpg');
+        /* background-blend-mode:color-burn; */
     }
 
 
     .navbar_menu.active{
         display: grid;
+        position: absolute;   
         place-items: center;
         animation-duration: 0.4s;
     }
@@ -190,6 +196,7 @@
     }
 
     .navbar_menu ul li{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-weight: 400;
         font-size: 4.07vw;
         margin: auto;

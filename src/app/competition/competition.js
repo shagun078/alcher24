@@ -110,7 +110,7 @@ function Body() {
           <div className="item_container">
             {array.map((arr) => {
               return (
-                <a href={arr.url} target='_blank' className="icon">
+                <a href={arr.url} target='_blank' key={arr.id} className="icon" id={arr.category}>
                   <Image src={arr.img}
                     alt="Photo"
                     className='iconsIMG'

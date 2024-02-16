@@ -21,7 +21,7 @@ const Navbar = ({ reg_bg }) => {
     return (
         <div className="header">
             <div className="logo">
-                <a href="/home">Alcheringa</a>
+                <a href="/home">ALCHERINGA</a>
             </div>
             <nav className={statey === true ? "navbar_menu active" : "navbar_menu"}>
                 <ul>
@@ -30,7 +30,7 @@ const Navbar = ({ reg_bg }) => {
                     <li onClick={() => router.push("/competition")} className={path === "/competition" ? "c c2" : ""}>
                         <Link href="/competition">Competitions</Link></li>
                     <li onClick={() => router.push("/kartavya")} className={path === "/kartavya" ? "c c3" : ""}>
-                        <Link href="/kartavya">Kartayva</Link></li>
+                        <Link href="/kartavya">Kartavya</Link></li>
                     {/* <li onClick={() => router.push("/mun")} className={path === "/mun" ? "c c4" : ""}> */}
                     {/* <Link href="/mun">MUN</Link></li> */}
                     {/* <li onClick={() => router.push("/merch")} className={path === "/merch" ? "c c5" : ""}> */}
@@ -42,7 +42,7 @@ const Navbar = ({ reg_bg }) => {
                 </ul>
             </nav>
             <div className="fixing">
-                <button className={reg_bg}><Link href="#">Get Cards</Link></button>
+                <button className={reg_bg}><Link href="/card">Get Cards</Link></button>
             </div>
             <div className="hidden_box"></div>
             <svg onClick={handleClick} className={statey === false ? 'on_state icon_ham' : 'off_state icon_ham'} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg>

@@ -3,6 +3,10 @@
     --color-b: #646DBB;
     --color-w: #E8EDD9;
     --color-db: #444A7F;
+    --ff-vac: FontSpringText;
+    --ff-cs: CruffySans;
+    --ff-usm: UncutSans;
+    --ff-usr: UncutSansRegular;
 }
 
 #menu_nav {
@@ -105,7 +109,7 @@
     font-size: var(--font-size-20-1440);
     color: var(--color-w);
     box-sizing: border-box;
-    font-family: 'Uncut sans regular';
+    font-family: 'UncutSans';
     border-radius: 0.55vw;
 }
 
@@ -114,6 +118,7 @@
 }
 
 .modules p {
+    font-family: var(--ff-usr);
     padding: 1.11vw 1.11vw;
 }
 
@@ -134,7 +139,7 @@
 }
 
 .small_box {
-    position: relative;
+    position: absolute;
     right: 0.6vw;
     filter: invert(1);
 }
@@ -204,7 +209,7 @@
 }
 
 .list ul li {
-    font-family: 'Uncut sans regular';
+    font-family: var(--ff-usr);
     font-weight: 400;
     font-size: var(--font-size-20-1440);
     color: white;
@@ -261,6 +266,10 @@
     animation-timing-function: ease-in-out;
 }
 
+span{
+    font-size: 1vw;
+}
+
 @keyframes stairs {
     0% {
         background-position: 46.2vw 13.8vw;
@@ -286,6 +295,7 @@
     display: flex;
     flex-direction: column;
     justify-content: end;
+    margin: 2vw 0vw;
 }
 
 .iconsIMG {
@@ -318,13 +328,17 @@
     width: 40vw;
 }
 
+#Literary{
+    margin-bottom: 5vw 0vw !important;
+}
+
 @media screen and (max-width: 1000px) {
     .item_container {
         grid-template-columns: repeat(2, 1fr);
     }
 
     .icon_text {
-        font-size: 4vw;
+        font-size: 6vw;
     }
 
     .icon {
@@ -358,6 +372,10 @@
 
     .list ul {
         height: auto;
+    }
+
+    span{
+        font-size: 4vw;
     }
 
     .list ul li {
