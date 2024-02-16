@@ -5,7 +5,7 @@ const Loadingpage = () => {
         <>
             <div className="Loading_page">
                 <div className='logo_img'>
-                    <img src='AlcherLogo.svg'></img>
+                    <img src='AlcherLogo.png'></img>
                 </div>
 
                 <div className='loading_content'>
