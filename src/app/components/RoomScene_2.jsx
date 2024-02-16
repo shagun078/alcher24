@@ -29,12 +29,11 @@ export default function RoomScene(props) {
     const minutesRemaining = Math.floor(
       (timeDifference % (1000 * 60 * 60)) / (1000 * 60)
     );
-    console.log(hoursRemaining, minutesRemaining);
-    if (daysRemaining < 0) {
-      return "Live";
-    }
-
-    return [daysRemaining];
+    return {
+      days: daysRemaining,
+      hours: hoursRemaining,
+      minutes: minutesRemaining,
+    };
   };
 
   const timeRemaining = useState(calculateTimeRemaining());
