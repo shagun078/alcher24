@@ -717,34 +717,36 @@ export default function Home() {
               </h2>
             </div>
 
-            <div className="getAppSection">
-              <img src="upperHand.svg" id="upperHand"></img>
-              <img src="lowerHand.svg" id="lowerHand"></img>
-              <div className="textSection">
-                <div id="text_home">
-                  <h1>
-                    GET THE <br /> ALCHERINGA APP
-                  </h1>
-                  <p>
-                    Download our app and get access to app exclusive
-                    <br /> features like Alcheringa passes, Merches,
-                    <br /> Schedule, Campus maps, Real-time updates and
-                    <br /> much more.
-                  </p>
-                  <div id="appDownloadBtn">
+          <div className="getAppSection">
+            <img src="upperHand.svg" id="upperHand"></img>
+            <img src="lowerHand.svg" id="lowerHand"></img>
+            <div className="textSection">
+              <div id="text_home">
+                <h1>
+                  GET THE <br /> ALCHERINGA APP
+                </h1>
+                <p>
+                  Download our app and get access to app exclusive
+                  <br /> features like Alcheringa passes, Merches,
+                  <br /> Schedule, Campus maps, Real-time updates and
+                  <br /> much more.
+                </p>
+                <div id="appDownloadBtn">
+                  <a href="https://play.google.com/store/apps/details?id=com.alcheringa.alcheringa2022" target="_blank">
                     <img
                       src="home_google_play.png"
                       className="googlePlayImage"
                     ></img>
-                  </div>
-                </div>
-              </div>
-              <div className="imageWrapper">
-                <div className="home_alcher_app_container">
-                  <img src="home_mobile_app.png"></img>
+                  </a>
                 </div>
               </div>
             </div>
+            <div className="imageWrapper">
+              <div className="home_alcher_app_container">
+                <img src="home_mobile_app.png"></img>
+              </div>
+            </div>
+          </div>
 
             {/* <div className="passesSection">
             <p id="getYour">Get your Own</p>

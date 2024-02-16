@@ -221,6 +221,7 @@ function Body() {
                   <a
                     href={arr.url}
                     target="_blank"
+                    key={arr.id}
                     className="icon"
                     id={arr.category}
                   >
