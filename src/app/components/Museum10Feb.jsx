@@ -12,7 +12,7 @@ import * as THREE from 'three';
 
 
 export function Museumfinal(props) {
-  const texture=useTexture('BakedTexture_Events.jpg');
+  const texture=useTexture('BakedTexture_Events.webp');
   texture.flipY=false;
   texture.colorSpace=THREE.SRGBColorSpace;
   const textureMaterial=new THREE.MeshStandardMaterial({

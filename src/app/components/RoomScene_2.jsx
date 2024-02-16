@@ -10,7 +10,7 @@ import * as THREE from "three";
 
 export default function RoomScene(props) {
   const rotateRef = useRef();
-  const texture = useTexture("BakedTexture.png");
+  const texture = useTexture("BakedTexture_Home.webp");
   texture.flipY = false;
   texture.colorSpace = THREE.SRGBColorSpace;
   const textureMaterial = new THREE.MeshStandardMaterial({
@@ -19,7 +19,7 @@ export default function RoomScene(props) {
   const { nodes, materials } = useGLTF("RoomScene.gltf");
 
   const calculateTimeRemaining = () => {
-    const currentDate = new Date(2024, 2, 7, 17, 29, 0, 0);
+    const currentDate = new Date();
     const targetDate = new Date(2024, 2, 7, 17, 30, 0, 0); // Replace with your target date
     const timeDifference = targetDate.getTime() - currentDate.getTime();
 

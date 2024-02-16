@@ -9,6 +9,11 @@ body,
   background-blend-mode: color-burn;
   background-color: #141414;
 }
+canvas {
+  cursor: grab;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+}
 
 @font-face {
   font-family: sponsor_heading_text;
@@ -117,24 +122,24 @@ body,
 
 .return-home {
   cursor: pointer;
-  /* position: relative; */
-  /* left: 0; */
-  /* float: left; */
   display: flex;
-  /* flex-grow: 2; */
   justify-content: center;
   align-items: center;
   font-size: large;
   color: white;
   padding: 3%;
-  /* border-radius: 50%; */
-  /* backdrop-filter: blur(2px); */
-  /* background-color: hsla(0, 0%, 9%, 0.3); */
+  border-radius: 50%;
+  backdrop-filter: blur(2px);
+  background-color: hsla(0, 0%, 9%, 0.3);
   border: none;
   outline: none;
 }
+.return-home-dummy {
+  width: 10%;
+  font-size: larger;
+}
 .blur-home {
-  padding: 0 5%;
+  padding: 0 1%;
   border-radius: 0.5rem;
   min-width: 35vmax;
   /* width: max-content; */
@@ -159,7 +164,7 @@ body,
   padding: 5%;
 }
 .blur-home p {
-  text-align: center;
+  text-align: justify;
   display: flex;
   align-items: center;
   font-family: normalText !important;
@@ -170,20 +175,29 @@ body,
   justify-content: space-evenly;
   text-align: center;
   align-items: center;
-  background-image: linear-gradient(90deg, #F22C5B 0%, #FF8835 17.5%, #9CCD5D 34.5%, #3083EA 51%, #B357B6 67%, #39A27A 83.5%, #FA5045 100%);
+  background-image: linear-gradient(
+    90deg,
+    #f22c5b 0%,
+    #ff8835 17.5%,
+    #9ccd5d 34.5%,
+    #3083ea 51%,
+    #b357b6 67%,
+    #39a27a 83.5%,
+    #fa5045 100%
+  );
   background-repeat: repeat;
   background-size: 400% 400%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shift 3s linear infinite;
+  animation: shift 8s linear infinite;
   animation-delay: 2s;
 }
-.title-home a{
+.title-home a {
   padding: 0 5%;
 }
 @keyframes shift {
-  20% {
+  10% {
     background-position: 0% 0%;
   }
   70% {
@@ -485,7 +499,6 @@ iframe {
   position: relative;
   margin-top: 6rem;
   display: flex;
-
 }
 #upperHand {
   position: absolute;
@@ -795,7 +808,7 @@ iframe {
   .getAppSection {
     height: 40%;
   }
-  
+
   .home_alcher_app_container > img {
     top: 10vh;
   }
@@ -839,30 +852,30 @@ iframe {
   }
 }
 
-.x-A{
+.x-A {
   translate: -47%;
 }
-.x-B{
+.x-B {
   translate: -47%;
 }
-.x-C{
+.x-C {
   translate: -47%;
 }
-.x-D{
+.x-D {
   translate: -41%;
 }
-.x-E{
+.x-E {
   translate: -47%;
 }
-.x-F{
+.x-F {
   translate: -45%;
 }
-.x-G{
+.x-G {
   translate: -48%;
 }
-.x-H{
+.x-H {
   translate: -47%;
 }
-.x-I{
+.x-I {
   translate: -45%;
 }
