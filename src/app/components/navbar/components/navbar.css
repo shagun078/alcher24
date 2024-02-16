@@ -155,7 +155,7 @@
         width: 46.81vw !important;
         height: 71.24vw;
         top: 42.5vw;
-        left: 48.5vw;
+        left: 48.8vw;
         background-color: #141414;
         display: none;
         justify-content: center;
@@ -170,20 +170,7 @@
     .navbar_menu.active{
         display: grid;
         place-items: center;
-        animation-name: hamburger;
         animation-duration: 0.4s;
-        transition-timing-function: ease-out;
-    }
-
-    @keyframes hamburger{
-       0%{
-        height: 0vw;
-       }
-
-       100%{
-        height: 71.24vw;
-
-       }
     }
     
     .navbar_menu ul{
