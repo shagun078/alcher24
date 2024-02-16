@@ -13,7 +13,10 @@
   src: url("../../public/Uncut-Sans-Medium.woff2");
 }
 
-
+@font-face {
+  font-family: UncutSansRegular;
+  src: url("../../public/Uncut-Sans-Regular.otf");
+}
 
 :root {
   --max-width: 1100px;
@@ -146,7 +149,7 @@ a {
 }
 
 @font-face {
-  font-family: 'Uncut sans regular';
+  font-family: 'UncutSans';
   src: url(./fonts/Uncut-Sans-Regular.otf) format('truetype');
 }
 

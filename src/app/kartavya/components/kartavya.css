@@ -17,7 +17,7 @@
     text-align: center;
     overflow: hidden;
     background-image: url('../../../../public/TexturePattern.jpg');
-    background-blend-mode:color-burn;
+    /* background-blend-mode:color-burn; */
     user-select: none;
     margin-top: 0;
 }
@@ -348,7 +348,7 @@ padding-left: 0%;
     justify-content: space-between;
 }
 
-.star2{
+.star2_k{
     position: relative;
     top: 3vh;
     background-color: transparent;
@@ -450,7 +450,7 @@ padding-left: 0%;
         font-size: var(--text4);
     }
 
-    .star2{
+    .star2_k{
         top: -1.5vh;
     }
 }
@@ -552,7 +552,7 @@ padding-left: 0%;
 }
 
 @media screen and (max-width: 750px){
-    .star2{
+    .star2_k{
         top: 1vh;
     }
 }

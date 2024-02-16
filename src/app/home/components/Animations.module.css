@@ -12,6 +12,8 @@
     color:#F22C5B;
     font-weight: 700;
     font-size: 5vw;
+    position: relative;
+    top: -3vh;
 }
 
 .animes>div>div

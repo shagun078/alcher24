@@ -6,7 +6,7 @@ body,
   background: #000000;
   -ms-content-zooming: none disable browser zoom;
   background-image: url("/TexturePattern.jpg");
-  background-blend-mode: color-burn;
+  /* background-blend-mode: color-burn; */
   background-color: #141414;
 }
 canvas {
@@ -199,9 +199,9 @@ canvas {
   width: 100%;
   -ms-content-zooming: none disable browser zoom;
   background-image: url("/TexturePattern.jpg");
-  background-blend-mode: color-burn;
+  /* background-blend-mode: color-burn; */
   background-color: #141414;
-  padding-bottom: 15vh;
+  padding-bottom: 30vh;
 }
 
 .mainContainer {
@@ -495,7 +495,8 @@ iframe {
 }
 .imageWrapper {
   width: 50%;
-  height: 100%;
+  /* height: 100%; */
+  height: auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -511,7 +512,8 @@ iframe {
   left: 0;
   top: 18vh;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
+  height: auto;
   transform: scale(1);
 }
 
@@ -636,6 +638,9 @@ iframe {
   .buy_merch_button {
     font-size: 3vw;
     font-weight: 700;
+  }
+  .threeD_2dwrapper {
+    padding-bottom: 10vh;
   }
 
   .decorationContainer {

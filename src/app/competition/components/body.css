@@ -3,6 +3,10 @@
     --color-b: #646DBB;
     --color-w: #E8EDD9;
     --color-db: #444A7F;
+    --ff-vac: FontSpringText;
+    --ff-cs: CruffySans;
+    --ff-usm: UncutSans;
+    --ff-usr: UncutSansRegular;
 }
 
 #menu_nav {
@@ -32,7 +36,7 @@
     background: url('../resources/Texture\ Pattern\ \(to\ be\ used\ as\ Color\ Burn\).jpg'), url('../resources/top\ black\ overlay\ for\ infinite\ tiles-min.jpg');
     background-repeat: repeat, repeat;
     background-position: center, center;
-    mix-blend-mode: color-burn;
+    /* mix-blend-mode: color-burn; */
 }
 
 .search_box {
@@ -105,7 +109,7 @@
     font-size: var(--font-size-20-1440);
     color: var(--color-w);
     box-sizing: border-box;
-    font-family: 'Uncut sans regular';
+    font-family: 'UncutSans';
     border-radius: 0.55vw;
 }
 
@@ -114,6 +118,7 @@
 }
 
 .modules p {
+    font-family: var(--ff-usr);
     padding: 1.11vw 1.11vw;
 }
 
@@ -204,7 +209,7 @@
 }
 
 .list ul li {
-    font-family: 'Uncut sans regular';
+    font-family: var(--ff-usr);
     font-weight: 400;
     font-size: var(--font-size-20-1440);
     color: white;
@@ -259,6 +264,10 @@
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+}
+
+span{
+    font-size: 1vw;
 }
 
 @keyframes stairs {
@@ -329,7 +338,7 @@
     }
 
     .icon_text {
-        font-size: 4vw;
+        font-size: 6vw;
     }
 
     .icon {
@@ -363,6 +372,10 @@
 
     .list ul {
         height: auto;
+    }
+
+    span{
+        font-size: 4vw;
     }
 
     .list ul li {
