@@ -44,14 +44,14 @@ const marks = [
       z: -3.5,
     },
     textAt: {
-      x: -5.25,
-      y: 2.6,
+      x: -5.82,
+      y: 2.65,
       z: -5,
     },
     textAt2: {
       x: -5.1,
-      y: 2.4,
-      z: -5,
+      y: 2.6,
+      z: -5.3,
     },
   },
   {
@@ -77,8 +77,8 @@ const marks = [
     },
     textAt: {
       x: -11,
-      y: 0.8,
-      z: -3,
+      y: 2.8,
+      z: -2.9,
     },
     textAt2: {
       x: -8,
@@ -89,18 +89,18 @@ const marks = [
   {
     key: "C",
     title: "THEME",
-    link: "",
+    link: "https://www.youtube.com/watch?v=GJfmkiVj4FA&pp=ygURYWxjaGVyaW5nYSB0aGVtZSA%3D",
     description:
       "The theme for Alcheringa 24 tells the story of a young girl who is facing a art block in a monotonous world,travels to a art exhibit ina museum and unravels a journey of Psychedelia to find her inspiration.",
     camPos: {
       x: -4,
       y: 2,
-      z: -2.3,
+      z: -2.2,
     },
     lookAt: {
       x: -7,
       y: 0.5,
-      z: -2.3,
+      z: -2.2,
     },
     pos: {
       x: -5.5,
@@ -109,12 +109,12 @@ const marks = [
     },
     textAt: {
       x: -7.5,
-      y: 1.3,
-      z: -0.65,
+      y: 1.7,
+      z: -0.2,
     },
     textAt2: {
       x: -7.5,
-      y: 1.3,
+      y: 1.5,
       z: -1.3,
     },
   },
@@ -142,12 +142,12 @@ const marks = [
     textAt: {
       x: -7.5,
       y: 2.6,
-      z: -2.5,
+      z: -2,
     },
     textAt2: {
       x: -7.5,
-      y: 3.8,
-      z: -0.6,
+      y: 3.65,
+      z: -0.52,
     },
   },
   {
@@ -173,7 +173,7 @@ const marks = [
     },
     textAt: {
       x: -3.55,
-      y: 3.2,
+      y: 3.4,
       z: -5,
     },
     textAt2: {
@@ -185,7 +185,7 @@ const marks = [
   {
     key: "F",
     title: "MERCH",
-    link: "",
+    link: "#",
     description:
       "Alcheringa has more than 80 events spread across various genres like fashion, music, art, sports, etc. They take place during the three days in which many events take place which includes panel discussions with various famous creators, informal activities like hot air balloon, ATV rides, paint ball shoot etc.",
     camPos: {
@@ -206,11 +206,11 @@ const marks = [
     textAt: {
       x: -8,
       y: 1.9,
-      z: 2.4,
+      z: 3,
     },
     textAt2: {
       x: -8,
-      y: 3.5,
+      y: 3.15,
       z: 0,
     },
   },
@@ -238,7 +238,7 @@ const marks = [
     textAt: {
       x: -8,
       y: 1.2,
-      z: 4.5,
+      z: 4.8,
     },
     textAt2: {
       x: -8,
@@ -268,13 +268,13 @@ const marks = [
       z: -3.7,
     },
     textAt: {
-      x: -4.12,
-      y: 1.75,
+      x: -4,
+      y: 1.8,
       z: -3.4,
     },
     textAt2: {
-      x: -3.9,
-      y: 1.825,
+      x: -3.85,
+      y: 1.8,
       z: -3.4,
     },
   },
@@ -305,8 +305,8 @@ const marks = [
       z: -3.4,
     },
     textAt2: {
-      x: -4,
-      y: 1.5,
+      x: -4.2,
+      y: 1.4,
       z: -3.4,
     },
   },
@@ -368,212 +368,214 @@ function Annotations({ controls }) {
   return (
     <React.Fragment>
       {marks.map((a, i) => {
-        return (
-          <>
-            {/* <Navbar reg_bg={"register reg_bg4"} />
+        if (a.key === "B" && window.innerWidth < 840) {
+          return <></>;
+        } else {
+          return (
+            <>
+              {/* <Navbar reg_bg={"register reg_bg4"} />
             <Footer bg={"footer img4"} star={"star1 star"} circle_src={circle1} windows_src={windows1} /> */}
-            <Html
-              className="flex-conatiner"
-              key={a.key}
-              position={[a.pos.x, a.pos.y, a.pos.z]}
-            >
-              {!backtrack && (
-                <motion.svg
-                  initial={{ opacity: 0, pointerEvents: "none" }}
-                  animate={{ opacity: 1, pointerEvents: "all" }}
-                  transition={{ duration: 2, delay: 1.5 }}
-                  height="34"
-                  width="34"
-                  transform="translate(-13 -13)"
-                  style={{ cursor: "pointer" }}
-                  onHoverStart={() => {
-                    setHoverkey(a.key);
-                    setHovered(true);
-                  }}
-                  onPointerLeave={() => {
-                    setHovered(false);
-                    setHoverkey("");
-                  }}
-                  onPointerUp={() => {
-                    // console.log(controls.current);
-                    // controls.current.enableDamping = false;
-                    setHovered(false);
-                    setHoverkey("");
-                    setSelected(a.key);
-                    const isSameAnnotation = a.key === selected;
-                    setBackTrack(isSameAnnotation ? false : true);
-                    const targetX = isSameAnnotation ? -3.5 : a.lookAt.x;
-                    const targetY = isSameAnnotation ? 1.4 : a.lookAt.y;
-                    const targetZ = isSameAnnotation ? -1.8 : a.lookAt.z;
-
-                    const camPosX = isSameAnnotation ? -2 : a.camPos.x;
-                    const camPosY = isSameAnnotation ? 1.5 : a.camPos.y;
-                    const camPosZ = isSameAnnotation ? -1 : a.camPos.z;
-
-                    // change target
-                    new TWEEN.Tween(controls.current.target)
-                      .to(
-                        {
-                          x: targetX,
-                          y: targetY,
-                          z: targetZ,
-                        },
-                        2000
-                      )
-                      .easing(TWEEN.Easing.Sinusoidal.InOut)
-                      .start();
-
-                    // change camera position
-                    new TWEEN.Tween(camera.position)
-                      .to(
-                        {
-                          x: camPosX,
-                          y: camPosY,
-                          z: camPosZ,
-                        },
-                        2000
-                      )
-                      .easing(TWEEN.Easing.Sinusoidal.InOut)
-                      .start();
-                    setSelected(backtrack ? -1 : a.key);
-                    setTimeout(() => {
-                      controls.current.enabled = backtrack;
-                    }, 2100);
-                    // console.log(controls.current);
-                  }}
-                >
-                  <>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="30"
-                      height="30"
-                      viewBox="0 0 30 30"
-                      fill="none"
-                    >
-                      <path
-                        d="M12.75 3.03109C14.1423 2.22724 15.8577 2.22724 17.25 3.03109L24.2404 7.06699C25.6327 7.87083 26.4904 9.35641 26.4904 10.9641V19.0359C26.4904 20.6436 25.6327 22.1292 24.2404 22.933L17.25 26.9689C15.8577 27.7728 14.1423 27.7728 12.75 26.9689L5.75962 22.933C4.36731 22.1292 3.50962 20.6436 3.50962 19.0359V10.9641C3.50962 9.35641 4.36731 7.87083 5.75962 7.06699L12.75 3.03109Z"
-                        stroke="white"
-                        strokeWidth="3"
-                      />
-                      <path
-                        d="M19 15.5714H15.5714V19H14.4286V15.5714H11V14.4286H14.4286V11H15.5714V14.4286H19V15.5714Z"
-                        fill="white"
-                      />
-                    </svg>
-                  </>
-                </motion.svg>
-              )}
-              {hovered && a.key === hoverKey && (
-                <motion.div
-                  className={`title-hover-home x-${a.key}`}
-                  initial={{ opacity: !hovered ? 1 : 0, y: -10 }}
-                  animate={{ opacity: !hovered ? 0 : 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
-                  style={{
-                    color: "white",
-                    fontSize: window.innerWidth > 840 ? "2vh" : "1vh",
-                    cursor: "pointer",
-                  }}
-                >
-                  {a.title}
-                </motion.div>
-              )}
-            </Html>
-            <Html
-              key={i}
-              position={
-                window.innerWidth > 840
-                  ? [a.textAt.x, a.textAt.y, a.textAt.z]
-                  : [a.textAt2.x, a.textAt2.y, a.textAt2.z]
-              }
-            >
-              {a.key === selected && backtrack && (
-                <>
-                  <motion.div
-                    className="blur-home"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
+              <Html
+                className="flex-conatiner"
+                key={a.key}
+                position={[a.pos.x, a.pos.y, a.pos.z]}
+              >
+                {!backtrack && (
+                  <motion.svg
+                    initial={{ opacity: 0, pointerEvents: "none" }}
+                    animate={{ opacity: 1, pointerEvents: "all" }}
                     transition={{ duration: 2, delay: 1.5 }}
+                    height="34"
+                    width="34"
+                    transform="translate(-13 -13)"
+                    style={{ cursor: "pointer" }}
+                    onHoverStart={() => {
+                      setHoverkey(a.key);
+                      setHovered(true);
+                    }}
+                    onPointerLeave={() => {
+                      setHovered(false);
+                      setHoverkey("");
+                    }}
+                    onPointerUp={() => {
+                      // console.log(controls.current);
+                      // controls.current.enableDamping = false;
+                      setHovered(false);
+                      setHoverkey("");
+                      setSelected(a.key);
+                      const isSameAnnotation = a.key === selected;
+                      setBackTrack(isSameAnnotation ? false : true);
+                      const targetX = isSameAnnotation ? -3.5 : a.lookAt.x;
+                      const targetY = isSameAnnotation ? 1.4 : a.lookAt.y;
+                      const targetZ = isSameAnnotation ? -1.8 : a.lookAt.z;
+
+                      const camPosX = isSameAnnotation ? -2 : a.camPos.x;
+                      const camPosY = isSameAnnotation ? 1.5 : a.camPos.y;
+                      const camPosZ = isSameAnnotation ? -1 : a.camPos.z;
+
+                      // change target
+                      new TWEEN.Tween(controls.current.target)
+                        .to(
+                          {
+                            x: targetX,
+                            y: targetY,
+                            z: targetZ,
+                          },
+                          2000
+                        )
+                        .easing(TWEEN.Easing.Sinusoidal.InOut)
+                        .start();
+
+                      // change camera position
+                      new TWEEN.Tween(camera.position)
+                        .to(
+                          {
+                            x: camPosX,
+                            y: camPosY,
+                            z: camPosZ,
+                          },
+                          2000
+                        )
+                        .easing(TWEEN.Easing.Sinusoidal.InOut)
+                        .start();
+                      setSelected(backtrack ? -1 : a.key);
+                      setTimeout(() => {
+                        controls.current.enabled = backtrack;
+                      }, 2100);
+                      // console.log(controls.current);
+                    }}
                   >
-                    <div className="flex-container-home">
-                      <motion.div
-                        className="title-home"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 2, delay: 1.5 }}
-                        style={{
-                          color: "white",
-                          fontSize: window.innerWidth > 840 ? "4.7vh" : "3.5vh",
-                        }}
+                    <>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="30"
+                        height="30"
+                        viewBox="0 0 30 30"
+                        fill="none"
                       >
+                        <path
+                          d="M12.75 3.03109C14.1423 2.22724 15.8577 2.22724 17.25 3.03109L24.2404 7.06699C25.6327 7.87083 26.4904 9.35641 26.4904 10.9641V19.0359C26.4904 20.6436 25.6327 22.1292 24.2404 22.933L17.25 26.9689C15.8577 27.7728 14.1423 27.7728 12.75 26.9689L5.75962 22.933C4.36731 22.1292 3.50962 20.6436 3.50962 19.0359V10.9641C3.50962 9.35641 4.36731 7.87083 5.75962 7.06699L12.75 3.03109Z"
+                          stroke="white"
+                          strokeWidth="3"
+                        />
+                        <path
+                          d="M19 15.5714H15.5714V19H14.4286V15.5714H11V14.4286H14.4286V11H15.5714V14.4286H19V15.5714Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </>
+                  </motion.svg>
+                )}
+                {hovered && a.key === hoverKey && (
+                  <motion.div
+                    className={`title-hover-home x-${a.key}`}
+                    initial={{ opacity: !hovered ? 1 : 0, y: -10 }}
+                    animate={{ opacity: !hovered ? 0 : 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    style={{
+                      color: "white",
+                      fontSize: window.innerWidth > 840 ? "2vh" : "1vh",
+                      cursor: "pointer",
+                    }}
+                  >
+                    {a.title}
+                  </motion.div>
+                )}
+              </Html>
+              <Html
+                key={i}
+                position={
+                  window.innerWidth > 840
+                    ? [a.textAt.x, a.textAt.y, a.textAt.z]
+                    : [a.textAt2.x, a.textAt2.y, a.textAt2.z]
+                }
+              >
+                {a.key === selected && backtrack && (
+                  <>
+                    <motion.div
+                      className="blur-home"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 2, delay: 1.5 }}
+                    >
+                      <div className="flex-container-home">
                         <motion.div
+                          className="title-home"
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           transition={{ duration: 2, delay: 1.5 }}
-                          className="return-home"
-                          onClick={handleReturn}
+                          style={{
+                            color: "white",
+                            fontSize:
+                              window.innerWidth > 840 ? "4.7vh" : "3.5vh",
+                          }}
                         >
+                          <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 2, delay: 1.5 }}
+                            className="return-home"
+                            onClick={handleReturn}
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="22"
+                              height="22"
+                              viewBox="0 0 22 22"
+                              fill="none"
+                            >
+                              <path
+                                d="M21.333 9.70835V12.2917H5.83305L12.9372 19.3959L11.103 21.23L0.873047 11L11.103 0.77002L12.9372 2.60419L5.83305 9.70835H21.333Z"
+                                fill="white"
+                              />
+                            </svg>
+                          </motion.div>
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            width="22"
-                            height="22"
-                            viewBox="0 0 22 22"
+                            width="29"
+                            height="32"
+                            viewBox="0 0 29 32"
                             fill="none"
                           >
                             <path
-                              d="M21.333 9.70835V12.2917H5.83305L12.9372 19.3959L11.103 21.23L0.873047 11L11.103 0.77002L12.9372 2.60419L5.83305 9.70835H21.333Z"
+                              d="M14.5 0.5L16.5506 13.808L29 16L16.5506 18.192L14.5 31.5L12.4494 18.192L0 16L12.4494 13.808L14.5 0.5Z"
                               fill="white"
                             />
                           </svg>
+                          <Link href={a.link}>{a.title}</Link>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="29"
+                            height="32"
+                            viewBox="0 0 29 32"
+                            fill="none"
+                          >
+                            <path
+                              d="M14.5 0.5L16.5506 13.808L29 16L16.5506 18.192L14.5 31.5L12.4494 18.192L0 16L12.4494 13.808L14.5 0.5Z"
+                              fill="white"
+                            />
+                          </svg>
+                          <div className="return-home-dummy"></div>
                         </motion.div>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="29"
-                          height="32"
-                          viewBox="0 0 29 32"
-                          fill="none"
+                        <motion.p
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 2, delay: 1.5 }}
+                          style={{
+                            color: "white",
+                            fontSize: window.innerWidth > 840 ? "2vh" : "1.5vh",
+                          }}
                         >
-                          <path
-                            d="M14.5 0.5L16.5506 13.808L29 16L16.5506 18.192L14.5 31.5L12.4494 18.192L0 16L12.4494 13.808L14.5 0.5Z"
-                            fill="white"
-                          />
-                        </svg>
-                        <Link href={a.link}>{a.title}</Link>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="29"
-                          height="32"
-                          viewBox="0 0 29 32"
-                          fill="none"
-                        >
-                          <path
-                            d="M14.5 0.5L16.5506 13.808L29 16L16.5506 18.192L14.5 31.5L12.4494 18.192L0 16L12.4494 13.808L14.5 0.5Z"
-                            fill="white"
-                          />
-                        </svg>
-                        <div
-                          className="return-home"
-                        >
-                        </div>
-                      </motion.div>
-                      <motion.p
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 2, delay: 1.5 }}
-                        style={{
-                          color: "white",
-                          fontSize: window.innerWidth > 840 ? "2vh" : "1.5vh",
-                        }}
-                      >
-                        {a.description}
-                      </motion.p>
-                    </div>
-                  </motion.div>
-                </>
-              )}
-            </Html>
-          </>
-        );
+                          {a.description}
+                        </motion.p>
+                      </div>
+                    </motion.div>
+                  </>
+                )}
+              </Html>
+            </>
+          );
+        }
       })}
     </React.Fragment>
   );
@@ -638,6 +640,13 @@ export default function Home() {
     </React.Fragment>
   );
 
+  // useEffect(() => {
+  //   const cnvs = document.querySelector("canvas");
+  //   cnvs.addEventListener("dragover", () => {
+  //     cnvs.style.cursor = "grabbing!important";
+  //   });
+  // }, []);
+
   // const Cursor = () => {
   //   useEffect(() => {
   //     const cursor = document.querySelector(".cursor");
@@ -694,15 +703,16 @@ export default function Home() {
           <div id="ui_home">{buttons}</div>
         </div>
         <div className="mainContainer " ref={contentRef}>
-          {/*Video-container section starts*/}
-          {/* <div className="videoWrapper">
+         {/*
+          <div className="videoWrapper">
             <div className="videoBox">
               <iframe
                 src="https://www.youtube.com/embed/CWhFx8v1mg8?autoplay=1&controls=0"
                 allowFullScreen
               ></iframe>
             </div>
-          </div> */}
+
+          </div>*/}
 
           {/*Sponsor section starts*/}
           <div className="decorationContainer">

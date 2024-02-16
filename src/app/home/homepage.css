@@ -9,26 +9,15 @@ body,
   background-blend-mode: color-burn;
   background-color: #141414;
 }
-
-@font-face {
-  font-family: sponsor_heading_text;
-  src: url("../../../public/Fontspring-DEMO-freigeist-conblack.woff2");
+canvas {
+  cursor: grab;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
 }
 
-@font-face {
-  font-family: headingAlcher;
-  src: url("../../../public/CruyffSans-Bold.ecd5078c.woff2");
-}
 
-@font-face {
-  font-family: normalText;
-  src: url("../../../public/Uncut-Sans-Medium.woff2");
-}
 
-@font-face {
-  font-family: clockText;
-  src: url("../../../public/Orbitron-Black.ttf");
-}
+
 
 .clock_div {
   width: 15px;
@@ -53,13 +42,7 @@ body,
   flex-direction: column;
 }
 
-#s1 {
-  font-size: 25px;
-}
 
-#s2 {
-  font-size: 25px;
-}
 
 #info {
   position: absolute;
@@ -105,7 +88,7 @@ body,
   width: 200px;
   background: rgba(0, 0, 0, 0.66);
   color: white;
-  font-family: normalText;
+  font-family: UncutSans;
   border-radius: 0.5em;
   display: block;
 }
@@ -117,24 +100,24 @@ body,
 
 .return-home {
   cursor: pointer;
-  /* position: relative; */
-  /* left: 0; */
-  /* float: left; */
   display: flex;
-  /* flex-grow: 2; */
   justify-content: center;
   align-items: center;
   font-size: large;
   color: white;
   padding: 3%;
-  /* border-radius: 50%; */
-  /* backdrop-filter: blur(2px); */
-  /* background-color: hsla(0, 0%, 9%, 0.3); */
+  border-radius: 50%;
+  backdrop-filter: blur(2px);
+  background-color: hsla(0, 0%, 9%, 0.3);
   border: none;
   outline: none;
 }
+.return-home-dummy {
+  width: 10%;
+  font-size: larger;
+}
 .blur-home {
-  padding: 0 5%;
+  padding: 0 1%;
   border-radius: 0.5rem;
   min-width: 35vmax;
   /* width: max-content; */
@@ -150,7 +133,7 @@ body,
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-  font-family: headingAlcher;
+  font-family: CruffySans;
   font-weight: 400 !important;
   align-items: center;
   justify-content: center;
@@ -159,10 +142,10 @@ body,
   padding: 5%;
 }
 .blur-home p {
-  text-align: center;
+  text-align: justify;
   display: flex;
   align-items: center;
-  font-family: normalText !important;
+  font-family: UncutSans !important;
 }
 .title-home {
   width: 100%;
@@ -170,20 +153,29 @@ body,
   justify-content: space-evenly;
   text-align: center;
   align-items: center;
-  background-image: linear-gradient(90deg, #F22C5B 0%, #FF8835 17.5%, #9CCD5D 34.5%, #3083EA 51%, #B357B6 67%, #39A27A 83.5%, #FA5045 100%);
+  background-image: linear-gradient(
+    90deg,
+    #f22c5b 0%,
+    #ff8835 17.5%,
+    #9ccd5d 34.5%,
+    #3083ea 51%,
+    #b357b6 67%,
+    #39a27a 83.5%,
+    #fa5045 100%
+  );
   background-repeat: repeat;
   background-size: 400% 400%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shift 3s linear infinite;
+  animation: shift 8s linear infinite;
   animation-delay: 2s;
 }
-.title-home a{
+.title-home a {
   padding: 0 5%;
 }
 @keyframes shift {
-  20% {
+  10% {
     background-position: 0% 0%;
   }
   70% {
@@ -331,28 +323,28 @@ iframe {
   color: #aadcdb;
   font-weight: 850;
   font-size: 4.5vw;
-  font-family: sponsor_heading_text;
+  font-family: FontSpringText;
 }
 
 .text_sponsor_content span {
   color: #f12353;
   font-size: 4.2vw;
   font-weight: 700;
-  font-family: headingAlcher;
+  font-family: CruffySans;
 }
 
 .text_sponsor_content h2 {
   color: #ffffff;
   font-size: 4.2vw;
   font-weight: 700;
-  font-family: headingAlcher;
+  font-family: CruffySans;
 }
 
 .text_sponsor_content p {
   color: #ffffff;
   margin-top: 1.4rem;
   font-size: 1.8vw;
-  font-family: normalText;
+  font-family: UncutSans;
 }
 .splide {
   width: 90%;
@@ -388,7 +380,7 @@ iframe {
   color: #ffffff;
   font-size: 1.6rem;
   margin-bottom: 1rem;
-  font-family: normalText;
+  font-family: UncutSans;
   font-weight: 900;
 }
 
@@ -396,7 +388,7 @@ iframe {
   color: #f22c5b;
   font-size: 3rem;
   margin-bottom: 1.4rem;
-  font-family: headingAlcher;
+  font-family: CruffySans;
 }
 
 #registerBtn {
@@ -410,7 +402,7 @@ iframe {
   border-radius: 1rem;
   background-color: #f22c5b;
   cursor: pointer;
-  font-family: headingAlcher;
+  font-family: CruffySans;
 }
 .cardHoverSection {
   display: flex;
@@ -485,7 +477,6 @@ iframe {
   position: relative;
   margin-top: 6rem;
   display: flex;
-
 }
 #upperHand {
   position: absolute;
@@ -536,13 +527,13 @@ iframe {
   color: #aadcdb;
   font-size: 3.8vw;
   text-align: left;
-  font-family: headingAlcher;
+  font-family: FontSpringText;
 }
 
 #text_home p {
   margin-top: 2vh;
   font-size: 1.2vw;
-  font-family: normalText;
+  font-family: UncutSans;
   color: white;
 }
 
@@ -568,7 +559,7 @@ iframe {
   color: #aadcdb;
   font-weight: 850;
   font-size: 5.5vw;
-  font-family: sponsor_heading_text;
+  font-family: FontSpringText;
   margin-bottom: -5vh;
 }
 
@@ -585,7 +576,7 @@ iframe {
   color: #ffffff;
   margin-top: -4vh;
   font-size: 2vw;
-  font-family: normalText;
+  font-family: UncutSans;
 }
 
 .buy_merch_button {
@@ -610,21 +601,21 @@ iframe {
   color: #aadcdb;
   font-weight: 850;
   font-size: 5.5vw;
-  font-family: sponsor_heading_text;
+  font-family: FontSpringText;
 }
 
 .alcher_merch_coming_soon span {
   color: #f12353;
   font-size: 4.2vw;
   font-weight: 700;
-  font-family: headingAlcher;
+  font-family: CruffySans;
 }
 
 .alcher_merch_coming_soon h2 {
   color: #ffffff;
   font-size: 4.2vw;
   font-weight: 700;
-  font-family: headingAlcher;
+  font-family: CruffySans;
 }
 
 @keyframes moveUpDown {
@@ -795,7 +786,7 @@ iframe {
   .getAppSection {
     height: 40%;
   }
-  
+
   .home_alcher_app_container > img {
     top: 10vh;
   }
@@ -839,30 +830,30 @@ iframe {
   }
 }
 
-.x-A{
+.x-A {
   translate: -47%;
 }
-.x-B{
+.x-B {
   translate: -47%;
 }
-.x-C{
+.x-C {
   translate: -47%;
 }
-.x-D{
+.x-D {
   translate: -41%;
 }
-.x-E{
+.x-E {
   translate: -47%;
 }
-.x-F{
+.x-F {
   translate: -45%;
 }
-.x-G{
+.x-G {
   translate: -48%;
 }
-.x-H{
+.x-H {
   translate: -47%;
 }
-.x-I{
+.x-I {
   translate: -45%;
 }

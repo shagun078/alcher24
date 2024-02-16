@@ -252,7 +252,7 @@ body::-webkit-scrollbar {
   position: absolute;
   top: 0;
   width: 100%;
-  height: fit-content;
+  height: 275vh;
   min-height: 100%;
   background-color: rgba(255, 255, 255, 0.294);
   backdrop-filter: blur(2px);
