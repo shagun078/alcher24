@@ -392,7 +392,7 @@ function Events() {
           <button
             className="back-to-home"
             onClick={() => {
-              backToHome();
+              backward();
             }}
           >
             BACK
