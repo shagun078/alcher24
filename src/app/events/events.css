@@ -44,21 +44,21 @@ body {
   inset: 50%;
   transform: translate(-50%, -50%);
   animation: clockwise 30s linear infinite;
-  /* filter: contrast(30%); */
+  filter: brightness(40%);
 }
 #ui .rings_event:first-child {
   position: absolute;
   inset: 50%;
   transform: translate(-50%, -50%);
   animation: anticlockwise 30s linear infinite;
-  /* filter: contrast(100%); */
+  filter: brightness(70%);
 }
 #ui .rings_event:nth-child(3) {
   position: absolute;
   inset: 50%;
   transform: translate(-50%, -50%);
   animation: clockwise 30s linear infinite;
-  /* filter: contrast(150%); */
+  filter: brightness(100%);
 }
 
 @keyframes clockwise {

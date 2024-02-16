@@ -9,6 +9,11 @@ body,
   background-blend-mode: color-burn;
   background-color: #141414;
 }
+canvas {
+  cursor: grab;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+}
 
 
 
@@ -95,21 +100,26 @@ body,
 
 .return-home {
   cursor: pointer;
-  height: 100%;
-  /* width: 20%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: large;
-  padding-left: 0.25rem;
-  padding-top: 1rem;
-  /* color: white;
+  color: white;
+  padding: 3%;
+  border-radius: 50%;
   backdrop-filter: blur(2px);
-  background-color: hsla(0, 0%, 9%, 0.3); */
+  background-color: hsla(0, 0%, 9%, 0.3);
   border: none;
   outline: none;
 }
+.return-home-dummy {
+  width: 10%;
+  font-size: larger;
+}
 .blur-home {
-  padding: 0 5%;
+  padding: 0 1%;
   border-radius: 0.5rem;
-  min-width: 27vw;
+  min-width: 35vmax;
   /* width: max-content; */
   font-family: Helvetica, sans-serif;
   /* backdrop-filter: blur(2px); */
@@ -129,32 +139,43 @@ body,
   justify-content: center;
   width: 100%;
   height: 100%;
-  padding: 1rem;
+  padding: 5%;
 }
 .blur-home p {
+  text-align: justify;
   display: flex;
   align-items: center;
   font-family: UncutSans !important;
 }
 .title-home {
   width: 100%;
-  word-wrap: none;
   display: flex;
-  gap: 10px;
-  justify-content: center;
+  justify-content: space-evenly;
   text-align: center;
   align-items: center;
-  background-image: linear-gradient(90deg, #F22C5B 0%, #FF8835 17.5%, #9CCD5D 34.5%, #3083EA 51%, #B357B6 67%, #39A27A 83.5%, #FA5045 100%);
+  background-image: linear-gradient(
+    90deg,
+    #f22c5b 0%,
+    #ff8835 17.5%,
+    #9ccd5d 34.5%,
+    #3083ea 51%,
+    #b357b6 67%,
+    #39a27a 83.5%,
+    #fa5045 100%
+  );
   background-repeat: repeat;
   background-size: 400% 400%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shift 3s linear infinite;
+  animation: shift 8s linear infinite;
   animation-delay: 2s;
 }
+.title-home a {
+  padding: 0 5%;
+}
 @keyframes shift {
-  20% {
+  10% {
     background-position: 0% 0%;
   }
   70% {
@@ -180,7 +201,7 @@ body,
   background-image: url("/TexturePattern.jpg");
   background-blend-mode: color-burn;
   background-color: #141414;
-  padding-bottom: 8vh;
+  padding-bottom: 15vh;
 }
 
 .mainContainer {
@@ -456,7 +477,6 @@ iframe {
   position: relative;
   margin-top: 6rem;
   display: flex;
-
 }
 #upperHand {
   position: absolute;
@@ -766,7 +786,7 @@ iframe {
   .getAppSection {
     height: 40%;
   }
-  
+
   .home_alcher_app_container > img {
     top: 10vh;
   }
@@ -810,30 +830,30 @@ iframe {
   }
 }
 
-.x-A{
+.x-A {
   translate: -47%;
 }
-.x-B{
+.x-B {
   translate: -47%;
 }
-.x-C{
+.x-C {
   translate: -47%;
 }
-.x-D{
+.x-D {
   translate: -41%;
 }
-.x-E{
+.x-E {
   translate: -47%;
 }
-.x-F{
+.x-F {
   translate: -45%;
 }
-.x-G{
+.x-G {
   translate: -48%;
 }
-.x-H{
+.x-H {
   translate: -47%;
 }
-.x-I{
+.x-I {
   translate: -45%;
 }

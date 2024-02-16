@@ -1,5 +1,10 @@
+@font-face {
+    font-family: 'FontSpringText';
+    src:url('../../../../../public/Vacation-Heavy.ttf')
+  }
+
 :root{
-    --color1: black;
+    --color1: #141414;
     --font-size1: 1.31vw;
     --font-size-16-1440: 1.11vw;
     --font-size-20-1440: 1.38vw;
@@ -67,6 +72,7 @@
     text-decoration: none;
     color: white;
     padding: 0.66vw 0.66vw 0.66vw 0.66vw;
+    font-family: FontSpringText;
 }
 
 .footer{
