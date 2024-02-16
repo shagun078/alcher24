@@ -327,7 +327,7 @@ function Events() {
       <Head>
         <title>Events | Alcheringa</title>
       </Head>
-      <div className="event_box" style={{ zIndex: "5" }}>
+      <div className="event_box" style={{ zIndex: "1" }}>
         <span
           className={`fade-in ${isAnimating ? "animating" : ""}`}
           id="museum_events_name"
@@ -363,23 +363,20 @@ function Events() {
           </span>
         </div>
 
-        <div className="responsive_btn_box center_btn_box">
-          <div
-            className="events_arrow_div"
-            onClick={() => {
-              forward();
-            }}
-          >
-            <img src="Events arrow.png"></img>
-          </div>
-
+        <div className="responsive_btn_box center_btn_box" style={{ zIndex: "5" }}>
+        <div className="events_arrow_div"   onClick={() => {
+          forward();
+        }}>
+        <img src="Events arrow.png" ></img>
+        </div>
+       
           <button
             className="back-to-home"
             onClick={() => {
-              backToHome();
+              backward();
             }}
           >
-            BACK TO HOME
+            BACK
           </button>
         </div>
 

@@ -179,6 +179,8 @@ button {
   /* position: absolute;
   bottom:5vh;
   left:45vw; */
+  position: relative;
+  top:2vh;
   outline: none;
   border: none;
   width: fit-content;
