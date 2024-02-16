@@ -171,6 +171,13 @@ canvas {
   animation: shift 10s linear infinite;
   animation-delay: 2s;
 }
+.draggable {
+    cursor: grab;
+}
+
+.draggable:active {
+    cursor: grabbing;
+}
 .title-home a {
   padding: 0 5%;
 }
