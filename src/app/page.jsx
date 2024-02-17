@@ -19,9 +19,10 @@ export default function MainPage() {
       <br />
       <Link href="/teams">Teams Page</Link>
       <br />
-      <Link href="/loading">Loading</Link>
+     {/* <Link href="/loading">Loading</Link> */}
       <Footer />
       <br/>
+      
     </>
   );
 }
