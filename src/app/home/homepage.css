@@ -558,7 +558,7 @@ iframe {
 }
 
 .alcher_merch_section {
-  padding-top: 10vh;
+  padding-top: 15rem;
   text-align: center;
 
   /* display: none; */
@@ -708,7 +708,7 @@ iframe {
   }
 
   .alcher_merch_section {
-    padding-top: 0vh;
+    padding-top: 5rem;
   }
 
   .alcher_merch_coming_soon {
@@ -782,7 +782,9 @@ iframe {
   .animation-container {
     top: 53%;
   }
-
+  .alcher_merch_section{
+    padding-top: 0rem;
+  }
   .decorationContainer {
     margin-top: 0rem;
   }
