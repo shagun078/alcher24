@@ -14,7 +14,9 @@ export default function MainPage() {
       <Link href="/events">Events Page</Link>
       <br />
       <Link href="/kartavya">Kartavya Page</Link>
-      <br></br>
+      <br>
+      <Link href='/competitions'>Competitions Page</Link>
+      </br>
       <Link href="/sponsor">Sponsor Page</Link>
       <br />
       <Link href="/teams">Teams Page</Link>
