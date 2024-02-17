@@ -223,6 +223,13 @@
     animation-duration: 0.502s;
     transition-timing-function: ease-in;
     white-space: nowrap;
+    /* padding-bottom: 10px; */
+    height: 5vh;
+}
+@media screen and (max-width: 540px) {
+    .list ul li{
+        height: 3vh;
+    }
 }
 
 .list ul li:hover {
