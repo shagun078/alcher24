@@ -606,6 +606,11 @@ iframe {
   display: none;
 }
 
+.alcher_merch_img{
+  margin-bottom: -6vw;
+  margin-top: -5vw;
+}
+
 .alcher_merch_coming_soon h1 {
   color: #aadcdb;
   font-weight: 850;
@@ -634,6 +639,14 @@ iframe {
   }
   50% {
     transform: translateY(-20px);
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  
+  .alcher_merch_img{
+    margin-bottom: 0vh;
+    margin-top: 0vh;
   }
 }
 

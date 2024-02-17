@@ -120,7 +120,7 @@ export default function Teams() {
                   style={{
                     // width: "fit-content",
                     // height: "50vh",
-                    width: "75vw",
+                    width: "77vw",
                     height: "auto",
                   }}
                 />
@@ -175,7 +175,7 @@ export default function Teams() {
                   src={model_creatives}
                   alt="Creatives"
                   style={{
-                    width: "65vw",
+                    width: "67vw",
                     height: "auto",
                     // height: "60vh",
                     paddingBottom: "0px",

@@ -716,6 +716,7 @@ export default function Home() {
                     height: "auto",
                     alignItems: "center",
                   }}
+                  className="alcher_merch_img"
                 />
               </div>
               <p>Get Your Own</p>
