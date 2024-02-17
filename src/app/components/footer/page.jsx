@@ -25,7 +25,7 @@ const Footer = ({ bg, star, circle_src1, circle_src2, windows_src, alcheringa_lo
                     <ul>
                         <li onClick={() => router.push("/events")} className={path === '/events' ? 'c c1' : ''}>
                             <Link href="/events">Events</Link></li>
-                        <li onClick={() => router.push("/competitions")} className={path === '/competitions' ? 'c c2' : ''}>
+                        <li onClick={() => router.push("/competition")} className={path === '/competition' ? 'c c2' : ''}>
                             <Link href="/competition">Competitions</Link></li>
                         <li onClick={() => router.push("/kartavya")} className={path === '/kartavya' ? 'c c3' : ''}>
                             <Link href="/kartavya">Kartayva</Link></li>
