@@ -648,6 +648,10 @@ iframe {
     margin-bottom: 0vh;
     margin-top: 0vh;
   }
+
+  .animation-container {
+    top: 50%;
+  }
 }
 
 @media screen and (max-width: 912px) {
@@ -774,6 +778,10 @@ iframe {
   /* .threeDWrapper div:first-child div {
     height: 40%!important;
   } */
+
+  .animation-container {
+    top: 53%;
+  }
 
   .decorationContainer {
     margin-top: 0rem;
