@@ -117,11 +117,11 @@ function Body() {
                   <motion.div
                     className="list"
                     initial={{
-                      height: state ? "0vh" : window.innerWidth <540 ?"33vh":"55vh",
+                      height: state ? "0vh" : window.innerWidth < 540 ? "33vh" : "55vh",
                       y: state ? "0vh" : "2vh",
                     }}
                     animate={{
-                      height: state ? window.innerWidth <540 ?"33vh":"55vh" : "0vh",
+                      height: state ? window.innerWidth < 540 ? "33vh" : "55vh" : "0vh",
                       y: state ? "2vh" : "0vh",
                     }}
                     transition={{ duration: 0.3 }}

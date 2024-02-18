@@ -125,10 +125,10 @@
 .para_cover p {
     text-overflow: ellipsis;
     line-clamp: 1;
-    font-size: 1vw;
     white-space: nowrap;
     overflow: hidden;
     width: 40vw;
+    font-size: var(--font-size-20-1440);
 }
 
 .fa-sort-down {
@@ -309,6 +309,7 @@ span{
     flex-direction: column;
     justify-content: end;
     margin: 2vw 0vw;
+    z-index: 100;
 }
 
 .iconsIMG {
