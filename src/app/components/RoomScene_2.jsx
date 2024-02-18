@@ -7,9 +7,26 @@ import {
 } from "@react-three/drei";
 import "../home/homepage.css";
 import * as THREE from "three";
+import { useFrame } from "@react-three/fiber";
 
 export default function RoomScene(props) {
-  const rotateRef = useRef();
+  const rotateRef = props.rotate;
+  // let backward = false, stop = false;
+  // useFrame(() => {
+  //   if (!stop && !backward && rotateRef.current.rotation.y < 0.3) {
+  //     rotateRef.current.rotation.y += 0.001;
+  //   }
+  //   if (!stop && rotateRef.current.rotation.y >= 0.3) {
+  //     backward = true;
+  //   }
+  //   if (!stop && backward && rotateRef.current.rotation.y >= -0.000000001) {
+  //     rotateRef.current.rotation.y -= 0.001;
+  //   }
+  //   if (rotateRef.current.rotation.y === 0) {
+  //     stop = true;
+  //   }
+  // });
+
   const texture = useTexture("BakedTexture_Home.webp");
   texture.flipY = false;
   texture.colorSpace = THREE.SRGBColorSpace;
@@ -352,7 +369,7 @@ export default function RoomScene(props) {
           rotation={[-0.3, 0.58, 0.17]}
           scale={[0.03, 0.12, 0.1]}
         >
-          <planeGeometry args={[3.2, 1.9]} />
+          <planeGeometry args={[3.3, 1.9]} />
           <meshStandardMaterial
             side={THREE.DoubleSide}
             map={mobileScreen}
@@ -473,7 +490,7 @@ export default function RoomScene(props) {
           rotation={[0, 1.2925, 0]}
           scale={[0.101, 0.1, 0.1]}
         >
-          <planeGeometry args={[3.2, 1.5]} />
+          <planeGeometry args={[3, 1]} />
           <meshStandardMaterial side={THREE.DoubleSide} map={live} />
         </mesh>)}
       </group>

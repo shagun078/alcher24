@@ -6,7 +6,7 @@ body,
   background: #000000;
   -ms-content-zooming: none disable browser zoom;
   background-image: url("/TexturePattern.jpg");
-  background-blend-mode: color-burn;
+  /* background-blend-mode: color-burn; */
   background-color: #141414;
 }
 canvas {
@@ -168,8 +168,15 @@ canvas {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shift 8s linear infinite;
+  animation: shift 10s linear infinite;
   animation-delay: 2s;
+}
+.draggable {
+    cursor: grab;
+}
+
+.draggable:active {
+    cursor: grabbing;
 }
 .title-home a {
   padding: 0 5%;
@@ -199,9 +206,9 @@ canvas {
   width: 100%;
   -ms-content-zooming: none disable browser zoom;
   background-image: url("/TexturePattern.jpg");
-  background-blend-mode: color-burn;
+  /* background-blend-mode: color-burn; */
   background-color: #141414;
-  padding-bottom: 15vh;
+  padding-bottom: 30vh;
 }
 
 .mainContainer {
@@ -495,7 +502,8 @@ iframe {
 }
 .imageWrapper {
   width: 50%;
-  height: 100%;
+  /* height: 100%; */
+  height: auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -511,7 +519,8 @@ iframe {
   left: 0;
   top: 18vh;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
+  height: auto;
   transform: scale(1);
 }
 
@@ -549,7 +558,7 @@ iframe {
 }
 
 .alcher_merch_section {
-  padding-top: 10vh;
+  padding-top: 15rem;
   text-align: center;
 
   /* display: none; */
@@ -597,6 +606,11 @@ iframe {
   display: none;
 }
 
+.alcher_merch_img{
+  margin-bottom: -6vw;
+  margin-top: -5vw;
+}
+
 .alcher_merch_coming_soon h1 {
   color: #aadcdb;
   font-weight: 850;
@@ -628,6 +642,18 @@ iframe {
   }
 }
 
+@media screen and (max-width: 1025px) {
+  
+  .alcher_merch_img{
+    margin-bottom: 0vh;
+    margin-top: 0vh;
+  }
+
+  .animation-container {
+    top: 50%;
+  }
+}
+
 @media screen and (max-width: 912px) {
   .alcher_merch_section p {
     font-size: 3vw;
@@ -636,6 +662,9 @@ iframe {
   .buy_merch_button {
     font-size: 3vw;
     font-weight: 700;
+  }
+  .threeD_2dwrapper {
+    padding-bottom: 10vh;
   }
 
   .decorationContainer {
@@ -679,7 +708,7 @@ iframe {
   }
 
   .alcher_merch_section {
-    padding-top: 0vh;
+    padding-top: 5rem;
   }
 
   .alcher_merch_coming_soon {
@@ -750,6 +779,12 @@ iframe {
     height: 40%!important;
   } */
 
+  .animation-container {
+    top: 53%;
+  }
+  .alcher_merch_section{
+    padding-top: 0rem;
+  }
   .decorationContainer {
     margin-top: 0rem;
   }

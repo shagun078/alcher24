@@ -21,7 +21,7 @@
     text-align: center;
     overflow: hidden;
     background-image: url('../../../../public/TexturePattern.jpg');
-    background-blend-mode:color-burn;
+    /* background-blend-mode:color-burn; */
     /* user-select: none; */
 }
 
@@ -77,7 +77,7 @@
 
 .all_teams{
     width: 80vw;
-    margin: 0 auto 40vh;
+    margin: 0 auto 30vh;
 }
 
 .head_prb{
@@ -190,7 +190,7 @@
 
 .names_prb, .names_crm, .names_creatives, .names_events, .names_web_app, .names_mun, .names_finance, .names_convener{
     width: 58vw;
-    margin: calc(2vw + 40px) auto 0;
+    margin: calc(1vw + 20px) auto 0;
     display: flex;
     justify-content: space-evenly;
     gap: 0px 10px;
@@ -253,6 +253,10 @@
 }
 
 @media screen and (max-width: 1025px){
+    
+    .all_teams{
+        margin-bottom: 10vh;
+    }
     .teams_heading{
         width: 90vw;
         margin: 10vh auto 0;
@@ -274,10 +278,14 @@
         margin-bottom: -0.5vw;
     }
     .convener_img{
-        margin-bottom: 1vw;
+        margin-bottom: 0.8vw;
     }
     .line_break{
         display: inline-block;
+    }
+    .head_prb, .head_events, .head_creatives, .head_crm, .head_web_app, .head_mun, .head_finance, .head_convener{
+        padding-top: 10vh;
+        font-size: 4vw;
     }
 }
 
@@ -286,7 +294,7 @@
         margin-bottom: -1.3vw;
     }
     .convener_img{
-        margin-bottom: 0.5vw;
+        margin-bottom: 0.6vw;
     }
 }
 

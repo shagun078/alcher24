@@ -109,7 +109,7 @@
     font-size: var(--font-size-20-1440);
     color: var(--color-w);
     box-sizing: border-box;
-    font-family: 'Uncut sans regular';
+    font-family: 'UncutSans';
     border-radius: 0.55vw;
 }
 
@@ -125,6 +125,10 @@
 .para_cover p {
     text-overflow: ellipsis;
     line-clamp: 1;
+    font-size: 1vw;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 40vw;
 }
 
 .fa-sort-down {
@@ -139,7 +143,7 @@
 }
 
 .small_box {
-    position: relative;
+    position: absolute;
     right: 0.6vw;
     filter: invert(1);
 }
@@ -154,27 +158,28 @@
 
 .list {
     background: var(--color-db);
-    height: 32vw;
+    height: 0vw;
     width: 26.87vw;
     position: absolute;
-    margin-top: 2vw;
+    margin-top: 2vh;
     box-sizing: border-box;
     display: block;
     align-items: center;
     border-radius: 0.55vw;
-    display: none;
+    display: grid;
+    z-index: 10;
+    overflow: hidden;
+
 }
 
-.list_active {
+/* .list_active {
     display: grid;
     animation-name: list-anime;
     animation-duration: 0.5s;
-    transition: all;
-    transition-timing-function: ease;
-    z-index: 10;
-}
+    transition-timing-function: ease-out;
+} */
 
-@keyframes list-anime {
+/* @keyframes list-anime {
     0% {
         height: 0;
     }
@@ -182,7 +187,7 @@
     100% {
         height: 33.88vw;
     }
-}
+} */
 
 .list ul {
     list-style: none;
@@ -218,14 +223,21 @@
     animation-duration: 0.502s;
     transition-timing-function: ease-in;
     white-space: nowrap;
+    /* padding-bottom: 10px; */
+    height: 5vh;
+}
+@media screen and (max-width: 540px) {
+    .list ul li{
+        height: 3vh;
+    }
 }
 
 .list ul li:hover {
     cursor: pointer;
 }
 
-.title {
-    margin: 3vw 0vw 2.5vw 0vw;
+.comp_title {
+    /* margin: 3vw 0vw 2.5vw 0vw; */
     height: 10vh;
     width: 100vw;
     display: flex;
@@ -234,7 +246,7 @@
     box-sizing: border-box;
 }
 
-.title h2 {
+.comp_title h2 {
     font-size: 3.93vw;
     color: var(--color2);
     font-family: var();
@@ -323,17 +335,18 @@ span{
     z-index: 5;
 }
 
-.para_cover p {
-    white-space: nowrap;
-    overflow: hidden;
-    width: 40vw;
-}
+
 
 #Literary{
     margin-bottom: 5vw 0vw !important;
 }
 
 @media screen and (max-width: 1000px) {
+   
+
+    .comp_title{
+        margin-top: 2vh;
+    }
     .item_container {
         grid-template-columns: repeat(2, 1fr);
     }

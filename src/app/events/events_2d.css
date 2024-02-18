@@ -10,7 +10,7 @@
   --text4: 2vh;
   --text5: 6vh;
   --font1: "FONTSPRING DEMO - Freigeist Con Bold";
-  --font2: "Uncut Sans";
+  --font2: "UncutSans";
   --font3: "Cruyff Sans";
 }
 @-webkit-keyframes cspin {
@@ -49,7 +49,7 @@ body::-webkit-scrollbar {
   color: #e8edd9;
   overflow: hidden;
   background-image: url("../../../public/TexturePattern.jpg");
-  background-blend-mode: color-burn;
+  /* background-blend-mode: color-burn; */
 }
 
 .hero-section {
@@ -246,7 +246,7 @@ body::-webkit-scrollbar {
 .dropdown > ul > li:last-child {
   border-bottom: none;
 }
-.blur-events {
+/* .blur-events {
   opacity: 0;
   z-index: 99;
   position: absolute;
@@ -257,7 +257,7 @@ body::-webkit-scrollbar {
   background-color: rgba(255, 255, 255, 0.294);
   backdrop-filter: blur(2px);
   pointer-events: none;
-}
+} */
 
 .image-wrapper {
   width: 100%;

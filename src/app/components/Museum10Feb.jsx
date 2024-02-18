@@ -31,35 +31,41 @@ export function Museumfinal(props) {
       //   return vid;
       // });
 
-      const proshowsScreen = useTexture("pronites2.png");
+      const proshowsScreen = useTexture("Frame 15624-min.jpg");
       proshowsScreen.flipX = true;
 
-      const proShowsContent = useTexture("pronites2content.jpg");
+      const proShowsContent = useTexture("Frame 15625-min.jpg");
       proShowsContent.flipX = true;
 
-      const pronitesScreen = useTexture("Pronites.jpg");
+      const pronitesScreen = useTexture("Frame 15617-min.jpg");
       pronitesScreen.flipX = true;
 
-      const proniteContent = useTexture("PronitesContent.jpg");
+      const proniteContent = useTexture("Frame 15621-min.jpg");
       proniteContent.flipX = true;
 
-      const creatorsScreen = useTexture("Creatorscamp.jpg");
+      const creatorsScreen = useTexture("Frame 15612-min.jpg");
       creatorsScreen.flipX = true;
 
-      const creatorsContent = useTexture("CreatorsContent.jpg");
+      const creatorsContent = useTexture("Frame 15613-min.jpg");
       creatorsContent.flipX = true;
 
-      const CriticalScreen = useTexture("CriticalDamage.jpg")
+      const CriticalScreen = useTexture("Frame 15619-min.jpg")
       CriticalScreen.flipX = true;
 
-      const criticalContent = useTexture("CriticalDamageContent.jpg");
+      const criticalContent = useTexture("Frame 15623-min.jpg");
       criticalContent.flipX = true;
 
-      const Informals = useTexture("Informals.jpg");
+      const Informals = useTexture("Frame 15618-min.jpg");
       Informals.flipX = true;
 
-      const informalContent = useTexture("InformalsContent.jpg");
+      const informalContent = useTexture("Frame 15622-min.jpg");
       informalContent.flipX = true;
+
+      const lastImageLeft=useTexture("Frame 6356192-min.jpg")
+      lastImageLeft.flipX=true;
+
+      const lastImageRight=useTexture("Frame 6356191-min.jpg")
+      lastImageRight.flipX=true;
 
       return (
             <group {...props} dispose={null}>
@@ -218,7 +224,7 @@ export function Museumfinal(props) {
                   <group>
                         <mesh position={[-1.80, 1.58, 83.68]} scale={[0.638, 1.6, 1]} rotation={[0.15, -0.33, 0.04]}>
                               <planeGeometry args={[3.2, 1.9]} />
-                              <meshStandardMaterial emissive={"white"} side={THREE.DoubleSide}>
+                              <meshStandardMaterial map={lastImageLeft} side={THREE.DoubleSide}>
                                     {/* <videoTexture attach="map" args={[video]} />
 <videoTexture attach="emissiveMap" args={[video]} /> */}
                               </meshStandardMaterial>
@@ -229,7 +235,7 @@ export function Museumfinal(props) {
                   <group>
                         <mesh position={[1.982, 1.6, 83.2]} scale={[0.65, 1.62, 1]} rotation={[0.15, 0.52, -0.075]}>
                               <planeGeometry args={[3.2, 1.9]} />
-                              <meshStandardMaterial emissive={"white"} side={THREE.DoubleSide}>
+                              <meshStandardMaterial map={lastImageRight} side={THREE.DoubleSide}>
                                     {/* <videoTexture attach="map" args={[video]} />
 <videoTexture attach="emissiveMap" args={[video]} /> */}
                               </meshStandardMaterial>

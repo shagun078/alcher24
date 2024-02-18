@@ -19,7 +19,6 @@ import Footer from "../components/footer/page";
 import Image from "next/image";
 import merch from "./resources/home_merch.png";
 import Link from "next/link";
-import Loading from "../components/loading/loading";
 
 const marks = [
   {
@@ -59,7 +58,7 @@ const marks = [
     title: "ALCHER APP",
     link: "https://play.google.com/store/apps/details?id=com.alcheringa.alcheringa2022",
     description:
-      "Download our app and visit our website get access to amazing features like E-Alcher passes, Schedule, Campus maps, Real-Time updates and much more.",
+      "Download our app and visit our website,get access to amazing features like Schedule, Campus maps, Real-Time updates and much more.",
     camPos: {
       x: -4.65,
       y: 1,
@@ -91,7 +90,7 @@ const marks = [
     title: "THEME",
     link: "https://www.youtube.com/watch?v=GJfmkiVj4FA&pp=ygURYWxjaGVyaW5nYSB0aGVtZSA%3D",
     description:
-      "The theme for Alcheringa 24 tells the story of a young girl who is facing a art block in a monotonous world,travels to a art exhibit ina museum and unravels a journey of Psychedelia to find her inspiration.",
+      "The theme for Alcheringa '24 is the story of a young girl facing an art block in a monotonous world, who travels to an art exhibition in a museum, finding inspiration as she unravels a journey of memories and Psychedelia.",
     camPos: {
       x: -4,
       y: 2,
@@ -187,7 +186,7 @@ const marks = [
     title: "MERCH",
     link: "#",
     description:
-      "Alcheringa has more than 80 events spread across various genres like fashion, music, art, sports, etc. They take place during the three days in which many events take place which includes panel discussions with various famous creators, informal activities like hot air balloon, ATV rides, paint ball shoot etc.",
+      "Every year Alcheringa has a different theme and their limited edition of merch, so quickly go and grab out Alcheringa Merchandise. This year we have T-shirt, Sweatshirts and Over-sized T-Shirt in our stores.",
     camPos: {
       x: -4,
       y: 2,
@@ -588,30 +587,9 @@ function Tween() {
 }
 
 export default function Home() {
-  const [showSplash, setShowSplash] = useState(true);
-
-  useEffect(() => {
-    if (document.readyState !== "complete") {
-      const handler = () => {
-        console.log("load");
-        setShowSplash(false);
-      };
-      window.addEventListener("load", handler);
-
-      return () => {
-        window.removeEventListener("load", handler);
-      };
-    } else {
-      const timeout = window.setTimeout(() => {
-        console.log("timeout");
-        setShowSplash(false);
-      }, 0);
-      return () => window.clearTimeout(timeout);
-    }
-  }, []);
+  const rotateRef = useRef();
   const contentRef = useRef(null);
   const ref = useRef();
-  const rotateRef = useRef();
   const [isHovered, setIsHovered] = useState(false);
   const scrollToContent = () => {
     console.log("clicked!");
@@ -621,8 +599,20 @@ export default function Home() {
 
   const hoverEffect = () => {
     setIsHovered(!isHovered);
-    console.log(isHovered);
   };
+
+  useEffect(() => {
+    const document = window.document;
+    const cnvs = document.querySelector("canvas");
+    cnvs.classList.add("draggable");
+    cnvs.addEventListener("dragenter", () => {
+      cnvs.classList.add("active");
+    });
+    cnvs.addEventListener("dragleave", () => {
+      cnvs.classList.remove("active");
+    });
+  }, []);
+
   const buttons = (
     <React.Fragment>
       <svg
@@ -640,44 +630,39 @@ export default function Home() {
     </React.Fragment>
   );
 
-  // useFrame(() => {
-  //   rotateRef.current.rotation.y += 0.005;
-  // });
-
-  return !showSplash ? (
+  return (
     <React.Fragment>
-      <Navbar reg_bg={"register reg_bg1"} />
-      <main className="threeD_2dwrapper">
-        <div className="threeDWrapper">
-          <Canvas
-            camera={{
-              fov: 70,
-              position: [-2, 1.5, -1],
-              zoom: 1,
-            }}
-            shadows
-          >
-            <OrbitControls
-              ref={ref}
-              target={[-3.5, 1.4, -1.8]}
-              enableZoom={false}
-              enableDamping={true}
-              minPolarAngle={Math.PI / 3}
-              maxPolarAngle={Math.PI / 2}
-              dampingFactor={0.02}
-              enabled={true}
-            />
-            <ambientLight intensity={2} />
-            <Annotations controls={ref} />
-            <mesh ref={rotateRef}>
-              <RoomScene />
-            </mesh>
-            <Tween />
-          </Canvas>
-          <div id="ui_home">{buttons}</div>
-        </div>
-        <div className="mainContainer " ref={contentRef}>
-         {/*
+      <Suspense fallback={<Loadingpage />}>
+        <Navbar reg_bg={"register reg_bg1"} />
+        <main className="threeD_2dwrapper">
+          <div className="threeDWrapper">
+            <Canvas
+              camera={{
+                fov: 70,
+                position: [-2, 1.5, -1],
+                zoom: 1,
+              }}
+              shadows
+            >
+              <OrbitControls
+                ref={ref}
+                target={[-3.5, 1.4, -1.8]}
+                enableZoom={false}
+                enableDamping={true}
+                minPolarAngle={Math.PI / 3}
+                maxPolarAngle={Math.PI / 2}
+                dampingFactor={0.02}
+                enabled={true}
+              />
+              <ambientLight intensity={2} />
+              <Annotations controls={ref} />
+              <RoomScene rotate={rotateRef} />
+              <Tween />
+            </Canvas>
+            <div id="ui_home">{buttons}</div>
+          </div>
+          <div className="mainContainer " ref={contentRef}>
+            {/*
           <div className="videoWrapper">
             <div className="videoBox">
               <iframe
@@ -688,98 +673,104 @@ export default function Home() {
 
           </div>*/}
 
-          {/*Sponsor section starts*/}
-          <div className="decorationContainer">
-            <div className="left">
-              <img className="image" src="Subtract.svg"></img>
-            </div>
-            <div className="centerDiv">
-              <img className="center_image" src="center_final.svg"></img>
-              <div className="animation-container">
-                {" "}
-                <Animations />
+            {/*Sponsor section starts*/}
+            <div className="decorationContainer">
+              <div className="left">
+                <img className="image" src="Subtract.svg"></img>
+              </div>
+              <div className="centerDiv">
+                <img className="center_image" src="center_final.svg"></img>
+                <div className="animation-container">
+                  {" "}
+                  <Animations />
+                </div>
+              </div>
+              <div className="right">
+                <img className="image" src="Subtract1.svg"></img>
               </div>
             </div>
-            <div className="right">
-              <img className="image" src="Subtract1.svg"></img>
-            </div>
-          </div>
-          <div className="sponsor_homepage">
-            {/* <MySlider />*/}
-            <div className="img_text_wrapper">
-              <img src="left_final_gate.svg" id="leftGate"></img>
-              <div className="text_sponsor_content">
-                <h1>SPONSORS</h1>
-                <h2>
-                  Coming <span>Soon</span>
-                </h2>
-                <p>Stay tuned, sponsors are on the horizon!</p>
+            <div className="sponsor_homepage">
+              {/* <MySlider />*/}
+              <div className="img_text_wrapper">
+                <img src="left_final_gate.svg" id="leftGate"></img>
+                <div className="text_sponsor_content">
+                  <h1>SPONSORS</h1>
+                  <h2>
+                    Coming <span>Soon</span>
+                  </h2>
+                  <p>Stay tuned, sponsors are on the horizon!</p>
+                </div>
+
+                <img src="right_final_gate.svg" id="rightGate"></img>
               </div>
-
-              <img src="right_final_gate.svg" id="rightGate"></img>
             </div>
-          </div>
-          {/*Sponsorsection ends*/}
+            {/*Sponsorsection ends*/}
 
-          <div className="alcher_merch_section">
-            <h1>ALCHER MERCH</h1>
-            <div className="merch_holder">
-              <Image
-                src={merch}
-                style={{
-                  width: "100vw",
-                  height: "auto",
-                  alignItems: "center",
-                }}
-              />
+            <div className="alcher_merch_section">
+              <h1>ALCHER MERCH</h1>
+              <div className="merch_holder">
+                <Image
+                  src={merch}
+                  style={{
+                    width: "100vw",
+                    height: "auto",
+                    alignItems: "center",
+                  }}
+                  className="alcher_merch_img"
+                />
+              </div>
+              <p>Get Your Own</p>
+              <button className="buy_merch_button">COMING SOON</button>
             </div>
-            <p>Get Your Own</p>
-            <button className="buy_merch_button">COMING SOON</button>
-          </div>
 
-          <div className="alcher_merch_coming_soon">
-            <h1>ALCHER MERCH</h1>
-            <h2>
-              Coming <span>Soon</span>
-            </h2>
-          </div>
+            <div className="alcher_merch_coming_soon">
+              <h1>ALCHER MERCH</h1>
+              <h2>
+                Coming <span>Soon</span>
+              </h2>
+            </div>
 
-          <div className="getAppSection">
-            <img src="upperHand.svg" id="upperHand"></img>
-            <img src="lowerHand.svg" id="lowerHand"></img>
-            <div className="textSection">
-              <div id="text_home">
-                <h1>
-                  GET THE <br /> ALCHERINGA APP
-                </h1>
-                <p>
-                  Download our app and get access to app exclusive
-                  <br /> features like Alcheringa passes, Merches,
-                  <br /> Schedule, Campus maps, Real-time updates and
-                  <br /> much more.
-                </p>
-                <div id="appDownloadBtn">
-                  <img
-                    src="home_google_play.png"
-                    className="googlePlayImage"
-                  ></img>
+            <div className="getAppSection">
+              <img src="upperHand.svg" id="upperHand"></img>
+              <img src="lowerHand.svg" id="lowerHand"></img>
+              <div className="textSection">
+                <div id="text_home">
+                  <h1>
+                    GET THE <br /> ALCHERINGA APP
+                  </h1>
+                  <p>
+                    Download our app and get access to app exclusive
+                    <br /> features like Alcheringa passes, Merches,
+                    <br /> Schedule, Campus maps, Real-time updates and
+                    <br /> much more.
+                  </p>
+                  <div id="appDownloadBtn">
+                    <a
+                      href="https://play.google.com/store/apps/details?id=com.alcheringa.alcheringa2022"
+                      target="_blank"
+                    >
+                      <img
+                        src="home_google_play.png"
+                        className="googlePlayImage"
+                      ></img>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="imageWrapper">
+                <div className="home_alcher_app_container">
+                  <img src="home_mobile_app.png"></img>
                 </div>
               </div>
             </div>
-            <div className="imageWrapper">
-              <div className="home_alcher_app_container">
-                <img src="home_mobile_app.png"></img>
-              </div>
-            </div>
-          </div>
 
-          {/* <div className="passesSection">
+            {/* <div className="passesSection">
             <p id="getYour">Get your Own</p>
             <h1 id="alcherPass">Alcheringa'24 Cards</h1>
             <button id="registerBtn">REGISTER</button>
           </div> */}
 
-          {/* <div
+            {/* <div
             className={`cardHoverSection ${isHovered ? "hovered" : ""}`}
             onMouseEnter={hoverEffect}
             onMouseLeave={hoverEffect}
@@ -787,18 +778,17 @@ export default function Home() {
             <img src="BoardOrange.svg" id="cardHoverLeft"></img>
             <img src="BoardBlue.svg" id="cardHoverRight"></img>
           </div> */}
-        </div>
-      </main>
-      <Footer
-        bg={"footer img_homepage"}
-        alcheringa_logo={alcheringa}
-        star={"star_homepage star"}
-        circle_src1={circle1}
-        circle_src2={circle2}
-        windows_src={windows1}
-      />
+          </div>
+        </main>
+        <Footer
+          bg={"footer img_homepage"}
+          alcheringa_logo={alcheringa}
+          star={"star_homepage star"}
+          circle_src1={circle1}
+          circle_src2={circle2}
+          windows_src={windows1}
+        />
+      </Suspense>
     </React.Fragment>
-  ) : (
-    <Loading />
   );
 }
