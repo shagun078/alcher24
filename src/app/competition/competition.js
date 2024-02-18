@@ -232,27 +232,30 @@ function Body() {
             <div className="item_container">
               {array.map((arr) => {
                 return (
-                  <a
-                    href={arr.url}
-                    target="_blank"
-                    key={arr.id}
-                    className="icon"
-                    id={arr.category}
-                  >
-                    <Image
-                      src={arr.img}
-                      alt="Photo"
-                      className="iconsIMG"
-                      width={1000}
-                      height={1000}
-                      quality={100}
-                    />
+                  <div className="z_icon">
+                    <a
+                      href={arr.url}
+                      target="_blank"
+                      key={arr.id}
+                      className="icon"
+                      id={arr.category}
+                    >
+                      <Image
+                        src={arr.img}
+                        alt="Photo"
+                        className="iconsIMG"
+                        width={1000}
+                        height={1000}
+                        quality={100}
+                      />
+                    </a>
                     <p className="margin_top_text">
                       <span>{arr.type}</span>&nbsp;
                       <span className="pad_text_arr">{arr.one_liner}</span>
                     </p>
                     <p className="icon_text">{arr.comp_name}</p>
-                  </a>
+
+                  </div>
                 );
               })}
             </div>

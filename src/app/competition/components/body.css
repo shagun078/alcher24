@@ -227,8 +227,9 @@
     /* padding-bottom: 10px; */
     height: 5vh;
 }
+
 @media screen and (max-width: 540px) {
-    .list ul li{
+    .list ul li {
         height: 3vh;
     }
 }
@@ -280,7 +281,7 @@
     animation-timing-function: ease-in-out;
 }
 
-span{
+span {
     font-size: 1vw;
 }
 
@@ -302,7 +303,8 @@ span{
     grid-gap: 2vw;
 }
 
-.icon {
+.z_icon {
+    z-index: 1;
     height: 100%;
     width: 100%;
     z-index: 5;
@@ -310,6 +312,11 @@ span{
     flex-direction: column;
     justify-content: end;
     margin: 2vw 0vw;
+}
+
+.icon {
+    width: 100%;
+    height: auto;
 }
 
 .iconsIMG {
@@ -338,23 +345,22 @@ span{
 
 
 
-#Literary{
+#Literary {
     margin-bottom: 5vw 0vw !important;
 }
 
 @media screen and (max-width: 1000px) {
-   
 
-    .comp_title{
-        margin-top: 2vh;
-    }
+
     .item_container {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .icon_text {
-        font-size: 6vw;
+    .comp_title {
+        margin-top: 2vh;
     }
+
+
 
     .icon {
         height: auto;
@@ -389,7 +395,7 @@ span{
         0% {
             height: 0;
         }
-    
+
         100% {
             height: auto;
         }
@@ -397,10 +403,6 @@ span{
 
     .list ul {
         height: auto;
-    }
-
-    span{
-        font-size: 4vw;
     }
 
     .list ul li {
@@ -412,10 +414,26 @@ span{
         font-size: 5vw;
         padding: 1vw;
     }
+
+    span {
+        font-size: 2vw;
+    }
+
+    .icon_text {
+        font-size: 3vw;
+    }
 }
 
 @media screen and (max-width: 800px) {
     .item_container {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    span {
+        font-size: 4vw;
+    }
+
+    .icon_text {
+        font-size: 6vw;
     }
 }
