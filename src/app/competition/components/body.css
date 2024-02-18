@@ -177,7 +177,8 @@
     animation-name: list-anime;
     animation-duration: 0.5s;
     transition-timing-function: ease-out;
-} */
+    z-index: 10;
+}
 
 /* @keyframes list-anime {
     0% {
@@ -309,7 +310,6 @@ span{
     flex-direction: column;
     justify-content: end;
     margin: 2vw 0vw;
-    z-index: 100;
 }
 
 .iconsIMG {
