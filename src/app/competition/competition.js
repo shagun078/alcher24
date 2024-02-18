@@ -29,12 +29,12 @@ function Body() {
 
   function onChange(event) {
     setValue(event.target.value);
-    const keyword = event.target.value;
+    const keyword = event.target.value.trim();
 
     setTitle([{ category: "Search Results:", id: 105 }]);
     setTitle2([{ category: "Modules", id: 101 }]);
 
-    if (keyword !== "") {
+    if (keyword.trim() !== "") {
       const result = info.filter((user) => {
         return (user.comp_name.toLowerCase().includes(keyword.toLowerCase()) ||
           user.tags.toLowerCase().includes(keyword.toLowerCase()) ||

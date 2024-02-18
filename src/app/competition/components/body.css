@@ -169,7 +169,8 @@
     display: grid;
     animation-name: list-anime;
     animation-duration: 0.5s;
-    transition-timing-function: ease-out;
+    transition: all;
+    transition-timing-function: ease;
     z-index: 10;
 }
 
@@ -368,6 +369,16 @@ span{
     .list {
         height: auto;
         width: 50vw;
+    }
+
+    @keyframes list-anime {
+        0% {
+            height: 0;
+        }
+    
+        100% {
+            height: auto;
+        }
     }
 
     .list ul {
