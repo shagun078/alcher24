@@ -8,6 +8,8 @@ Command: npx gltfjsx@6.2.16 Museum10Feb.gltf
 import React, { useRef, useState } from 'react'
 import { useGLTF, useTexture } from '@react-three/drei';
 import * as THREE from 'three';
+import proshowsurl from '../../../public/Proshows.mp4';
+import proshowsReverseurl from '../../../public/Proshowsreverse.mp4';
 
 
 
@@ -34,8 +36,32 @@ export function Museumfinal(props) {
       const proshowsScreen = useTexture("Frame 15624-min.jpg");
       proshowsScreen.flipX = true;
 
-      const proShowsContent = useTexture("Frame 15625-min.jpg");
-      proShowsContent.flipX = true;
+    //  const proShowsContent = useTexture("Frame 15625-min.jpg");
+     // proShowsContent.flipX = true;
+
+      //video for proshows
+
+      const [Proshows] = useState(() => {
+         const vid = document.createElement("video");
+         vid.src = proshowsurl;
+         vid.crossOrigin = "Anonymous";
+         vid.loop = true;
+         vid.muted = true;
+         vid.type = "Proshows/mp4" / vid.play();
+         console.log(vid);
+         return vid;
+       });
+
+       const [ProshowsReverse] = useState(() => {
+            const vid = document.createElement("video");
+            vid.src = proshowsReverseurl;
+            vid.crossOrigin = "Anonymous";
+            vid.loop = true;
+            vid.muted = true;
+            vid.type = "Proshows/mp4" / vid.play();
+            console.log(vid);
+            return vid;
+          });
 
       const pronitesScreen = useTexture("Frame 15617-min.jpg");
       pronitesScreen.flipX = true;
@@ -102,11 +128,11 @@ export function Museumfinal(props) {
 
 
                   <group>
-                        <mesh position={[-1.80, 1.58, -2.74]} scale={[0.638, 1.67, 1]} rotation={[0.15, -0.33, 0.04]}>
+                        <mesh position={[-1.80, 1.58, -2.74]} scale={[0.638, 1.67, 1]} rotation={[0.15, -0.33 + Math.PI, -0.04]}>
                               <planeGeometry args={[3.2, 1.9]} />
-                              <meshStandardMaterial side={THREE.DoubleSide} map={proShowsContent}>
-                                    {/* <videoTexture attach="map" args={[video]} />
-  <videoTexture attach="emissiveMap" args={[video]} />*/}
+                              <meshStandardMaterial side={THREE.DoubleSide} emissive={"#181818"} toneMapped={false}>
+                                     <videoTexture attach="map" args={[ProshowsReverse]} />
+  <videoTexture attach="emissiveMap" args={[ProshowsReverse]} />
                               </meshStandardMaterial>
                         </mesh>
                         <mesh geometry={nodes.Plane036.geometry} material={materials.Canvas} position={[-1.735, 0.081, -2.886]} rotation={[-1.442, -0.042, -0.313]} />
@@ -115,12 +141,12 @@ export function Museumfinal(props) {
 
 
                   <group>
-                        <mesh position={[1.982, 1.6, -2.869]} scale={[0.65, 1.68, 1]} rotation={[0.15, 0.52, -0.075]}>
+                        <mesh position={[1.982, 1.6, -2.869]} scale={[0.65, 1.68, 1]} rotation={[0.15, 0.52 + Math.PI, 0.07]}>
                               <planeGeometry args={[3.2, 1.9]} />
-                              <meshStandardMaterial side={THREE.DoubleSide} map={proshowsScreen}>
-                                    {/*<videoTexture attach="map" args={[video]} />
-<videoTexture attach="emissiveMap" args={[video]} />*/}
-                              </meshStandardMaterial>
+                              <meshStandardMaterial side={THREE.DoubleSide} emissive={"#181818"}>
+                              <videoTexture attach="map" args={[Proshows]} />
+<videoTexture attach="emissiveMap" args={[Proshows]} />
+                       </meshStandardMaterial>
                         </mesh>
                         <mesh geometry={nodes.Plane037.geometry} material={materials.Canvas} position={[1.921, 0.081, -3.037]} rotation={[-1.453, 0.066, 0.506]} />
                   </group>
