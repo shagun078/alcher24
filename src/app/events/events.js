@@ -316,7 +316,7 @@ function Events() {
         {
           intensity: 3,
         },
-        8000
+        7000
       )
       .easing(TWEEN.Easing.Cubic.Out)
       .start();
