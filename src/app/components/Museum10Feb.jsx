@@ -33,35 +33,35 @@ export function Museumfinal(props) {
       //   return vid;
       // });
 
-      const proshowsScreen = useTexture("Frame 15624-min.jpg");
-      proshowsScreen.flipX = true;
+      const proshowsLeft = useTexture("proshows-Left.jpg");
+      proshowsLeft.flipX = true;
 
-      //  const proShowsContent = useTexture("Frame 15625-min.jpg");
-      // proShowsContent.flipX = true;
+      const proshowsRight = useTexture("proshows-Right.jpg");
+      proshowsRight.flipX = true;
 
       //video for proshows
 
-      const [Proshows] = useState(() => {
-            const vid = document.createElement("video");
-            vid.src = proshowsurl;
-            vid.crossOrigin = "Anonymous";
-            vid.loop = true;
-            vid.muted = true;
-            vid.type = "Proshows/mp4" / vid.play();
-            console.log(vid);
-            return vid;
-      });
-
-      const [ProshowsReverse] = useState(() => {
-            const vid = document.createElement("video");
-            vid.src = proshowsReverseurl;
-            vid.crossOrigin = "Anonymous";
-            vid.loop = true;
-            vid.muted = true;
-            vid.type = "Proshows/mp4" / vid.play();
-            console.log(vid);
-            return vid;
-      });
+      /*   const [Proshows] = useState(() => {
+               const vid = document.createElement("video");
+               vid.src = proshowsurl;
+               vid.crossOrigin = "Anonymous";
+               vid.loop = true;
+               vid.muted = true;
+               vid.type = "Proshows/mp4" / vid.play();
+               console.log(vid);
+               return vid;
+         });
+   
+         const [ProshowsReverse] = useState(() => {
+               const vid = document.createElement("video");
+               vid.src = proshowsReverseurl;
+               vid.crossOrigin = "Anonymous";
+               vid.loop = true;
+               vid.muted = true;
+               vid.type = "Proshows/mp4" / vid.play();
+               console.log(vid);
+               return vid;
+         });*/
 
       const pronitesScreen = useTexture("Frame 15617-min.jpg");
       pronitesScreen.flipX = true;
@@ -128,10 +128,9 @@ export function Museumfinal(props) {
 
 
                   <group>
-                        <mesh position={[-1.80, 1.58, -2.74]} scale={[0.638, 1.67, 1]} rotation={[0.15, -0.33 + Math.PI, -0.04]}>
-                              <planeGeometry args={[3.2, 1.9]} />
-                              <meshStandardMaterial side={THREE.DoubleSide} toneMapped={false}>
-                                    <videoTexture attach="map" args={[ProshowsReverse]} colorSpace='srgb'/>
+                        <mesh position={[-1.80, 1.58, -2.74]} scale={[0.638, 1.67, 1]} rotation={[0.15, -0.33, 0.04]}>                              <planeGeometry args={[3.2, 1.9]} />
+                              <meshStandardMaterial side={THREE.DoubleSide} map={proshowsRight}>
+                                    {/*  <videoTexture attach="map" args={[ProshowsReverse]} colorSpace='srgb'/>*/}
                                     {/* <videoTexture attach="emissiveMap" args={[ProshowsReverse]} /> */}
                               </meshStandardMaterial>
                         </mesh>
@@ -141,10 +140,9 @@ export function Museumfinal(props) {
 
 
                   <group>
-                        <mesh position={[1.982, 1.6, -2.869]} scale={[0.65, 1.68, 1]} rotation={[0.15, 0.52 + Math.PI, 0.07]}>
-                              <planeGeometry args={[3.2, 1.9]} />
-                              <meshStandardMaterial side={THREE.DoubleSide} emissive="#141414">
-                                    <videoTexture attach="map" args={[Proshows]} colorSpace="srgb"></videoTexture>
+                        <mesh position={[1.982, 1.6, -2.869]} scale={[0.65, 1.68, 1]} rotation={[0.15, 0.52, -0.075]}>                              <planeGeometry args={[3.2, 1.9]} />
+                              <meshStandardMaterial side={THREE.DoubleSide} map={proshowsLeft}>
+                                    {/*   <videoTexture attach="map" args={[Proshows]} colorSpace="srgb"></videoTexture> */}
                                     {/* <videoTexture attach="emissiveMap" args={[Proshows]} /> */}
                               </meshStandardMaterial>
                         </mesh>
