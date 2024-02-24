@@ -1,27 +1,25 @@
 import Image from "next/image";
-import coming_soon from "../resources/coming_soon_card.png";
 
-export function Cardleft(){
+export function Cardleft({ key, data }) {
   return (
     <div className="card">
       <div className="details-left">
         <div className="coming-soon-left">
           <Image
-            src={coming_soon}
-            alt="lower hand"
+            src={data.img}
+            alt="competition image"
             style={{
               width: "auto",
               height: "100%",
             }}
             quality={100}
-            // placeholder="blur"
+            placeholder="blur"
           />
         </div>
         <div className="wrap-left">
-          <h4>PRONITES</h4>
+          <h4>{data.title}</h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque,
-            rem!
+            {data.description}
           </p>
         </div>
       </div>
@@ -29,27 +27,26 @@ export function Cardleft(){
   );
 };
 
-export function Cardright(){
+export function Cardright({ key, data }) {
   return (
     <div className="card">
       <div className="details-right">
         <div className="coming-soon-right">
           <Image
-            src={coming_soon}
-            alt="lower hand"
+            src={data.img}
+            alt="competition image"
             style={{
               width: "auto",
               height: "100%",
             }}
             quality={100}
-            // placeholder="blur"
+            placeholder="blur"
           />
         </div>
         <div className="wrap-right">
-          <h4>PRONITES</h4>
+          <h4>{data.title}</h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque,
-            rem!
+            {data.description}
           </p>
         </div>
       </div>
