@@ -128,9 +128,10 @@ export function Museumfinal(props) {
 
 
                   <group>
-                        <mesh position={[-1.80, 1.58, -2.74]} scale={[0.638, 1.67, 1]} rotation={[0.15, -0.33, 0.04]}>                              <planeGeometry args={[3.2, 1.9]} />
+                  <mesh position={[-1.80, 1.58, -2.74]} scale={[0.638, 1.67, 1]} rotation={[0.15, -0.33, 0.04]}>
+                              <planeGeometry args={[3.2, 1.9]} />
                               <meshStandardMaterial side={THREE.DoubleSide} map={proshowsRight}>
-                                    {/*  <videoTexture attach="map" args={[ProshowsReverse]} colorSpace='srgb'/>*/}
+                                  {/*  <videoTexture attach="map" args={[ProshowsReverse]} colorSpace='srgb'/> */}
                                     {/* <videoTexture attach="emissiveMap" args={[ProshowsReverse]} /> */}
                               </meshStandardMaterial>
                         </mesh>
@@ -140,9 +141,10 @@ export function Museumfinal(props) {
 
 
                   <group>
-                        <mesh position={[1.982, 1.6, -2.869]} scale={[0.65, 1.68, 1]} rotation={[0.15, 0.52, -0.075]}>                              <planeGeometry args={[3.2, 1.9]} />
+                  <mesh position={[1.982, 1.6, -2.869]} scale={[0.65, 1.68, 1]} rotation={[0.15, 0.52, -0.075]}>
+                              <planeGeometry args={[3.2, 1.9]} />
                               <meshStandardMaterial side={THREE.DoubleSide} map={proshowsLeft}>
-                                    {/*   <videoTexture attach="map" args={[Proshows]} colorSpace="srgb"></videoTexture> */}
+                                    {/*<videoTexture attach="map" args={[Proshows]} colorSpace="srgb"></videoTexture>*/}
                                     {/* <videoTexture attach="emissiveMap" args={[Proshows]} /> */}
                               </meshStandardMaterial>
                         </mesh>
@@ -266,8 +268,6 @@ export function Museumfinal(props) {
                               </mesh>
                               <mesh geometry={nodes.Plane047.geometry} material={materials.Canvas} position={[1.921, 0.081, 83.406]} rotation={[-1.453, 0.066, 0.506]} />
                         </group>
-                  </>
-                  </Suspense >
             </group >
 
       )
