@@ -130,6 +130,79 @@ const marks = [
   },
 ];
 
+const data_2d = [
+  {
+    key: "A",
+    field: "PROSHOWS",
+    title: "PROSHOWS",
+    img: alcheringa,
+    description: "Alcher-related display image!",
+  },
+  {
+    key: "B",
+    field: "PROSHOWS",
+    title: "PROSHOWS",
+    img: alcheringa,
+    description: "Alcher-related display image!",
+  },
+  {
+    key: "C",
+    field: "PROSHOWS",
+    title: "PROSHOWS",
+    img: alcheringa,
+    description: "Alcher-related display image!",
+  },
+  {
+    key: "D",
+    field: "PRONITES",
+    title: "PRONITES",
+    img: coming_soon,
+    description: "Alcher-related display image!",
+  },
+  {
+    key: "E",
+    field: "PRONITES",
+    title: "PRONITES",
+    img: coming_soon,
+    description: "Alcher-related display image!",
+  },
+  {
+    key: "F",
+    field: "CREATORS CAMP",
+    title: "CREATORS CAMP",
+    img: circle1,
+    description: "Alcher-related display image!",
+  },
+  {
+    key: "G",
+    field: "CREATORS CAMP",
+    title: "CREATORS CAMP",
+    img: circle1,
+    description: "Alcher-related display image!",
+  },
+  {
+    key: "H",
+    field: "CREATORS CAMP",
+    title: "CREATORS CAMP",
+    img: circle1,
+    description: "Alcher-related display image!",
+  },
+  {
+    key: "I",
+    field: "CREATORS CAMP",
+    title: "CREATORS CAMP",
+    img: circle1,
+    description: "Alcher-related display image!",
+  },
+  {
+    key: "J",
+    field: "INFORMALS",
+    title: "INFORMALS",
+    img: circle2,
+    description: "Alcher-related display image!",
+  },
+];
+
 class Node {
   constructor(data) {
     this.data = data;
@@ -316,7 +389,7 @@ function Events() {
         {
           intensity: 3,
         },
-        8000
+        7000
       )
       .easing(TWEEN.Easing.Cubic.Out)
       .start();
@@ -363,13 +436,19 @@ function Events() {
           </span>
         </div>
 
-        <div className="responsive_btn_box center_btn_box" style={{ zIndex: "5" }}>
-        <div className="events_arrow_div"   onClick={() => {
-          forward();
-        }}>
-        <img src="Events arrow.png" ></img>
-        </div>
-       
+        <div
+          className="responsive_btn_box center_btn_box"
+          style={{ zIndex: "5" }}
+        >
+          <div
+            className="events_arrow_div"
+            onClick={() => {
+              forward();
+            }}
+          >
+            <img src="Events arrow.png"></img>
+          </div>
+
           <button
             className="back-to-home"
             onClick={() => {
@@ -402,6 +481,13 @@ function Events() {
 
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState("PRONITES");
+  const [list_2d, setList_2d] = useState(
+    data_2d.filter((obj) => obj.field === "PRONITES")
+  );
+
+  useEffect(() => {
+    setList_2d(data_2d.filter((obj) => obj.field === selected));
+  }, [selected]);
 
   return (
     <>
@@ -614,7 +700,7 @@ function Events() {
 
                 {/* <p>Welcome to Alcheringa!! We are loading up.please wait..</p> */}
               </div>
-              <div className="image-wrapper">
+              {/* <div className="image-wrapper">
                 <Image
                   src={coming_soon}
                   alt="lower hand"
@@ -625,7 +711,16 @@ function Events() {
                   quality={100}
                   // placeholder="blur"
                 />
-              </div>
+              </div> */}
+              {list_2d.map((item, index) => (
+                <>
+                  {index % 2 === 0 ? (
+                    <Cardleft key={index} data={item} />
+                  ) : (
+                    <Cardright key={index} data={item} />
+                  )}
+                </>
+              ))}
               {/* <Cardleft />
             <Cardright />
             <Cardleft />

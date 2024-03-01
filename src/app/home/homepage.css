@@ -558,7 +558,7 @@ iframe {
 }
 
 .alcher_merch_section {
-  padding-top: 10vh;
+  padding-top: 15rem;
   text-align: center;
 
   /* display: none; */
@@ -606,6 +606,11 @@ iframe {
   display: none;
 }
 
+.alcher_merch_img{
+  margin-bottom: -6vw;
+  margin-top: -5vw;
+}
+
 .alcher_merch_coming_soon h1 {
   color: #aadcdb;
   font-weight: 850;
@@ -634,6 +639,18 @@ iframe {
   }
   50% {
     transform: translateY(-20px);
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  
+  .alcher_merch_img{
+    margin-bottom: 0vh;
+    margin-top: 0vh;
+  }
+
+  .animation-container {
+    top: 50%;
   }
 }
 
@@ -691,7 +708,7 @@ iframe {
   }
 
   .alcher_merch_section {
-    padding-top: 0vh;
+    padding-top: 5rem;
   }
 
   .alcher_merch_coming_soon {
@@ -762,6 +779,12 @@ iframe {
     height: 40%!important;
   } */
 
+  .animation-container {
+    top: 53%;
+  }
+  .alcher_merch_section{
+    padding-top: 0rem;
+  }
   .decorationContainer {
     margin-top: 0rem;
   }

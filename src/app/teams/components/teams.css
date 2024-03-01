@@ -190,7 +190,7 @@
 
 .names_prb, .names_crm, .names_creatives, .names_events, .names_web_app, .names_mun, .names_finance, .names_convener{
     width: 58vw;
-    margin: calc(2vw + 40px) auto 0;
+    margin: calc(1vw + 20px) auto 0;
     display: flex;
     justify-content: space-evenly;
     gap: 0px 10px;

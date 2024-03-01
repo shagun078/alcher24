@@ -330,16 +330,18 @@
   }
   
 .front .inner p{
-padding-top: calc((770/772)*24.667vw);
-font-weight: 600;
-font-size: var(--text2); 
-text-align: left;
-padding-left: 0%;
+    padding-top: calc((770/772)*24.667vw);
+    font-weight: 600;
+    font-size: var(--text2); 
+    text-align: left;
+    padding-left: 0%;
+    overflow: hidden;
 }
 
   
 .back .inner p{
     font-size: var(--text3);
+    overflow: hidden;
 }
 
 .kartavya_button{

@@ -33,12 +33,12 @@ function Body() {
 
   function onChange(event) {
     setValue(event.target.value);
-    const keyword = event.target.value;
+    const keyword = event.target.value.trim();
 
     setTitle([{ category: "Search Results:", id: 105 }]);
     setTitle2([{ category: "Modules", id: 101 }]);
 
-    if (keyword !== "") {
+    if (keyword.trim() !== "") {
       const result = info.filter((user) => {
         return (
           user.comp_name.toLowerCase().includes(keyword.toLowerCase()) ||
@@ -117,11 +117,11 @@ function Body() {
                   <motion.div
                     className="list"
                     initial={{
-                      height: state ? "0vh" : window.innerWidth <540 ?"33vh":"55vh",
+                      height: state ? "0vh" : window.innerWidth < 540 ? "33vh" : "55vh",
                       y: state ? "0vh" : "2vh",
                     }}
                     animate={{
-                      height: state ? window.innerWidth <540 ?"33vh":"55vh" : "0vh",
+                      height: state ? window.innerWidth < 540 ? "33vh" : "55vh" : "0vh",
                       y: state ? "2vh" : "0vh",
                     }}
                     transition={{ duration: 0.3 }}
@@ -232,27 +232,30 @@ function Body() {
             <div className="item_container">
               {array.map((arr) => {
                 return (
-                  <a
-                    href={arr.url}
-                    target="_blank"
-                    key={arr.id}
-                    className="icon"
-                    id={arr.category}
-                  >
-                    <Image
-                      src={arr.img}
-                      alt="Photo"
-                      className="iconsIMG"
-                      width={1000}
-                      height={1000}
-                      quality={100}
-                    />
+                  <div className="z_icon">
+                    <a
+                      href={arr.url}
+                      target="_blank"
+                      key={arr.id}
+                      className="icon"
+                      id={arr.category}
+                    >
+                      <Image
+                        src={arr.img}
+                        alt="Photo"
+                        className="iconsIMG"
+                        width={1000}
+                        height={1000}
+                        quality={100}
+                      />
+                    </a>
                     <p className="margin_top_text">
                       <span>{arr.type}</span>&nbsp;
                       <span className="pad_text_arr">{arr.one_liner}</span>
                     </p>
                     <p className="icon_text">{arr.comp_name}</p>
-                  </a>
+
+                  </div>
                 );
               })}
             </div>

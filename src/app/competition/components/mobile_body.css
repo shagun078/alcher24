@@ -44,10 +44,17 @@
   .small_box{
     right: 0.8vw;
   }
+
 }
 
-@media screen and (max-width: 1500px) and (min-width: 1000px){
+@media screen and (max-width: 1500px) and (min-width: 1200px){
   .list_container{
     top: 13.5vh !important;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 1000px){
+  .list_container{
+    top: 15vh !important;
   }
 }
