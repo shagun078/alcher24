@@ -709,7 +709,7 @@ function Events() {
                     <li
                       className="names"
                       onClick={() => {
-                        setSelected("INFORMALS");
+                        setSelected("FLICKERINGA");
                         setOpen(!open);
                       }}
                     >
