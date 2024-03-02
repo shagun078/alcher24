@@ -146,7 +146,7 @@ button {
 
 #museum_events_name {
   position: relative;
-  bottom: 16vh;
+  bottom: 18vh;
   font-size: 5vw;
   font-family: FontSpringText;
   transition: all 1s ease-in-out;

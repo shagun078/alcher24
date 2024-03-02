@@ -162,7 +162,7 @@ body::-webkit-scrollbar {
   width: 50%;
   height: 100%;
   position: absolute;
-  right: 0;
+  right: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -277,6 +277,20 @@ body::-webkit-scrollbar {
   }
 }
 @media screen and (max-width: 371px) {
+  .coming-soon-left{
+    top:-6vh;
+    left:6vw;
+  }
+  .coming-soon-right{
+    top:-6vh;
+    right:4vw;
+  }
+  .details-left{
+    width:93%;
+  }
+  .details-right{
+    width:93%;
+  }
   .coming-soon-left img{
     width: 100%!important;
   }

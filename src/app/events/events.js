@@ -24,6 +24,11 @@ import hand_lower from "./resources/hand_lower.png";
 import down_arrow from "./resources/down.png";
 import coming_soon from "./resources/coming_soon_card.png";
 // import ring from "../../../public/ring.png";
+import proshows_i1 from '/public/events2d_img/Frame 6356254-min.png'
+import proshows_i2 from '/public/events2d_img/Frame 6356255-min.png'
+import proshows_i3 from '/public/events2d_img/Frame 6356256-min.png'
+import proshows_i4 from '/public/events2d_img/Frame 6356257-min.png'
+import proshows_i5 from '/public/events2d_img/Frame 6356258-min.png'
 
 import "./events_2d.css";
 
@@ -40,7 +45,7 @@ const marks = [
     camPos: {
       x: 0,
       y: 2,
-      z: -9.65,
+      z: -8.5,
     },
     lookAt: {
       x: 0,
@@ -56,7 +61,7 @@ const marks = [
     camPos: {
       x: 0,
       y: 2,
-      z: 8,
+      z: 9.4,
     },
     lookAt: {
       x: 0,
@@ -72,7 +77,7 @@ const marks = [
     camPos: {
       x: 0,
       y: 2,
-      z: 25,
+      z: 25.6,
     },
     lookAt: {
       x: 0,
@@ -82,13 +87,13 @@ const marks = [
   },
   {
     title2: "CREATORS CAMP",
-    title1: "INFORMALS",
+    title1: "FLICKERINGA",
     currPage: "CRITICAL DAMAGE",
     description: "Alcher-related display image!",
     camPos: {
       x: 0,
       y: 2,
-      z: 42.5,
+      z: 44,
     },
     lookAt: {
       x: 0,
@@ -99,12 +104,12 @@ const marks = [
   {
     title2: "CRITICAL DAMAGE",
     title1: "JOIN US",
-    currPage: "INFORMALS",
+    currPage: "FLICKERINGA",
     description: "Alcher-related display image!",
     camPos: {
       x: 0,
       y: 2,
-      z: 60,
+      z: 59.6,
     },
     lookAt: {
       x: 0,
@@ -113,14 +118,14 @@ const marks = [
     },
   },
   {
-    title2: "INFORMALS",
+    title2: "FLICKERINGA",
     title1: "PROSHOWS",
     currPage: "Join us all from 8th to 10th March",
     description: "Alcher-related display image!",
     camPos: {
       x: 0,
       y: 2,
-      z: 77,
+      z: 77.8,
     },
     lookAt: {
       x: 0,
@@ -130,54 +135,55 @@ const marks = [
   },
 ];
 
+
 const data_2d = [
   {
     key: "A",
     field: "PROSHOWS",
     title: "PROSHOWS",
-    img: alcheringa,
+    img: proshows_i1,
     description: "Alcher-related display image!",
   },
   {
     key: "B",
     field: "PROSHOWS",
     title: "PROSHOWS",
-    img: alcheringa,
+    img: proshows_i2,
     description: "Alcher-related display image!",
   },
   {
     key: "C",
     field: "PROSHOWS",
     title: "PROSHOWS",
-    img: alcheringa,
+    img: proshows_i3,
     description: "Alcher-related display image!",
   },
   {
     key: "D",
-    field: "PRONITES",
-    title: "PRONITES",
-    img: coming_soon,
+    field: "PROSHOWS",
+    title: "PROSHOWS",
+    img: proshows_i4,
     description: "Alcher-related display image!",
   },
   {
     key: "E",
+    field: "PROSHOWS",
+    title: "PROSHOWS",
+    img: proshows_i5,
+    description: "Alcher-related display image!",
+  },
+  {
+    key: "F",
     field: "PRONITES",
     title: "PRONITES",
     img: coming_soon,
     description: "Alcher-related display image!",
   },
   {
-    key: "F",
-    field: "CREATORS CAMP",
-    title: "CREATORS CAMP",
-    img: circle1,
-    description: "Alcher-related display image!",
-  },
-  {
     key: "G",
-    field: "CREATORS CAMP",
-    title: "CREATORS CAMP",
-    img: circle1,
+    field: "PRONITES",
+    title: "PRONITES",
+    img: coming_soon,
     description: "Alcher-related display image!",
   },
   {
@@ -196,8 +202,22 @@ const data_2d = [
   },
   {
     key: "J",
-    field: "INFORMALS",
-    title: "INFORMALS",
+    field: "CREATORS CAMP",
+    title: "CREATORS CAMP",
+    img: circle1,
+    description: "Alcher-related display image!",
+  },
+  {
+    key: "K",
+    field: "CREATORS CAMP",
+    title: "CREATORS CAMP",
+    img: circle1,
+    description: "Alcher-related display image!",
+  },
+  {
+    key: "L",
+    field: "FLICKERINGA",
+    title: "FLICKERINGA",
     img: circle2,
     description: "Alcher-related display image!",
   },
@@ -358,7 +378,7 @@ function Events() {
     const targetX = 0;
     const targetY = 2;
     const targetZ = 0;
-    const camZ = -10;
+    const camZ = -8.5;
 
     new TWEEN.Tween(controls.current.target)
       .to(
@@ -693,7 +713,7 @@ function Events() {
                         setOpen(!open);
                       }}
                     >
-                      INFORMALS
+                      FLICKERINGA
                     </li>
                   </ul>
                 </motion.div>
