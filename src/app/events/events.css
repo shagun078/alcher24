@@ -145,9 +145,11 @@ button {
 }
 
 #museum_events_name {
+  width:50%;
+  text-align: center;
   position: relative;
-  bottom: 18vh;
-  font-size: 5vw;
+  bottom: 25vh;
+  font-size: 5.2vw;
   font-family: FontSpringText;
   transition: all 1s ease-in-out;
 }

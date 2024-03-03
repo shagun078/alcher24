@@ -33,10 +33,10 @@ export function Museumfinal(props) {
       //   return vid;
       // });
 
-      const proshowsLeft = useTexture("proshows-Left.jpg");
+      const proshowsLeft = useTexture("events3d_img/proshows-min.jpg");
       proshowsLeft.flipX = true;
 
-      const proshowsRight = useTexture("proshows-Right.jpg");
+      const proshowsRight = useTexture("events3d_img/proshows-1-min.jpg");
       proshowsRight.flipX = true;
 
       //video for proshows
@@ -74,22 +74,22 @@ export function Museumfinal(props) {
       const proniteContent = useTexture("Frame 15621-min.jpg");
       proniteContent.flipX = true;
 
-      const creatorsScreen = useTexture("Frame 15612-min.jpg");
+      const creatorsScreen = useTexture("events3d_img/cc-min.jpg");
       creatorsScreen.flipX = true;
 
-      const creatorsContent = useTexture("Frame 15613-min.jpg");
+      const creatorsContent = useTexture("events3d_img/cc-1-min.jpg");
       creatorsContent.flipX = true;
 
-      const CriticalScreen = useTexture("Frame 15619-min.jpg")
+      const CriticalScreen = useTexture("events3d_img/critical damage-min.jpg")
       CriticalScreen.flipX = true;
 
-      const criticalContent = useTexture("Frame 15623-min.jpg");
+      const criticalContent = useTexture("events3d_img/critical damage-1-min.jpg");
       criticalContent.flipX = true;
 
-      const Informals = useTexture("Frame 15618-min.jpg");
+      const Informals = useTexture("events3d_img/flicker-min.jpg");
       Informals.flipX = true;
 
-      const informalContent = useTexture("Frame 15622-min.jpg");
+      const informalContent = useTexture("events3d_img/flicker-1-min.jpg");
       informalContent.flipX = true;
 
       const lastImageLeft = useTexture("Frame 6356192-min.jpg")
@@ -135,11 +135,10 @@ export function Museumfinal(props) {
                   <group>
                   <mesh position={[-1.80, 1.58, -2.74]} scale={[0.638, 1.67, 1]} rotation={[0.15, -0.33, 0.04]}>
                               <planeGeometry args={[3.2, 1.9]} />
-                            {/*  <meshStandardMaterial side={THREE.DoubleSide} map={proshowsRight}>
-                                    <videoTexture attach="map" args={[ProshowsReverse]} colorSpace='srgb'/> 
-                                     <videoTexture attach="emissiveMap" args={[ProshowsReverse]} /> 
-      </meshStandardMaterial>*/}
-      <VideoMaterial url={proshowsurl}/>
+                              <meshStandardMaterial side={THREE.DoubleSide} map={proshowsRight}>
+                                   
+      </meshStandardMaterial>
+      {/*<VideoMaterial url={proshowsurl}/>*/}
                         </mesh>
                         {/* <mesh geometry={nodes.Plane036.geometry} material={materials.Canvas} position={[-1.735, 0.081, -2.886]} rotation={[-1.442, -0.042, -0.313]} /> */}
                   </group>
@@ -149,11 +148,10 @@ export function Museumfinal(props) {
                   <group>
                   <mesh position={[1.982, 1.6, -2.869]} scale={[0.65, 1.68, 1]} rotation={[0.15, 0.52, -0.075]}>
                               <planeGeometry args={[3.2, 1.9]} />
-                            {/*  <meshStandardMaterial side={THREE.DoubleSide} map={proshowsLeft}>
-                                    <videoTexture attach="map" args={[Proshows]} colorSpace="srgb"></videoTexture>
-                                     <videoTexture attach="emissiveMap" args={[Proshows]} />
-</meshStandardMaterial>*/}
-<VideoMaterial url={proshowsReverseurl}/>
+                             <meshStandardMaterial side={THREE.DoubleSide} map={proshowsLeft}>
+                                 
+</meshStandardMaterial>
+{/*<VideoMaterial url={proshowsReverseurl}/>*/}
                         </mesh>
                         <mesh geometry={nodes.Plane037.geometry} material={materials.Canvas} position={[1.921, 0.081, -3.037]} rotation={[-1.453, 0.066, 0.506]} />
                   </group>
