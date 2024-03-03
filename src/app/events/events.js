@@ -29,6 +29,7 @@ import proshows_i2 from '/public/events2d_img/ps2.png'
 import proshows_i3 from '/public/events2d_img/ps3.png'
 import proshows_i4 from '/public/events2d_img/ps4.png'
 import proshows_i5 from '/public/events2d_img/ps5.png'
+import proshows_i6 from '/public/events2d_img/ps6.png'
 
 import creators_i1 from '/public/events2d_img/cc1.png'
 import creators_i2 from '/public/events2d_img/cc2.png'
@@ -186,6 +187,13 @@ const data_2d = [
     title: "DJ ANIMAGUS ROY",
     img: proshows_i5,
     description: "Proshows is about to witness brilliance like never before! DJ ANIMAGUS ROY is bringing an unparalleled level of skill and inventiveness to the stage.",
+  },
+  {
+    key: "EA",
+    field: "PROSHOWS",
+    title: "KALOU",
+    img: proshows_i6,
+    description: "KALOU is about to steal the spotlight at Proshows with an extraordinary fusion of talent and imagination.",
   },
   {
     key: "F",

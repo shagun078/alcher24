@@ -353,13 +353,19 @@ iframe {
   font-size: 1.8vw;
   font-family: UncutSans;
 }
+.splideWrapper{
+  position: relative;
+}
 .splide {
   width: 90%;
   margin: 0px auto;
   z-index: 10;
 }
-.splide__slide img {
-  height: 20vh;
+.splide__slide{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #leftGate {
@@ -670,9 +676,7 @@ iframe {
   .decorationContainer {
     margin-top: 0rem;
   }
-  .splide__slide {
-    margin: 0px 5rem;
-  }
+  
   .sponsor_homepage {
     margin-top: 5rem;
   }
@@ -820,6 +824,13 @@ iframe {
 
   .getAppSection {
     height: 40%;
+  }
+
+ 
+
+  .splide__track{
+    position: relative;
+    top:-3vh;
   }
 
   .home_alcher_app_container > img {

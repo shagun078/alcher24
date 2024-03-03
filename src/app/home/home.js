@@ -690,7 +690,9 @@ export default function Home() {
               </div>
             </div>
             <div className="sponsor_homepage">
-              {/* <MySlider />*/}
+           <h1  style={{width:'fit-content', margin:'0px auto',position:'relative' , top:'-6vh'  , fontSize:'5vw' , fontFamily:'FontSpringText'}}>SPONSORS</h1>
+               <MySlider />
+               {/*
               <div className="img_text_wrapper">
                 <img src="left_final_gate.svg" id="leftGate"></img>
                 <div className="text_sponsor_content">
@@ -702,7 +704,7 @@ export default function Home() {
                 </div>
 
                 <img src="right_final_gate.svg" id="rightGate"></img>
-              </div>
+        </div>*/}
             </div>
             {/*Sponsorsection ends*/}
 
