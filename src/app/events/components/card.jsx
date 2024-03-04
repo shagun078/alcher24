@@ -9,8 +9,11 @@ export function Cardleft({ key, data }) {
             src={data.img}
             alt="competition image"
             style={{
-              width: "auto",
+              width: "100%",
               height: "100%",
+              transform:'scale(0.9)',
+              position:'relative',
+              left:'-10px',
             }}
             quality={100}
             placeholder="blur"
@@ -36,8 +39,11 @@ export function Cardright({ key, data }) {
             src={data.img}
             alt="competition image"
             style={{
-              width: "auto",
+              width: "100%",
               height: "100%",
+              transform:'scale(0.9)',
+              position:'relative',
+              left:'10px',
             }}
             quality={100}
             placeholder="blur"

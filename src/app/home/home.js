@@ -184,7 +184,7 @@ const marks = [
   {
     key: "F",
     title: "MERCH",
-    link: "#",
+    link: "https://forms.gle/rddFejMdxRapGsMS9",
     description:
       "Every year Alcheringa has a different theme and their limited edition of merch, so quickly go and grab out Alcheringa Merchandise. This year we have T-shirt, Sweatshirts and Over-sized T-Shirt in our stores.",
     camPos: {
@@ -690,7 +690,9 @@ export default function Home() {
               </div>
             </div>
             <div className="sponsor_homepage">
-              {/* <MySlider />*/}
+           <h1  style={{width:'fit-content', margin:'0px auto',position:'relative' , top:'-6vh'  , fontSize:'5vw' , fontFamily:'FontSpringText'}}>SPONSORS</h1>
+               <MySlider />
+               {/*
               <div className="img_text_wrapper">
                 <img src="left_final_gate.svg" id="leftGate"></img>
                 <div className="text_sponsor_content">
@@ -702,7 +704,7 @@ export default function Home() {
                 </div>
 
                 <img src="right_final_gate.svg" id="rightGate"></img>
-              </div>
+        </div>*/}
             </div>
             {/*Sponsorsection ends*/}
 

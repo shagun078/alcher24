@@ -5,7 +5,7 @@
 } */
 :root {
   --text1: 10vh;
-  --text2: 3.5vh;
+  --text2: 2.6vh;
   --text3: 3vh;
   --text4: 2vh;
   --text5: 6vh;
@@ -127,8 +127,8 @@ body::-webkit-scrollbar {
 
 .card {
   width: 100%;
-  padding: 1rem;
-  height: 40vh;
+  padding: 0.8rem;
+  height: 50vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -146,7 +146,7 @@ body::-webkit-scrollbar {
   height: auto;
 }
 .details-left {
-  width: 90%;
+  width: 95%;
   height: 60%;
   padding: 2rem;
   position: absolute;
@@ -158,11 +158,12 @@ body::-webkit-scrollbar {
   align-items: center;
 }
 .wrap-left {
-  padding: 2%;
+  padding-left: 2%;
+  padding-right:2%;
   width: 50%;
   height: 100%;
   position: absolute;
-  right: 0;
+  right: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -187,7 +188,7 @@ body::-webkit-scrollbar {
   height: auto;
 }
 .details-right {
-  width: 90%;
+  width: 95%;
   height: 60%;
   padding: 2rem;
   position: absolute;
@@ -277,6 +278,20 @@ body::-webkit-scrollbar {
   }
 }
 @media screen and (max-width: 371px) {
+  .coming-soon-left{
+    top:-6vh;
+    left:6vw;
+  }
+  .coming-soon-right{
+    top:-6vh;
+    right:4vw;
+  }
+  .details-left{
+    width:93%;
+  }
+  .details-right{
+    width:93%;
+  }
   .coming-soon-left img{
     width: 100%!important;
   }

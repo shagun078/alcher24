@@ -1,7 +1,7 @@
 import "./components/sponsor.css";
 import design from "./resources/design.png";
-import SponsorList from "./components/sponsor_list";
-import gucci from "./resources/gucci.png";
+import SponsorList1 from "./components/sponsor_list1";
+import SponsorList2 from "./components/sponsor_list2";
 import Image from "next/image";
 import Navbar from "../components/navbar/page";
 import Footer from "../components/footer/page";
@@ -13,8 +13,6 @@ import Loading from "../components/loading/loading";
 import { Suspense } from "react";
 
 function Sponsor() {
-  // const image = [gucci];
-
   return (
     <>
       <Suspense fallback={<Loading />}>
@@ -33,7 +31,7 @@ function Sponsor() {
             <div className="App">
               <h1>We Have Worked With</h1>
 
-              <div className="title">
+              {/* <div className="title">
                 <h1> TITLE SPONSOR </h1>
                 <div className="titlesponsorimg">
                   <Image
@@ -50,13 +48,13 @@ function Sponsor() {
                   />
                   <div className="card_shadowt">
                     <div className="cardt">
-                      <div className="imagecardt">{/* background image */}</div>
+                      <div className="imagecardt"></div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
-              <div className="cotitle">
+              {/* <div className="cotitle">
                 <h1> CO-TITLE SPONSOR </h1>
                 <div className="cotitlesponsorimg">
                   <Image
@@ -74,22 +72,40 @@ function Sponsor() {
                   <div className="card_shadowct">
                     <div className="cardct">
                       <div className="imagecardct">
-                        {/* background image */}
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               <div className="powered">
                 <h1> POWERED BY</h1>
               </div>
-              <div className="poweredimg"></div>
+              <a href="https://www.onlinesbi.sbi/" target="_blank"><div className="poweredimg" id="powered_by"></div></a>
+
+              <div className="powered">
+                <h1>IN ASSOCIATION WITH</h1>
+              </div>
+              <a href="https://www.instagram.com/sparxgoforit/?hl=en" target="_blank"><div className="poweredimg" id="in_asso_with"></div></a>
+
+              <div className="powered">
+                <h1>TRUSTED BY</h1>
+              </div>
+              <a href="#https://manikchandjewellers.com/" target="_blank"><div className="poweredimg" id="trusted_by"></div></a>
+
+              <div className="powered">
+                <h1>CONNECTED BY</h1>
+              </div>
+              <a href="https://guwahatiplus.com/" target="_blank"><div className="poweredimg" id="connected_by"></div></a>
+
 
               <div className="sponsorfooter">
-                <div className="heading2">Media Sponsors</div>
+                <div className="sponsors sp_list1">
+                  <SponsorList2></SponsorList2>
+                </div>
+                <div className="heading2 sp_list2">Media Sponsors</div>
                 <div className="sponsors">
-                  <SponsorList></SponsorList>
+                  <SponsorList1></SponsorList1>
                 </div>
               </div>
             </div>

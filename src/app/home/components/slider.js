@@ -9,12 +9,16 @@ const MySlider = () => {
     const splide = new Splide('.splide', {
       pagination: false,
       type: 'loop',
-      drag: 'free',
+      drag: 'false',
       focus: 'center',
       perPage: 3, 
       drag:false,
       autoScroll: {
         speed: 2,
+        pauseOnHover:false,
+      },
+      breakpoints:{
+        600:{gap:'2rem',perPage:2}
       },
       arrows: false,
     });
@@ -29,23 +33,29 @@ const MySlider = () => {
 
   return (
     <div className='splideWrapper'>
-    <img src="left_gate.svg" id="leftGate"></img>
+    <img src="left_final_gate.svg" id="leftGate"></img>
       <div className="splide">
         <div className="splide__track">
           <ul className="splide__list">
             <li className="splide__slide">
-              <img src="download.png" className='sponsorImage' alt="Slide 1" />
+              <img src="sponsor_strip/s1.png" className='sponsorImage' alt="Slide 1" />
             </li>
             <li className="splide__slide">
-              <img src="download.png" className='sponsorImage' alt="Slide 2" />
+              <img src="sponsor_strip/s2.png" className='sponsorImage' alt="Slide 2" />
             </li>
             <li className="splide__slide">
-              <img src="download.png" className='sponsorImage' alt="Slide 3" />
+              <img src="sponsor_strip/s3.png" className='sponsorImage' alt="Slide 3" />
+            </li>
+            <li className="splide__slide">
+              <img src="sponsor_strip/s4.png" className='sponsorImage' alt="Slide 4" />
+            </li>
+            <li className="splide__slide">
+              <img src="sponsor_strip/s5.png" className='sponsorImage' alt="Slide 5" />
             </li>
           </ul>
         </div>
       </div>
-      <img src="right_gate.svg" id="rightGate"></img>
+      <img src="right_final_gate.svg" id="rightGate"></img>
     </div>
 
   );

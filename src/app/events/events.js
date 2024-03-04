@@ -24,6 +24,30 @@ import hand_lower from "./resources/hand_lower.png";
 import down_arrow from "./resources/down.png";
 import coming_soon from "./resources/coming_soon_card.png";
 // import ring from "../../../public/ring.png";
+import proshows_i1 from '/public/events2d_img/ps1.png'
+import proshows_i2 from '/public/events2d_img/ps2.png'
+import proshows_i3 from '/public/events2d_img/ps3.png'
+import proshows_i4 from '/public/events2d_img/ps4.png'
+import proshows_i5 from '/public/events2d_img/ps5.png'
+import proshows_i6 from '/public/events2d_img/ps6.png'
+
+import creators_i1 from '/public/events2d_img/cc1.png'
+import creators_i2 from '/public/events2d_img/cc2.png'
+import creators_i3 from '/public/events2d_img/cc3.png'
+import creators_i4 from '/public/events2d_img/cc4.png'
+
+import flickeringa_i1 from '/public/events2d_img/f1.png'
+import flickeringa_i2 from '/public/events2d_img/f3.png'
+import flickeringa_i3 from '/public/events2d_img/f2.png'
+import flickeringa_i4 from '/public/events2d_img/f4.png'
+import flickeringa_i5 from '/public/events2d_img/f5.png'
+
+import critical_i1 from '/public/events2d_img/cd1.png'
+import critical_i2 from '/public/events2d_img/cd3.png'
+import critical_i3 from '/public/events2d_img/cd2.png'
+
+import pronite_1 from '/public/events2d_img/pn1.png'
+import pronite_2 from '/public/events2d_img/pn2.png'
 
 import "./events_2d.css";
 
@@ -40,7 +64,7 @@ const marks = [
     camPos: {
       x: 0,
       y: 2,
-      z: -9.65,
+      z: -8.5,
     },
     lookAt: {
       x: 0,
@@ -56,7 +80,7 @@ const marks = [
     camPos: {
       x: 0,
       y: 2,
-      z: 8,
+      z: 9.8,
     },
     lookAt: {
       x: 0,
@@ -72,7 +96,7 @@ const marks = [
     camPos: {
       x: 0,
       y: 2,
-      z: 25,
+      z: 25.8,
     },
     lookAt: {
       x: 0,
@@ -82,13 +106,13 @@ const marks = [
   },
   {
     title2: "CREATORS CAMP",
-    title1: "INFORMALS",
+    title1: "FLICKERINGA",
     currPage: "CRITICAL DAMAGE",
     description: "Alcher-related display image!",
     camPos: {
       x: 0,
       y: 2,
-      z: 42.5,
+      z: 44.4,
     },
     lookAt: {
       x: 0,
@@ -99,12 +123,12 @@ const marks = [
   {
     title2: "CRITICAL DAMAGE",
     title1: "JOIN US",
-    currPage: "INFORMALS",
+    currPage: "FLICKERINGA",
     description: "Alcher-related display image!",
     camPos: {
       x: 0,
       y: 2,
-      z: 60,
+      z: 59.9,
     },
     lookAt: {
       x: 0,
@@ -113,14 +137,14 @@ const marks = [
     },
   },
   {
-    title2: "INFORMALS",
+    title2: "FLICKERINGA",
     title1: "PROSHOWS",
     currPage: "Join us all from 8th to 10th March",
     description: "Alcher-related display image!",
     camPos: {
       x: 0,
       y: 2,
-      z: 77,
+      z: 78,
     },
     lookAt: {
       x: 0,
@@ -130,76 +154,167 @@ const marks = [
   },
 ];
 
+
 const data_2d = [
   {
     key: "A",
     field: "PROSHOWS",
-    title: "PROSHOWS",
-    img: alcheringa,
-    description: "Alcher-related display image!",
+    title: "ASSURDITE",
+    img: proshows_i1,
+    description:
+      "Brace yourselves for an unforgettable spectacle! ASSURDITE is set to captivate Proshows with an extraordinary display of talent and innovation.",
   },
   {
     key: "B",
     field: "PROSHOWS",
-    title: "PROSHOWS",
-    img: alcheringa,
-    description: "Alcher-related display image!",
+    title: "VOID",
+    img: proshows_i2,
+    description:
+      "Prepare to be enchanted! VOID is gearing up to grace Proshows with an unmatched showcase of skill and ingenuity.",
   },
   {
     key: "C",
     field: "PROSHOWS",
-    title: "PROSHOWS",
-    img: alcheringa,
-    description: "Alcher-related display image!",
+    title: "URBAN BREEZE",
+    img: proshows_i3,
+    description:
+      "spellbound! URBAN BREEZE is on its way to Proshows, promising an awe-inspiring performance that will leave you mesmerized.",
   },
   {
     key: "D",
-    field: "PRONITES",
-    title: "PRONITES",
-    img: coming_soon,
-    description: "Alcher-related display image!",
+    field: "PROSHOWS",
+    title: "DJ SHAW",
+    img: proshows_i4,
+    description:
+      "A sensational experience awaits! DJ SHAW is making its mark on Proshows with an incomparable blend of talent and creativity.",
   },
   {
     key: "E",
-    field: "PRONITES",
-    title: "PRONITES",
-    img: coming_soon,
-    description: "Alcher-related display image!",
+    field: "PROSHOWS",
+    title: "DJ ANIMAGUS ROY",
+    img: proshows_i5,
+    description:
+      "Proshows is about to witness brilliance like never before! DJ ANIMAGUS ROY is bringing an unparalleled level of skill and inventiveness to the stage.",
+  },
+  {
+    key: "EA",
+    field: "PROSHOWS",
+    title: "KALOU",
+    img: proshows_i6,
+    description:
+      "KALOU is about to steal the spotlight at Proshows with an extraordinary fusion of talent and imagination.",
   },
   {
     key: "F",
-    field: "CREATORS CAMP",
-    title: "CREATORS CAMP",
-    img: circle1,
-    description: "Alcher-related display image!",
+    field: "PRONITES",
+    title: "ARMAAN MALIK",
+    img: pronite_2,
+    description:
+      "Get ready to groove! 🎶 Armaan Malik is lighting up the stage at Alcheringa Pronites, Crescendo awaits! Don't miss out on the electrifying performance!",
   },
   {
     key: "G",
-    field: "CREATORS CAMP",
-    title: "CREATORS CAMP",
-    img: circle1,
-    description: "Alcher-related display image!",
+    field: "PRONITES",
+    title: "CHARLES B",
+    img: pronite_1,
+    description:
+      "Tomorrowland vibes hitting Alcheringa Pronites! 🎧 Brace yourselves as Charles B brings the magic to Juggernaut. Get ready to dance the night away!",
   },
   {
     key: "H",
     field: "CREATORS CAMP",
-    title: "CREATORS CAMP",
-    img: circle1,
-    description: "Alcher-related display image!",
+    title: "DR. TANU JAIN",
+    img: creators_i1,
+    description: `Don't miss Dr. Tanu Jain at Alcheringa's Creators Camp - an event of inspiration and creativity!
+    `,
   },
   {
     key: "I",
     field: "CREATORS CAMP",
-    title: "CREATORS CAMP",
-    img: circle1,
-    description: "Alcher-related display image!",
+    title: "DR. VIJENDRA SINGH CHAUHAN",
+    img: creators_i2,
+    description: `Exciting news! Dr. Vijendra Singh Chauhan joins Alcheringa's Creators Camp for an inspiring and creative experience.
+    `,
   },
   {
     key: "J",
-    field: "INFORMALS",
-    title: "INFORMALS",
-    img: circle2,
-    description: "Alcher-related display image!",
+    field: "CREATORS CAMP",
+    title: "MOHIT CHIKARA",
+    img: creators_i3,
+    description: `Join us for Alcheringa's Creators Camp - featuring the esteemed Mohit Chikara, igniting creativity.
+    `,
+  },
+  {
+    key: "K",
+    field: "CREATORS CAMP",
+    title: "SHREYA MEHTA",
+    img: creators_i4,
+    description:
+      "Unleash your creativity with Shreya Mehta at Alcheringa's Creators Camp. Don't miss this opportunity!",
+  },
+  {
+    key: "L",
+    field: "FLICKERINGA",
+    title: "FERRIS WHEEL",
+    img: flickeringa_i1,
+    description:
+      "Enjoy the heights of joy on our Ferris Wheel at Alcheringa Flickeringa - thrill awaits!",
+  },
+  {
+    key: "M",
+    field: "FLICKERINGA",
+    title: "BREAK DANCE",
+    img: flickeringa_i2,
+    description:
+      "Spin, twirl, and dance the night away at Alcheringa Flickeringa's exhilarating Break Dance attraction.",
+  },
+  {
+    key: "N",
+    field: "FLICKERINGA",
+    title: "TORA TORA",
+    img: flickeringa_i3,
+    description:
+      "Brace yourself for an electrifying experience on the Tora Tora ride at Alcheringa Flickeringa!",
+  },
+  {
+    key: "O",
+    field: "FLICKERINGA",
+    title: "TATOO",
+    img: flickeringa_i4,
+    description:
+      "Wear your story with pride visit the Tattoo Zone at Alcheringa Flickeringa for unique designs.",
+  },
+  {
+    key: "P",
+    field: "FLICKERINGA",
+    title: "BOOK FAIR",
+    img: flickeringa_i5,
+    description:
+      "Immerse yourself in a world of knowledge and imagination at Alcheringa Flickeringa's enchanting Book Fair.",
+  },
+  {
+    key: "Q",
+    field: "CRITICAL DAMAGE",
+    title: "VALORANT",
+    img: critical_i1,
+    description:
+      "Unleash your strategic prowess in Valorant at Alcheringa Critical Damage event - the ultimate showdown!",
+  },
+  {
+    key: "R",
+    field: "CRITICAL DAMAGE",
+    title: "FIFA",
+    img: critical_i2,
+    description:
+      "Score goals and glory in the FIFA competition at Alcheringa's Critical Damage – game on!",
+  },
+  {
+    key: "S",
+    field: "CRITICAL DAMAGE",
+    title: "LICHESS",
+    img: critical_i3,
+    description:
+      "Make your move on the digital chessboard – Lichess awaits at Alcheringa's Critical Damage event.",
   },
 ];
 
@@ -358,7 +473,7 @@ function Events() {
     const targetX = 0;
     const targetY = 2;
     const targetZ = 0;
-    const camZ = -10;
+    const camZ = -8.5;
 
     new TWEEN.Tween(controls.current.target)
       .to(
@@ -689,11 +804,11 @@ function Events() {
                     <li
                       className="names"
                       onClick={() => {
-                        setSelected("INFORMALS");
+                        setSelected("FLICKERINGA");
                         setOpen(!open);
                       }}
                     >
-                      INFORMALS
+                      FLICKERINGA
                     </li>
                   </ul>
                 </motion.div>
