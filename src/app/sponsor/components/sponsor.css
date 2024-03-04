@@ -16,17 +16,19 @@
   position: absolute;
   /* top: -4vw; */
   background-size: cover;
-  z-index: 2;
+  z-index: 3;
 }
 
 .no_sponsor{
-  /* display: none; */
+  display: none;
   z-index: -0.9;
   position: relative;
 }
 
 .after_sponsor{
-  display: none;
+  /* display: none; */
+  position: relative;
+  z-index: 2;
 }
 
 .coming_soon{
@@ -77,11 +79,11 @@
   background-image: url("../resources/bg1.jpg");
   background-size:cover;
   background-repeat: repeat;
-  padding-top: 15vw;
+  padding-top: 8vw;
 }
 
 .App h1{
-  font-size: 5vh;
+  font-size: 7vh;
 }
 
 .title{
@@ -165,6 +167,10 @@
   margin-bottom: 4vh;
 }
 
+.sp_list2{
+  margin-top: 10vh;
+}
+
 .cardct{
   height: 18vw;
   width: 18vw;
@@ -203,14 +209,24 @@
   font-size: 3vh;
 }
 .poweredimg{
-  height: 16vw ;
+  height: 10vw ;
   width: 16vw;
-  /* padding-top: 3vw; */
-  
   margin: 2vw auto;
-  background-image: url('../resources/gucci.png');
   background-size: contain;
-  border-radius: 1.3vw;
+  background-repeat: no-repeat;
+  /* border-radius: 1.3vw; */
+}
+
+#powered_by{
+  background-image: url('../resources/SBI.jpg');
+}
+
+#in_asso_with{
+  background-image: url('../resources/sparx.png');
+}
+
+#trusted_by{
+  background-image: url('../resources/Manikchand.png');
 }
 
 .sponsorfooter{
@@ -313,19 +329,22 @@
   }
 } 
 
- @media (max-width: 1025px ),( max-height: 1360 ) {
+@media screen and (max-width: 1369px) {  
+  .coming_soon h2{
+    font-size: 10vw;
+  }
+  
+  .coming_soon h5{
+    font-size: 4vw;
+  }
+}
+
+@media (max-width: 1025px ),( max-height: 1360 ) {
   #sponsorimg{
     width: 12vw;
     height: 19vh;
     padding-bottom: 2vw;
   }
-  
-  /* .sponsor_name{
-    font-size: 2vw;
-    padding-top: 3vw;
-    padding-bottom: 5vw;
-  } */
-  
   .name{
     height: 3vw;
     font-size: 6vw;
@@ -336,53 +355,43 @@
   .title{
     height: 40%;
   }
-  h1{
-    font-size: 2vh;
+  .App h1{
+    font-size: 4vh;
   }
+}
+
+@media (max-width: 431px){
+  
+  #name{
+    font-size: 1vh;
+    padding-top: 3vw;
   }
   
-   @media (max-width: 430px){
-   
-    #name{
-      font-size: 1vh;
-      padding-top: 3vw;
-    }
-    
-    .sponsors{
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-row-gap: 6vh;
-    }
-    .App h1{
-      font-size: 2vh;
-    }
-    
-    #design{
-      margin-top: 1.2vh;
-      height: 11.5vw;
-    }
-    #designct{
-      margin-bottom: 3vh;
-      padding-right: 2.5vw;
-    }
-    #partner{
-      font-size: 1.3vh;
-      padding-top: 1vh;
-    }
-    .heading2{
-      font-size: 1.6vh;
-      padding: 10px 0;
-    }
-
-  } 
-
-@media screen and (max-width: 1369px) {
+  .sponsors{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 6vh;
+  }
+  .App h1{
+    font-size: 3vh;
+  }
   
-.coming_soon h2{
-  font-size: 10vw;
-}
+  #design{
+    margin-top: 1.2vh;
+    height: 11.5vw;
+  }
+  #designct{
+    margin-bottom: 3vh;
+    padding-right: 2.5vw;
+  }
+  #partner{
+    font-size: 1.3vh;
+    padding-top: 1vh;
+  }
+  .heading2{
+    font-size: 1.6vh;
+    padding: 10px 0;
+  }
 
-.coming_soon h5{
-  font-size: 4vw;
-}
-}
+} 
+
