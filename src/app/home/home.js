@@ -184,7 +184,7 @@ const marks = [
   {
     key: "F",
     title: "MERCH",
-    link: "#",
+    link: "https://forms.gle/rddFejMdxRapGsMS9",
     description:
       "Every year Alcheringa has a different theme and their limited edition of merch, so quickly go and grab out Alcheringa Merchandise. This year we have T-shirt, Sweatshirts and Over-sized T-Shirt in our stores.",
     camPos: {

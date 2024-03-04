@@ -46,6 +46,9 @@ import critical_i1 from '/public/events2d_img/cd1.png'
 import critical_i2 from '/public/events2d_img/cd3.png'
 import critical_i3 from '/public/events2d_img/cd2.png'
 
+import pronite_1 from '/public/events2d_img/pn1.png'
+import pronite_2 from '/public/events2d_img/pn2.png'
+
 import "./events_2d.css";
 
 //components
@@ -158,56 +161,64 @@ const data_2d = [
     field: "PROSHOWS",
     title: "ASSURDITE",
     img: proshows_i1,
-    description: "Brace yourselves for an unforgettable spectacle! ASSURDITE is set to captivate Proshows with an extraordinary display of talent and innovation.",
+    description:
+      "Brace yourselves for an unforgettable spectacle! ASSURDITE is set to captivate Proshows with an extraordinary display of talent and innovation.",
   },
   {
     key: "B",
     field: "PROSHOWS",
     title: "VOID",
     img: proshows_i2,
-    description: "Prepare to be enchanted! VOID is gearing up to grace Proshows with an unmatched showcase of skill and ingenuity.",
+    description:
+      "Prepare to be enchanted! VOID is gearing up to grace Proshows with an unmatched showcase of skill and ingenuity.",
   },
   {
     key: "C",
     field: "PROSHOWS",
     title: "URBAN BREEZE",
     img: proshows_i3,
-    description: "spellbound! URBAN BREEZE is on its way to Proshows, promising an awe-inspiring performance that will leave you mesmerized.",
+    description:
+      "spellbound! URBAN BREEZE is on its way to Proshows, promising an awe-inspiring performance that will leave you mesmerized.",
   },
   {
     key: "D",
     field: "PROSHOWS",
     title: "DJ SHAW",
     img: proshows_i4,
-    description: "A sensational experience awaits! DJ SHAW is making its mark on Proshows with an incomparable blend of talent and creativity.",
+    description:
+      "A sensational experience awaits! DJ SHAW is making its mark on Proshows with an incomparable blend of talent and creativity.",
   },
   {
     key: "E",
     field: "PROSHOWS",
     title: "DJ ANIMAGUS ROY",
     img: proshows_i5,
-    description: "Proshows is about to witness brilliance like never before! DJ ANIMAGUS ROY is bringing an unparalleled level of skill and inventiveness to the stage.",
+    description:
+      "Proshows is about to witness brilliance like never before! DJ ANIMAGUS ROY is bringing an unparalleled level of skill and inventiveness to the stage.",
   },
   {
     key: "EA",
     field: "PROSHOWS",
     title: "KALOU",
     img: proshows_i6,
-    description: "KALOU is about to steal the spotlight at Proshows with an extraordinary fusion of talent and imagination.",
+    description:
+      "KALOU is about to steal the spotlight at Proshows with an extraordinary fusion of talent and imagination.",
   },
   {
     key: "F",
     field: "PRONITES",
-    title: "PRONITES",
-    img: coming_soon,
-    description: "Alcher-related display image!",
+    title: "ARMAAN MALIK",
+    img: pronite_2,
+    description:
+      "Get ready to groove! 🎶 Armaan Malik is lighting up the stage at Alcheringa Pronites, Crescendo awaits! Don't miss out on the electrifying performance!",
   },
   {
     key: "G",
     field: "PRONITES",
-    title: "PRONITES",
-    img: coming_soon,
-    description: "Alcher-related display image!",
+    title: "CHARLES B",
+    img: pronite_1,
+    description:
+      "Tomorrowland vibes hitting Alcheringa Pronites! 🎧 Brace yourselves as Charles B brings the magic to Juggernaut. Get ready to dance the night away!",
   },
   {
     key: "H",
@@ -238,59 +249,72 @@ const data_2d = [
     field: "CREATORS CAMP",
     title: "SHREYA MEHTA",
     img: creators_i4,
-    description: "Unleash your creativity with Shreya Mehta at Alcheringa's Creators Camp. Don't miss this opportunity!",
+    description:
+      "Unleash your creativity with Shreya Mehta at Alcheringa's Creators Camp. Don't miss this opportunity!",
   },
   {
     key: "L",
     field: "FLICKERINGA",
     title: "FERRIS WHEEL",
     img: flickeringa_i1,
-    description: "Enjoy the heights of joy on our Ferris Wheel at Alcheringa Flickeringa - thrill awaits!",
+    description:
+      "Enjoy the heights of joy on our Ferris Wheel at Alcheringa Flickeringa - thrill awaits!",
   },
   {
     key: "M",
     field: "FLICKERINGA",
     title: "BREAK DANCE",
     img: flickeringa_i2,
-    description: "Spin, twirl, and dance the night away at Alcheringa Flickeringa's exhilarating Break Dance attraction.",
-  }, {
+    description:
+      "Spin, twirl, and dance the night away at Alcheringa Flickeringa's exhilarating Break Dance attraction.",
+  },
+  {
     key: "N",
     field: "FLICKERINGA",
     title: "TORA TORA",
     img: flickeringa_i3,
-    description: "Brace yourself for an electrifying experience on the Tora Tora ride at Alcheringa Flickeringa!",
-  }, {
+    description:
+      "Brace yourself for an electrifying experience on the Tora Tora ride at Alcheringa Flickeringa!",
+  },
+  {
     key: "O",
     field: "FLICKERINGA",
     title: "TATOO",
     img: flickeringa_i4,
-    description: "Wear your story with pride visit the Tattoo Zone at Alcheringa Flickeringa for unique designs.",
-  }, {
+    description:
+      "Wear your story with pride visit the Tattoo Zone at Alcheringa Flickeringa for unique designs.",
+  },
+  {
     key: "P",
     field: "FLICKERINGA",
     title: "BOOK FAIR",
     img: flickeringa_i5,
-    description: "Immerse yourself in a world of knowledge and imagination at Alcheringa Flickeringa's enchanting Book Fair.",
+    description:
+      "Immerse yourself in a world of knowledge and imagination at Alcheringa Flickeringa's enchanting Book Fair.",
   },
   {
     key: "Q",
     field: "CRITICAL DAMAGE",
     title: "VALORANT",
     img: critical_i1,
-    description: "Unleash your strategic prowess in Valorant at Alcheringa Critical Damage event - the ultimate showdown!",
+    description:
+      "Unleash your strategic prowess in Valorant at Alcheringa Critical Damage event - the ultimate showdown!",
   },
   {
     key: "R",
     field: "CRITICAL DAMAGE",
     title: "FIFA",
     img: critical_i2,
-    description: "Score goals and glory in the FIFA competition at Alcheringa's Critical Damage – game on!",
-  }, {
+    description:
+      "Score goals and glory in the FIFA competition at Alcheringa's Critical Damage – game on!",
+  },
+  {
     key: "S",
     field: "CRITICAL DAMAGE",
     title: "LICHESS",
     img: critical_i3,
-    description: "Make your move on the digital chessboard – Lichess awaits at Alcheringa's Critical Damage event.",
+    description:
+      "Make your move on the digital chessboard – Lichess awaits at Alcheringa's Critical Damage event.",
   },
 ];
 

@@ -36,7 +36,7 @@ export function Museumfinal(props) {
       const proshowsLeft = useTexture("events3d_img/proshows-min.jpg");
       proshowsLeft.flipX = true;
 
-      const proshowsRight = useTexture("events3d_img/proshows-1-min.jpg");
+      const proshowsRight = useTexture("events3d_img/proshows-1.jpg");
       proshowsRight.flipX = true;
 
       //video for proshows
@@ -63,15 +63,15 @@ export function Museumfinal(props) {
                return vid;
          });*/
 
-      function VideoMaterial({url}){
-            const texture=useVideoTexture(url)
+      function VideoMaterial({ url }) {
+            const texture = useVideoTexture(url)
             return <meshBasicMaterial side={THREE.DoubleSide} map={texture} />
-      }   
+      }
 
-      const pronitesScreen = useTexture("Frame 15617-min.jpg");
+      const pronitesScreen = useTexture("events3d_img/pronite-min.jpg");
       pronitesScreen.flipX = true;
 
-      const proniteContent = useTexture("Frame 15621-min.jpg");
+      const proniteContent = useTexture("events3d_img/pronite-1-min.jpg");
       proniteContent.flipX = true;
 
       const creatorsScreen = useTexture("events3d_img/cc-min.jpg");
@@ -133,12 +133,12 @@ export function Museumfinal(props) {
 
 
                   <group>
-                  <mesh position={[-1.80, 1.58, -2.74]} scale={[0.638, 1.67, 1]} rotation={[0.15, -0.33, 0.04]}>
+                        <mesh position={[-1.80, 1.58, -2.74]} scale={[0.638, 1.67, 1]} rotation={[0.15, -0.33, 0.04]}>
                               <planeGeometry args={[3.2, 1.9]} />
                               <meshStandardMaterial side={THREE.DoubleSide} map={proshowsRight}>
-                                   
-      </meshStandardMaterial>
-      {/*<VideoMaterial url={proshowsurl}/>*/}
+
+                              </meshStandardMaterial>
+                              {/*<VideoMaterial url={proshowsurl}/>*/}
                         </mesh>
                         {/* <mesh geometry={nodes.Plane036.geometry} material={materials.Canvas} position={[-1.735, 0.081, -2.886]} rotation={[-1.442, -0.042, -0.313]} /> */}
                   </group>
@@ -146,133 +146,133 @@ export function Museumfinal(props) {
 
 
                   <group>
-                  <mesh position={[1.982, 1.6, -2.869]} scale={[0.65, 1.68, 1]} rotation={[0.15, 0.52, -0.075]}>
+                        <mesh position={[1.982, 1.6, -2.869]} scale={[0.65, 1.68, 1]} rotation={[0.15, 0.52, -0.075]}>
                               <planeGeometry args={[3.2, 1.9]} />
-                             <meshStandardMaterial side={THREE.DoubleSide} map={proshowsLeft}>
-                                 
-</meshStandardMaterial>
-{/*<VideoMaterial url={proshowsReverseurl}/>*/}
+                              <meshStandardMaterial side={THREE.DoubleSide} map={proshowsLeft}>
+
+                              </meshStandardMaterial>
+                              {/*<VideoMaterial url={proshowsReverseurl}/>*/}
                         </mesh>
                         <mesh geometry={nodes.Plane037.geometry} material={materials.Canvas} position={[1.921, 0.081, -3.037]} rotation={[-1.453, 0.066, 0.506]} />
                   </group>
 
 
-                        <group>
-                              <mesh position={[-1.80, 1.58, 15.71]} scale={[0.638, 1.6, 1]} rotation={[0.15, -0.33, 0.04]}>
-                                    <planeGeometry args={[3.2, 1.9]} />
-                                    <meshStandardMaterial side={THREE.DoubleSide} map={proniteContent}>
-                                          {/*<videoTexture attach="map" args={[video]} />
+                  <group>
+                        <mesh position={[-1.80, 1.58, 15.71]} scale={[0.638, 1.6, 1]} rotation={[0.15, -0.33, 0.04]}>
+                              <planeGeometry args={[3.2, 1.9]} />
+                              <meshStandardMaterial side={THREE.DoubleSide} map={proniteContent}>
+                                    {/*<videoTexture attach="map" args={[video]} />
 <videoTexture attach="emissiveMap" args={[video]} />*/}
-                                    </meshStandardMaterial>
-                              </mesh>
-                              <mesh geometry={nodes.Plane038.geometry} material={materials.Canvas} position={[-1.735, 0.081, 15.553]} rotation={[-1.442, -0.042, -0.313]} />
-                        </group>
+                              </meshStandardMaterial>
+                        </mesh>
+                        <mesh geometry={nodes.Plane038.geometry} material={materials.Canvas} position={[-1.735, 0.081, 15.553]} rotation={[-1.442, -0.042, -0.313]} />
+                  </group>
 
 
-                        <group>
-                              <mesh position={[1.96, 1.6, 15.5]} scale={[0.68, 1.62, 1]} rotation={[0.15, 0.52, -0.075]}>
-                                    <planeGeometry args={[3.2, 1.9]} />
-                                    <meshStandardMaterial side={THREE.DoubleSide} map={pronitesScreen}>
-                                          {/*  <videoTexture attach="map" args={[video]} />
+                  <group>
+                        <mesh position={[1.96, 1.6, 15.5]} scale={[0.68, 1.62, 1]} rotation={[0.15, 0.52, -0.075]}>
+                              <planeGeometry args={[3.2, 1.9]} />
+                              <meshStandardMaterial side={THREE.DoubleSide} map={pronitesScreen}>
+                                    {/*  <videoTexture attach="map" args={[video]} />
 <videoTexture attach="emissiveMap" args={[video]} />*/}
-                                    </meshStandardMaterial>
-                              </mesh>
-                              <mesh geometry={nodes.Plane039.geometry} material={materials.Canvas} position={[1.921, 0.081, 15.403]} rotation={[-1.453, 0.066, 0.506]} />
-                        </group>
+                              </meshStandardMaterial>
+                        </mesh>
+                        <mesh geometry={nodes.Plane039.geometry} material={materials.Canvas} position={[1.921, 0.081, 15.403]} rotation={[-1.453, 0.066, 0.506]} />
+                  </group>
 
 
 
-                        <group>
-                              <mesh position={[-1.80, 1.58, 31.13]} scale={[0.638, 1.6, 1]} rotation={[0.15, -0.33, 0.04]}>
-                                    <planeGeometry args={[3.2, 1.9]} />
-                                    <meshStandardMaterial side={THREE.DoubleSide} map={creatorsContent}>
-                                          {/*<videoTexture attach="map" args={[video]} />
+                  <group>
+                        <mesh position={[-1.80, 1.58, 31.13]} scale={[0.638, 1.6, 1]} rotation={[0.15, -0.33, 0.04]}>
+                              <planeGeometry args={[3.2, 1.9]} />
+                              <meshStandardMaterial side={THREE.DoubleSide} map={creatorsContent}>
+                                    {/*<videoTexture attach="map" args={[video]} />
 <videoTexture attach="emissiveMap" args={[video]} />*/}
-                                    </meshStandardMaterial>
-                              </mesh>
-                              <mesh geometry={nodes.Plane040.geometry} material={materials.Canvas} position={[-1.735, 0.081, 31.017]} rotation={[-1.442, -0.042, -0.313]} />
-                        </group>
+                              </meshStandardMaterial>
+                        </mesh>
+                        <mesh geometry={nodes.Plane040.geometry} material={materials.Canvas} position={[-1.735, 0.081, 31.017]} rotation={[-1.442, -0.042, -0.313]} />
+                  </group>
 
-                        <group>
-                              <mesh position={[1.982, 1.6, 30.98]} scale={[0.65, 1.62, 1]} rotation={[0.15, 0.52, -0.075]}>
-                                    <planeGeometry args={[3.2, 1.9]} />
-                                    <meshStandardMaterial side={THREE.DoubleSide} map={creatorsScreen}>
-                                          {/* <videoTexture attach="map" args={[video]} />
+                  <group>
+                        <mesh position={[1.982, 1.6, 30.98]} scale={[0.65, 1.62, 1]} rotation={[0.15, 0.52, -0.075]}>
+                              <planeGeometry args={[3.2, 1.9]} />
+                              <meshStandardMaterial side={THREE.DoubleSide} map={creatorsScreen}>
+                                    {/* <videoTexture attach="map" args={[video]} />
 <videoTexture attach="emissiveMap" args={[video]} />*/}
-                                    </meshStandardMaterial>
-                              </mesh>
-                              <mesh geometry={nodes.Plane041.geometry} material={materials.Canvas} position={[1.921, 0.081, 30.867]} rotation={[-1.453, 0.066, 0.506]} />
-                        </group>
+                              </meshStandardMaterial>
+                        </mesh>
+                        <mesh geometry={nodes.Plane041.geometry} material={materials.Canvas} position={[1.921, 0.081, 30.867]} rotation={[-1.453, 0.066, 0.506]} />
+                  </group>
 
 
 
-                        <group>
-                              <mesh position={[-1.80, 1.58, 49.6]} scale={[0.638, 1.6, 1]} rotation={[0.15, -0.33, 0.04]}>
-                                    <planeGeometry args={[3.2, 1.9]} />
-                                    <meshStandardMaterial side={THREE.DoubleSide} map={criticalContent}>
-                                          {/*<videoTexture attach="map" args={[video]} />
+                  <group>
+                        <mesh position={[-1.80, 1.58, 49.6]} scale={[0.638, 1.6, 1]} rotation={[0.15, -0.33, 0.04]}>
+                              <planeGeometry args={[3.2, 1.9]} />
+                              <meshStandardMaterial side={THREE.DoubleSide} map={criticalContent}>
+                                    {/*<videoTexture attach="map" args={[video]} />
 <videoTexture attach="emissiveMap" args={[video]} />*/}
-                                    </meshStandardMaterial>
-                              </mesh>
-                              <mesh geometry={nodes.Plane042.geometry} material={materials.Canvas} position={[-1.735, 0.081, 49.456]} rotation={[-1.442, -0.042, -0.313]} />
+                              </meshStandardMaterial>
+                        </mesh>
+                        <mesh geometry={nodes.Plane042.geometry} material={materials.Canvas} position={[-1.735, 0.081, 49.456]} rotation={[-1.442, -0.042, -0.313]} />
 
-                        </group>
+                  </group>
 
-                        <group>
-                              <mesh position={[1.982, 1.6, 49.45]} scale={[0.65, 1.62, 1]} rotation={[0.15, 0.52, -0.075]}>
-                                    <planeGeometry args={[3.2, 1.9]} />
-                                    <meshStandardMaterial map={CriticalScreen} side={THREE.DoubleSide}>
-                                          {/* <videoTexture attach="map" args={[video]} />
+                  <group>
+                        <mesh position={[1.982, 1.6, 49.45]} scale={[0.65, 1.62, 1]} rotation={[0.15, 0.52, -0.075]}>
+                              <planeGeometry args={[3.2, 1.9]} />
+                              <meshStandardMaterial map={CriticalScreen} side={THREE.DoubleSide}>
+                                    {/* <videoTexture attach="map" args={[video]} />
 <videoTexture attach="emissiveMap" args={[video]} />*/}
-                                    </meshStandardMaterial>
-                              </mesh>
-                              <mesh geometry={nodes.Plane043.geometry} material={materials.Canvas} position={[1.921, 0.081, 49.306]} rotation={[-1.453, 0.066, 0.506]} />
-                        </group>
+                              </meshStandardMaterial>
+                        </mesh>
+                        <mesh geometry={nodes.Plane043.geometry} material={materials.Canvas} position={[1.921, 0.081, 49.306]} rotation={[-1.453, 0.066, 0.506]} />
+                  </group>
 
-                        <group>
-                              <mesh position={[-1.80, 1.58, 65.25]} scale={[0.638, 1.6, 1]} rotation={[0.15, -0.33, 0.04]}>
-                                    <planeGeometry args={[3.2, 1.9]} />
-                                    <meshStandardMaterial side={THREE.DoubleSide} map={informalContent}>
-                                          {/*<videoTexture attach="map" args={[video]} />
+                  <group>
+                        <mesh position={[-1.80, 1.58, 65.25]} scale={[0.638, 1.6, 1]} rotation={[0.15, -0.33, 0.04]}>
+                              <planeGeometry args={[3.2, 1.9]} />
+                              <meshStandardMaterial side={THREE.DoubleSide} map={informalContent}>
+                                    {/*<videoTexture attach="map" args={[video]} />
 <videoTexture attach="emissiveMap" args={[video]} />*/}
-                                    </meshStandardMaterial>
-                              </mesh>
-                              <mesh geometry={nodes.Plane044.geometry} material={materials.Canvas} position={[-1.735, 0.081, 65.117]} rotation={[-1.442, -0.042, -0.313]} />
+                              </meshStandardMaterial>
+                        </mesh>
+                        <mesh geometry={nodes.Plane044.geometry} material={materials.Canvas} position={[-1.735, 0.081, 65.117]} rotation={[-1.442, -0.042, -0.313]} />
 
-                        </group>
+                  </group>
 
-                        <group>
-                              <mesh position={[1.982, 1.6, 65.14]} scale={[0.65, 1.62, 1]} rotation={[0.15, 0.52, -0.075]}>
-                                    <planeGeometry args={[3.2, 1.9]} />
-                                    <meshStandardMaterial map={Informals} side={THREE.DoubleSide}>
-                                          {/* <videoTexture attach="map" args={[video]} />
+                  <group>
+                        <mesh position={[1.982, 1.6, 65.14]} scale={[0.65, 1.62, 1]} rotation={[0.15, 0.52, -0.075]}>
+                              <planeGeometry args={[3.2, 1.9]} />
+                              <meshStandardMaterial map={Informals} side={THREE.DoubleSide}>
+                                    {/* <videoTexture attach="map" args={[video]} />
 <videoTexture attach="emissiveMap" args={[video]} /> */}
-                                    </meshStandardMaterial>
-                              </mesh>
-                              <mesh geometry={nodes.Plane045.geometry} material={materials.Canvas} position={[1.921, 0.081, 64.967]} rotation={[-1.453, 0.066, 0.506]} />
-                        </group>
+                              </meshStandardMaterial>
+                        </mesh>
+                        <mesh geometry={nodes.Plane045.geometry} material={materials.Canvas} position={[1.921, 0.081, 64.967]} rotation={[-1.453, 0.066, 0.506]} />
+                  </group>
 
-                        <group>
-                              <mesh position={[-1.80, 1.58, 83.68]} scale={[0.638, 1.6, 1]} rotation={[0.15, -0.33, 0.04]}>
-                                    <planeGeometry args={[3.2, 1.9]} />
-                                    <meshStandardMaterial map={lastImageLeft} side={THREE.DoubleSide}>
-                                          {/* <videoTexture attach="map" args={[video]} />
+                  <group>
+                        <mesh position={[-1.80, 1.58, 83.68]} scale={[0.638, 1.6, 1]} rotation={[0.15, -0.33, 0.04]}>
+                              <planeGeometry args={[3.2, 1.9]} />
+                              <meshStandardMaterial map={lastImageLeft} side={THREE.DoubleSide}>
+                                    {/* <videoTexture attach="map" args={[video]} />
 <videoTexture attach="emissiveMap" args={[video]} /> */}
-                                    </meshStandardMaterial>
-                              </mesh>
-                              <mesh geometry={nodes.Plane046.geometry} material={materials.Canvas} position={[-1.735, 0.081, 83.557]} rotation={[-1.442, -0.042, -0.313]} />
+                              </meshStandardMaterial>
+                        </mesh>
+                        <mesh geometry={nodes.Plane046.geometry} material={materials.Canvas} position={[-1.735, 0.081, 83.557]} rotation={[-1.442, -0.042, -0.313]} />
 
-                        </group>
-                        <group>
-                              <mesh position={[1.982, 1.6, 83.2]} scale={[0.65, 1.62, 1]} rotation={[0.15, 0.52, -0.075]}>
-                                    <planeGeometry args={[3.2, 1.9]} />
-                                    <meshStandardMaterial map={lastImageRight} side={THREE.DoubleSide}>
-                                          {/* <videoTexture attach="map" args={[video]} />
+                  </group>
+                  <group>
+                        <mesh position={[1.982, 1.6, 83.2]} scale={[0.65, 1.62, 1]} rotation={[0.15, 0.52, -0.075]}>
+                              <planeGeometry args={[3.2, 1.9]} />
+                              <meshStandardMaterial map={lastImageRight} side={THREE.DoubleSide}>
+                                    {/* <videoTexture attach="map" args={[video]} />
 <videoTexture attach="emissiveMap" args={[video]} /> */}
-                                    </meshStandardMaterial>
-                              </mesh>
-                              <mesh geometry={nodes.Plane047.geometry} material={materials.Canvas} position={[1.921, 0.081, 83.406]} rotation={[-1.453, 0.066, 0.506]} />
-                        </group>
+                              </meshStandardMaterial>
+                        </mesh>
+                        <mesh geometry={nodes.Plane047.geometry} material={materials.Canvas} position={[1.921, 0.081, 83.406]} rotation={[-1.453, 0.066, 0.506]} />
+                  </group>
             </group >
 
       )
