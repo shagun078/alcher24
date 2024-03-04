@@ -320,7 +320,7 @@
 .sponsorimg{
   width: 13vw;
   aspect-ratio: 1/1;
-
+  object-fit: contain;
 }
 
 #name {

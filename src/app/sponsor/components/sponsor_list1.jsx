@@ -18,10 +18,10 @@ function getCards(){
       },
       {
         "id": "3",
-        "name": "Bull Head",
+        "name": "VYGR",
         "partner": "Digital Media Partner",
         "img": "/sponsor_res/digital_media/bullhead_logo.jpg",
-        "slink": "#"
+        "slink": "https://www.instagram.com/vygrofficial/?hl=en"
       },
       {
         "id": "4",

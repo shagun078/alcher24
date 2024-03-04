@@ -91,7 +91,7 @@ function Sponsor() {
               <div className="powered">
                 <h1>TRUSTED BY</h1>
               </div>
-              <a href="#" target="_blank"><div className="poweredimg" id="trusted_by"></div></a>
+              <a href="#https://manikchandjewellers.com/" target="_blank"><div className="poweredimg" id="trusted_by"></div></a>
 
 
               <div className="sponsorfooter">
