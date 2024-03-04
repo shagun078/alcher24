@@ -93,16 +93,17 @@ function Sponsor() {
               </div>
               <a href="#https://manikchandjewellers.com/" target="_blank"><div className="poweredimg" id="trusted_by"></div></a>
 
+              <div className="powered">
+                <h1>CONNECTED BY</h1>
+              </div>
+              <a href="https://guwahatiplus.com/" target="_blank"><div className="poweredimg" id="connected_by"></div></a>
+
 
               <div className="sponsorfooter">
                 <div className="sponsors sp_list1">
                   <SponsorList2></SponsorList2>
                 </div>
                 <div className="heading2 sp_list2">Media Sponsors</div>
-                <div className="powered">
-                <h1>CONNECTED BY</h1>
-              </div>
-              <a href="https://guwahatiplus.com/" target="_blank"><div className="poweredimg" id="connected_by"></div></a>
                 <div className="sponsors">
                   <SponsorList1></SponsorList1>
                 </div>
