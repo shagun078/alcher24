@@ -52,7 +52,7 @@ function getCards(){
       },
       {
         "id": "7",
-        "name": "PEESAFE",
+        "name": "PEE SAFE",
         "partner": "Women hygiene Partner",
         "img": "/sponsor_res/spons/Pee_Safe.png",
         "slink": "https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjFvPeAqNaEAxUHC6IDHQnfC5UYABAAGgJsZQ&ase=2&gclid=CjwKCAiAuYuvBhApEiwAzq_YiSWNffk-crZtM1w_kB89F_3IMHwIu-_cYdK38kWaWrshs_uLEUR4GBoC0HUQAvD_BwE&ohost=www.google.co.in&cid=CAESVeD2rkgScKiDLQ3NGdnWd6_EVr0hKFJEBcpp35u0Kvt9_trjPLAamt6Y3no0lxqH6NmqjkpluxTGEVArNdhyHnfLE5kCGH1vFTi0JE7mUlFsXzOngNo&sig=AOD64_3Vf_hrXNyJ5elo7nepjQQc3sYWWA&q&nis=4&adurl&ved=2ahUKEwjQufCAqNaEAxVdHRAIHTwND4wQ0Qx6BAgFEAE"
@@ -77,7 +77,7 @@ function getCards(){
       {
         "id": "10",
         "name": "ASACS",
-        "partner": "Sanrakshan title sponsor and awareness partner",
+        "partner": "Sanrakshan Title Sponsor / Awareness partner",
         "img": "/sponsor_res/spons/asacs.jpg",
         "slink": "http://asacs.assam.gov.in/"
 
@@ -85,14 +85,14 @@ function getCards(){
       {
         "id": "11",
         "name": "MDH",
-        "partner": "Official spice Partner",
+        "partner": "Official Spice Partner",
         "img": "/sponsor_res/spons/mdh.png",
         "slink": "https://mdhspices.com/"
 
       },
       {
         "id": "12",
-        "name": "Local all natural soda",
+        "name": "Local All Natural Soda",
         "partner": "Drinking Partner",
         "img": "/sponsor_res/spons/local.png",
         "slink": "https://localallnaturalsoda.com/"
@@ -116,7 +116,7 @@ function getCards(){
       },
       {
         "id": "15",
-        "name": "Hurricane energy drink",
+        "name": "Hurricane Energy Drink",
         "partner": "Energy Drink partner",
         "img": "/sponsor_res/spons/Hurricane_logo.png",
         "slink": "https://www.instagram.com/huricanedrink/"
@@ -148,7 +148,7 @@ function getCards(){
       },
       {
         "id": "19",
-        "name": "Ocean beverage",
+        "name": "Ocean Beverage",
         "partner": "Hydrating Partner",
         "img": "/sponsor_res/spons/ocean.png",
         "slink": "https://oceanbeverages.in/"
@@ -157,7 +157,7 @@ function getCards(){
       {
         "id": "20",
         "name": "Smarto",
-        "partner": "Sustainable ride Partner",
+        "partner": "Sustainable Ride Partner",
         "img": "/sponsor_res/spons/Smarto_logo.png",
         "slink": "https://smartocabs.com/terms-of-service/"
 
@@ -165,9 +165,9 @@ function getCards(){
       {
         "id": "21",
         "name": "OIL",
-        "partner": "SAFHER title sponsor & strategic Partner",
+        "partner": "SAFHER Title Sponsor / Strategic Partner",
         "img": "/sponsor_res/spons/oil_india.png",
-        "slink": "#"
+        "slink": "https://www.oil-india.com/"
 
       },
       {
@@ -181,7 +181,7 @@ function getCards(){
       {
         "id": "23",
         "name": "ASDMA",
-        "partner": "Gold sponsor",
+        "partner": "Gold Sponsor",
         "img": "/sponsor_res/spons/asdma.png",
         "slink": "http://asdma.assam.gov.in/"
 
@@ -205,7 +205,7 @@ function getCards(){
       {
         "id": "26",
         "name": "Medifio",
-        "partner": "Health tech Partner",
+        "partner": "Health Tech Partner",
         "img": "/sponsor_res/spons/med.png",
         "slink": "https://medifio.com/"
 
@@ -229,7 +229,7 @@ function getCards(){
       {
         "id": "29",
         "name": "Goezy",
-        "partner": "Bike and car rental Partner",
+        "partner": "Bike and Car Rental Partner",
         "img": "/sponsor_res/spons/goezy.png",
         "slink": "https://goezycars.in/"
 
@@ -237,7 +237,7 @@ function getCards(){
       {
         "id": "30",
         "name": "Go ridez",
-        "partner": "Bike and car rental Partner",
+        "partner": "Bike and Car Rental Partner",
         "img": "/sponsor_res/spons/goridez.png",
         "slink": "https://www.goridez.in/"
 
@@ -252,8 +252,10 @@ export default function SponsorList() {
     <>
         {sponsor_card.map((sponsor)=>(
         <div key={sponsor.id} className="col">
-            <img className="sponsorimg" src={sponsor.img}/>
-            <div id="name"><a href={sponsor.slink} target="_blank"><h2>{sponsor.name}</h2></a></div>
+            <a href={sponsor.slink} target="_blank">
+              <img className="sponsorimg" src={sponsor.img}/>
+              <div id="name"><h2>{sponsor.name}</h2></div>
+            </a>
             <div id="partner"> <p>{sponsor.partner}</p></div>
         </div>
         ))}

@@ -81,17 +81,17 @@ function Sponsor() {
               <div className="powered">
                 <h1> POWERED BY</h1>
               </div>
-              <div className="poweredimg" id="powered_by"></div>
+              <a href="https://www.onlinesbi.sbi/" target="_blank"><div className="poweredimg" id="powered_by"></div></a>
 
               <div className="powered">
                 <h1>IN ASSOCIATION WITH</h1>
               </div>
-              <div className="poweredimg" id="in_asso_with"></div>
+              <a href="https://www.instagram.com/sparxgoforit/?hl=en" target="_blank"><div className="poweredimg" id="in_asso_with"></div></a>
 
               <div className="powered">
                 <h1>TRUSTED BY</h1>
               </div>
-              <div className="poweredimg" id="trusted_by"></div>
+              <a href="https://guwahatiplus.com/" target="_blank"><div className="poweredimg" id="trusted_by"></div></a>
 
 
               <div className="sponsorfooter">
@@ -99,6 +99,10 @@ function Sponsor() {
                   <SponsorList2></SponsorList2>
                 </div>
                 <div className="heading2 sp_list2">Media Sponsors</div>
+                <div className="powered">
+                <h1>CONNECTED BY</h1>
+              </div>
+              <a href="https://guwahatiplus.com/" target="_blank"><div className="poweredimg" id="connected_by"></div></a>
                 <div className="sponsors">
                   <SponsorList1></SponsorList1>
                 </div>

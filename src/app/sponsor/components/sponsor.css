@@ -167,6 +167,15 @@
   margin-bottom: 4vh;
 }
 
+/* .media_off_partner{
+  width: 16vw;
+  margin: 0 auto 6vh;
+  aspect-ratio: 2/1;
+  background-image: url('../resources/gplus.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+} */
+
 .sp_list2{
   margin-top: 10vh;
 }
@@ -227,6 +236,10 @@
 
 #trusted_by{
   background-image: url('../resources/Manikchand.png');
+}
+
+#connected_by{
+  background-image: url('../resources/gplus.png');
 }
 
 .sponsorfooter{
@@ -360,6 +373,12 @@
   }
 }
 
+@media (max-width: 914px){
+  .App h1{
+    font-size: 3vh;
+  }
+}
+
 @media (max-width: 431px){
   
   #name{
@@ -373,7 +392,7 @@
     grid-row-gap: 6vh;
   }
   .App h1{
-    font-size: 3vh;
+    font-size: 2vh;
   }
   
   #design{
