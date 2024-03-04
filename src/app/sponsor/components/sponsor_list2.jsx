@@ -194,14 +194,14 @@ function getCards(){
         "slink": "https://startup.assam.gov.in/"
 
       },
-      {
-        "id": "25",
-        "name": "ATDC",
-        "partner": "Tourism Partner",
-        "img": "/sponsor_res/digital_news/siliconindia.png",
-        "slink": "http://www.assamtourismonline.com/"
+      // {
+      //   "id": "25",
+      //   "name": "ATDC",
+      //   "partner": "Tourism Partner",
+      //   "img": "/sponsor_res/digital_news/siliconindia.png",
+      //   "slink": "http://www.assamtourismonline.com/"
 
-      },
+      // },
       {
         "id": "26",
         "name": "Medifio",
