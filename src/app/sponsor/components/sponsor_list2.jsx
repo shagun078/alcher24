@@ -253,7 +253,7 @@ export default function SponsorList() {
         {sponsor_card.map((sponsor)=>(
         <div key={sponsor.id} className="col">
             <img className="sponsorimg" src={sponsor.img}/>
-            <div id="name"> <h2>{sponsor.name}</h2></div>
+            <div id="name"><a href={sponsor.slink} target="_blank"><h2>{sponsor.name}</h2></a></div>
             <div id="partner"> <p>{sponsor.partner}</p></div>
         </div>
         ))}

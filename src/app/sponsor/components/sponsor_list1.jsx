@@ -6,7 +6,8 @@ function getCards(){
         "id": "1",
         "name": "Trending on Guwahati",
         "partner": "Digital media Partner",
-        "img": "/sponsor_res/digital_media/trending.png"
+        "img": "/sponsor_res/digital_media/trending.png",
+        "slink": "#"
       },
       {
         "id": "2",
@@ -19,8 +20,8 @@ function getCards(){
         "id": "3",
         "name": "Bull head",
         "partner": "Digital media Partner",
-        "img": "/sponsor_res/digital_media/bullhead_logo.jpg"
-
+        "img": "/sponsor_res/digital_media/bullhead_logo.jpg",
+        "slink": "#"
       },
       {
         "id": "4",
@@ -103,7 +104,8 @@ function getCards(){
         "id": "15",
         "name": "DU Updates",
         "partner": "Youth and student media Partner",
-        "img": "/sponsor_res/youth_media/du_updates.png"
+        "img": "/sponsor_res/youth_media/du_updates.png",
+        "slink": "#"
       },
       {
         "id": "16",
@@ -130,7 +132,7 @@ export default function SponsorList() {
         {sponsor_card.map((sponsor)=>(
         <div key={sponsor.id} className="col">
             <img className="sponsorimg" src={sponsor.img}/>
-            <div id="name"> <h2>{sponsor.name}</h2></div>
+            <div id="name"><a href={sponsor.slink} target="_blank"><h2>{sponsor.name}</h2></a></div>
             <div id="partner"> <p>{sponsor.partner}</p></div>
         </div>
         ))}
