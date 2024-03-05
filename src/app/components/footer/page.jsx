@@ -29,10 +29,14 @@ const Footer = ({ bg, star, circle_src1, circle_src2, windows_src, alcheringa_lo
                             <Link href="/competition">Competitions</Link></li>
                         <li onClick={() => router.push("/kartavya")} className={path === '/kartavya' ? 'c c3' : ''}>
                             <Link href="/kartavya">Kartayva</Link></li>
-                        {/* <li onClick={() => router.push("/mun")} className={path === '/mun' ? 'c c4' : ''}> */}
-                        {/* <Link href="/mun">MUN</Link></li> */}
-                        {/* <li onClick={() => router.push("/merch")} className={path === '/merch' ? 'c c5' : ''}> */}
-                        {/* <Link href="/merch">Merch</Link></li> */}
+                        {/* <li onClick={() => router.push("/mun")} className={path === '/mun' ? 'c c4' : ''}>
+                        <Link href="/mun">MUN</Link></li>
+                        <li onClick={() => router.push("/merch")} className={path === '/merch' ? 'c c5' : ''}>
+                        <Link href="/merch">Merch</Link></li> */}
+                        <li >
+                            <Link href="https://iitgmun.alcheringa.in">MUN</Link></li>
+                        <li >
+                            <Link href="https://forms.gle/rddFejMdxRapGsMS9">Merch</Link></li>
                         <li onClick={() => router.push("/teams")} className={path === '/teams' ? 'c c6' : ''}>
                             <Link href="/team">Teams</Link></li>
                         <li onClick={() => router.push("/sponsor")} className={path === '/sponsor' ? 'c c7' : ''}>
@@ -123,9 +127,9 @@ const Footer = ({ bg, star, circle_src1, circle_src2, windows_src, alcheringa_lo
                         </a>&nbsp;&&nbsp;
                         <a className='hover_parent'>
                             <div id="right_shift_2" className='hover_child'>
+                                <p>Himank Bohara</p>
                                 <p>Shubham Kumar Jha</p>
                                 <p>Aditya Dadhich</p>
-                                <p>Himank Bohara</p>
                                 <p>Deepak Sutradhar</p>
                                 <p>Shagun Sharma</p>
                             </div>

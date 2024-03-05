@@ -31,10 +31,10 @@ const Navbar = ({ reg_bg }) => {
                         <Link href="/competition">Competitions</Link></li>
                     <li onClick={() => router.push("/kartavya")} className={path === "/kartavya" ? "c c3" : ""}>
                         <Link href="/kartavya">Kartavya</Link></li>
-                    {/* <li onClick={() => router.push("/mun")} className={path === "/mun" ? "c c4" : ""}> */}
-                    {/* <Link href="/mun">MUN</Link></li> */}
-                    {/* <li onClick={() => router.push("/merch")} className={path === "/merch" ? "c c5" : ""}> */}
-                    {/* <Link href="/merch">Merch</Link></li> */}
+                    <li >
+                        <Link href="https://iitgmun.alcheringa.in">MUN</Link></li>
+                    <li >
+                        <Link href="https://forms.gle/rddFejMdxRapGsMS9">Merch</Link></li>
                     <li onClick={() => router.push("/teams")} className={path === "/teams" ? "c c6" : ""}>
                         <Link href="/teams">Teams</Link></li>
                     <li onClick={() => router.push("/sponsor")} className={path === "/sponsor" ? "c c7" : ""}>
