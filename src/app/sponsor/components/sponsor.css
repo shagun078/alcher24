@@ -222,6 +222,7 @@
   width: 16vw;
   margin: 2vw auto;
   background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
   /* border-radius: 1.3vw; */
 }
@@ -230,8 +231,16 @@
   background-image: url('../resources/SBI.jpg');
 }
 
-#in_asso_with{
+#in_asso_with1{
   background-image: url('../resources/sparx.png');
+}
+
+#in_asso_with2{
+  background-image: url('../resources/prag_news.png');
+}
+
+#in_asso_with3{
+  background-image: url('../resources/Assam_Tribune.png');
 }
 
 #trusted_by{
