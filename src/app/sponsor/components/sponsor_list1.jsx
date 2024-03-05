@@ -120,6 +120,13 @@ function getCards(){
         "partner": "Digital News Partner",
         "img": "/sponsor_res/digital_news/siliconindia.png",
         "slink": "https://www.siliconindia.com/"
+      },
+      {
+        "id": "18",
+        "name": "Outlook",
+        "partner": "Digital News Partner",
+        "img": "/sponsor_res/digital_news/Outlook_Logo.png",
+        "slink": "https://www.outlookindia.com/"
       }
     ]
     return data;
