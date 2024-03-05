@@ -280,7 +280,7 @@ const marks = [
   {
     key: "I",
     title: "MUN",
-    link: "https://www.instagram.com/iitg_mun/",
+    link: "https://iitgmun.alcheringa.in",
     description:
       "The grandest simulation of the UN in the North-East, IIT Guwahati Model United Nations presents its Edition XVI, bigger and better than ever before. This year we bring to you four committees that are bound to get you thinking about and deliberating on the issues that we face in the real world.",
     camPos: {
