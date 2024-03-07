@@ -35,6 +35,7 @@ import creators_i1 from '/public/events2d_img/cc1.png'
 import creators_i2 from '/public/events2d_img/cc2.png'
 import creators_i3 from '/public/events2d_img/cc3.png'
 import creators_i4 from '/public/events2d_img/cc4.png'
+import creators_i5 from '/public/events2d_img/cc5.png'
 
 import flickeringa_i1 from '/public/events2d_img/f1.png'
 import flickeringa_i2 from '/public/events2d_img/f3.png'
@@ -251,6 +252,14 @@ const data_2d = [
     img: creators_i4,
     description:
       "Unleash your creativity with Shreya Mehta at Alcheringa's Creators Camp. Don't miss this opportunity!",
+  },
+  {
+    key: "KA",
+    field: "CREATORS CAMP",
+    title: "LATAA SABERWAAL",
+    img: creators_i5,
+    description:
+      "Embark on a creative journey with Alcheringa's Creators Camp, led by the renowned Lataa Saberwaal. Unleash your creativity under her guidance and ignite the spark within!",
   },
   {
     key: "L",
