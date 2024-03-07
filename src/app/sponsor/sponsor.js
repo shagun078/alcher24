@@ -29,7 +29,7 @@ function Sponsor() {
 
           <section className="after_sponsor">
             <div className="App">
-              <h1>We Have Worked With</h1>
+              <h1 className="first_head_spon">Our Partners</h1>
 
               {/* <div className="title">
                 <h1> TITLE SPONSOR </h1>
