@@ -3,9 +3,30 @@
 function getCards(){
     const data = [
       {
+        "id": "31",
+        "name": "French Essence",
+        "partner": "Official Fragrance Partner",
+        "img": "/sponsor_res/spons/french_essence.jpg",
+        "slink": "https://frenchessence.com/"
+      },
+      {
+        "id": "32",
+        "name": "The Table",
+        "partner": "Restaurant Partner",
+        "img": "/sponsor_res/spons/the_table.jpg",
+        "slink": "https://www.instagram.com/thetableguwahati/?hl=en"
+      },
+      {
+        "id": "33",
+        "name": "Avon",
+        "partner": "Cosmetics Partner",
+        "img": "/sponsor_res/spons/avon.jpg",
+        "slink": "https://www.avon.co.in/"
+      },
+      {
         "id": "1",
         "name": "BIS",
-        "partner": "UDAAN title sponsor,startdization partner",
+        "partner": "UDAAN Title Sponsor / Startdization Partner",
         "img": "/sponsor_res/spons/Bureau_of_Indian_Standards_Logo.png",
         "slink": "https://www.bis.gov.in/"
     
