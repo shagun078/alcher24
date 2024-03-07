@@ -34,7 +34,7 @@ function getCards(){
       {
         "id": "2",
         "name": "JIO SAAVN",
-        "partner": "Official music streaming Partner",
+        "partner": "Official Music Streaming Partner",
         "img": "/sponsor_res/spons/JioSaavn_logo.png",
         "slink": "https://www.jiosaavn.com/"
 
@@ -42,7 +42,7 @@ function getCards(){
       {
         "id": "3",
         "name": "UNSTOP",
-        "partner": "Online hosting Partner",
+        "partner": "Online Hosting Partner",
         "img": "/sponsor_res/spons/unstop_logo.png",
         "slink": "https://unstop.com/"
 
@@ -50,7 +50,7 @@ function getCards(){
       {
         "id": "4",
         "name": "Edufabrica",
-        "partner": "Tech & bio workshop Partner",
+        "partner": "Tech & Bio Workshop Partner",
         "img": "/sponsor_res/spons/Edufabrica.png",
         "slink": "https://www.edufabrica.net/"
 
@@ -58,7 +58,7 @@ function getCards(){
       {
         "id": "5",
         "name": "GMDA",
-        "partner": "Kartavya in association with",
+        "partner": "Kartavya In Association With",
         "img": "/sponsor_res/spons/gmda.jpg",
         "slink": "http://gmda.assam.gov.in/"
 
@@ -66,7 +66,7 @@ function getCards(){
       {
         "id": "6",
         "name": "NTPC",
-        "partner": "Platinum sponsor",
+        "partner": "Platinum Sponsor",
         "img": "/sponsor_res/spons/ntpc.png",
         "slink": "https://www.ntpc.co.in/"
 
@@ -74,7 +74,7 @@ function getCards(){
       {
         "id": "7",
         "name": "PEE SAFE",
-        "partner": "Women hygiene Partner",
+        "partner": "Women Hygiene Partner",
         "img": "/sponsor_res/spons/Pee_Safe.png",
         "slink": "https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjFvPeAqNaEAxUHC6IDHQnfC5UYABAAGgJsZQ&ase=2&gclid=CjwKCAiAuYuvBhApEiwAzq_YiSWNffk-crZtM1w_kB89F_3IMHwIu-_cYdK38kWaWrshs_uLEUR4GBoC0HUQAvD_BwE&ohost=www.google.co.in&cid=CAESVeD2rkgScKiDLQ3NGdnWd6_EVr0hKFJEBcpp35u0Kvt9_trjPLAamt6Y3no0lxqH6NmqjkpluxTGEVArNdhyHnfLE5kCGH1vFTi0JE7mUlFsXzOngNo&sig=AOD64_3Vf_hrXNyJ5elo7nepjQQc3sYWWA&q&nis=4&adurl&ved=2ahUKEwjQufCAqNaEAxVdHRAIHTwND4wQ0Qx6BAgFEAE"
 
@@ -82,7 +82,7 @@ function getCards(){
       {
         "id": "8",
         "name": "SAFEEXPRESS",
-        "partner": "Official supply chain partner",
+        "partner": "Official Supply Chain Partner",
         "img": "/sponsor_res/spons/safeexpress.png",
         "slink": "https://www.safexpress.com/"
 
@@ -121,7 +121,7 @@ function getCards(){
       },
       {
         "id": "13",
-        "name": "Coca cola",
+        "name": "Coca Cola",
         "partner": "Beverage Partner",
         "img": "/sponsor_res/spons/coke_logo.png",
         "slink": "https://www.coca-colacompany.com/"
@@ -209,7 +209,7 @@ function getCards(){
       },
       {
         "id": "24",
-        "name": "Assam startup",
+        "name": "Assam Startup",
         "partner": "Startup Partner",
         "img": "/sponsor_res/spons/Logo_Assam_Start.png",
         "slink": "https://startup.assam.gov.in/"
@@ -257,7 +257,7 @@ function getCards(){
       },
       {
         "id": "30",
-        "name": "Go ridez",
+        "name": "Go Ridez",
         "partner": "Bike and Car Rental Partner",
         "img": "/sponsor_res/spons/goridez.png",
         "slink": "https://www.goridez.in/"
