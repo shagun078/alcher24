@@ -86,6 +86,10 @@
   font-size: 7vh;
 }
 
+/* .first_head_spon{
+  font-size: 10vh;
+} */
+
 .title{
   font-size: 1vw;
   padding-top: 1.5vw;
@@ -215,7 +219,7 @@
   color: white;
 }
 .powered h1{
-  font-size: 3vh;
+  font-size: 4vh;
 }
 .poweredimg{
   height: 10vw ;
@@ -378,13 +382,21 @@
     height: 40%;
   }
   .App h1{
-    font-size: 4vh;
+    /* font-size: 4vh; */
   }
 }
 
 @media (max-width: 914px){
   .App h1{
     font-size: 3vh;
+  }
+  .first_head_spon{
+    font-size: 4.5vh !important;
+  }
+  .sponsors{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 4vh;
   }
 }
 
@@ -394,10 +406,14 @@
     font-size: 1vh;
     padding-top: 3vw;
   }
+
+  .first_head_spon{
+    font-size: 4vh !important;
+  }
   
   .sponsors{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 6vh;
   }
   .App h1{
