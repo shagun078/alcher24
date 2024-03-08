@@ -262,6 +262,20 @@ function getCards(){
         "img": "/sponsor_res/spons/goridez.png",
         "slink": "https://www.goridez.in/"
 
+      },
+      {
+        "id": "34",
+        "name": "Trivane",
+        "partner": "Bike Rental Partner",
+        "img": "/sponsor_res/spons/trivane.jpg",
+        "slink": "https://www.trivane.com/"
+      },
+      {
+        "id": "35",
+        "name": "KA School of Design",
+        "partner": "Design Partner",
+        "img": "/sponsor_res/spons/school_of_design.jpg",
+        "slink": "https://www.instagram.com/kaschoolofdesign?igsh=MTZzMjd6Znp2cGN0OA=="
       }
     ]
     return data;
